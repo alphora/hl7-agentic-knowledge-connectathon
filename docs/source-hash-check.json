@@ -1,0 +1,32 @@
+[
+  {
+    "path": "use-cases/steadi/sources/raw/cdc-steadi-algorithm.pdf",
+    "sha256": "5e89b5396e488504b927b4b972e82d277f705ba50d0c41a081ec7e40b6e3bdc0",
+    "matches": true
+  },
+  {
+    "path": "use-cases/steadi/sources/raw/cdc-steadi-pocket-guide.pdf",
+    "sha256": "419a3daa3b0caf0ceb203cee9d16dd36abdbf969163dcffcdc6b7c05a21eeb11",
+    "matches": true
+  },
+  {
+    "path": "use-cases/steadi/sources/raw/uspstf-falls-recommendation-2024.html",
+    "sha256": "7aebb36b266bda82cd2de6d0d9b89bd8b7b9c8be227bbd405fddf62131f984e8",
+    "matches": true
+  },
+  {
+    "path": "use-cases/steadi/sources/raw/uspstf-falls-evidence-update-2024.html",
+    "sha256": "ff0e8915966c5c1e179975f2dfb3d46b15ac56c38a0ad35df5dccfb9461774c5",
+    "matches": true
+  },
+  {
+    "path": "use-cases/steadi/sources/raw/pillay-falls-systematic-review-2024.html",
+    "sha256": "676b94d7a032a2a0e5e8ce30b5cb213c5ea156aeb14b51fa0b4a3c09f3994fcb",
+    "matches": true
+  },
+  {
+    "path": "use-cases/steadi/sources/raw/cdc-injury-economics.html",
+    "sha256": "83180831b9ad7aa8b4b2f21090eb5a3f905d28ccc87fbca9bbb7b08404588547",
+    "matches": true
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "resourceType": "Evidence",
+  "id": "multifactorial-fall-rate",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Evidence/multifactorial-fall-rate",
+  "version": "0.1.0",
+  "status": "draft",
+  "title": "Multifactorial intervention and rate of incident falls",
+  "date": "2026-09-19",
+  "publisher": "Alphora",
+  "description": "Intervention: multifactorial-interventions. Comparator: trial-comparator. Outcome: incident-fall-rate.\n\nMultifactorial intervention versus contributing trial comparator arms: incidence rate ratio 0.84 (95% CI 0.74 to 0.95), 20 trials, 22,115 participants, longest follow-up 6 to 28 months. Heterogeneity I-squared = 85.0% (supplied AHRQ abstract). This estimate applies to incident fall rate, not the number of people who fall.\n\nRecommendation grade C: The USPSTF recommends individualizing whether to offer multifactorial interventions to community-dwelling adults aged 65 years or older at increased fall risk, considering prior falls, comorbidities and patient preferences.\n\nUSPSTF assessed moderate certainty of a small net benefit for its recommendation. Routine provision to everyone is not the recommended decision.\n\nHarms: Harms were sparsely reported; five trials with 4,199 participants reported generally rare, minor effects, often associated with exercise components.\n\nLimitations: Trial components, baseline risks, implementation and adherence varied. Pooled results did not establish statistically significant reductions in people falling, injurious falls, fractures or mortality; this is not proof of no effect.",
+  "exposureBackground": {
+    "reference": "EvidenceVariable/multifactorial-fall-rate-population",
+    "display": "Population: multifactorial-fall-rate-population"
+  },
+  "exposureVariant": [
+    {
+      "reference": "EvidenceVariable/multifactorial-interventions",
+      "display": "Intervention"
+    },
+    {
+      "reference": "EvidenceVariable/trial-comparator",
+      "display": "Comparator"
+    }
+  ],
+  "outcome": [
+    {
+      "reference": "EvidenceVariable/incident-fall-rate",
+      "display": "Incident fall rate"
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "citation",
+      "display": "Benefits of Interventions; Harms of Interventions; Table 1. Summary of USPSTF Rationale",
+      "citation": "Supplied snapshot SHA-256 7aebb36b266bda82cd2de6d0d9b89bd8b7b9c8be227bbd405fddf62131f984e8",
+      "document": {
+        "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "type": "citation",
+      "display": "Structured Abstract: Results; Structured Abstract: Limitations; Structured Abstract: Conclusions",
+      "citation": "Supplied snapshot SHA-256 ff0e8915966c5c1e179975f2dfb3d46b15ac56c38a0ad35df5dccfb9461774c5",
+      "document": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK604238/",
+        "contentType": "text/html"
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "Descriptive FHIR R4 evidence. Numerical findings are attributed narrative, not computable R5 statistic elements. Array order does not encode comparator direction. Guidance linkage to the final CRL-generated artifacts remains pending."
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Intervention: multifactorial-interventions. Comparator: trial-comparator. Outcome: incident-fall-rate.</p><p>Multifactorial intervention versus contributing trial comparator arms: incidence rate ratio 0.84 (95% CI 0.74 to 0.95), 20 trials, 22,115 participants, longest follow-up 6 to 28 months. Heterogeneity I-squared = 85.0% (supplied AHRQ abstract). This estimate applies to incident fall rate, not the number of people who fall.</p><p>Recommendation grade C: The USPSTF recommends individualizing whether to offer multifactorial interventions to community-dwelling adults aged 65 years or older at increased fall risk, considering prior falls, comorbidities and patient preferences.</p><p>USPSTF assessed moderate certainty of a small net benefit for its recommendation. Routine provision to everyone is not the recommended decision.</p><p>Harms: Harms were sparsely reported; five trials with 4,199 participants reported generally rare, minor effects, often associated with exercise components.</p><p>Limitations: Trial components, baseline risks, implementation and adherence varied. Pooled results did not establish statistically significant reductions in people falling, injurious falls, fractures or mortality; this is not proof of no effect.</p></div>"
+  }
+}

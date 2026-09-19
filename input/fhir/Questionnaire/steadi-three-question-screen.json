@@ -1,0 +1,97 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "steadi-three-question-screen",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-obsn|4.0.0"
+    ],
+    "security": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "valueCoding": {
+        "system": "http://hl7.org/fhir/version-algorithm",
+        "code": "semver"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+      "valueBoolean": true
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observation-extract-category",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey",
+            "display": "Survey"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi-three-question-screen",
+  "version": "0.2.0",
+  "name": "STEADIThreeQuestionScreen",
+  "title": "STEADI Three-Question Fall-Risk Screen",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-08-26",
+  "publisher": "HL7 Connectathon track proposal",
+  "description": "Synthetic, track-authored Questionnaire for testing SDC Observation-based extraction. The wording is based on the CDC STEADI three-question screen.",
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "linkId": "unsteady",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "version": "2.81",
+          "code": "100257-5",
+          "display": "Feel unsteady when standing or walking"
+        }
+      ],
+      "text": "Do you feel unsteady when standing or walking?",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "linkId": "worries-about-falling",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "version": "2.81",
+          "code": "97878-3",
+          "display": "Worried about falling"
+        }
+      ],
+      "text": "Do you worry about falling?",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "linkId": "fallen-in-past-year",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "version": "2.81",
+          "code": "52552-7",
+          "display": "Falls in the past year"
+        }
+      ],
+      "text": "Have you fallen in the past year?",
+      "type": "boolean",
+      "required": true
+    }
+  ]
+}

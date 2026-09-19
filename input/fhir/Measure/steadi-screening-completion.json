@@ -1,0 +1,104 @@
+{
+  "resourceType": "Measure",
+  "id": "steadi-screening-completion",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Measure/steadi-screening-completion",
+  "version": "0.1.0",
+  "name": "SteadiScreeningCompletion",
+  "title": "STEADI three-question screening completion (Connectathon)",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-19",
+  "publisher": "Alphora",
+  "description": "Track-authored patient-based proportion of eligible community-dwelling adults aged 65 or older seen in ambulatory care during the measurement period who have a completed three-question STEADI screen. Not CMS139FHIR and not claimed equivalent to it.",
+  "subjectCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/resource-types",
+        "code": "Patient"
+      }
+    ]
+  },
+  "library": [
+    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiMeasure|0.1.0"
+  ],
+  "scoring": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+        "code": "proportion"
+      }
+    ]
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+          "code": "process"
+        }
+      ]
+    }
+  ],
+  "improvementNotation": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+        "code": "increase"
+      }
+    ]
+  },
+  "guidance": "Synthetic Connectathon context only: community residence and exclusion of hospice, inpatient and long-term-care settings are supplied by the track context; AMB does not prove residence or hospice status. Age is calculated at the linked encounter start. A completed screen requires status completed and one usable Boolean answer for each required linkId in one response. Explicit false is complete; absent or incomplete responses do not enter the numerator. The measure counts a patient once when any linked eligible encounter has a completed screen within the period.",
+  "disclaimer": "Connectathon testing and education only. No clinical approval or CMS139FHIR equivalence is claimed.",
+  "group": [
+    {
+      "id": "screening-completion",
+      "population": [
+        {
+          "id": "initial-population",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population"
+              }
+            ]
+          },
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Initial Population"
+          }
+        },
+        {
+          "id": "denominator",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator"
+              }
+            ]
+          },
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Denominator"
+          }
+        },
+        {
+          "id": "numerator",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator"
+              }
+            ]
+          },
+          "criteria": {
+            "language": "text/cql",
+            "expression": "Numerator"
+          }
+        }
+      ]
+    }
+  ]
+}

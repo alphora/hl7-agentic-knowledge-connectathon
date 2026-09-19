@@ -1,0 +1,114 @@
+{
+  "status": "passed",
+  "runId": "4ce11ff2-e62c-4775-899f-9f3a9994f4b3",
+  "startedAt": "2026-09-19T21:24:39.175896+00:00",
+  "timezone": "UTC",
+  "cases": [
+    {
+      "fixtureId": "eligible-all-no",
+      "exitCode": 0,
+      "passed": true,
+      "actual": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 1
+      },
+      "expected": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 1
+      },
+      "measureScore": 1.0
+    },
+    {
+      "fixtureId": "eligible-incomplete-response",
+      "exitCode": 0,
+      "passed": true,
+      "actual": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 0
+      },
+      "expected": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 0
+      },
+      "measureScore": 0.0
+    },
+    {
+      "fixtureId": "eligible-no-response",
+      "exitCode": 0,
+      "passed": true,
+      "actual": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 0
+      },
+      "expected": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 0
+      },
+      "measureScore": 0.0
+    },
+    {
+      "fixtureId": "eligible-prior-fall-yes",
+      "exitCode": 0,
+      "passed": true,
+      "actual": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 1
+      },
+      "expected": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 1
+      },
+      "measureScore": 1.0
+    },
+    {
+      "fixtureId": "eligible-unsteady-yes",
+      "exitCode": 0,
+      "passed": true,
+      "actual": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 1
+      },
+      "expected": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 1
+      },
+      "measureScore": 1.0
+    },
+    {
+      "fixtureId": "younger-than-65",
+      "exitCode": 0,
+      "passed": true,
+      "actual": {
+        "initial-population": 0,
+        "denominator": 0,
+        "numerator": 0
+      },
+      "expected": {
+        "initial-population": 0,
+        "denominator": 0,
+        "numerator": 0
+      },
+      "measureScore": null
+    }
+  ],
+  "limits": [
+    "Synthetic track context; no general clinical deployment qualification",
+    "Independent participant interoperability testing remains pending"
+  ],
+  "engineSha256": "9870fc867547f65518c5cd6e698ace77b60a9e98797ed38330c25d06cbf5cb2e",
+  "inputs": {
+    "input/cql/SteadiMeasure.cql": "ef49b98702b981c428f854ae4a1c62d8703e42c2c2aa5dc26d7aee542655f0e1",
+    "input/fhir/Measure/steadi-screening-completion.json": "5c37ed0612711f3864c41fc69a15573bbe26dc1c634f4130f6ee8e0f8cdf99cf",
+    "generated/companions/Library/SteadiMeasure.json": "9ea060797c86ec4ec143d2f47a9aa4df07b71a4f6fdfb3392e1755cf8a9bd2e0"
+  }
+}

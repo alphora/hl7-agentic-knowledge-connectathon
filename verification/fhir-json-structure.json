@@ -1,0 +1,127 @@
+{
+  "runId": "7ed8210d-4cfa-492e-a1b1-3debae43914e",
+  "status": "passed",
+  "validator": "jsonschema4.25.1/Draft6",
+  "schema": {
+    "url": "https://hl7.org/fhir/R4/fhir.schema.json.zip",
+    "archiveSha256": "75e5560da3cf503895a44c8ca7af17a83b4cca6c2cb5ba1883d2aec0d1cb5ac6",
+    "schemaSha256": "2230406893b4cf002a4ee1e5e2bbeca22ac5d2d4931b3e9ef7b9594bbc376a01"
+  },
+  "scope": "FHIR4.0.1 JSON structure only; not terminology/profile/invariant validation or source fidelity",
+  "resources": [
+    {
+      "path": "input/fhir/Measure/steadi-screening-completion.json",
+      "resourceType": "Measure",
+      "sha256": "5c37ed0612711f3864c41fc69a15573bbe26dc1c634f4130f6ee8e0f8cdf99cf",
+      "errors": []
+    },
+    {
+      "path": "input/fhir/Questionnaire/steadi-three-question-screen.json",
+      "resourceType": "Questionnaire",
+      "sha256": "7c569b2853f1bed847549962a2e765c8c7f5d2685894c832fa010d94471535d5",
+      "errors": []
+    },
+    {
+      "path": "input/fhir/ValueSet/steadi-screen-items.json",
+      "resourceType": "ValueSet",
+      "sha256": "3e34e586c29c26e81ed88dea77534cd6300c2f81b7b84aecb95a14838ff96a0e",
+      "errors": []
+    },
+    {
+      "path": "generated/companions/Evidence/exercise-fall-rate.json",
+      "resourceType": "Evidence",
+      "sha256": "6efb8446abd3ebfbb7100e6e36b97109283091e9105116e06a027354753d4442",
+      "errors": []
+    },
+    {
+      "path": "generated/companions/Evidence/multifactorial-fall-rate.json",
+      "resourceType": "Evidence",
+      "sha256": "d1d04b1fbf52c8a7c4b1abe962b28ed12ec6d53402bbd12a477836964957bc82",
+      "errors": []
+    },
+    {
+      "path": "generated/companions/EvidenceVariable/exercise-fall-rate-population.json",
+      "resourceType": "EvidenceVariable",
+      "sha256": "fd22b56565a4d1c4512ade2c7e2a80d01f263bd73f1cad7437291001d9f38f3d",
+      "errors": []
+    },
+    {
+      "path": "generated/companions/EvidenceVariable/exercise-interventions.json",
+      "resourceType": "EvidenceVariable",
+      "sha256": "7d59c433aacf3e08aa29244324715179a3056fa704b3ab66e5f7b2dba677652c",
+      "errors": []
+    },
+    {
+      "path": "generated/companions/EvidenceVariable/incident-fall-rate.json",
+      "resourceType": "EvidenceVariable",
+      "sha256": "f46519cfcbf3af930a8260fceca5c256b1b984410065521d045cf3245d34a821",
+      "errors": []
+    },
+    {
+      "path": "generated/companions/EvidenceVariable/multifactorial-fall-rate-population.json",
+      "resourceType": "EvidenceVariable",
+      "sha256": "8e03d34e4eee98f8222cb3199dffde2bc0f377efebd338d03c00314e96a243b0",
+      "errors": []
+    },
+    {
+      "path": "generated/companions/EvidenceVariable/multifactorial-interventions.json",
+      "resourceType": "EvidenceVariable",
+      "sha256": "e619d53e9285e6ab7a8ece9e17b0bb75296227e2cd518233f057da737464d9c4",
+      "errors": []
+    },
+    {
+      "path": "generated/companions/EvidenceVariable/steadi-track-population.json",
+      "resourceType": "EvidenceVariable",
+      "sha256": "11047c5875a24e789dcdc801137ad84de45007702798c2317e2f922ea7bf8f15",
+      "errors": []
+    },
+    {
+      "path": "generated/companions/EvidenceVariable/trial-comparator.json",
+      "resourceType": "EvidenceVariable",
+      "sha256": "0c1c428c4e983a5fdd8597ea1c05a912a5588b2e92e3ab83465b14d7d59e8c83",
+      "errors": []
+    },
+    {
+      "path": "generated/companions/Library/SteadiMeasure.json",
+      "resourceType": "Library",
+      "sha256": "9ea060797c86ec4ec143d2f47a9aa4df07b71a4f6fdfb3392e1755cf8a9bd2e0",
+      "errors": []
+    },
+    {
+      "path": "verification/measure-native/eligible-all-no.json",
+      "resourceType": "MeasureReport",
+      "sha256": "4023398f2562de8ae61849c38b788f8f65c6afc52e381696f3dd2d52cdfa20dc",
+      "errors": []
+    },
+    {
+      "path": "verification/measure-native/eligible-incomplete-response.json",
+      "resourceType": "MeasureReport",
+      "sha256": "d71e0fa18766fd7b7d970a82f08fdc651cffabe8c67362d7d7b0a937b6df2ba6",
+      "errors": []
+    },
+    {
+      "path": "verification/measure-native/eligible-no-response.json",
+      "resourceType": "MeasureReport",
+      "sha256": "ff961919d4366192873c9eaf1520f5c5ef137a6f022ab5fe8091411a0be365f2",
+      "errors": []
+    },
+    {
+      "path": "verification/measure-native/eligible-prior-fall-yes.json",
+      "resourceType": "MeasureReport",
+      "sha256": "aed69f7f9cb9e6bef7e69da60a9b68833d3e546e6baf3617e2365fc0d57f194f",
+      "errors": []
+    },
+    {
+      "path": "verification/measure-native/eligible-unsteady-yes.json",
+      "resourceType": "MeasureReport",
+      "sha256": "6c01802722fa2c15e8e3a5913e158e8d8a7fb551f39f87c0d17bfbe12c767bec",
+      "errors": []
+    },
+    {
+      "path": "verification/measure-native/younger-than-65.json",
+      "resourceType": "MeasureReport",
+      "sha256": "28e612c15932f0e7209edf1e44b6e42659b1ad38973da1caef70c77b28b57e86",
+      "errors": []
+    }
+  ]
+}
