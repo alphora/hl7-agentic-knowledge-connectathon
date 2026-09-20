@@ -68,27 +68,42 @@ concept "Has Fall Answer":
 - definition is "Fallen In Past Year" has a value.
 - shape reduction is most recent.
 
+// Named assessment exports: local selected-answer semantics only.
+// A or not A is true for a known Boolean and unknown for a missing answer.
+// This preserves null for incomplete screening without an invented input.
 criterion "In Screening Population":
 - when ("Age 65 Or Older").
-criterion "All Three Answers Present":
+criterion "Completed Three Question Screen":
 - when ("Has Unsteady Answer" and "Has Worries Answer" and "Has Fall Answer").
-criterion "Any Positive Screening Answer":
-- when ("Unsteady" or "Worries About Falling" or "Fallen In Past Year").
+criterion "Answer Evidence Available":
+- when (("Unsteady" or not "Unsteady") and ("Worries About Falling" or not "Worries About Falling") and ("Fallen In Past Year" or not "Fallen In Past Year")).
+criterion "At Increased Fall Risk":
+- when ("Answer Evidence Available" and ("Unsteady" or "Worries About Falling" or "Fallen In Past Year")).
+criterion "Exercise Intervention Applicable":
+- when ("In Screening Population" and "At Increased Fall Risk").
+criterion "Consider Multifactorial Intervention":
+- when ("Exercise Intervention Applicable").
+criterion "Initial Population":
+- when ("In Screening Population").
+criterion "Denominator":
+- when ("Initial Population").
+criterion "Numerator":
+- when ("Denominator" and "Completed Three Question Screen").
 
 activity "Exercise Guidance":
 - request CPGCommunicationRequest.
 - with `Exercise interventions are recommended for community-dwelling adults 65 years or older at increased risk of falls (USPSTF grade B). This is guidance, not an intervention order.`.
-activity "Consider Multifactorial Intervention":
+activity "Multifactorial Intervention Guidance":
 - request CPGCommunicationRequest.
 - with `Individualize whether to offer a multifactorial intervention, considering prior falls, comorbidities and patient preferences (USPSTF grade C). This is guidance, not an intervention order.`.
 
 decision "Screening Guidance":
 - when "In Screening Population" then:
-  - when "All Three Answers Present" then:
-    - when "Any Positive Screening Answer" then:
+  - when "Completed Three Question Screen" then:
+    - when "At Increased Fall Risk" then:
       all:
       - recommend activity "Exercise Guidance".
-      - recommend activity "Consider Multifactorial Intervention".
+      - recommend activity "Multifactorial Intervention Guidance".
       end.
     end.
   end.
