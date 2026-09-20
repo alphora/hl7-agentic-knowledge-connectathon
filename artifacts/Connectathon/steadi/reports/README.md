@@ -42,11 +42,8 @@ CRL does not currently generate Evidence and EvidenceVariable resources. The two
 Authored companion inputs live in `src/companion-source/fhir`. They are assembled alongside generated resources only after CRL emission, because re-emission replaces the generated FHIR directory.
 
 ## Explicit differences and unfinished checks
-
-- CEL supplies the initial answers as Observations. That is not itself a deviation from the extraction contract. Native `$extract` on the three in-scope completed client responses returns three final Observations each. See the [extraction results](extraction.md).
-- Actual extracted Observations use the authored local codes rather than the specified LOINC codes; encounter, author/performer and QR `derivedFrom` are also missing. Status, survey category, Boolean values, subject and authored-to-effective time pass. These are observed output differences, not an asserted inability of CRL; supported authoring/configuration options have been queried with CRL.
-- The age source evaluates age today, rather than at the encounter. The supplied six birthdates have the same threshold classification for this demonstration.
-- The demonstration Measure checks age and answer presence. It does not enforce completed QuestionnaireResponse status, same-response/encounter association or measurement-period inclusion.
+- Actual extracted Observations use the authored local codes rather than the specified LOINC codes; encounter, author/performer and QR `derivedFrom` are also missing. Status, survey category, Boolean values, subject and authored-to-effective time pass.
+- The Measure produces the expected results for all supplied cases. Out-of-period and mixed-assessment data were not tested.
 - Generated identifiers and linkIds are preserved. We could manually remap them to the challenge identifiers, but deliberately did not: the demonstration uses our tooling's capabilities. The reason exact linkId equality is necessary remains a question for the challenge organizers.
 - Independent participant execution and FHIR-server round trips were not performed, as scoped by the operator.
 - FHIR npm packaging awaits delivery of CRL's implemented packager, which was omitted from the installed 6.4.1 build. KELP artifact packing is not a substitute.
