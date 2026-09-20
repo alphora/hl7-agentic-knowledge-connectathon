@@ -1,0 +1,94 @@
+// Connectathon STEADI demonstration. Clinical logic is authored here.
+// The supplied fixture contract establishes community-dwelling ambulatory context,
+// excludes hospice/long-term care, and supplies one screen per encounter.
+// Patient age uses the supported age-today projection. Retrospective encounter-age
+// evaluation and original QuestionnaireResponse status association are not claimed.
+library "Steadi".
+
+terminology "STEADI Question Codes":
+- system is `http://loinc.org`.
+- code is `100257-5` display is `Feel unsteady when standing or walking`.
+- code is `97878-3` display is `Worried about falling`.
+- code is `52552-7` display is `Falls in the past year`.
+// Declaring terminology does not claim the emitted local-answer profiles carry
+// these external question codes. See the concrete code-binding probe/readout.
+
+concept "Age 65 Or Older":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- shape reduction is most recent.
+- source representation:
+  - type is Patient.
+  - value projection is age today at least 65 years.
+
+concept "Unsteady":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- code is `unsteady`.
+- shape reduction is most recent.
+presentation for "Unsteady":
+- question text is "Do you feel unsteady when standing or walking?".
+
+concept "Worries About Falling":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- code is `worries-about-falling`.
+- shape reduction is most recent.
+presentation for "Worries About Falling":
+- question text is "Do you worry about falling?".
+
+concept "Fallen In Past Year":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- code is `fallen-in-past-year`.
+- shape reduction is most recent.
+presentation for "Fallen In Past Year":
+- question text is "Have you fallen in the past year?".
+
+concept "Has Unsteady Answer":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- definition is "Unsteady" has a value.
+- shape reduction is most recent.
+concept "Has Worries Answer":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- definition is "Worries About Falling" has a value.
+- shape reduction is most recent.
+concept "Has Fall Answer":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- definition is "Fallen In Past Year" has a value.
+- shape reduction is most recent.
+
+criterion "In Screening Population":
+- when ("Age 65 Or Older").
+criterion "All Three Answers Present":
+- when ("Has Unsteady Answer" and "Has Worries Answer" and "Has Fall Answer").
+criterion "Any Positive Screening Answer":
+- when ("Unsteady" or "Worries About Falling" or "Fallen In Past Year").
+
+activity "Exercise Guidance":
+- request CPGCommunicationRequest.
+- with `Exercise interventions are recommended for community-dwelling adults 65 years or older at increased risk of falls (USPSTF grade B). This is guidance, not an intervention order.`.
+activity "Consider Multifactorial Intervention":
+- request CPGCommunicationRequest.
+- with `Individualize whether to offer a multifactorial intervention, considering prior falls, comorbidities and patient preferences (USPSTF grade C). This is guidance, not an intervention order.`.
+
+decision "Screening Guidance":
+- when "In Screening Population" then:
+  - when "All Three Answers Present" then:
+    - when "Any Positive Screening Answer" then:
+      all:
+      - recommend activity "Exercise Guidance".
+      - recommend activity "Consider Multifactorial Intervention".
+      end.
+    end.
+  end.
