@@ -1,11 +1,11 @@
 {
-  "at": "2026-09-20T13:55:22.776Z",
+  "at": "2026-09-20T14:18:55.374Z",
   "basis": {
     "cel": "61be2ff2870cf5efb4c9bd5959bd2f2b26aa629d",
     "cql": "b54fced74365f7c049c7ab176ca9a77d563d2496",
     "crl": "af2fbbdecc8ad7edbdc9869c1ca19658310950ad",
     "fhir": "db4c2cac5a04e0e5fdfa885dd43e10c418c3ff16",
-    "qa": "3a7e34bb242607801b9829a751c465736587a965"
+    "qa": "3cfe53aa39751030227c80ee874dba47bd54bbd8"
   },
   "by": "rob@alphora.com",
   "entity": "report",
