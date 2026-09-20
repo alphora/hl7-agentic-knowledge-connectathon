@@ -1,5 +1,11 @@
 {
-  "name": "steadi",
-  "version": "0.0.0",
-  "private": true
+    "name":  "steadi",
+    "version":  "0.0.0",
+    "private":  true,
+    "crl":  {
+                "canonicalBase":  "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir",
+                "date":  "2026-09-20",
+                "status":  "draft",
+                "experimental":  true
+            }
 }
