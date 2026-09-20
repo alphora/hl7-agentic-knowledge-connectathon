@@ -1,0 +1,54 @@
+Text extraction adapted from the National Cancer Institute
+Original source title: Chemotherapy for Breast Cancer
+Original source URL: https://www.cancer.gov/types/breast/treatment/chemotherapy
+Retrieved at: 2026-09-19T15:24:40+00:00
+Source displayed date: December 2, 2025
+Format: selected unstructured source prose; whitespace normalized and link destinations retained.
+Excluded: tables, images/figures/captions, page navigation, scripts, styling, and unselected sections.
+This is a static extraction, not the complete or maintained original publication.
+Reuse policy: https://www.cancer.gov/policies/copyright-reuse
+
+[Source selector: article .cgdp-field-intro-text]
+Chemotherapy (chemo) uses drugs to stop the growth of cancer cells, either by killing the cells or stopping them from dividing. Learn about what to expect when receiving chemotherapy at Chemotherapy to Treat Cancer <https://www.cancer.gov/about-cancer/treatment/types/chemotherapy>.
+
+[Source selector: article .cgdp-article-body]
+Who gets chemotherapy for breast cancer?
+Many people with breast cancer get chemotherapy but not everyone. For example, some people with early-stage breast cancer <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/446564> that does not have a high risk of recurrence <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45861> may not get chemotherapy at all.
+Multigene tests <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/775581> such as Oncotype DX <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/737122> and MammaPrint <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/737131> can help determine if you are likely to benefit from chemotherapy. If these tests show you are unlikely to benefit from chemotherapy, you can skip it without increasing the chance of recurrence. Learn more about multigene tests at How Breast Cancer Is Diagnosed <https://www.cancer.gov/types/breast/diagnosis>. Learn about other biomarker tests at Tests for Breast Cancer Biomarkers <https://www.cancer.gov/types/breast/diagnosis/breast-cancer-biomarker-tests>.
+When is chemotherapy for breast cancer given?
+Chemotherapy for breast cancer may be given at different times in your treatment. You might get it after surgery or before surgery. It can also be given if your disease cannot be treated with surgery or if the disease comes back (recurs) after initial treatment.
+Chemotherapy after surgery for breast cancer
+After surgery to remove breast cancer, some people may receive chemotherapy. Chemotherapy is given to kill any remaining cancer cells to lower the risk of recurrence. Chemotherapy after surgery may be called adjuvant chemotherapy.
+Your doctor may recommend chemotherapy after surgery if you have:
+- high-grade <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/386205> breast cancer (grade 3)
+- breast cancer that has spread to the lymph nodes <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45762>
+- triple-negative breast cancer <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/639916>
+- inflammatory breast cancer <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45313>
+Chemotherapy before surgery for breast cancer
+Sometimes chemotherapy is given before surgery. It may be given to shrink large tumors to make breast-conserving surgery <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45626> possible for people who would have otherwise needed a mastectomy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45777>. It may also be given to reduce the number of lymph nodes that need to be removed during surgery or to lower the risk of recurrence. Chemotherapy before surgery may be called neoadjuvant chemotherapy.
+Your doctor may recommend chemotherapy before surgery if you have:
+- high-grade breast cancer (grade 3)
+- breast cancer that has spread to the lymph nodes
+- a large breast cancer
+- HER2-positive <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/737998> breast cancer
+- triple-negative breast cancer
+- inflammatory breast cancer
+Chemotherapy drugs used for breast cancer
+Chemotherapy drugs used to treat breast cancer include:
+- anthracyclines <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/44916>, such as doxorubicin <https://www.cancer.gov/about-cancer/treatment/drugs/doxorubicinhydrochloride>, liposomal doxorubicin <https://www.cancer.gov/about-cancer/treatment/drugs/doxorubicin-hydrochloride-liposome>, and epirubicin <https://www.cancer.gov/about-cancer/treatment/drugs/epirubicinhydrochloride>
+- capecitabine <https://www.cancer.gov/about-cancer/treatment/drugs/capecitabine>
+- cyclophosphamide <https://www.cancer.gov/about-cancer/treatment/drugs/cyclophosphamide>
+- eribulin <https://www.cancer.gov/about-cancer/treatment/drugs/eribulinmesylate>
+- fluorouracil (5-FU) <https://www.cancer.gov/about-cancer/treatment/drugs/fluorouracil>
+- gemcitabine <https://www.cancer.gov/about-cancer/treatment/drugs/gemcitabinehydrochloride>
+- ixabepilone <https://www.cancer.gov/about-cancer/treatment/drugs/ixabepilone>
+- methotrexate <https://www.cancer.gov/about-cancer/treatment/drugs/methotrexate-sodium>
+- platinum agents, such as cisplatin <https://www.cancer.gov/about-cancer/treatment/drugs/cisplatin> or carboplatin <https://www.cancer.gov/about-cancer/treatment/drugs/carboplatin>
+- taxanes <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/46138>, such as paclitaxel <https://www.cancer.gov/about-cancer/treatment/drugs/paclitaxel>, docetaxel <https://www.cancer.gov/about-cancer/treatment/drugs/docetaxel>, and albumin-bound paclitaxel <https://www.cancer.gov/about-cancer/treatment/drugs/nanoparticlepaclitaxel>
+Combinations of chemotherapy drugs may be used. Other chemotherapy drugs not listed here may also be used.
+Chemotherapy may also be combined with other kinds of drugs. For example:
+- HER2-positive breast cancer may be treated with both chemotherapy and targeted therapy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/270742>, such as trastuzumab <https://www.cancer.gov/about-cancer/treatment/drugs/trastuzumab> and pertuzumab <https://www.cancer.gov/about-cancer/treatment/drugs/pertuzumab>. Learn more about these drugs at Targeted Therapy for Breast Cancer <https://www.cancer.gov/types/breast/treatment/targeted-therapy>.
+- Triple-negative breast cancer may be treated with both chemotherapy and the immunotherapy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45729> drug pembrolizumab <https://www.cancer.gov/about-cancer/treatment/drugs/pembrolizumab>. Learn more about Triple-Negative Breast Cancer Treatment <https://www.cancer.gov/types/breast/treatment/triple-negative-breast-cancer>.
+- Hormone receptor–positive <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/788029> breast cancer may be treated with both chemotherapy and hormone therapy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45110>. Learn more about Hormone Therapy for Breast Cancer <https://www.cancer.gov/types/breast/treatment/hormone-therapy>.
+Side effects of chemotherapy
+The most common side effect of chemotherapy is fatigue <https://www.cancer.gov/about-cancer/treatment/side-effects/fatigue>, which is feeling exhausted or extremely tired. Other side effects may include hair loss <https://www.cancer.gov/about-cancer/treatment/side-effects/hair-loss>, mouth sores <https://www.cancer.gov/about-cancer/treatment/side-effects/mouth-throat>, and nausea <https://www.cancer.gov/about-cancer/treatment/side-effects/nausea-vomiting>. Learn more about the side effects of cancer treatment <https://www.cancer.gov/about-cancer/treatment/side-effects> and the steps you can take to manage or prevent them.

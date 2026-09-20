@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "fixtureId": "tnbc-metastasis-missing",
+  "fhirVersion": "4.0.1",
+  "bundle": "bundle.json",
+  "evaluationContext": {
+    "patientId": "patient-tnbc-metastasis-missing",
+    "evaluationDateTime": "2026-06-15T12:00:00Z"
+  },
+  "assertions": [
+    {
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "Has Nonmetastatic Disease",
+      "expected": {
+        "type": "Boolean",
+        "value": null,
+        "semantics": "unknown"
+      }
+    },
+    {
+      "expression": "In Neoadjuvant Review Population",
+      "expected": {
+        "type": "Boolean",
+        "value": null,
+        "semantics": "unknown"
+      }
+    },
+    {
+      "expression": "Is Triple Negative",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "Has Clinically Positive Nodes",
+      "expected": {
+        "type": "Boolean",
+        "value": false
+      }
+    },
+    {
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": {
+        "type": "Boolean",
+        "value": null,
+        "semantics": "unknown"
+      }
+    }
+  ]
+}

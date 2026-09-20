@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-09-19",
+  "method": "ReasonHub FHIR CodeSystem/$lookup",
+  "system": "http://loinc.org",
+  "version": "2.81",
+  "results": [
+    {
+      "code": "85337-4",
+      "display": "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "85339-0",
+      "display": "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "48676-1",
+      "display": "HER2 [Interpretation] in Tissue",
+      "status": "ACTIVE"
+    },
+    {
+      "code": "21889-1",
+      "display": "Size Tumor",
+      "status": "ACTIVE",
+      "exampleUcumUnits": "mm"
+    },
+    {
+      "code": "33728-7",
+      "display": "Size.maximum dimension in Tumor",
+      "status": "ACTIVE",
+      "exampleUcumUnits": "cm"
+    }
+  ],
+  "limitations": [
+    "Code lookups verify code identity and status, not ValueSet membership, clinical suitability, or mCODE profile conformance.",
+    "ReasonHub returned not-found for LOINC answer codes LA6576-8, LA6577-6, LA11884-6. The public LOINC 85339-0 page independently lists these as Positive, Negative, and Indeterminate. No terminology-service validation of those answer codes is claimed."
+  ],
+  "answerCodeReference": "https://loinc.org/85339-0/"
+}

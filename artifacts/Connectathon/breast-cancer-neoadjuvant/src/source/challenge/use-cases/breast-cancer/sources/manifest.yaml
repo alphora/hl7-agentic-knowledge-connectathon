@@ -1,0 +1,287 @@
+version: 1.0.0
+status: draft
+retrieved_at: '2026-09-19'
+checksum_algorithm: sha256
+scope: Educational TNBC neoadjuvant-review use case; not exhaustive current clinical guidance
+included_sources:
+- id: nci-breast-treatment-pdq
+  title: Breast Cancer Treatment (PDQ®)–Health Professional Version
+  canonical_url: https://www.cancer.gov/types/breast/hp/breast-treatment-pdq
+  role:
+  - professional-evidence-summary
+  - receptor-status
+  - neoadjuvant-context
+  locators:
+  - section_id: _1027
+    heading: Stages I, II, and III Triple-Negative Breast Cancer (TNBC)
+    selection: Opening definition paragraph _3053 only
+  - section_id: _2896
+    heading: Preoperative therapy for TNBC
+    selection: Section prose including Chemotherapy and Immunotherapy subsections; tables/images excluded
+  boundary: Professional evidence synthesis, not a formal clinical-practice recommendation. Static selected excerpts
+    are not the complete maintained PDQ summary. Trial eligibility and results do not independently establish this
+    demonstration's decision rule.
+  local_path: use-cases/breast-cancer/sources/raw/nci-breast-treatment-pdq.txt
+  media_type: text/plain; charset=utf-8
+  bytes: 5510
+  sha256: b05f58a44e72c1d7371c5b9bb1fa133079ceff38327feb84885d02cfe397a287
+  source_displayed_dates:
+  - April 25, 2025
+  original_response:
+    retrieved_at: '2026-09-19T15:24:38+00:00'
+    resolved_url: https://www.cancer.gov/types/breast/hp/breast-treatment-pdq
+    http_status: 200
+    media_type: text/html
+    bytes: 812893
+    sha256: 862f78faa9e4cbedc19f9ffcaeba97e029ba51b72bb3b81fc67aa8b6adf96904
+    stored: false
+    reason_not_stored: Original HTML includes images and potentially separately credited material; retain selected
+      permitted prose only.
+  extraction:
+    script: use-cases/breast-cancer/sources/retrieve.py
+    selectors:
+    - '#_3053'
+    - '#_2896'
+    excluded_elements:
+    - audio
+    - figcaption
+    - figure
+    - iframe
+    - img
+    - nav
+    - script
+    - style
+    - svg
+    - table
+    - video
+    - .cgdp-image
+    transformations:
+    - Select source prose only
+    - Normalize whitespace and preserve paragraph/list boundaries
+    - Append resolved link destinations
+    - Prepend extraction and attribution metadata
+  redistribution_basis: NCI text reuse permission, except separately credited material. Selected prose excludes
+    all tables, images and figures; attributed and labeled as an adaptation.
+  license_url: https://www.cancer.gov/policies/copyright-reuse
+- id: nci-breast-tnm
+  title: TNM Staging for Breast Cancer
+  canonical_url: https://www.cancer.gov/types/breast/stages/tnm-staging-system
+  role:
+  - patient-education
+  - staging-context
+  locators:
+  - heading: Tumor (T)
+  - heading: Lymph node (N)
+  - heading: Metastasis (M)
+  boundary: Patient education. T size boundaries provide context; do not infer T category from size alone when invasion
+    features matter. The N section explicitly describes pathological staging and must not be used to derive clinical
+    cN from node counts.
+  local_path: use-cases/breast-cancer/sources/raw/nci-breast-tnm.txt
+  media_type: text/plain; charset=utf-8
+  bytes: 7504
+  sha256: c1027bf765c6f7d67af1c5942e7825aa2e1d98aef78ed7a34d04b5ed62e7f882
+  source_displayed_dates:
+  - August 6, 2025
+  original_response:
+    retrieved_at: '2026-09-19T15:24:40+00:00'
+    resolved_url: https://www.cancer.gov/types/breast/stages/tnm-staging-system
+    http_status: 200
+    media_type: text/html
+    bytes: 45292
+    sha256: 7017a6bce86d5002d2b380247557fe6c3a34a4b32f9ca456a7f25d692ca45b7e
+    stored: false
+    reason_not_stored: Original HTML includes images and potentially separately credited material; retain selected
+      permitted prose only.
+  extraction:
+    script: use-cases/breast-cancer/sources/retrieve.py
+    selectors:
+    - article .cgdp-field-intro-text
+    - article .cgdp-article-body
+    excluded_elements:
+    - audio
+    - figcaption
+    - figure
+    - iframe
+    - img
+    - nav
+    - script
+    - style
+    - svg
+    - table
+    - video
+    - .cgdp-image
+    transformations:
+    - Select source prose only
+    - Normalize whitespace and preserve paragraph/list boundaries
+    - Append resolved link destinations
+    - Prepend extraction and attribution metadata
+  redistribution_basis: NCI text reuse permission, except separately credited material. Selected prose excludes
+    all tables, images and figures; attributed and labeled as an adaptation.
+  license_url: https://www.cancer.gov/policies/copyright-reuse
+- id: nci-breast-chemotherapy
+  title: Chemotherapy for Breast Cancer
+  canonical_url: https://www.cancer.gov/types/breast/treatment/chemotherapy
+  role:
+  - patient-education
+  - treatment-timing
+  locators:
+  - section_id: when-is-chemotherapy-for-breast-cancer-given
+    heading: When is chemotherapy for breast cancer given?
+  boundary: Patient education explains treatment timing and discussions; it is not sufficient authority for regimen
+    selection or precise eligibility thresholds.
+  local_path: use-cases/breast-cancer/sources/raw/nci-breast-chemotherapy.txt
+  media_type: text/plain; charset=utf-8
+  bytes: 7847
+  sha256: 283e6361008c83fb9b2d77c50769c394f76c77690c41f186341bf45fb842e6d8
+  source_displayed_dates:
+  - December 2, 2025
+  original_response:
+    retrieved_at: '2026-09-19T15:24:40+00:00'
+    resolved_url: https://www.cancer.gov/types/breast/treatment/chemotherapy
+    http_status: 200
+    media_type: text/html
+    bytes: 50326
+    sha256: c6b8070453f65a4d332ae8bcf029c92865ad31b0edc1b6990d52e8be07eca067
+    stored: false
+    reason_not_stored: Original HTML includes images and potentially separately credited material; retain selected
+      permitted prose only.
+  extraction:
+    script: use-cases/breast-cancer/sources/retrieve.py
+    selectors:
+    - article .cgdp-field-intro-text
+    - article .cgdp-article-body
+    excluded_elements:
+    - audio
+    - figcaption
+    - figure
+    - iframe
+    - img
+    - nav
+    - script
+    - style
+    - svg
+    - table
+    - video
+    - .cgdp-image
+    transformations:
+    - Select source prose only
+    - Normalize whitespace and preserve paragraph/list boundaries
+    - Append resolved link destinations
+    - Prepend extraction and attribution metadata
+  redistribution_basis: NCI text reuse permission, except separately credited material. Selected prose excludes
+    all tables, images and figures; attributed and labeled as an adaptation.
+  license_url: https://www.cancer.gov/policies/copyright-reuse
+- id: nci-breast-immunotherapy
+  title: Immunotherapy for Breast Cancer
+  canonical_url: https://www.cancer.gov/types/breast/treatment/immunotherapy
+  role:
+  - patient-education
+  - updated-treatment-context
+  locators:
+  - heading: Who gets immunotherapy for breast cancer?
+  - heading: When is immunotherapy for breast cancer given?
+  boundary: Patient education supporting contemporary context; stage/subtype statements are not a substitute for
+    the ASCO update and individualized oncology review.
+  local_path: use-cases/breast-cancer/sources/raw/nci-breast-immunotherapy.txt
+  media_type: text/plain; charset=utf-8
+  bytes: 3114
+  sha256: 0bd67e80b77dc21f11aaa626b7cff02bfadd9e19afff08a5988a19d46e8b4858
+  source_displayed_dates:
+  - December 2, 2025
+  original_response:
+    retrieved_at: '2026-09-19T15:24:40+00:00'
+    resolved_url: https://www.cancer.gov/types/breast/treatment/immunotherapy
+    http_status: 200
+    media_type: text/html
+    bytes: 39119
+    sha256: 0b5f2d67674695fc7ab26904e82c3cd9fdeedd4406210c9ca8f685d924490470
+    stored: false
+    reason_not_stored: Original HTML includes images and potentially separately credited material; retain selected
+      permitted prose only.
+  extraction:
+    script: use-cases/breast-cancer/sources/retrieve.py
+    selectors:
+    - article .cgdp-field-intro-text
+    - article .cgdp-article-body
+    excluded_elements:
+    - audio
+    - figcaption
+    - figure
+    - iframe
+    - img
+    - nav
+    - script
+    - style
+    - svg
+    - table
+    - video
+    - .cgdp-image
+    transformations:
+    - Select source prose only
+    - Normalize whitespace and preserve paragraph/list boundaries
+    - Append resolved link destinations
+    - Prepend extraction and attribution metadata
+  redistribution_basis: NCI text reuse permission, except separately credited material. Selected prose excludes
+    all tables, images and figures; attributed and labeled as an adaptation.
+  license_url: https://www.cancer.gov/policies/copyright-reuse
+link_only_references:
+- id: asco-neoadjuvant-2021
+  title: 'Neoadjuvant Chemotherapy, Endocrine Therapy, and Targeted Therapy for Breast Cancer: ASCO Guideline'
+  canonical_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8274745/
+  doi: 10.1200/JCO.20.03399
+  publication_year: 2021
+  role:
+  - clinical-practice-guideline
+  - historical-rule-anchor
+  locators:
+  - recommendation: '3.1'
+    topic: 'TNBC: clinically node-positive and/or at least T1c disease'
+  - recommendation: '3.2'
+    topic: 'cT1a or cT1b N0 TNBC: not routine neoadjuvant therapy outside a clinical trial'
+  - recommendation: '3.4'
+    topic: Historical immunotherapy evidence statement; read with 2022 rapid update
+  verified_at: '2026-09-19'
+  access_note: Full PMC article read and recommendation numbering verified during the task; subsequent requests
+    sometimes returned a browser challenge.
+  reason: ASCO copyright; full guideline is not redistributed.
+  boundary: The exercise borrows a broad neoadjuvant-review trigger from recommendations 3.1/3.2. The 2021 immunotherapy
+    statement must not be presented as current guidance.
+- id: asco-pembrolizumab-update-2022
+  title: 'Use of Immune Checkpoint Inhibitor Pembrolizumab in the Treatment of High-Risk, Early-Stage Triple-Negative
+    Breast Cancer: ASCO Guideline Rapid Recommendation Update'
+  canonical_url: https://ascopubs.org/doi/abs/10.1200/JCO.22.00503
+  metadata_url: https://pubmed.ncbi.nlm.nih.gov/35417251/
+  doi: 10.1200/JCO.22.00503
+  publication_year: 2022
+  role:
+  - clinical-practice-guideline-update
+  - updated-treatment-context
+  locators:
+  - section: Abstract / Recommendation
+    topic: Pembrolizumab with neoadjuvant chemotherapy followed by adjuvant pembrolizumab for the specified high-risk
+      early-stage TNBC population
+  verified_at: '2026-09-19'
+  access_note: Publisher search result exposed the abstract recommendation; PubMed search verified metadata. Direct
+    publisher full-page access returned an error; no full-text snapshot or exhaustive update search claimed.
+  reason: ASCO copyright; link-only recommendation update.
+  boundary: Review alongside the 2021 guideline; its treatment-specific eligibility must not be equated with the
+    broader educational review flag. No claim that these sources exhaust guidance available in 2026.
+- id: nci-text-reuse-policy
+  title: Reuse of NCI Information
+  canonical_url: https://www.cancer.gov/policies/copyright-reuse
+  role:
+  - redistribution-policy
+  verified_at: '2026-09-19'
+  reason: Permission reference for included attributed text extractions; separately credited material is excluded.
+- id: hl7-cpg-ig
+  title: Clinical Practice Guidelines Implementation Guide
+  canonical_url: https://hl7.org/fhir/uv/cpg/
+  role:
+  - fhir-guidance
+  reason: Standards reference; this corpus does not claim CPG conformance.
+- id: hl7-mcode
+  title: Minimal Common Oncology Data Elements (mCODE) Implementation Guide
+  canonical_url: https://hl7.org/fhir/us/mcode/
+  role:
+  - oncology-data-model-reference
+  reason: Standards reference; demonstration fixtures do not claim mCODE conformance.

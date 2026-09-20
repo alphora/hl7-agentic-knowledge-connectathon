@@ -1,0 +1,33 @@
+Text extraction adapted from the National Cancer Institute
+Original source title: Breast Cancer Treatment (PDQ®)–Health Professional Version
+Original source URL: https://www.cancer.gov/types/breast/hp/breast-treatment-pdq
+Retrieved at: 2026-09-19T15:24:38+00:00
+Source displayed date: April 25, 2025
+Format: selected unstructured source prose; whitespace normalized and link destinations retained.
+Excluded: tables, images/figures/captions, page navigation, scripts, styling, and unselected sections.
+This is a static extraction, not the complete or maintained original publication.
+Reuse policy: https://www.cancer.gov/policies/copyright-reuse
+
+[Source selector: #_3053]
+TNBC is defined as the absence of staining for ER, PR, and HER2. TNBC is insensitive to some of the most effective therapies for patients with breast cancer, including HER2-directed therapy such as trastuzumab and endocrine therapies such as tamoxifen or AIs.
+
+[Source selector: #_2896]
+Preoperative therapy for TNBC
+Patients with TNBC are frequently treated with preoperative systemic therapy.
+Chemotherapy
+Promising results have been observed with the addition of carboplatin to anthracycline/taxane combination chemotherapy regimens in patients with TNBC.
+Evidence (adding carboplatin to an anthracycline/taxane–based chemotherapy regimen in patients with TNBC):
+- In the GeparSixto <https://www.cancer.gov/clinicaltrials/NCT01426880> trial (NCT01426880), carboplatin was added to an anthracycline/taxane–based backbone.[103 <https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#cit/section_6.103>][Level of evidence B3 <https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=810031&version=HealthProfessional&language=English>]
+- Higher pCR rates were observed with the addition of carboplatin to an anthracycline/taxane–based backbone compared with anthracycline/taxane alone (36.9% vs. 53.2%; P = .005) in patients with TNBC.
+- Patients with BRCA1 or BRCA2 variants had a higher rate of pCR, which was not increased by the addition of carboplatin (66.7% in the nonplatinum arm vs. 65.7% in the platinum-containing arm).
+- The 3-year DFS rate was higher for patients with TNBC randomly assigned to the carboplatin arm (86.1% vs. 75.8%; HR, 0.56; 95% CI, 0.34−0.93), but OS did not differ.[104 <https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#cit/section_6.104>]
+- The more intensive regimen was also associated with increased toxicity and treatment discontinuations (39% vs. 48%).
+- The CALGB 40603 <https://www.cancer.gov/clinicaltrials/NCT00861705> trial (NCT00861705) compared an anthracycline/taxane backbone alone with an anthracycline/taxane backbone plus carboplatin in patients with stage II and stage III TNBC.[105 <https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#cit/section_6.105>][Level of evidence B3 <https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=810031&version=HealthProfessional&language=English>]
+- The pCR rate for the breast and axilla was 54% for the anthracycline/taxane backbone-plus-carboplatin group versus 41% for the anthracycline/taxane backbone-alone group (P = .0029).
+Immunotherapy
+Evidence (adding pembrolizumab to a chemotherapy regimen in patients with stage II or stage III TNBC):
+- The randomized, double blind, phase III KEYNOTE-522 <https://www.cancer.gov/clinicaltrials/NCT03036488> trial (NCT03036488) evaluated the addition of immunotherapy to neoadjuvant chemotherapy for patients with stage II and stage III TNBC.[106 <https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#cit/section_6.106>][Level of evidence B1 <https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=810025&version=HealthProfessional&language=English>] Participants were randomly assigned in a 2:1 ratio to receive neoadjuvant chemotherapy (paclitaxel plus carboplatin, followed by doxorubicin plus cyclophosphamide) with either neoadjuvant and adjuvant pembrolizumab or neoadjuvant and adjuvant placebo. Co-primary end points were pCR rate and EFS. The pCR rate, as reported at the time of the first interim analysis for the first 602 participants (pembrolizumab arm, n = 401; placebo arm, n = 201), favored the pembrolizumab arm.
+- A pCR was observed in 64.8% of patients in the pembrolizumab arm and 51.2% of patients in the placebo arm (estimated treatment difference, 13.6%; 95% CI, 5.4%−21.8%; P < .001). Approximately 80% of tumors were positive for programmed death-ligand 1 (PD-L1), but the benefits of pembrolizumab regarding pCR were observed regardless of PD-L1 status.
+- At the time of the fourth interim analysis, when the median follow-up was 39 months, an improved EFS was observed in patients who received pembrolizumab. The 36-month EFS rate was 84.5% for patients who received pembrolizumab and 76.8% for patients who received placebo. (HR, 0.63; 95% CI, 0.48–0.82; P < .001).[107 <https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#cit/section_6.107>][Level of evidence B1 <https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=810025&version=HealthProfessional&language=English>]
+- EFS data are immature.
+- Grade 3 or higher adverse events occurred in 76.8% of participants in the pembrolizumab arm and 72.2% of participants in the placebo arm. Serious treatment-related adverse events occurred in 32.5% of participants in the pembrolizumab arm and 19.5% of participants in the placebo arm. Grade 3 or higher skin rashes, infusion reactions, and adrenal insufficiency were more frequent in the pembrolizumab arm.

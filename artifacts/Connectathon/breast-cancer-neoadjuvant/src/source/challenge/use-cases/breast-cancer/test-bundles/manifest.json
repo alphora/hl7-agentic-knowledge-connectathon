@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0",
+  "fhirVersion": "4.0.1",
+  "evaluationDateTime": "2026-06-15T12:00:00Z",
+  "codeSystem": "code-system.json",
+  "sourceIds": [
+    "asco-neoadjuvant-2021",
+    "nci-breast-tnm"
+  ],
+  "expressions": [
+    "Has Active Confirmed Invasive Breast Cancer",
+    "Has Nonmetastatic Disease",
+    "In Neoadjuvant Review Population",
+    "Is Triple Negative",
+    "Has Clinically Positive Nodes",
+    "Has Clinical T1c Or Higher",
+    "Meets Tumor Or Node Criterion",
+    "Neoadjuvant TNBC Guidance Applicable"
+  ],
+  "cases": [
+    {
+      "id": "tnbc-t1c-n0",
+      "title": "TNBC, clinical T1c N0 M0",
+      "bundle": "cases/tnbc-t1c-n0/bundle.json",
+      "assertions": "cases/tnbc-t1c-n0/assertions.json",
+      "summary": "cases/tnbc-t1c-n0/SUMMARY.md"
+    },
+    {
+      "id": "tnbc-t1b-n0-10mm",
+      "title": "TNBC, exactly 10 mm, clinical T1b N0 M0",
+      "bundle": "cases/tnbc-t1b-n0-10mm/bundle.json",
+      "assertions": "cases/tnbc-t1b-n0-10mm/assertions.json",
+      "summary": "cases/tnbc-t1b-n0-10mm/SUMMARY.md"
+    },
+    {
+      "id": "tnbc-t1b-n1",
+      "title": "Small TNBC with clinically positive nodes",
+      "bundle": "cases/tnbc-t1b-n1/bundle.json",
+      "assertions": "cases/tnbc-t1b-n1/assertions.json",
+      "summary": "cases/tnbc-t1b-n1/SUMMARY.md"
+    },
+    {
+      "id": "her2-positive",
+      "title": "HER2-positive breast cancer",
+      "bundle": "cases/her2-positive/bundle.json",
+      "assertions": "cases/her2-positive/assertions.json",
+      "summary": "cases/her2-positive/SUMMARY.md"
+    },
+    {
+      "id": "er-positive",
+      "title": "ER-positive breast cancer",
+      "bundle": "cases/er-positive/bundle.json",
+      "assertions": "cases/er-positive/assertions.json",
+      "summary": "cases/er-positive/SUMMARY.md"
+    },
+    {
+      "id": "her2-missing",
+      "title": "HER2 result missing",
+      "bundle": "cases/her2-missing/bundle.json",
+      "assertions": "cases/her2-missing/assertions.json",
+      "summary": "cases/her2-missing/SUMMARY.md"
+    },
+    {
+      "id": "her2-equivocal",
+      "title": "HER2 interpretation unresolved",
+      "bundle": "cases/her2-equivocal/bundle.json",
+      "assertions": "cases/her2-equivocal/assertions.json",
+      "summary": "cases/her2-equivocal/SUMMARY.md"
+    },
+    {
+      "id": "tnbc-t1b-nodes-missing",
+      "title": "Small TNBC with missing nodal assessment",
+      "bundle": "cases/tnbc-t1b-nodes-missing/bundle.json",
+      "assertions": "cases/tnbc-t1b-nodes-missing/assertions.json",
+      "summary": "cases/tnbc-t1b-nodes-missing/SUMMARY.md"
+    },
+    {
+      "id": "tnbc-metastatic",
+      "title": "TNBC with distant metastasis",
+      "bundle": "cases/tnbc-metastatic/bundle.json",
+      "assertions": "cases/tnbc-metastatic/assertions.json",
+      "summary": "cases/tnbc-metastatic/SUMMARY.md"
+    },
+    {
+      "id": "tnbc-metastasis-missing",
+      "title": "TNBC without distant-metastasis assessment",
+      "bundle": "cases/tnbc-metastasis-missing/bundle.json",
+      "assertions": "cases/tnbc-metastasis-missing/assertions.json",
+      "summary": "cases/tnbc-metastasis-missing/SUMMARY.md"
+    },
+    {
+      "id": "diagnosis-absent",
+      "title": "Receptor and staging results without cancer diagnosis",
+      "bundle": "cases/diagnosis-absent/bundle.json",
+      "assertions": "cases/diagnosis-absent/assertions.json",
+      "summary": "cases/diagnosis-absent/SUMMARY.md"
+    },
+    {
+      "id": "tnbc-t1c-n0-cm",
+      "title": "TNBC, T1c N0 M0, size in centimeters",
+      "bundle": "cases/tnbc-t1c-n0-cm/bundle.json",
+      "assertions": "cases/tnbc-t1c-n0-cm/assertions.json",
+      "summary": "cases/tnbc-t1c-n0-cm/SUMMARY.md"
+    },
+    {
+      "id": "tnbc-t2-n0",
+      "title": "TNBC, clinical T2 N0 M0",
+      "bundle": "cases/tnbc-t2-n0/bundle.json",
+      "assertions": "cases/tnbc-t2-n0/assertions.json",
+      "summary": "cases/tnbc-t2-n0/SUMMARY.md"
+    }
+  ]
+}

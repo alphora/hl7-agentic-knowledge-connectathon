@@ -1,0 +1,148 @@
+{
+  "checkedAt": "2026-09-19",
+  "tool": "HL7 FHIR Validator",
+  "version": "6.10.2",
+  "gitVersion": "d06577dbc5c6",
+  "javaVersion": "25.0.2",
+  "packages": [
+    "hl7.fhir.r4.core#4.0.1",
+    "hl7.terminology.r4#6.2.0",
+    "hl7.fhir.uv.extensions.r4#5.2.0"
+  ],
+  "terminologyServer": null,
+  "command": "java -jar validator_cli-6.10.2.jar use-cases/breast-cancer/test-bundles/cases/*/bundle.json use-cases/breast-cancer/test-bundles/code-system.json -version 4.0.1 -tx n/a -output validator-results.json",
+  "originalReportSha256": "4659cb7aae40775842efdaf200676dbfc6eebf49b66ff5b196d72ebe2b83b6fa",
+  "counts": {
+    "fatal": 0,
+    "error": 0,
+    "warning": 215,
+    "information": 0
+  },
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "message": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+      "count": 114
+    },
+    {
+      "severity": "warning",
+      "message": "Best Practice Recommendation: In general, all observations should have a performer",
+      "count": 88
+    },
+    {
+      "severity": "warning",
+      "message": "Unable to validate code 'mm' in system 'http://unitsofmeasure.org' because the validator is running without terminology services",
+      "count": 12
+    },
+    {
+      "severity": "warning",
+      "message": "Unable to validate code 'cm' in system 'http://unitsofmeasure.org' because the validator is running without terminology services",
+      "count": 1
+    }
+  ],
+  "files": [
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/diagnosis-absent/bundle.json",
+      "sha256": "47b4a9b9e777e7e7cbb7421a2522ff6625667ec83c52e85befa4e07c5f312256",
+      "counts": {
+        "warning": 16
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/er-positive/bundle.json",
+      "sha256": "e7360e36ff8fa84bf4366a8ac10015c23eafad27dc9a9b88bc8dee7c52bc0c52",
+      "counts": {
+        "warning": 17
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/her2-equivocal/bundle.json",
+      "sha256": "88618142211b70c4f591f59ed9f43267445314959ba7d5c3231f75f6d584fb0b",
+      "counts": {
+        "warning": 17
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/her2-missing/bundle.json",
+      "sha256": "b87e799943cc624dbf2621014be97e11cc1e9c29b3ca05f40fa1f52c4ac9fb06",
+      "counts": {
+        "warning": 15
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/her2-positive/bundle.json",
+      "sha256": "ebcb876d9afa5366214c8ac119995540888074ea6b8e23ff5ee2d5e8a3bbbbb5",
+      "counts": {
+        "warning": 17
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/tnbc-metastasis-missing/bundle.json",
+      "sha256": "dd577cc4ab3e3c084b8ff5f15b00d63545a38abfe7944714459e073d59252568",
+      "counts": {
+        "warning": 15
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/tnbc-metastatic/bundle.json",
+      "sha256": "89eff2b47ea94f0c0f8bfe3a3286ffb24d4ad5ebc1cddc658fe55700ad8c64ed",
+      "counts": {
+        "warning": 17
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-n0-10mm/bundle.json",
+      "sha256": "c4efbdfb4027221eb84f59fca8284e0a76d8903ef00ea908d81d230b594d8c25",
+      "counts": {
+        "warning": 17
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-n1/bundle.json",
+      "sha256": "c012876b4437592b8d0bc68384254824d5d31b1bc5e154d105e9e13fb724fb09",
+      "counts": {
+        "warning": 17
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-nodes-missing/bundle.json",
+      "sha256": "1fb5fbb0b7e060915112fbae757e4e839e967291ce262510cba9a2a52bc42594",
+      "counts": {
+        "warning": 15
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/tnbc-t1c-n0-cm/bundle.json",
+      "sha256": "07b0bce9086f301d7b37791d6084ac2a920e2d10c82617f53f3178c3e5622bcd",
+      "counts": {
+        "warning": 17
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/tnbc-t1c-n0/bundle.json",
+      "sha256": "522452c9bcb586fe771208ef6955251bda5861c2cef2dcba8995abe97dae9928",
+      "counts": {
+        "warning": 17
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/cases/tnbc-t2-n0/bundle.json",
+      "sha256": "991476b1fac9ca94a00489dcd043005b3c455a6ad9245a4c1c3dcd9ec329dac0",
+      "counts": {
+        "warning": 17
+      }
+    },
+    {
+      "path": "use-cases/breast-cancer/test-bundles/code-system.json",
+      "sha256": "b2e45bab8f17ff8e258acd9314330866f5f5b5b81bba56184c75d63514a6edb3",
+      "counts": {
+        "warning": 1
+      }
+    }
+  ],
+  "limits": [
+    "Base R4 structural validation; no mCODE or CPG profile-conformance claim.",
+    "Terminology services disabled. Separate lookup evidence covers five LOINC observation codes only.",
+    "No CQL translation/execution, FHIR-server round trip, or clinical approval claimed."
+  ]
+}

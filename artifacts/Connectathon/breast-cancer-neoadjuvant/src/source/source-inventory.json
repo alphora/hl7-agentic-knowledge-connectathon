@@ -1,0 +1,284 @@
+{
+  "sourceRepository": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon",
+  "revision": "5034ccd6bc5971aa7e366b6b0df0b23caffe4f46",
+  "files": [
+    {
+      "path": "challenge/README.md",
+      "bytes": 4241,
+      "sha256": "1fe58e7f5845f2727dc605afdd9a0acec7c9dcd66dca06ccb0de39f6bfbb0282"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/README.md",
+      "bytes": 7741,
+      "sha256": "03cc2efee7d6a2beada0ae774bf81e3e3ce26115e5718e880dbf1742e9b345d2"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/scripts/validate_fixtures.py",
+      "bytes": 9713,
+      "sha256": "663bbead158de2b30587b3d1a3a08fa1a5b17edae2a8f232488109ca8386a871"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/sources/README.md",
+      "bytes": 5987,
+      "sha256": "38f396d84861a539f883b1d279d19503d4447201f887a3255397cec2babcb3d4"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/sources/manifest.yaml",
+      "bytes": 11623,
+      "sha256": "f8c505f9d0abed038117312354d1c54c2d1550f914d2e0eecc9047783b8904c7"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/sources/raw/nci-breast-chemotherapy.txt",
+      "bytes": 7847,
+      "sha256": "283e6361008c83fb9b2d77c50769c394f76c77690c41f186341bf45fb842e6d8"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/sources/raw/nci-breast-immunotherapy.txt",
+      "bytes": 3114,
+      "sha256": "0bd67e80b77dc21f11aaa626b7cff02bfadd9e19afff08a5988a19d46e8b4858"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/sources/raw/nci-breast-tnm.txt",
+      "bytes": 7504,
+      "sha256": "c1027bf765c6f7d67af1c5942e7825aa2e1d98aef78ed7a34d04b5ed62e7f882"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/sources/raw/nci-breast-treatment-pdq.txt",
+      "bytes": 5510,
+      "sha256": "b05f58a44e72c1d7371c5b9bb1fa133079ceff38327feb84885d02cfe397a287"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/sources/retrieve.py",
+      "bytes": 8597,
+      "sha256": "09e9847a7c767f5638f8bd589333b8bac147c1d97cd2e2b5d21b32dac8ed7709"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/README.md",
+      "bytes": 9119,
+      "sha256": "da98d976a570cef2f4e269f6ba379562a10750dd71503bb280ac2a8a3d1e9c99"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/diagnosis-absent/SUMMARY.md",
+      "bytes": 1655,
+      "sha256": "a22a7915134d77de6ffae65e46de24dcd08f33b9be68629275410ecd6eb96779"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/diagnosis-absent/assertions.json",
+      "bytes": 1576,
+      "sha256": "ba68be64920115a990ae60c6b36331a596e0337f475b65a5294eea2aa508f4d5"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/diagnosis-absent/bundle.json",
+      "bytes": 10110,
+      "sha256": "47b4a9b9e777e7e7cbb7421a2522ff6625667ec83c52e85befa4e07c5f312256"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/er-positive/SUMMARY.md",
+      "bytes": 1403,
+      "sha256": "722c84a948e867d67cf01ff3dbf151657c6c6b14b251a175d2f1afddaf5d79b4"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/er-positive/assertions.json",
+      "bytes": 1406,
+      "sha256": "95038fccf25e2e21020901bc3c5e0ce65443407ef95a345cb48bc85cc4e7cbe7"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/er-positive/bundle.json",
+      "bytes": 12450,
+      "sha256": "e7360e36ff8fa84bf4366a8ac10015c23eafad27dc9a9b88bc8dee7c52bc0c52"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/her2-equivocal/SUMMARY.md",
+      "bytes": 1438,
+      "sha256": "3111251d41e736b9eb21b7d8ae5253f2a27d5f433d31a4c0725c33640fe0c6de"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/her2-equivocal/assertions.json",
+      "bytes": 1474,
+      "sha256": "22e5e60530e5f95cc24d5eed6be5a021c2e4b4fd38fdbf749180b13bd493746f"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/her2-equivocal/bundle.json",
+      "bytes": 12677,
+      "sha256": "88618142211b70c4f591f59ed9f43267445314959ba7d5c3231f75f6d584fb0b"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/her2-missing/SUMMARY.md",
+      "bytes": 1362,
+      "sha256": "72793dd7204660d1d824696201f2a1b1fab9dc6393a98e77d0af24e7b3010bab"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/her2-missing/assertions.json",
+      "bytes": 1470,
+      "sha256": "1e6c8878a8f9a15bcdf0d47d7e3aa2a610feb045a36d07d2fbf9b65b6f64e4e4"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/her2-missing/bundle.json",
+      "bytes": 11199,
+      "sha256": "b87e799943cc624dbf2621014be97e11cc1e9c29b3ca05f40fa1f52c4ac9fb06"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/her2-positive/SUMMARY.md",
+      "bytes": 1395,
+      "sha256": "0b39408f93fe3f8c36bfbe24ea7f6f058bef16ffbd235fb0d65ba313e55195ed"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/her2-positive/assertions.json",
+      "bytes": 1410,
+      "sha256": "440b2d083bbf923b5342fd679834797f5a25a9003d65bb2d98c995df6c4d8abd"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/her2-positive/bundle.json",
+      "bytes": 12520,
+      "sha256": "ebcb876d9afa5366214c8ac119995540888074ea6b8e23ff5ee2d5e8a3bbbbb5"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-metastasis-missing/SUMMARY.md",
+      "bytes": 1442,
+      "sha256": "5ef98b09ab8b26a443088155d8135ac650c1f90070370787ef2b9ae89fff0998"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-metastasis-missing/assertions.json",
+      "bytes": 1524,
+      "sha256": "1a889aba05b2e2975c04c0fe9f3c1437507987d9c9bd4bd8a4367c5ebbc770f5"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-metastasis-missing/bundle.json",
+      "bytes": 11434,
+      "sha256": "dd577cc4ab3e3c084b8ff5f15b00d63545a38abfe7944714459e073d59252568"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-metastatic/SUMMARY.md",
+      "bytes": 1424,
+      "sha256": "ce1259a06f56bd5063536e7348d496ff2941d0907a52605d105e1009614a7c8e"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-metastatic/assertions.json",
+      "bytes": 1415,
+      "sha256": "4e72c0a52e2c9ce8322376832100e4d7a0238209a087c14a1606da70e078e732"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-metastatic/bundle.json",
+      "bytes": 12590,
+      "sha256": "89eff2b47ea94f0c0f8bfe3a3286ffb24d4ad5ebc1cddc658fe55700ad8c64ed"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-n0-10mm/SUMMARY.md",
+      "bytes": 1456,
+      "sha256": "904d16a72e14a400316c12c11a5df789299a8db124def6da7174bb9e187685bb"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-n0-10mm/assertions.json",
+      "bytes": 1417,
+      "sha256": "13fdf50fa62f74068e5166717af052fa8a11228af87bf7bc6423be08fae51509"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-n0-10mm/bundle.json",
+      "bytes": 12625,
+      "sha256": "c4efbdfb4027221eb84f59fca8284e0a76d8903ef00ea908d81d230b594d8c25"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-n1/SUMMARY.md",
+      "bytes": 1387,
+      "sha256": "1677d02bc68026c81ef41b03c6f699e744453f87c2d4250c879f80ad69c05747"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-n1/assertions.json",
+      "bytes": 1404,
+      "sha256": "20016091bf93ed41d6bcad4fefa041e95346370aa338740c65ed02758055592d"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-n1/bundle.json",
+      "bytes": 12449,
+      "sha256": "c012876b4437592b8d0bc68384254824d5d31b1bc5e154d105e9e13fb724fb09"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-nodes-missing/SUMMARY.md",
+      "bytes": 1420,
+      "sha256": "ef9c949f790a0ba6f45beca4543bd607dde2b16ada0cac3c8420d829af7f9aba"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-nodes-missing/assertions.json",
+      "bytes": 1522,
+      "sha256": "d1e8b3cf06fe238c221abe49a74753b8ff70120e7c60d1b6d45e233ce6a32ffa"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-nodes-missing/bundle.json",
+      "bytes": 11402,
+      "sha256": "1fb5fbb0b7e060915112fbae757e4e839e967291ce262510cba9a2a52bc42594"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1c-n0-cm/SUMMARY.md",
+      "bytes": 1424,
+      "sha256": "ed0960171a712607b014f35ee78cb65c7d92a7222e71e2eb790c32e5250124ae"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1c-n0-cm/assertions.json",
+      "bytes": 1410,
+      "sha256": "0b7dd1ba497f7eecd4a5d05de8778610ddbec90bfa617d9607155cf131535ebf"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1c-n0-cm/bundle.json",
+      "bytes": 12556,
+      "sha256": "07b0bce9086f301d7b37791d6084ac2a920e2d10c82617f53f3178c3e5622bcd"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1c-n0/SUMMARY.md",
+      "bytes": 1371,
+      "sha256": "5f2ce05a54a4b82c92d066854b8838751741bf0edabfefef8776c6e2cdf4b123"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1c-n0/assertions.json",
+      "bytes": 1404,
+      "sha256": "a67f0362a70b86384aabb8e4ad1c230d6743c1c929b8c0810c67ef5b61a4516d"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1c-n0/bundle.json",
+      "bytes": 12450,
+      "sha256": "522452c9bcb586fe771208ef6955251bda5861c2cef2dcba8995abe97dae9928"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t2-n0/SUMMARY.md",
+      "bytes": 1438,
+      "sha256": "29201dc818511078b62fab1a9c5bcc9ddd55d56a890a3c1e40b43bf277ebbcec"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t2-n0/assertions.json",
+      "bytes": 1402,
+      "sha256": "6a8e5377825d801533674da652ef677d5e8a8b34854d25e3ef835684e947e160"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t2-n0/bundle.json",
+      "bytes": 12414,
+      "sha256": "991476b1fac9ca94a00489dcd043005b3c455a6ad9245a4c1c3dcd9ec329dac0"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/code-system.json",
+      "bytes": 3998,
+      "sha256": "b2e45bab8f17ff8e258acd9314330866f5f5b5b81bba56184c75d63514a6edb3"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/test-bundles/manifest.json",
+      "bytes": 3929,
+      "sha256": "a43b743547859c5b0f5e7dd66c405e958f54f7ac9db1e0f4e4951aa9171e86fb"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/validation/README.md",
+      "bytes": 2953,
+      "sha256": "9d1750f75042a6d88717f271982715b951526dfd6f33a075cff1150853579f6f"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/validation/fhir-validator-summary.json",
+      "bytes": 5113,
+      "sha256": "b4ed737cdf637a4a01db6b39bed745aa301b5ce56e619e1a8f69bd135eaf8e3f"
+    },
+    {
+      "path": "challenge/use-cases/breast-cancer/validation/terminology-lookups.json",
+      "bytes": 1323,
+      "sha256": "eac54d045c4ec02c004b3a7feca3f5101a32367b88a85faabce692d2d41b4527"
+    }
+  ],
+  "sourceAuthority": "Operator-selected challenge case, supplied source packet, fixture contract and participant requirements",
+  "retrieval": "54 previously pinned case files copied byte-for-byte; only the pinned top-level README is fetched if absent",
+  "referencedDocumentsFetched": []
+}

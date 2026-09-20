@@ -1,0 +1,337 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-diagnosis-absent",
+  "meta": {
+    "security": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-06-15T12:00:00Z",
+  "entry": [
+    {
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Patient/patient-diagnosis-absent",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-diagnosis-absent",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Synthetic",
+            "given": [
+              "diagnosis-absent"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1970-01-01"
+      }
+    },
+    {
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Observation/stage-t-diagnosis-absent",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "stage-t-diagnosis-absent",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+              "code": "clinical-t",
+              "display": "Clinical T category"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-diagnosis-absent"
+        },
+        "effectiveDateTime": "2026-06-01T09:00:00Z",
+        "issued": "2026-06-02T10:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+              "code": "cT1c"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Observation/stage-n-diagnosis-absent",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "stage-n-diagnosis-absent",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+              "code": "clinical-n",
+              "display": "Clinical N category"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-diagnosis-absent"
+        },
+        "effectiveDateTime": "2026-06-01T09:00:00Z",
+        "issued": "2026-06-02T10:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+              "code": "cN0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Observation/stage-m-diagnosis-absent",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "stage-m-diagnosis-absent",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+              "code": "clinical-m",
+              "display": "Clinical M category"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-diagnosis-absent"
+        },
+        "effectiveDateTime": "2026-06-01T09:00:00Z",
+        "issued": "2026-06-02T10:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+              "code": "cM0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Observation/er-diagnosis-absent",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "er-diagnosis-absent",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85337-4",
+              "display": "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+              "version": "2.81"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-diagnosis-absent"
+        },
+        "effectiveDateTime": "2026-06-01T09:00:00Z",
+        "issued": "2026-06-02T10:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA6577-6",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Observation/pr-diagnosis-absent",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "pr-diagnosis-absent",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85339-0",
+              "display": "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+              "version": "2.81"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-diagnosis-absent"
+        },
+        "effectiveDateTime": "2026-06-01T09:00:00Z",
+        "issued": "2026-06-02T10:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA6577-6",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Observation/her2-diagnosis-absent",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "her2-diagnosis-absent",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48676-1",
+              "display": "HER2 [Interpretation] in Tissue",
+              "version": "2.81"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-diagnosis-absent"
+        },
+        "effectiveDateTime": "2026-06-01T09:00:00Z",
+        "issued": "2026-06-02T10:00:00Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA6577-6",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Observation/size-diagnosis-absent",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "size-diagnosis-absent",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "21889-1",
+              "display": "Size Tumor",
+              "version": "2.81"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-diagnosis-absent"
+        },
+        "effectiveDateTime": "2026-06-01T09:00:00Z",
+        "issued": "2026-06-02T10:00:00Z",
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "33728-7",
+                  "version": "2.81",
+                  "display": "Size.maximum dimension in Tumor"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 15,
+              "unit": "mm",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

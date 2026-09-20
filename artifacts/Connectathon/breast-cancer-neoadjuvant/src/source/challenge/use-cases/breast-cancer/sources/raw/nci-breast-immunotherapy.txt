@@ -1,0 +1,25 @@
+Text extraction adapted from the National Cancer Institute
+Original source title: Immunotherapy for Breast Cancer
+Original source URL: https://www.cancer.gov/types/breast/treatment/immunotherapy
+Retrieved at: 2026-09-19T15:24:40+00:00
+Source displayed date: December 2, 2025
+Format: selected unstructured source prose; whitespace normalized and link destinations retained.
+Excluded: tables, images/figures/captions, page navigation, scripts, styling, and unselected sections.
+This is a static extraction, not the complete or maintained original publication.
+Reuse policy: https://www.cancer.gov/policies/copyright-reuse
+
+[Source selector: article .cgdp-field-intro-text]
+Immunotherapy helps a person’s immune system <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/46356> fight cancer. Learn about what to expect when receiving immunotherapy at Immunotherapy to Treat Cancer <https://www.cancer.gov/about-cancer/treatment/types/immunotherapy>.
+
+[Source selector: article .cgdp-article-body]
+Who gets immunotherapy for breast cancer?
+You may receive immunotherapy if you have triple-negative breast cancer. Learn about Triple-Negative Breast Cancer <https://www.cancer.gov/types/breast/breast-cancer-types/triple-negative>.
+Sometimes it is not clear if immunotherapy will be helpful. Your doctor may suggest biomarker <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45618> tests to help predict your response to immunotherapy. Learn more about Tests for Breast Cancer Biomarkers <https://www.cancer.gov/types/breast/diagnosis/breast-cancer-biomarker-tests>.
+When is immunotherapy for breast cancer given?
+Immunotherapy for breast cancer may be given at different times in your treatment. You might get it with chemotherapy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45214> before surgery to help shrink the tumor so that it can be removed more easily during surgery.
+After the doctor removes all the cancer that can be seen at the time of the surgery, you may receive immunotherapy alone to kill any cancer cells that are left.
+Immunotherapy may also be given with chemotherapy for metastatic breast cancer or recurrent breast cancer that cannot be removed by surgery. Learn more about Metastatic Breast Cancer <https://www.cancer.gov/types/breast/stages/metastatic-breast-cancer> or Breast Cancer Recurrence <https://www.cancer.gov/types/breast/breast-cancer-survivorship/recurrence>.
+Immunotherapy drugs used for breast cancer
+Pembrolizumab <https://www.cancer.gov/about-cancer/treatment/drugs/pembrolizumab> is the only immunotherapy drug approved to treat breast cancer.
+Side effects of immunotherapy
+The most common side effects of immunotherapy are rash, diarrhea <https://www.cancer.gov/about-cancer/treatment/side-effects/diarrhea>, and fatigue <https://www.cancer.gov/about-cancer/treatment/side-effects/fatigue>, which is feeling exhausted or extremely tired. Learn more about the side effects of immunotherapy <https://www.cancer.gov/about-cancer/treatment/types/immunotherapy/side-effects> and steps you can take to manage or prevent them.
