@@ -6,6 +6,17 @@
                 "canonicalBase":  "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir",
                 "date":  "2026-09-20",
                 "status":  "draft",
-                "experimental":  true
-            }
+                "experimental":  true,
+                "packageId":  "org.alphora.connectathon.steadi",
+                "fhirDependencies":  {
+                                         "hl7.terminology.r4":  "6.5.0",
+                                         "hl7.fhir.uv.crmi":  "1.0.0",
+                                         "hl7.fhir.uv.cql":  "1.0.0",
+                                         "hl7.fhir.uv.cpg":  "2.0.0",
+                                         "hl7.fhir.r4.core":  "4.0.1",
+                                         "hl7.fhir.uv.sdc":  "3.0.0"
+                                     }
+            },
+    "author":  "Alphora",
+    "description":  "STEADI screening and falls-prevention guidance demonstration for the HL7 Agentic Knowledge Connectathon."
 }
