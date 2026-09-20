@@ -1,45 +1,21 @@
-# Alphora STEADI Connectathon implementation
+# Alphora HL7 Agentic Knowledge Connectathon
 
-An AI-assisted clinical knowledge engineering framework that turns source guidance into executable FHIR content, with traceable reasoning, reproducible verification, and human review.
+A source-to-execution knowledge workflow: author in CRL and CEL, generate CQL and FHIR, and manage artifacts and verification with KELP.
 
-This implements the supplied STEADI challenge at upstream revision `5034ccd6bc5971aa7e366b6b0df0b23caffe4f46`. All patient data are synthetic; this is not clinically approved content.
+This repository is being rebuilt as a KELP content project for the STEADI and breast-cancer neoadjuvant challenges. The previous direct-authored assessment implementation has been removed from the active project and moved to local temporary staging. It is not the demo deliverable.
 
-The operator authorized direct implementation for capabilities not available through the CRL authoring path. This submission therefore contains explicitly authored CQL/FHIR, with a small adapter over the pinned native runtime. These artifacts are not represented as CRL-generated.
+## Demo status
 
-- `Steadi.cql` exposes the eight required expressions, preserving Boolean and unknown results.
-- `PlanDefinition` and two `ActivityDefinition` resources produce evidence-linked exercise and individualized multifactorial guidance through native `$apply` processing.
-- `SteadiMeasure.cql` and `Measure` count screening completion, evaluated through the native measure operation.
-- Two `Evidence` and seven `EvidenceVariable` resources describe the supplied research findings and population definitions.
-- The shared Questionnaire is byte-identical to the supplied version. Native SDC extraction is tested with an explicit metadata adapter; raw and adapted outputs are retained.
-- An `ImplementationGuide`, terminology `ValueSet`, deterministic FHIR NPM package, and PUT transaction Bundle complete the artifact inventory.
+Rebuild in progress. Artifact intake, lifecycle saves and runnable demo verification are not yet complete. The calculation-only STEADI source currently exposes a CRL generation defect; diagnostic Observation support for the breast-cancer contract remains incomplete. The preserved Measure definition still needs its replacement generated-logic connection completed. Do not treat the current main branch as a finished demonstration.
 
-[Download the FHIR package](dist/org.alphora.steadi-0.1.0.tgz) or [knowledge transaction Bundle](dist/knowledge-transaction.json). The Bundle contains knowledge definitions, not patient test data.
+Each use case will live under `artifacts/`, with source, CRL, CEL, generated CQL/FHIR, tests and a KELP-managed `reports/` folder. Use the KELP and CRL VS Code extensions to load and run the artifacts; exact verified commands will be added after execution.
 
-See [implementation plan](docs/steadi-plan.md), [assessment and measure contract](docs/assessment-and-measure.md), [runtime adapter](docs/native-adapter.md), [evidence summary](docs/evidence-summary.md), and [task state](docs/task-state.json).
+## Companion resources
 
-Canonical base: `https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir`.
+Measures are supported by our established workflow. CRL generates the supporting logic and artifacts; the agent manually authors the `Measure` resource alongside them. Because that resource is straightforward to author, direct generation has not been a priority, although it is on the backlog. This demonstration uses that established approach.
 
-## Reproduce
+`Evidence` and `EvidenceVariable` are also authored manually alongside the other FHIR resources. Direct CRL support for those resource families is under consideration. `MeasureReport` results belong with the tests alongside `Questionnaire` and `QuestionnaireResponse`.
 
-Use Node 22+, Python 3.11+, Java/Javac 23 and the pinned native engine in [toolchain.json](docs/toolchain.json). Run from this repository:
+Generated Questionnaire identifiers are preserved. We intentionally do not patch generated identifiers to match the challenge's fixed linkIds. Exact capability differences and actual test results will be documented in the per-artifact reports.
 
-```powershell
-python tools/bootstrap.py --engine-jar <path-to-pinned-jar>
-npm ci --ignore-scripts
-python -m pip install --target .cache/python -r requirements-dev.txt
-node tools/build-measure.mjs
-node tools/build-assessment.mjs
-python tools/build-evidence.py
-python tools/build-guidance.py
-python tools/build-package.py
-python tools/test-verification-guards.py
-python tools/verify-measure-native.py --jar <path-to-pinned-jar>
-python tools/verify-assessment-native.py --jar <path-to-pinned-jar>
-python tools/validate-companions.py
-```
-
-The scripts verify original fixture hashes. Assessment runs compare all 48 supplied assertions; native runs also check extraction and guidance. Additional controls test answer/change/clear, response isolation, encounter selection, age boundaries, and malformed or mismatched input. The native `measure` command corresponds to FHIR `Measure/$evaluate-measure`.
-
-The bootstrap retrieves only pinned supplied inputs and technical dependencies. The local Windows build is exercised; clean-cache cross-platform reproduction remains unverified. JSON-schema checks establish R4 JSON structure, not complete profile/terminology/invariant validation. Cross-participant FHIR storage/retrieval checks and human clinical review remain pending. Independent participants may supply the additional interoperability evidence; two local server installations are not a prerequisite.
-
-The shared Questionnaire is reproduced under the upstream [MIT license](licenses/upstream-MIT.txt); its metadata remain intact. Cached third-party clinical source snapshots and private KE workspace material are not distributed in this package.
+This is a connectathon demonstration, not a claim of clinical validation or production readiness. Cross-participant storage roundtrips and human clinical review are not included in this demonstration work.

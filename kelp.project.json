@@ -1,0 +1,143 @@
+{
+  "project": {
+    "schemaVersion": 1,
+    "requiresKelp": "0.9.0",
+    "remote": "origin",
+    "artifactBranchPrefix": "artifact/",
+    "structure": {
+      "entities": [
+        {
+          "key": "refined-source",
+          "folder": "src/refined-source",
+          "producer": "ai",
+          "needs": [
+            "source"
+          ],
+          "humanEditable": true
+        },
+        {
+          "key": "anchor-source",
+          "folder": "src/anchor-source",
+          "producer": "script",
+          "humanEditable": false,
+          "needs": [
+            "refined-source"
+          ]
+        },
+        {
+          "key": "crl",
+          "folder": "src/crl",
+          "producer": "ai",
+          "needs": [
+            "refined-source"
+          ],
+          "humanEditable": true
+        },
+        {
+          "key": "cel",
+          "folder": "src/cel",
+          "producer": "ai",
+          "needs": [
+            "crl"
+          ],
+          "humanEditable": true
+        },
+        {
+          "key": "cql",
+          "folder": "src/cql",
+          "producer": "script",
+          "needs": [
+            "crl"
+          ],
+          "humanEditable": true
+        },
+        {
+          "key": "fhir",
+          "folder": "src/fhir",
+          "producer": "script",
+          "needs": [
+            "crl",
+            "companion-source"
+          ],
+          "humanEditable": true
+        },
+        {
+          "key": "qa",
+          "folder": "tests",
+          "producer": "script",
+          "needs": [
+            "cel",
+            "cql",
+            "fhir",
+            "companion-source"
+          ],
+          "humanEditable": true
+        },
+        {
+          "key": "provenance",
+          "folder": "src/provenance",
+          "producer": "ai",
+          "humanEditable": false,
+          "needs": [
+            "anchor-source",
+            "crl",
+            "cel"
+          ]
+        },
+        {
+          "key": "companion-source",
+          "folder": "src/companion-source",
+          "producer": "ai",
+          "humanEditable": true,
+          "needs": [
+            "refined-source",
+            "crl"
+          ]
+        },
+        {
+          "key": "medical-validation",
+          "folder": "src/medical-validation",
+          "producer": "human",
+          "humanEditable": true,
+          "needs": [
+            "anchor-source",
+            "provenance",
+            "crl",
+            "cel"
+          ],
+          "open": {
+            "kind": "command",
+            "command": "crl.medicalValidation.show",
+            "label": "Open in Medical Validation",
+            "requires": [
+              "cel"
+            ]
+          }
+        },
+        {
+          "key": "report",
+          "folder": "reports",
+          "producer": "ai",
+          "humanEditable": true,
+          "needs": [
+            "crl",
+            "cel",
+            "cql",
+            "fhir",
+            "qa"
+          ]
+        }
+      ]
+    },
+    "ui": {
+      "lenses": [
+        {
+          "name": "Medical Validation",
+          "entities": [
+            "medical-validation"
+          ]
+        }
+      ]
+    }
+  }
+}
