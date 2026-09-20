@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-20T14:15:39.363Z",
+  "basis": {
+    "cel": "887420fa80c94902a9944cec3affbf4878ae658a",
+    "companion-source": "d0a1f025da5534cffc9cd4abe051f7b7de5d90d9",
+    "cql": "3bcef9a628ac790a1cd5fcd86a5a20f68f540580",
+    "fhir": "cbd48d713f0be43d21c98e79e8b3e83cd9590a74"
+  },
+  "by": "rob@alphora.com",
+  "entity": "qa",
+  "method": "release",
+  "schemaVersion": 1
+}
