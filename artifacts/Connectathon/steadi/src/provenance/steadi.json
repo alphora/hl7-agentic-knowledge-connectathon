@@ -57,7 +57,7 @@
                                      ],
                       "role":  "criterion",
                       "roleStatus":  "confirmed",
-                      "rationale":  "The completed-answer guard and transparent risk criterion require three usable local Boolean values, preserve false versus missing, and gate guidance. Original shared QuestionnaireResponse status/association is not implemented by this link.",
+                      "rationale":  "The completion guard checks that each of the three Boolean answers is present; after that guard, the decision tests their direct OR and produces both guidance recommendations for any Yes. It does not require all three answers to be Yes. Named assessment exports separately preserve unknown for incomplete screens. Original shared QuestionnaireResponse status/association is not established by this link.",
                       "linkRequirement":  "must-link-decision"
                   },
                   {

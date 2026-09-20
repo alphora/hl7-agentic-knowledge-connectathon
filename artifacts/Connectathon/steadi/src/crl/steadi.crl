@@ -100,7 +100,7 @@ activity "Multifactorial Intervention Guidance":
 decision "Screening Guidance":
 - when "In Screening Population" then:
   - when "Completed Three Question Screen" then:
-    - when "At Increased Fall Risk" then:
+    - when ("Unsteady" or "Worries About Falling" or "Fallen In Past Year") then:
       all:
       - recommend activity "Exercise Guidance".
       - recommend activity "Multifactorial Intervention Guidance".

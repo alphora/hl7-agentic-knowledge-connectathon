@@ -291,8 +291,26 @@ define "CRL branch CriterionRef L102C9":
 define "Not CRL branch CriterionRef L102C9":
   not ("Completed Three Question Screen")
 
-define "CRL branch CriterionRef L103C11":
-  "At Increased Fall Risk"
+define "CRL branch Or L103C12":
+  FHIRHelpers.ToBoolean(("Unsteady").value as FHIR.boolean) or FHIRHelpers.ToBoolean(("Worries About Falling").value as FHIR.boolean) or FHIRHelpers.ToBoolean(("Fallen In Past Year").value as FHIR.boolean)
 
-define "Not CRL branch CriterionRef L103C11":
-  not ("At Increased Fall Risk")
+define "Not CRL branch Or L103C12":
+  not (FHIRHelpers.ToBoolean(("Unsteady").value as FHIR.boolean) or FHIRHelpers.ToBoolean(("Worries About Falling").value as FHIR.boolean) or FHIRHelpers.ToBoolean(("Fallen In Past Year").value as FHIR.boolean))
+
+define "CRL branch Ref L103C12":
+  FHIRHelpers.ToBoolean(("Unsteady").value as FHIR.boolean)
+
+define "Not CRL branch Ref L103C12":
+  not (FHIRHelpers.ToBoolean(("Unsteady").value as FHIR.boolean))
+
+define "CRL branch Ref L103C26":
+  FHIRHelpers.ToBoolean(("Worries About Falling").value as FHIR.boolean)
+
+define "Not CRL branch Ref L103C26":
+  not (FHIRHelpers.ToBoolean(("Worries About Falling").value as FHIR.boolean))
+
+define "CRL branch Ref L103C53":
+  FHIRHelpers.ToBoolean(("Fallen In Past Year").value as FHIR.boolean)
+
+define "Not CRL branch Ref L103C53":
+  not (FHIRHelpers.ToBoolean(("Fallen In Past Year").value as FHIR.boolean))

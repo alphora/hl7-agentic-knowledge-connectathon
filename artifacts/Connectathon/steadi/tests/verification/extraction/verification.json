@@ -6,6 +6,7 @@
       "case": "younger-than-65",
       "invocationExpected": true,
       "invoked": true,
+      "scope": "supplemental generated-form reuse; not an apply-produced QR",
       "templateReason": "Age-gated apply emitted no Questionnaire. Client reuses the unchanged generated eligible-all-no Questionnaire for the age-independent extraction test, with the younger case all-false answers.",
       "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaire/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
       "questionnaireSourceSha256": "41333df8591866b516b683b36cdcaf803223ac57ea90164da757147e8db875b0",
@@ -288,13 +289,13 @@
           "pass": false
         }
       ],
-      "pass": false,
-      "scope": "supplemental generated-form reuse; not an apply-produced QR"
+      "pass": false
     },
     {
       "case": "eligible-all-no",
       "invocationExpected": true,
       "invoked": true,
+      "scope": "generated-output check",
       "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaire/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
       "questionnaireSourceSha256": "41333df8591866b516b683b36cdcaf803223ac57ea90164da757147e8db875b0",
       "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
@@ -576,13 +577,13 @@
           "pass": false
         }
       ],
-      "pass": false,
-      "scope": "generated-output check"
+      "pass": false
     },
     {
       "case": "eligible-unsteady-yes",
       "invocationExpected": true,
       "invoked": true,
+      "scope": "generated-output check",
       "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-unsteady-yes-eligible-patient/questionnaire/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient.json",
       "questionnaireSourceSha256": "8a1526b12f34ad5aa323409661f5fa6aadef9795598e4740e8f1a3656a9e54d7",
       "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-unsteady-yes-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient.json",
@@ -864,13 +865,13 @@
           "pass": false
         }
       ],
-      "pass": false,
-      "scope": "generated-output check"
+      "pass": false
     },
     {
       "case": "eligible-prior-fall-yes",
       "invocationExpected": true,
       "invoked": true,
+      "scope": "generated-output check",
       "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/questionnaire/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient.json",
       "questionnaireSourceSha256": "07f886669d924b187c9f920542120aecab7a0e90d2b02945fceba630bdad8008",
       "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient.json",
@@ -1152,22 +1153,21 @@
           "pass": false
         }
       ],
-      "pass": false,
-      "scope": "generated-output check"
+      "pass": false
     },
     {
       "case": "eligible-incomplete-response",
       "invocationExpected": false,
       "invoked": false,
-      "reason": "Client does not submit incomplete or absent responses to baseline extraction.",
-      "scope": "generated-output check"
+      "scope": "generated-output check",
+      "reason": "Client does not submit incomplete or absent responses to baseline extraction."
     },
     {
       "case": "eligible-no-response",
       "invocationExpected": false,
       "invoked": false,
-      "reason": "Client does not submit incomplete or absent responses to baseline extraction.",
-      "scope": "generated-output check"
+      "scope": "generated-output check",
+      "reason": "Client does not submit incomplete or absent responses to baseline extraction."
     }
   ],
   "allContractFieldsPass": false,

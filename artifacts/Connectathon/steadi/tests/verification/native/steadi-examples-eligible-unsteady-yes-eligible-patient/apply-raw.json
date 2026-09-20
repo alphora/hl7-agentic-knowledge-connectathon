@@ -62,8 +62,8 @@
                 }
               } ],
               "action": [ {
-                "title": "At Increased Fall Risk",
-                "description": "At Increased Fall Risk",
+                "title": "Unsteady or Worries About Falling or Fallen In Past Year",
+                "description": "Unsteady or Worries About Falling or Fallen In Past Year",
                 "code": [ {
                   "coding": [ {
                     "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
@@ -74,7 +74,7 @@
                   "kind": "applicability",
                   "expression": {
                     "language": "text/cql-identifier",
-                    "expression": "CRL branch CriterionRef L103C11"
+                    "expression": "CRL branch Or L103C12"
                   }
                 } ],
                 "action": [ {
@@ -272,7 +272,7 @@
             } ]
           } ],
           "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi",
-          "version": "0.0.0-steadi-examples-eligible-unsteady-yes-eligible-patient-2026-09-20-07.56.45",
+          "version": "0.0.0-steadi-examples-eligible-unsteady-yes-eligible-patient-2026-09-20-09.12.09",
           "status": "active",
           "item": [ {
             "extension": [ {
@@ -454,12 +454,12 @@
         "resource": {
           "resourceType": "QuestionnaireResponse",
           "id": "steadi-steadi-examples-eligible-unsteady-yes-eligible-patient",
-          "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi|0.0.0-steadi-examples-eligible-unsteady-yes-eligible-patient-2026-09-20-07.56.45",
+          "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi|0.0.0-steadi-examples-eligible-unsteady-yes-eligible-patient-2026-09-20-09.12.09",
           "status": "in-progress",
           "subject": {
             "reference": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient"
           },
-          "authored": "2026-09-20T07:56:46-04:00",
+          "authored": "2026-09-20T09:12:12-04:00",
           "item": [ {
             "linkId": "1",
             "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady",

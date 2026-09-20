@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-20T13:16:09.517Z",
+  "baseCommit": "7fb7d559929a108dcbb959e1479fa9c9e088de19",
+  "basis": {
+    "anchor-source": "8675a454af343c53a49b1b6ea944a2046a288b10",
+    "cel": "66fb6b4d54a0c4905707e774419f3ba9c0cd58a0"
+  },
+  "entity": "provenance",
+  "schemaVersion": 1
+}

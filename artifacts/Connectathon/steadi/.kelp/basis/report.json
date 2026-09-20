@@ -1,0 +1,9 @@
+{
+  "at": "2026-09-20T13:16:09.517Z",
+  "baseCommit": "3b52583fe3fde3d0a5d42b9febefad87eb4adcce",
+  "basis": {
+    "cel": "66fb6b4d54a0c4905707e774419f3ba9c0cd58a0"
+  },
+  "entity": "report",
+  "schemaVersion": 1
+}

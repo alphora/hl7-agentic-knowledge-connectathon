@@ -33,7 +33,7 @@
   "status": "draft",
   "experimental": true,
   "date": "2026-09-20T00:00:00.000Z",
-  "publisher": "unknown",
+  "publisher": "Alphora",
   "description": "Screening Guidance",
   "type": {
     "coding": [
@@ -132,8 +132,8 @@
           ],
           "action": [
             {
-              "title": "At Increased Fall Risk",
-              "description": "At Increased Fall Risk",
+              "title": "Unsteady or Worries About Falling or Fallen In Past Year",
+              "description": "Unsteady or Worries About Falling or Fallen In Past Year",
               "code": [
                 {
                   "coding": [
@@ -149,7 +149,7 @@
                   "kind": "applicability",
                   "expression": {
                     "language": "text/cql-identifier",
-                    "expression": "CRL branch CriterionRef L103C11"
+                    "expression": "CRL branch Or L103C12"
                   }
                 }
               ],

@@ -2,6 +2,7 @@
   "case": "eligible-unsteady-yes",
   "invocationExpected": true,
   "invoked": true,
+  "scope": "generated-output check",
   "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-unsteady-yes-eligible-patient/questionnaire/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient.json",
   "questionnaireSourceSha256": "8a1526b12f34ad5aa323409661f5fa6aadef9795598e4740e8f1a3656a9e54d7",
   "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-unsteady-yes-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient.json",

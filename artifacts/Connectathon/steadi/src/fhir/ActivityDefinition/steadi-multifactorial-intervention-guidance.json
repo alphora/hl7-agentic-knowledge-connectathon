@@ -33,7 +33,7 @@
   "status": "draft",
   "experimental": true,
   "date": "2026-09-20T00:00:00.000Z",
-  "publisher": "unknown",
+  "publisher": "Alphora",
   "description": "Multifactorial Intervention Guidance",
   "library": [
     "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInterface"

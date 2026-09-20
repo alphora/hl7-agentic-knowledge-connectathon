@@ -2,6 +2,7 @@
   "case": "eligible-all-no",
   "invocationExpected": true,
   "invoked": true,
+  "scope": "generated-output check",
   "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaire/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
   "questionnaireSourceSha256": "41333df8591866b516b683b36cdcaf803223ac57ea90164da757147e8db875b0",
   "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-all-no-eligible-patient.json",

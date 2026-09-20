@@ -1,0 +1,9 @@
+{
+  "at": "2026-09-20T13:16:09.517Z",
+  "baseCommit": "7fb7d559929a108dcbb959e1479fa9c9e088de19",
+  "basis": {
+    "companion-source": "b55ed8fdebc9240f0cf854f6c3dd511f655ce0bf"
+  },
+  "entity": "fhir",
+  "schemaVersion": 1
+}
