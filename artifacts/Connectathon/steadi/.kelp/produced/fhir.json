@@ -1,10 +1,11 @@
 {
-  "at": "2026-09-20T12:13:39.957Z",
-  "baseCommit": "f15e6da04ac085a2bc148bd458a81a36325df35e",
+  "at": "2026-09-20T12:14:00.426Z",
   "basis": {
     "companion-source": "b55ed8fdebc9240f0cf854f6c3dd511f655ce0bf",
     "crl": "223257b9ed7378cedadf5cf488bb9459e7f2b262"
   },
+  "by": "rob@alphora.com",
   "entity": "fhir",
+  "method": "release",
   "schemaVersion": 1
 }
