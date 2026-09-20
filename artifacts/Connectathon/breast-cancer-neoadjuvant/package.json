@@ -1,5 +1,21 @@
 {
   "name": "breast-cancer-neoadjuvant",
   "version": "0.0.0",
-  "private": true
+  "private": true,
+  "author": "Alphora",
+  "description": "Breast cancer neoadjuvant TNBC review guidance for the HL7 Agentic Knowledge Connectathon",
+  "crl": {
+    "canonicalBase": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir",
+    "date": "2026-09-20",
+    "status": "draft",
+    "experimental": true,
+    "packageId": "org.alphora.connectathon.breast-cancer-neoadjuvant",
+    "fhirDependencies": {
+      "hl7.fhir.r4.core": "4.0.1",
+      "hl7.fhir.uv.cpg": "2.0.0",
+      "hl7.fhir.uv.crmi": "1.0.0",
+      "hl7.fhir.uv.cql": "1.0.0",
+      "hl7.terminology.r4": "6.5.0"
+    }
+  }
 }
