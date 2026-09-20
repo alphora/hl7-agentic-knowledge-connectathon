@@ -1,0 +1,61 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [ {
+    "name": "Is Triple Negative",
+    "valueBoolean": true
+  }, {
+    "name": "Meets Tumor Or Node Criterion",
+    "valueBoolean": true
+  }, {
+    "name": "Has Clinically Positive Nodes",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "final",
+      "code": {
+        "text": "Has Clinically Positive Nodes"
+      },
+      "subject": {
+        "reference": "Patient/patient-diagnosis-absent"
+      },
+      "effectiveDateTime": "2026-06-01T09:00:00Z",
+      "valueBoolean": false
+    }
+  }, {
+    "name": "Neoadjuvant TNBC Guidance Applicable",
+    "valueBoolean": false
+  }, {
+    "name": "Has Nonmetastatic Disease",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "final",
+      "code": {
+        "text": "Has Nonmetastatic Disease"
+      },
+      "subject": {
+        "reference": "Patient/patient-diagnosis-absent"
+      },
+      "effectiveDateTime": "2026-06-01T09:00:00Z",
+      "valueBoolean": true
+    }
+  }, {
+    "name": "Has Active Confirmed Invasive Breast Cancer",
+    "valueBoolean": false
+  }, {
+    "name": "Has Clinical T1c Or Higher",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "final",
+      "code": {
+        "text": "Has Clinical T1c Or Higher"
+      },
+      "subject": {
+        "reference": "Patient/patient-diagnosis-absent"
+      },
+      "effectiveDateTime": "2026-06-01T09:00:00Z",
+      "valueBoolean": true
+    }
+  }, {
+    "name": "In Neoadjuvant Review Population",
+    "valueBoolean": false
+  } ]
+}

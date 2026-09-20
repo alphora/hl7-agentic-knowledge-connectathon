@@ -1,0 +1,45 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "bc-neoadjuvant-review-exposure",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/EvidenceVariable/bc-neoadjuvant-review-exposure",
+  "version": "0.0.0",
+  "name": "BcNeoadjuvantReviewExposure",
+  "title": "Neoadjuvant systemic therapy consideration",
+  "status": "draft",
+  "date": "2026-09-20",
+  "publisher": "Alphora",
+  "description": "Broad consideration of neoadjuvant treatment in oncology review.",
+  "author": [
+    {
+      "name": "Alphora Connectathon team"
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "citation",
+      "label": "asco-neoadjuvant-2021",
+      "display": "ASCO neoadjuvant guideline (2021), recommendations 3.1 and 3.2; DOI 10.1200/JCO.20.03399",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8274745/"
+    },
+    {
+      "type": "derived-from",
+      "label": "breast-cancer-track-contract",
+      "display": "Pinned breast-cancer fixture contract: Source and population contract, Observation selection and Required expressions",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/test-bundles/README.md"
+    }
+  ],
+  "note": [
+    {
+      "text": "Manually authored FHIR R4 companion. CRL does not currently generate this artifact family. Descriptive source-linked context, not an executable eligibility rule, treatment order, or assertion of clinical validation."
+    }
+  ],
+  "type": "descriptive",
+  "characteristic": [
+    {
+      "description": "Neoadjuvant systemic therapy consideration",
+      "definitionCodeableConcept": {
+        "text": "Review the relevance of neoadjuvant chemotherapy for the stated TNBC population. The demonstration does not select a regimen, assess chemotherapy fitness, prescribe treatment, or assert pembrolizumab eligibility."
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "breast-cancer-examples-tnbc-exactly-10-mm-c-8f33bc6b5f90",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "clinical-m"
+      }
+    ]
+  },
+  "valueString": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0",
+  "effectiveDateTime": "2026-06-01",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        }
+      ]
+    }
+  ]
+}

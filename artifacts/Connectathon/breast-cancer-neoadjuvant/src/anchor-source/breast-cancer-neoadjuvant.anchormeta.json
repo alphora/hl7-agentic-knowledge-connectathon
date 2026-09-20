@@ -1,0 +1,13 @@
+{
+  "textHash": "sha256:cb6fc891d28bdc01cb96b5533d0f74f77b0256681b93660d57b7df4b5af84eed",
+  "canonicalizer": "crl-anchor-docx-text",
+  "canonicalizerVersion": "1.0.0",
+  "offsetUnit": "utf8-byte",
+  "unicodeNormalization": "NFC",
+  "rangeConvention": "half-open",
+  "path": "breast-cancer-neoadjuvant.txt",
+  "derivedFrom": "../refined-source/breast-cancer-neoadjuvant.docx",
+  "derivedFromHash": "sha256:3c8a78302e781152121a0cdeb853b204663ae66347ef8758fe58565f21d86333",
+  "derivedFromContract": "upstream-source",
+  "warnings": []
+}

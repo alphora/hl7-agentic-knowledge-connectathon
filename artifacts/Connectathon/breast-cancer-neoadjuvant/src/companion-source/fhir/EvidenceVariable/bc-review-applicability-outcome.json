@@ -1,0 +1,39 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "bc-review-applicability-outcome",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/EvidenceVariable/bc-review-applicability-outcome",
+  "version": "0.0.0",
+  "name": "BcReviewApplicabilityOutcome",
+  "title": "Applicability of guidance for oncology review",
+  "status": "draft",
+  "date": "2026-09-20",
+  "publisher": "Alphora",
+  "description": "Operational demonstration output; not a therapeutic or survival endpoint.",
+  "author": [
+    {
+      "name": "Alphora Connectathon team"
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "derived-from",
+      "label": "breast-cancer-track-contract",
+      "display": "Pinned breast-cancer fixture contract: Source and population contract, Observation selection and Required expressions",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/test-bundles/README.md"
+    }
+  ],
+  "note": [
+    {
+      "text": "Manually authored FHIR R4 companion. CRL does not currently generate this artifact family. Descriptive source-linked context, not an executable eligibility rule, treatment order, or assertion of clinical validation."
+    }
+  ],
+  "type": "descriptive",
+  "characteristic": [
+    {
+      "description": "Applicability of guidance for oncology review",
+      "definitionCodeableConcept": {
+        "text": "The narrow TNBC neoadjuvant-review guidance is applicable, not applicable, or unknown from the supplied diagnostic evidence. A false result means only that this review criterion does not apply; it does not mean no cancer treatment is indicated."
+      }
+    }
+  ]
+}

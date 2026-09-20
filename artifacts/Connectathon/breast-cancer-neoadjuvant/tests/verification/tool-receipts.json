@@ -1,0 +1,176 @@
+{
+  "emit_crl": {
+    "success": true,
+    "cql": {
+      "libraries": [
+        {
+          "outputFilename": "BreastCancerNeoadjuvant.cql"
+        },
+        {
+          "outputFilename": "CRLCommon.cql"
+        },
+        {
+          "outputFilename": "CaseFeatureCommon.cql"
+        },
+        {
+          "outputFilename": "FHIRHelpers.cql"
+        }
+      ]
+    },
+    "fhir": {
+      "resourceCount": 21
+    },
+    "hardErrors": [],
+    "warnings": [],
+    "metadataErrors": []
+  },
+  "emit_cel": {
+    "success": true,
+    "caseCount": 13,
+    "resourceCount": 100,
+    "diagnostics": [
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is a test expectation; no FHIR data resource is emitted for it.",
+        "caseSlug": "tnbc-clinical-t1c-n0-m0",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 62,
+            "column": 2
+          },
+          "end": {
+            "line": 62,
+            "column": 64
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is a test expectation; no FHIR data resource is emitted for it.",
+        "caseSlug": "small-tnbc-with-clinically-positive-nodes",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 178,
+            "column": 2
+          },
+          "end": {
+            "line": 178,
+            "column": 64
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is pause is a test expectation; no FHIR data resource is emitted for it. Native $apply must be checked separately.",
+        "caseSlug": "her2-result-missing",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 345,
+            "column": 2
+          },
+          "end": {
+            "line": 345,
+            "column": 43
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is pause is a test expectation; no FHIR data resource is emitted for it. Native $apply must be checked separately.",
+        "caseSlug": "her2-interpretation-unresolved",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 403,
+            "column": 2
+          },
+          "end": {
+            "line": 403,
+            "column": 43
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is pause is a test expectation; no FHIR data resource is emitted for it. Native $apply must be checked separately.",
+        "caseSlug": "small-tnbc-with-missing-nodal-assessment",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 454,
+            "column": 2
+          },
+          "end": {
+            "line": 454,
+            "column": 43
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is pause is a test expectation; no FHIR data resource is emitted for it. Native $apply must be checked separately.",
+        "caseSlug": "tnbc-without-distant-metastasis-assessment",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 563,
+            "column": 2
+          },
+          "end": {
+            "line": 563,
+            "column": 43
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is a test expectation; no FHIR data resource is emitted for it.",
+        "caseSlug": "tnbc-t1c-n0-m0-size-in-centimeters",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 673,
+            "column": 2
+          },
+          "end": {
+            "line": 673,
+            "column": 64
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is a test expectation; no FHIR data resource is emitted for it.",
+        "caseSlug": "tnbc-clinical-t2-n0-m0",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 731,
+            "column": 2
+          },
+          "end": {
+            "line": 731,
+            "column": 64
+          }
+        }
+      }
+    ]
+  },
+  "validate_cel": {
+    "success": true,
+    "errors": [],
+    "warnings": []
+  },
+  "note": "Selected actual tool result fields; native execution is a separate verification."
+}

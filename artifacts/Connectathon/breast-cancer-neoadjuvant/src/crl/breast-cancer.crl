@@ -1,0 +1,169 @@
+library "Breast Cancer Neoadjuvant".
+terminology "Invasive Breast Carcinoma":
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `invasive-breast-carcinoma` display is `Invasive breast carcinoma (fixture assertion)`.
+concept "Diagnosis Records": - shape is RecordSet. - type is Condition. - coded from "Invasive Breast Carcinoma".
+concept "Active Breast Cancer": - shape is RecordSet. - type is Condition. - definition is "Diagnosis Records" active.
+concept "Indexed Breast Cancer": - shape is RecordSet. - type is Condition. - definition is "Active Breast Cancer" verified.
+concept "Has Active Confirmed Invasive Breast Cancer": - type is Observation. - value type is boolean. - defined as exists ( "Indexed Breast Cancer" ).
+terminology "Receptor Results":
+- system is `http://loinc.org`.
+- code is `LA6577-6` display is `Negative`.
+- code is `LA6576-8` display is `Positive`.
+terminology "Negative Receptor Result":
+- system is `http://loinc.org`.
+- code is `LA6577-6` display is `Negative`.
+terminology "Estrogen Receptor Test":
+- system is `http://loinc.org`.
+- code is `85337-4` display is `Estrogen Receptor result`.
+concept "Estrogen Receptor Result":
+- shape is Record.
+- type is Observation.
+- value type is CodeableConcept.
+- value domain is "Receptor Results".
+- shape reduction is most recent.
+- source representation:
+  - type is Observation.
+  - coded from "Estrogen Receptor Test".
+concept "Estrogen Receptor Negative":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- definition is "Estrogen Receptor Result" in "Negative Receptor Result".
+- shape reduction is most recent.
+terminology "Progesterone Receptor Test":
+- system is `http://loinc.org`.
+- code is `85339-0` display is `Progesterone Receptor result`.
+concept "Progesterone Receptor Result":
+- shape is Record.
+- type is Observation.
+- value type is CodeableConcept.
+- value domain is "Receptor Results".
+- shape reduction is most recent.
+- source representation:
+  - type is Observation.
+  - coded from "Progesterone Receptor Test".
+concept "Progesterone Receptor Negative":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- definition is "Progesterone Receptor Result" in "Negative Receptor Result".
+- shape reduction is most recent.
+terminology "HER2 Test":
+- system is `http://loinc.org`.
+- code is `48676-1` display is `HER2 result`.
+concept "HER2 Result":
+- shape is Record.
+- type is Observation.
+- value type is CodeableConcept.
+- value domain is "Receptor Results".
+- shape reduction is most recent.
+- source representation:
+  - type is Observation.
+  - coded from "HER2 Test".
+concept "HER2 Negative":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- definition is "HER2 Result" in "Negative Receptor Result".
+- shape reduction is most recent.
+terminology "Clinical M Test":
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `clinical-m` display is `Clinical M category`.
+terminology "Clinical M Categories":
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `cM0` display is `Clinical M0`.
+- code is `cM1` display is `Clinical M1`.
+terminology "Clinical M Qualifying Categories":
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `cM0` display is `Clinical M0`.
+concept "Clinical M Result":
+- shape is Record.
+- type is Observation.
+- value type is CodeableConcept.
+- value domain is "Clinical M Categories".
+- shape reduction is most recent.
+- source representation:
+  - type is Observation.
+  - coded from "Clinical M Test".
+concept "Nonmetastatic Disease Result":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- definition is "Clinical M Result" in "Clinical M Qualifying Categories".
+- shape reduction is most recent.
+terminology "Clinical N Test":
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `clinical-n` display is `Clinical N category`.
+terminology "Clinical N Categories":
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `cN0` display is `Clinical N0`.
+- code is `cN1` display is `Clinical N1`.
+- code is `cN2` display is `Clinical N2`.
+- code is `cN3` display is `Clinical N3`.
+terminology "Clinical N Qualifying Categories":
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `cN1` display is `Clinical N1`.
+- code is `cN2` display is `Clinical N2`.
+- code is `cN3` display is `Clinical N3`.
+concept "Clinical N Result":
+- shape is Record.
+- type is Observation.
+- value type is CodeableConcept.
+- value domain is "Clinical N Categories".
+- shape reduction is most recent.
+- source representation:
+  - type is Observation.
+  - coded from "Clinical N Test".
+concept "Clinically Positive Nodes Result":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- definition is "Clinical N Result" in "Clinical N Qualifying Categories".
+- shape reduction is most recent.
+terminology "Clinical T Test":
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `clinical-t` display is `Clinical T category`.
+terminology "Clinical T Categories":
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `cT1mi` display is `Clinical T1mi`.
+- code is `cT1a` display is `Clinical T1a`.
+- code is `cT1b` display is `Clinical T1b`.
+- code is `cT1c` display is `Clinical T1c`.
+- code is `cT2` display is `Clinical T2`.
+- code is `cT3` display is `Clinical T3`.
+- code is `cT4` display is `Clinical T4`.
+terminology "Clinical T Qualifying Categories":
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `cT1c` display is `Clinical T1c`.
+- code is `cT2` display is `Clinical T2`.
+- code is `cT3` display is `Clinical T3`.
+- code is `cT4` display is `Clinical T4`.
+concept "Clinical T Result":
+- shape is Record.
+- type is Observation.
+- value type is CodeableConcept.
+- value domain is "Clinical T Categories".
+- shape reduction is most recent.
+- source representation:
+  - type is Observation.
+  - coded from "Clinical T Test".
+concept "Clinical T1c Or Higher Result":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- definition is "Clinical T Result" in "Clinical T Qualifying Categories".
+- shape reduction is most recent.
+criterion "Has Nonmetastatic Disease": - when ("Nonmetastatic Disease Result").
+criterion "Has Clinically Positive Nodes": - when ("Clinically Positive Nodes Result").
+criterion "Has Clinical T1c Or Higher": - when ("Clinical T1c Or Higher Result").
+
+criterion "In Neoadjuvant Review Population": - when ("Has Active Confirmed Invasive Breast Cancer" and "Has Nonmetastatic Disease").
+criterion "Is Triple Negative": - when ("Estrogen Receptor Negative" and "Progesterone Receptor Negative" and "HER2 Negative").
+criterion "Meets Tumor Or Node Criterion": - when ("Has Clinical T1c Or Higher" or "Has Clinically Positive Nodes").
+criterion "Neoadjuvant TNBC Guidance Applicable": - when ("In Neoadjuvant Review Population" and "Is Triple Negative" and "Meets Tumor Or Node Criterion").
+activity "Oncology Review Guidance":
+- request CPGCommunicationRequest.
+- with `The documented nonmetastatic triple-negative breast cancer with clinically positive nodes or at least clinical T1c disease meets the supplied neoadjuvant guidance criterion for oncology review. This does not establish chemotherapy fitness or authorize a medication order. The ASCO 2022 immunotherapy update concerns a distinct high-risk population; this review trigger does not determine pembrolizumab eligibility.`.
+decision "Neoadjuvant Guidance":
+- when "Neoadjuvant TNBC Guidance Applicable" then recommend activity "Oncology Review Guidance".

@@ -1,0 +1,54 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "bc-keynote522-intervention",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/EvidenceVariable/bc-keynote522-intervention",
+  "version": "0.0.0",
+  "name": "BcKeynote522Intervention",
+  "title": "Pembrolizumab plus chemotherapy study exposure",
+  "status": "draft",
+  "date": "2026-09-20",
+  "publisher": "Alphora",
+  "description": "Experimental exposure described in the supplied NCI KEYNOTE-522 summary.",
+  "author": [
+    {
+      "name": "Alphora Connectathon team"
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "citation",
+      "label": "nci-breast-treatment-pdq",
+      "display": "NCI Breast Cancer Treatment PDQ, displayed April 25, 2025; supplied extract retrieved September 19, 2026, sections _3053 and _2896",
+      "url": "https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#_2896"
+    },
+    {
+      "type": "derived-from",
+      "label": "nci-breast-treatment-pdq-pinned-extract",
+      "display": "Supplied NCI PDQ text extraction; SHA-256 b05f58a44e72c1d7371c5b9bb1fa133079ceff38327feb84885d02cfe397a287",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/sources/raw/nci-breast-treatment-pdq.txt"
+    },
+    {
+      "type": "citation",
+      "label": "asco-pembrolizumab-update-2022",
+      "display": "ASCO rapid recommendation update (2022), Abstract / Recommendation; DOI 10.1200/JCO.22.00503",
+      "url": "https://ascopubs.org/doi/abs/10.1200/JCO.22.00503"
+    }
+  ],
+  "note": [
+    {
+      "text": "Manually authored FHIR R4 companion. CRL does not currently generate this artifact family. Descriptive source-linked context, not an executable eligibility rule, treatment order, or assertion of clinical validation."
+    },
+    {
+      "text": "Descriptive trial exposure only. No dose, prescription, patient-specific treatment sequence, contraindication assessment or executable immunotherapy eligibility is authored."
+    }
+  ],
+  "type": "descriptive",
+  "characteristic": [
+    {
+      "description": "Pembrolizumab plus chemotherapy study exposure",
+      "definitionCodeableConcept": {
+        "text": "Neoadjuvant pembrolizumab with chemotherapy (paclitaxel plus carboplatin, followed by doxorubicin plus cyclophosphamide), followed by adjuvant pembrolizumab."
+      }
+    }
+  ]
+}

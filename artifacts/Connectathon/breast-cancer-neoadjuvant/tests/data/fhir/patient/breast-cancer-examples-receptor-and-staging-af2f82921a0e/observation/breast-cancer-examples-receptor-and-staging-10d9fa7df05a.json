@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "breast-cancer-examples-receptor-and-staging-10d9fa7df05a",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "clinical-t"
+      }
+    ]
+  },
+  "valueString": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1c",
+  "effectiveDateTime": "2026-06-01",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        }
+      ]
+    }
+  ]
+}

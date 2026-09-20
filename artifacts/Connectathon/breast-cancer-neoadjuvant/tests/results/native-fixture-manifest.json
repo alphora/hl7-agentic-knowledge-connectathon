@@ -1,0 +1,201 @@
+{
+  "producer": "Native Library evaluate and PlanDefinition apply over unchanged original diagnostic bundles",
+  "notCelGeneratedInput": true,
+  "cases": [
+    {
+      "case": "tnbc-t1c-n0",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1c-n0/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t1c-n0/parameters/evaluation.json",
+          "sha256": "adbc39f31575c3113ac1e799854d184444a2a440b62bf55401fa6a309d69481a"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t1c-n0/parameters/apply.json",
+          "sha256": "113221a291edef762f6f417217636fd5d48af1a925ef30d9ba5a6b87f462ee8d"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "tnbc-t1b-n0-10mm",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-n0-10mm/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t1b-n0-10mm/parameters/evaluation.json",
+          "sha256": "0acecc041e517675b394b89347e7e744c5ac50d1653b166850db79f8fe6c468a"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t1b-n0-10mm/parameters/apply.json",
+          "sha256": "d2026e6ac734b4cdbfa915965e9f325bb6514fda2091a77c0251f76f814d9e85"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "tnbc-t1b-n1",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-n1/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t1b-n1/parameters/evaluation.json",
+          "sha256": "8759e041bdce94126853c7446ae051c539a1989d5986e5ed629e0e45a6252f56"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t1b-n1/parameters/apply.json",
+          "sha256": "e374482a2dcf69c16feb26095d95414a2e74cc5d53a02664aa73dac7dd7d6ae2"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "her2-positive",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/her2-positive/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-her2-positive/parameters/evaluation.json",
+          "sha256": "62cb293a2c3a895c3d45b115a63add061a56e10b6332b3f16a3bbab9cefb9c72"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-her2-positive/parameters/apply.json",
+          "sha256": "3bcd81f235b36c033dc05a664c33f0da8109b6f56440450a97201bc275d36623"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "er-positive",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/er-positive/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-er-positive/parameters/evaluation.json",
+          "sha256": "62cb293a2c3a895c3d45b115a63add061a56e10b6332b3f16a3bbab9cefb9c72"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-er-positive/parameters/apply.json",
+          "sha256": "eb2359a382ea11b653f1f1e4baba7cc930a47d912acaa8619e1de05a4eb21cee"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "her2-missing",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/her2-missing/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-her2-missing/parameters/evaluation.json",
+          "sha256": "b429bd8f5a5e28c70a5ab8b77fdb1c2b56dd31866b5fd6865432983da6e03ebc"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-her2-missing/parameters/apply.json",
+          "sha256": "d631ebea575a7b15bb85694cacb14d4a08eec96b881401db7598c2e1e4d8f9ab"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "her2-equivocal",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/her2-equivocal/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-her2-equivocal/parameters/evaluation.json",
+          "sha256": "277bc25bf304105f3a86bc5471537f800bbeb202d857a4945c77a9e31c12a6e7"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-her2-equivocal/parameters/apply.json",
+          "sha256": "ea3e6bc58dbf6b3e50c24d3dd9d46da58c261fcb4c30ff508d5ed15e0eb4aa8b"
+        }
+      ],
+      "activityCheckPass": false
+    },
+    {
+      "case": "tnbc-t1b-nodes-missing",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1b-nodes-missing/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t1b-nodes-missing/parameters/evaluation.json",
+          "sha256": "7ab414c86d5c925e1267cd6d201725d59202556a46f26110f7e14febe13b001d"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t1b-nodes-missing/parameters/apply.json",
+          "sha256": "df82b81880df94311f82f09975ab305639aaba6ef7f7fdbfbd52b1d83cb89e7f"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "tnbc-metastatic",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-metastatic/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-metastatic/parameters/evaluation.json",
+          "sha256": "04e89b5370ec4d1d8edeb2edeeb4891841f28aa14b03abbe032bfb765ea26dc0"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-metastatic/parameters/apply.json",
+          "sha256": "7916ab9e4884eb89c66108da707587ffd0c925877143658cd4ee70f97ac9bff7"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "tnbc-metastasis-missing",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-metastasis-missing/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-metastasis-missing/parameters/evaluation.json",
+          "sha256": "9b9b8a61dc0846c1c5483d9e6f2ffca1b5d3d2def81d0a938af6eff7566bc9dc"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-metastasis-missing/parameters/apply.json",
+          "sha256": "4bd482869546bfd250574560a6eb241c161cac4c96735547fc00121fb04a86c7"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "diagnosis-absent",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/diagnosis-absent/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-diagnosis-absent/parameters/evaluation.json",
+          "sha256": "c0ba4641491be6323e666569d3d44bb6b36f1cc08c154dc4bf167855ff4524d8"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-diagnosis-absent/parameters/apply.json",
+          "sha256": "b5a5aab4c3331ce9b62abb1de5fef0e5d5a15dc32bf5174d21d3f3f88b9cd98e"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "tnbc-t1c-n0-cm",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t1c-n0-cm/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t1c-n0-cm/parameters/evaluation.json",
+          "sha256": "adbc39f31575c3113ac1e799854d184444a2a440b62bf55401fa6a309d69481a"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t1c-n0-cm/parameters/apply.json",
+          "sha256": "1bd9e242489e296049dfe1f4ee4a3c257c4a5ef8fff833c371c1195ac4256d7b"
+        }
+      ],
+      "activityCheckPass": true
+    },
+    {
+      "case": "tnbc-t2-n0",
+      "input": "src/source/challenge/use-cases/breast-cancer/test-bundles/cases/tnbc-t2-n0/bundle.json",
+      "artifacts": [
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t2-n0/parameters/evaluation.json",
+          "sha256": "adbc39f31575c3113ac1e799854d184444a2a440b62bf55401fa6a309d69481a"
+        },
+        {
+          "path": "tests/results/fhir/patient/patient-tnbc-t2-n0/parameters/apply.json",
+          "sha256": "e7a646f92b507185d52c10bb675c7daff1262be5d76aee798b4821f5879ec8da"
+        }
+      ],
+      "activityCheckPass": true
+    }
+  ]
+}

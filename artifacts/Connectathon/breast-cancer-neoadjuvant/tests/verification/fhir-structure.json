@@ -1,0 +1,189 @@
+{
+  "pass": false,
+  "scope": "FHIR R4 JSON schema and identity uniqueness; not full profile or terminology validation",
+  "count": 33,
+  "files": [
+    {
+      "path": "src/fhir/ActivityDefinition/breast-cancer-neoadjuvant-oncology-review-guidance.json",
+      "sha256": "1678a322aa46f944a5e3a1603ccc2252c79edfddc04d59b2d351ad853bbb3677",
+      "identity": "ActivityDefinition/breast-cancer-neoadjuvant-oncology-review-guidance"
+    },
+    {
+      "path": "src/fhir/CodeSystem/breast-cancer-fixture.json",
+      "sha256": "b2e45bab8f17ff8e258acd9314330866f5f5b5b81bba56184c75d63514a6edb3",
+      "identity": "CodeSystem/breast-cancer-fixture"
+    },
+    {
+      "path": "src/fhir/Evidence/bc-asco-neoadjuvant-review.json",
+      "sha256": "0b3817f7a17e79ca4206160d369412e0150c3e60198848f4f9e196fc2c925f01",
+      "identity": "Evidence/bc-asco-neoadjuvant-review"
+    },
+    {
+      "path": "src/fhir/Evidence/bc-keynote522-context.json",
+      "sha256": "5d4f9251fe790b2bcc258e3d701ce3e3fd154f28054609dda5047715eb7be51e",
+      "identity": "Evidence/bc-keynote522-context"
+    },
+    {
+      "path": "src/fhir/EvidenceVariable/bc-event-free-survival.json",
+      "sha256": "735a8b0cc450af3d26d620fb309a70a12f401c5d59e2de969214249d2cb0c9cd",
+      "identity": "EvidenceVariable/bc-event-free-survival"
+    },
+    {
+      "path": "src/fhir/EvidenceVariable/bc-keynote522-comparator.json",
+      "sha256": "cee0a2c9f2f349709bd6ae4e642611d1e890f6d6aabbd5fff52e2b7500ce3d57",
+      "identity": "EvidenceVariable/bc-keynote522-comparator"
+    },
+    {
+      "path": "src/fhir/EvidenceVariable/bc-keynote522-intervention.json",
+      "sha256": "ba44af4b6ca17ed2d8a2b55cf15edd73a9faf9cbfe2e782306debb5fa6e3fb3e",
+      "identity": "EvidenceVariable/bc-keynote522-intervention"
+    },
+    {
+      "path": "src/fhir/EvidenceVariable/bc-keynote522-population.json",
+      "sha256": "98f895bc391e84e99263f8315cc6d4cdca3756ea1bf93a753f316c56fbac4d2b",
+      "identity": "EvidenceVariable/bc-keynote522-population"
+    },
+    {
+      "path": "src/fhir/EvidenceVariable/bc-neoadjuvant-review-exposure.json",
+      "sha256": "839b1800ae7e0c6579ee5b904b4438472ee93c18f1235dd447311ba71df933e7",
+      "identity": "EvidenceVariable/bc-neoadjuvant-review-exposure"
+    },
+    {
+      "path": "src/fhir/EvidenceVariable/bc-pathological-complete-response.json",
+      "sha256": "8b65042bce0f5ea908d1e3cd17c546370e8fca8e34d0fa56848b784fc4701f49",
+      "identity": "EvidenceVariable/bc-pathological-complete-response"
+    },
+    {
+      "path": "src/fhir/EvidenceVariable/bc-review-applicability-outcome.json",
+      "sha256": "f4cf8dc1a3466f837f5743f717734a1212684cdc8d442e9c0eeffdea98c8fe47",
+      "identity": "EvidenceVariable/bc-review-applicability-outcome"
+    },
+    {
+      "path": "src/fhir/EvidenceVariable/bc-review-population.json",
+      "sha256": "2a32bac7bf6c7d29f80441b553ada20e398d39cfbd41efeb759e2eb7b2bd7ec4",
+      "identity": "EvidenceVariable/bc-review-population"
+    },
+    {
+      "path": "src/fhir/EvidenceVariable/bc-treatment-adverse-events.json",
+      "sha256": "5bd9b484d6d038a80d93fd42827f753809b5dc2b15c8621c11f113a181a5e1d0",
+      "identity": "EvidenceVariable/bc-treatment-adverse-events"
+    },
+    {
+      "path": "src/fhir/Library/BreastCancerNeoadjuvant.json",
+      "sha256": "a5174df3626e9bf685714dbe7b71f3f4d662333f3283ea726555303d56b78517",
+      "identity": "Library/BreastCancerNeoadjuvant"
+    },
+    {
+      "path": "src/fhir/Library/CaseFeatureCommon.json",
+      "sha256": "d9b81355d735d90b66e00c8b903b2f45e298d85afd85eb5f54ececd97f331dbc",
+      "identity": "Library/CaseFeatureCommon"
+    },
+    {
+      "path": "src/fhir/Library/CRLCommon.json",
+      "sha256": "0d748d15d037167eb5b47935b315360b1e509050bc52f594757f5a88331be59c",
+      "identity": "Library/CRLCommon"
+    },
+    {
+      "path": "src/fhir/PlanDefinition/breast-cancer-neoadjuvant-oncology-r-159548add3d4-recommendation.json",
+      "sha256": "0df292b9a9cd09d9e53c7702b2d94c88d09ce647136f21f217bd5e19b9387f0d",
+      "identity": "PlanDefinition/breast-cancer-neoadjuvant-oncology-r-159548add3d4-recommendation"
+    },
+    {
+      "path": "src/fhir/PlanDefinition/breast-cancer-neoadjuvant.json",
+      "sha256": "e31f5ea19e97cfb142962f8921f5d944cd18a6560cd60ab822645dbc6f17d639",
+      "identity": "PlanDefinition/breast-cancer-neoadjuvant"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-m-categories.json",
+      "sha256": "ed6637372486a8edb445218a7142203ca8aa8f43c6a973172218dce0902335b7",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-clinical-m-categories"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-m-qualifying-categories.json",
+      "sha256": "c3b83288c993ecc9c8633c550c9e75969490ad57d10c74000e3143e115cc5c7c",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-clinical-m-qualifying-categories"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-m-test.json",
+      "sha256": "a8d88f022f8d27fc0ec4d539166ecf98be190863002e172db05f82da172ba39b",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-clinical-m-test"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-n-categories.json",
+      "sha256": "cc8ff42d38e3f110bdb52e2e6dedb0443d95dce5bfcac1619a8bd503c57084da",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-clinical-n-categories"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-n-qualifying-categories.json",
+      "sha256": "ef27e480751303367768fea08535c33c78249dfeb023b4267e78eca8616f91b7",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-clinical-n-qualifying-categories"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-n-test.json",
+      "sha256": "19feaa40b0a2ddcc5e3bcb812f58f9fce22956883671f2c358cf468f9f036b84",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-clinical-n-test"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-t-categories.json",
+      "sha256": "cc5063971672aba627f5f6f454d55062531449fdce9f9dc956763aa25e473acf",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-clinical-t-categories"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-t-qualifying-categories.json",
+      "sha256": "d91c1505dc47715a17c262ef0b17035321b3f3f5a7aa067ceca5960ec1a1da41",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-clinical-t-qualifying-categories"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-t-test.json",
+      "sha256": "45e9dfcfea7816439cf58d0a5c42ff6176d275239da654a98acd5e8dfe782c21",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-clinical-t-test"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-estrogen-receptor-test.json",
+      "sha256": "c80ddaba964fdfc40059a6e8731981d8ac32e31372300f7a052cad6fc5b80d8e",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-estrogen-receptor-test"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-her2-test.json",
+      "sha256": "be5ae8e1ed50301b48af3d7825710c838f7bca7d2a56993e483b74728d2c8dba",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-her2-test"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-invasive-breast-carcinoma.json",
+      "sha256": "b38ff0d5a836c0d39a6551bcfecfb696b393463d7db9717733b0f25dded5579a",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-invasive-breast-carcinoma"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-negative-receptor-result.json",
+      "sha256": "cbdb95a9d108141e0fc8f763626adbfa08c2276969821f0de3a68590af723cc2",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-negative-receptor-result"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-progesterone-receptor-test.json",
+      "sha256": "1a71ab65bcca1acf264fa1ea6f21d09b78b8d489708fa39184ac3be2c0a4cfa6",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-progesterone-receptor-test"
+    },
+    {
+      "path": "src/fhir/ValueSet/breast-cancer-neoadjuvant-receptor-results.json",
+      "sha256": "4c4d288e54757a602a6920e875053f32135d5a5f04d2b9b0a90cc5fdbf40a157",
+      "identity": "ValueSet/breast-cancer-neoadjuvant-receptor-results"
+    }
+  ],
+  "errors": [
+    {
+      "file": "src/fhir/ActivityDefinition/breast-cancer-neoadjuvant-oncology-review-guidance.json",
+      "path": [],
+      "message": "{'resourceType': 'ActivityDefinition', 'id': 'breast-cancer-neoadjuvant-oncology-review-guidance', 'meta': {'profile': ['http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-communicationactivity', 'http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableactivitydefinition', 'http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableactivitydefinition']}, 'extension': [{'url': 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability', 'valueCode': 'shareable'}, {'url': 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability', 'valueCode': 'computable'}, {'url': 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability', 'valueCode': 'publishable'}, {'url': 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel', 'valueCode': 'structured'}], 'url': 'https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ActivityDefinition/breast-cancer-neoadjuvant-oncology-review-guidance', 'version': '0.0.0', 'name': 'BreastCancerNeoadjuvantOncologyReviewGuidance', 'title': 'Oncology Review Guidance', 'status': 'draft', 'experimental': True, 'date': '2026-09-20T00:00:00.000Z', 'publisher': 'Alphora', 'description': 'Oncology Review Guidance', 'library': ['https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvant'], 'kind': 'CommunicationRequest', 'profile': 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-communicationrequest', 'intent': 'proposal', 'doNotPerform': False, 'code': {'coding': [{'system': 'http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs', 'code': 'send-message'}]}, 'dynamicValue': [{'path': 'payload.contentString', 'expression': {'language': 'text/cql-expression', 'expression': \"'The documented nonmetastatic triple-negative breast cancer with clinically positive nodes or at least clinical T1c disease meets the supplied neoadjuvant guidance criterion for oncology review. This does not establish chemotherapy fitness or authorize a medication order. The ASCO 2022 immunotherapy update concerns a distinct high-risk population; this review trigger does not determine pembrolizumab eligibility.'\"}}]} is not valid under any of the given schemas"
+    },
+    {
+      "file": "src/fhir/PlanDefinition/breast-cancer-neoadjuvant.json",
+      "path": [],
+      "message": "{'resourceType': 'PlanDefinition', 'id': 'breast-cancer-neoadjuvant', 'meta': {'profile': ['http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition', 'http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition', 'http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition']}, 'extension': [{'url': 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability', 'valueCode': 'shareable'}, {'url': 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability', 'valueCode': 'computable'}, {'url': 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability', 'valueCode': 'publishable'}, {'url': 'http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel', 'valueCode': 'structured'}], 'url': 'https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant', 'version': '0.0.0', 'name': 'BreastCancerNeoadjuvantNeoadjuvantGuidance', 'title': 'Neoadjuvant Guidance', 'status': 'draft', 'experimental': True, 'date': '2026-09-20T00:00:00.000Z', 'publisher': 'Alphora', 'description': 'Neoadjuvant Guidance', 'type': {'coding': [{'system': 'http://terminology.hl7.org/CodeSystem/plan-definition-type', 'code': 'workflow-definition'}]}, 'library': ['https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvant'], 'action': [{'title': 'Neoadjuvant TNBC Guidance Applicable', 'description': 'Neoadjuvant TNBC Guidance Applicable', 'code': [{'coding': [{'system': 'http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs', 'code': 'guideline-based-care'}]}], 'condition': [{'kind': 'applicability', 'expression': {'language': 'text/cql-identifier', 'expression': 'CRL branch CriterionRef L169C7'}}], 'definitionCanonical': 'https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant-oncology-r-159548add3d4-recommendation'}]} is not valid under any of the given schemas"
+    }
+  ],
+  "assessment": "The two raw schema failures concern text/cql-identifier and text/cql-expression absent from the R4 JSON schema enumeration. These are registered CQL media types used by the CQL IG; definitions were not rewritten. No full profile-validator pass is claimed.",
+  "references": [
+    "https://hl7.org/fhir/R4/metadatatypes-definitions.html#Expression.language",
+    "https://hl7.org/fhir/uv/cql/conformance.html"
+  ]
+}

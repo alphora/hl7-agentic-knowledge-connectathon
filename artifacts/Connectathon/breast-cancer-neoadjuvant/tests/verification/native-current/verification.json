@@ -1,0 +1,851 @@
+{
+  "cases": 13,
+  "checks": 104,
+  "passed": 91,
+  "results": [
+    {
+      "case": "tnbc-t1c-n0",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0",
+      "expression": "Is Triple Negative",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n0-10mm",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n0-10mm",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n0-10mm",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n0-10mm",
+      "expression": "Is Triple Negative",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n0-10mm",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n0-10mm",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n0-10mm",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n0-10mm",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n1",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n1",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n1",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n1",
+      "expression": "Is Triple Negative",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n1",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n1",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n1",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n1",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-positive",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-positive",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-positive",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-positive",
+      "expression": "Is Triple Negative",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "her2-positive",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "her2-positive",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-positive",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-positive",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "er-positive",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "er-positive",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "er-positive",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "er-positive",
+      "expression": "Is Triple Negative",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "er-positive",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "er-positive",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "er-positive",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "er-positive",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "her2-missing",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-missing",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-missing",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-missing",
+      "expression": "Is Triple Negative",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "her2-missing",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "her2-missing",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-missing",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "her2-missing",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "her2-equivocal",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "pass": false,
+      "error": "Evaluation contains OperationOutcome; cannot count as unknown"
+    },
+    {
+      "case": "her2-equivocal",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": true,
+      "pass": false,
+      "error": "Evaluation contains OperationOutcome; cannot count as unknown"
+    },
+    {
+      "case": "her2-equivocal",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": true,
+      "pass": false,
+      "error": "Evaluation contains OperationOutcome; cannot count as unknown"
+    },
+    {
+      "case": "her2-equivocal",
+      "expression": "Is Triple Negative",
+      "expected": null,
+      "pass": false,
+      "error": "Evaluation contains OperationOutcome; cannot count as unknown"
+    },
+    {
+      "case": "her2-equivocal",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": false,
+      "pass": false,
+      "error": "Evaluation contains OperationOutcome; cannot count as unknown"
+    },
+    {
+      "case": "her2-equivocal",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": true,
+      "pass": false,
+      "error": "Evaluation contains OperationOutcome; cannot count as unknown"
+    },
+    {
+      "case": "her2-equivocal",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": true,
+      "pass": false,
+      "error": "Evaluation contains OperationOutcome; cannot count as unknown"
+    },
+    {
+      "case": "her2-equivocal",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": null,
+      "pass": false,
+      "error": "Evaluation contains OperationOutcome; cannot count as unknown"
+    },
+    {
+      "case": "tnbc-t1b-nodes-missing",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-nodes-missing",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-nodes-missing",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-nodes-missing",
+      "expression": "Is Triple Negative",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-nodes-missing",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-nodes-missing",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-nodes-missing",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-nodes-missing",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastatic",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastatic",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastatic",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastatic",
+      "expression": "Is Triple Negative",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastatic",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastatic",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastatic",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastatic",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastasis-missing",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastasis-missing",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastasis-missing",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastasis-missing",
+      "expression": "Is Triple Negative",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastasis-missing",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastasis-missing",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastasis-missing",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastasis-missing",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "diagnosis-absent",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "diagnosis-absent",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": null,
+      "actual": true,
+      "pass": false
+    },
+    {
+      "case": "diagnosis-absent",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "diagnosis-absent",
+      "expression": "Is Triple Negative",
+      "expected": null,
+      "actual": true,
+      "pass": false
+    },
+    {
+      "case": "diagnosis-absent",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": null,
+      "actual": false,
+      "pass": false
+    },
+    {
+      "case": "diagnosis-absent",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": null,
+      "actual": true,
+      "pass": false
+    },
+    {
+      "case": "diagnosis-absent",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": null,
+      "actual": true,
+      "pass": false
+    },
+    {
+      "case": "diagnosis-absent",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0-cm",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0-cm",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0-cm",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0-cm",
+      "expression": "Is Triple Negative",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0-cm",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0-cm",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0-cm",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0-cm",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t2-n0",
+      "expression": "Has Active Confirmed Invasive Breast Cancer",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t2-n0",
+      "expression": "Has Nonmetastatic Disease",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t2-n0",
+      "expression": "In Neoadjuvant Review Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t2-n0",
+      "expression": "Is Triple Negative",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t2-n0",
+      "expression": "Has Clinically Positive Nodes",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t2-n0",
+      "expression": "Has Clinical T1c Or Higher",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t2-n0",
+      "expression": "Meets Tumor Or Node Criterion",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "tnbc-t2-n0",
+      "expression": "Neoadjuvant TNBC Guidance Applicable",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    }
+  ],
+  "activityChecks": [
+    {
+      "case": "tnbc-t1c-n0",
+      "expected": [
+        "breast-cancer-neoadjuvant-oncology-review-guidance"
+      ],
+      "actual": [
+        "breast-cancer-neoadjuvant-oncology-review-guidance"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n0-10mm",
+      "expected": [],
+      "actual": [],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1b-n1",
+      "expected": [
+        "breast-cancer-neoadjuvant-oncology-review-guidance"
+      ],
+      "actual": [
+        "breast-cancer-neoadjuvant-oncology-review-guidance"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "her2-positive",
+      "expected": [],
+      "actual": [],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "er-positive",
+      "expected": [],
+      "actual": [],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "her2-missing",
+      "expected": [],
+      "actual": [],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "her2-equivocal",
+      "expected": [],
+      "actual": [],
+      "errors": [
+        {
+          "severity": "error",
+          "code": "exception",
+          "diagnostics": "Error evaluating applicability for action null: publication-uninterpretable-value: publication-uninterpretable-value in crl:concept:v1:%5B%22https%3A%2F%2Falphora.github.io%2Fhl7-agentic-knowledge-connectathon%2Ffhir%22%2C%22breast-cancer-neoadjuvant%22%2C%22Breast%20Cancer%20Neoadjuvant%22%2C%22breast-cancer-neoadjuvant%22%2C%220.0.0%22%2C%22HER2%20Result%22%5D: 268:crl:source:v1:%5B%22https%3A%2F%2Falphora.github.io%2Fhl7-agentic-knowledge-connectathon%2Ffhir%22%2C%22breast-cancer-neoadjuvant%22%2C%22Breast%20Cancer%20Neoadjuvant%22%2C%22breast-cancer-neoadjuvant%22%2C%220.0.0%22%2C%22HER2%20Result%22%2C%5B%22source%22%2C0%5D%5D31:Observation/her2-her2-equivocal\nnull"
+        }
+      ],
+      "pass": false
+    },
+    {
+      "case": "tnbc-t1b-nodes-missing",
+      "expected": [],
+      "actual": [],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastatic",
+      "expected": [],
+      "actual": [],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "tnbc-metastasis-missing",
+      "expected": [],
+      "actual": [],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "diagnosis-absent",
+      "expected": [],
+      "actual": [],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "tnbc-t1c-n0-cm",
+      "expected": [
+        "breast-cancer-neoadjuvant-oncology-review-guidance"
+      ],
+      "actual": [
+        "breast-cancer-neoadjuvant-oncology-review-guidance"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case": "tnbc-t2-n0",
+      "expected": [
+        "breast-cancer-neoadjuvant-oncology-review-guidance"
+      ],
+      "actual": [
+        "breast-cancer-neoadjuvant-oncology-review-guidance"
+      ],
+      "errors": [],
+      "pass": true
+    }
+  ],
+  "activityPassed": 12
+}

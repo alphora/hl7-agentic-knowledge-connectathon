@@ -1,0 +1,50 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [ {
+    "name": "return",
+    "resource": {
+      "resourceType": "Bundle",
+      "id": "breast-cancer-neoadjuvant",
+      "type": "collection",
+      "entry": [ {
+        "resource": {
+          "resourceType": "RequestGroup",
+          "id": "breast-cancer-neoadjuvant",
+          "contained": [ {
+            "resourceType": "OperationOutcome",
+            "id": "apply-outcome-breast-cancer-neoadjuvant",
+            "issue": [ {
+              "severity": "error",
+              "code": "exception",
+              "diagnostics": "Error evaluating applicability for action null: publication-uninterpretable-value: publication-uninterpretable-value in crl:concept:v1:%5B%22https%3A%2F%2Falphora.github.io%2Fhl7-agentic-knowledge-connectathon%2Ffhir%22%2C%22breast-cancer-neoadjuvant%22%2C%22Breast%20Cancer%20Neoadjuvant%22%2C%22breast-cancer-neoadjuvant%22%2C%220.0.0%22%2C%22HER2%20Result%22%5D: 268:crl:source:v1:%5B%22https%3A%2F%2Falphora.github.io%2Fhl7-agentic-knowledge-connectathon%2Ffhir%22%2C%22breast-cancer-neoadjuvant%22%2C%22Breast%20Cancer%20Neoadjuvant%22%2C%22breast-cancer-neoadjuvant%22%2C%220.0.0%22%2C%22HER2%20Result%22%2C%5B%22source%22%2C0%5D%5D31:Observation/her2-her2-equivocal\nnull"
+            } ]
+          } ],
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-messages",
+            "valueReference": {
+              "reference": "#apply-outcome-breast-cancer-neoadjuvant"
+            }
+          } ],
+          "instantiatesCanonical": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant|0.0.0" ],
+          "status": "active",
+          "intent": "proposal",
+          "subject": {
+            "reference": "Patient/patient-her2-equivocal"
+          }
+        }
+      } ]
+    }
+  } ]
+}

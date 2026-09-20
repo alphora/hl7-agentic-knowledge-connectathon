@@ -1,0 +1,108 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "breast-cancer-fixture",
+  "url": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+  "version": "1.0.0",
+  "name": "BreastCancerFixtureCodes",
+  "title": "Breast cancer fixture contract codes",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-19",
+  "publisher": "HL7 Agentic Knowledge Connectathon contributors",
+  "description": "Track-local codes for synthetic input assertions. Clinical stage concepts express supplied clinical assessments, not stage inference from size. These are not official AJCC, SNOMED CT, or mCODE terminology mappings.",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 18,
+  "concept": [
+    {
+      "code": "invasive-breast-carcinoma",
+      "display": "Invasive breast carcinoma (fixture assertion)",
+      "definition": "Explicit synthetic assertion of an invasive primary breast carcinoma; not DCIS alone."
+    },
+    {
+      "code": "clinical-t",
+      "display": "Clinical T category",
+      "definition": "Pretreatment clinical primary-tumor category, explicitly asserted for the indexed cancer."
+    },
+    {
+      "code": "clinical-n",
+      "display": "Clinical N category",
+      "definition": "Pretreatment clinical regional-node category, explicitly asserted for the indexed cancer."
+    },
+    {
+      "code": "clinical-m",
+      "display": "Clinical M category",
+      "definition": "Clinical distant-metastasis category, explicitly asserted for the indexed cancer."
+    },
+    {
+      "code": "cT1b",
+      "display": "Clinical T1b",
+      "definition": "Supplied clinical category: primary tumor greater than 5 mm and no greater than 10 mm."
+    },
+    {
+      "code": "cT1c",
+      "display": "Clinical T1c",
+      "definition": "Supplied clinical category: primary tumor greater than 10 mm and no greater than 20 mm."
+    },
+    {
+      "code": "cN0",
+      "display": "Clinical N0",
+      "definition": "Supplied clinical category: no regional lymph-node metastases."
+    },
+    {
+      "code": "cN1",
+      "display": "Clinical N1",
+      "definition": "Supplied clinical category: regional-node-positive disease in clinical N1 category."
+    },
+    {
+      "code": "cM0",
+      "display": "Clinical M0",
+      "definition": "Explicit clinical assessment documents no distant metastasis; never inferred from an absent record."
+    },
+    {
+      "code": "cM1",
+      "display": "Clinical M1",
+      "definition": "Explicit clinical assessment documents distant metastasis."
+    },
+    {
+      "code": "equivocal",
+      "display": "Equivocal (unresolved fixture result)",
+      "definition": "Unresolved qualitative result. This is neither a negative nor a positive receptor interpretation."
+    },
+    {
+      "code": "cT1mi",
+      "display": "Clinical T1mi",
+      "definition": "Supplied clinical category: microinvasion no greater than 1 mm."
+    },
+    {
+      "code": "cT1a",
+      "display": "Clinical T1a",
+      "definition": "Supplied clinical category: tumor greater than 1 mm and no greater than 5 mm."
+    },
+    {
+      "code": "cT2",
+      "display": "Clinical T2",
+      "definition": "Supplied clinical category: tumor greater than 20 mm and no greater than 50 mm."
+    },
+    {
+      "code": "cT3",
+      "display": "Clinical T3",
+      "definition": "Supplied clinical category: tumor greater than 50 mm."
+    },
+    {
+      "code": "cT4",
+      "display": "Clinical T4",
+      "definition": "Supplied clinical category: tumor with direct extension to chest wall and/or skin under clinical staging rules; size alone does not establish T4."
+    },
+    {
+      "code": "cN2",
+      "display": "Clinical N2",
+      "definition": "Supplied clinical category: regional-node-positive disease in clinical N2 category."
+    },
+    {
+      "code": "cN3",
+      "display": "Clinical N3",
+      "definition": "Supplied clinical category: regional-node-positive disease in clinical N3 category."
+    }
+  ]
+}

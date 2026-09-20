@@ -1,0 +1,731 @@
+// Synthetic examples mirror the supplied diagnostic route data.
+// Original fixture Bundles remain the authoritative 13-case native test inputs.
+library "Breast Cancer Examples".
+covers "Breast Cancer Neoadjuvant".
+
+fact "Patient 01":
+- name is "Synthetic tnbc-t1c-n0".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "01 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "01 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1c".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "01 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "01 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "01 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "01 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "01 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "TNBC, clinical T1c N0 M0":
+- id is "bc-01".
+- subject is "Patient 01".
+- fact is "01 Diagnosis Records".
+- fact is "01 Clinical T Result".
+- fact is "01 Clinical N Result".
+- fact is "01 Clinical M Result".
+- fact is "01 Estrogen Receptor Result".
+- fact is "01 Progesterone Receptor Result".
+- fact is "01 HER2 Result".
+- result is "Neoadjuvant Guidance" is "Oncology Review Guidance".
+
+fact "Patient 02":
+- name is "Synthetic tnbc-t1b-n0-10mm".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "02 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "02 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1b".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "02 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "02 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "02 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "02 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "02 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "TNBC, exactly 10 mm, clinical T1b N0 M0":
+- id is "bc-02".
+- subject is "Patient 02".
+- fact is "02 Diagnosis Records".
+- fact is "02 Clinical T Result".
+- fact is "02 Clinical N Result".
+- fact is "02 Clinical M Result".
+- fact is "02 Estrogen Receptor Result".
+- fact is "02 Progesterone Receptor Result".
+- fact is "02 HER2 Result".
+// This rule is not applicable; native verification checks the empty guidance set.
+
+fact "Patient 03":
+- name is "Synthetic tnbc-t1b-n1".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "03 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "03 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1b".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "03 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN1".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "03 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "03 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "03 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "03 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "Small TNBC with clinically positive nodes":
+- id is "bc-03".
+- subject is "Patient 03".
+- fact is "03 Diagnosis Records".
+- fact is "03 Clinical T Result".
+- fact is "03 Clinical N Result".
+- fact is "03 Clinical M Result".
+- fact is "03 Estrogen Receptor Result".
+- fact is "03 Progesterone Receptor Result".
+- fact is "03 HER2 Result".
+- result is "Neoadjuvant Guidance" is "Oncology Review Guidance".
+
+fact "Patient 04":
+- name is "Synthetic her2-positive".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "04 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "04 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1c".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "04 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "04 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "04 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "04 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "04 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6576-8".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "HER2-positive breast cancer":
+- id is "bc-04".
+- subject is "Patient 04".
+- fact is "04 Diagnosis Records".
+- fact is "04 Clinical T Result".
+- fact is "04 Clinical N Result".
+- fact is "04 Clinical M Result".
+- fact is "04 Estrogen Receptor Result".
+- fact is "04 Progesterone Receptor Result".
+- fact is "04 HER2 Result".
+// This rule is not applicable; native verification checks the empty guidance set.
+
+fact "Patient 05":
+- name is "Synthetic er-positive".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "05 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "05 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1c".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "05 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "05 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "05 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6576-8".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "05 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "05 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "ER-positive breast cancer":
+- id is "bc-05".
+- subject is "Patient 05".
+- fact is "05 Diagnosis Records".
+- fact is "05 Clinical T Result".
+- fact is "05 Clinical N Result".
+- fact is "05 Clinical M Result".
+- fact is "05 Estrogen Receptor Result".
+- fact is "05 Progesterone Receptor Result".
+- fact is "05 HER2 Result".
+// This rule is not applicable; native verification checks the empty guidance set.
+
+fact "Patient 06":
+- name is "Synthetic her2-missing".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "06 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "06 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1c".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "06 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "06 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "06 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "06 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "HER2 result missing":
+- id is "bc-06".
+- subject is "Patient 06".
+- fact is "06 Diagnosis Records".
+- fact is "06 Clinical T Result".
+- fact is "06 Clinical N Result".
+- fact is "06 Clinical M Result".
+- fact is "06 Estrogen Receptor Result".
+- fact is "06 Progesterone Receptor Result".
+- result is "Neoadjuvant Guidance" is pause.
+
+fact "Patient 07":
+- name is "Synthetic her2-equivocal".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "07 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "07 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1c".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "07 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "07 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "07 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "07 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "07 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|equivocal".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "HER2 interpretation unresolved":
+- id is "bc-07".
+- subject is "Patient 07".
+- fact is "07 Diagnosis Records".
+- fact is "07 Clinical T Result".
+- fact is "07 Clinical N Result".
+- fact is "07 Clinical M Result".
+- fact is "07 Estrogen Receptor Result".
+- fact is "07 Progesterone Receptor Result".
+- fact is "07 HER2 Result".
+- result is "Neoadjuvant Guidance" is pause.
+
+fact "Patient 08":
+- name is "Synthetic tnbc-t1b-nodes-missing".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "08 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "08 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1b".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "08 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "08 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "08 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "08 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "Small TNBC with missing nodal assessment":
+- id is "bc-08".
+- subject is "Patient 08".
+- fact is "08 Diagnosis Records".
+- fact is "08 Clinical T Result".
+- fact is "08 Clinical M Result".
+- fact is "08 Estrogen Receptor Result".
+- fact is "08 Progesterone Receptor Result".
+- fact is "08 HER2 Result".
+- result is "Neoadjuvant Guidance" is pause.
+
+fact "Patient 09":
+- name is "Synthetic tnbc-metastatic".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "09 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "09 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1c".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "09 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "09 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM1".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "09 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "09 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "09 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "TNBC with distant metastasis":
+- id is "bc-09".
+- subject is "Patient 09".
+- fact is "09 Diagnosis Records".
+- fact is "09 Clinical T Result".
+- fact is "09 Clinical N Result".
+- fact is "09 Clinical M Result".
+- fact is "09 Estrogen Receptor Result".
+- fact is "09 Progesterone Receptor Result".
+- fact is "09 HER2 Result".
+// This rule is not applicable; native verification checks the empty guidance set.
+
+fact "Patient 10":
+- name is "Synthetic tnbc-metastasis-missing".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "10 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "10 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1c".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "10 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "10 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "10 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "10 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "TNBC without distant-metastasis assessment":
+- id is "bc-10".
+- subject is "Patient 10".
+- fact is "10 Diagnosis Records".
+- fact is "10 Clinical T Result".
+- fact is "10 Clinical N Result".
+- fact is "10 Estrogen Receptor Result".
+- fact is "10 Progesterone Receptor Result".
+- fact is "10 HER2 Result".
+- result is "Neoadjuvant Guidance" is pause.
+
+fact "Patient 11":
+- name is "Synthetic diagnosis-absent".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "11 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1c".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "11 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "11 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "11 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "11 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "11 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "Receptor and staging results without cancer diagnosis":
+- id is "bc-11".
+- subject is "Patient 11".
+- fact is "11 Clinical T Result".
+- fact is "11 Clinical N Result".
+- fact is "11 Clinical M Result".
+- fact is "11 Estrogen Receptor Result".
+- fact is "11 Progesterone Receptor Result".
+- fact is "11 HER2 Result".
+// This rule is not applicable; native verification checks the empty guidance set.
+
+fact "Patient 12":
+- name is "Synthetic tnbc-t1c-n0-cm".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "12 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "12 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT1c".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "12 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "12 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "12 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "12 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "12 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "TNBC, T1c N0 M0, size in centimeters":
+- id is "bc-12".
+- subject is "Patient 12".
+- fact is "12 Diagnosis Records".
+- fact is "12 Clinical T Result".
+- fact is "12 Clinical N Result".
+- fact is "12 Clinical M Result".
+- fact is "12 Estrogen Receptor Result".
+- fact is "12 Progesterone Receptor Result".
+- fact is "12 HER2 Result".
+- result is "Neoadjuvant Guidance" is "Oncology Review Guidance".
+
+fact "Patient 13":
+- name is "Synthetic tnbc-t2-n0".
+- birth date is "1970-01-01".
+- defined by "Patient".
+
+fact "13 Diagnosis Records":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|invasive-breast-carcinoma".
+- date is "2026-05-20".
+- defined by "Breast Cancer Neoadjuvant"."Diagnosis Records".
+
+fact "13 Clinical T Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-t".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cT2".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "13 Clinical N Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-n".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cN0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "13 Clinical M Result":
+- code is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|clinical-m".
+- value is "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM0".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "13 Estrogen Receptor Result":
+- code is "http://loinc.org|85337-4".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "13 Progesterone Receptor Result":
+- code is "http://loinc.org|85339-0".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+fact "13 HER2 Result":
+- code is "http://loinc.org|48676-1".
+- value is "http://loinc.org|LA6577-6".
+- date is "2026-06-01".
+- defined by "Observation".
+
+case "TNBC, clinical T2 N0 M0":
+- id is "bc-13".
+- subject is "Patient 13".
+- fact is "13 Diagnosis Records".
+- fact is "13 Clinical T Result".
+- fact is "13 Clinical N Result".
+- fact is "13 Clinical M Result".
+- fact is "13 Estrogen Receptor Result".
+- fact is "13 Progesterone Receptor Result".
+- fact is "13 HER2 Result".
+- result is "Neoadjuvant Guidance" is "Oncology Review Guidance".

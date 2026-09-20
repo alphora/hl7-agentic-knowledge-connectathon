@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "breast-cancer-examples-tnbc-without-distant-896c3ad75782",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "85339-0"
+      }
+    ]
+  },
+  "valueString": "http://loinc.org|LA6577-6",
+  "effectiveDateTime": "2026-06-01",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        }
+      ]
+    }
+  ]
+}

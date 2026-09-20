@@ -1,0 +1,21 @@
+{
+  "capturedAt": "2026-09-20T14:13:47.842861+00:00",
+  "tool": "validate_provenance",
+  "crlVersion": "6.4.2",
+  "input": {
+    "anchor": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\anchor-source\\breast-cancer-neoadjuvant.txt",
+    "artifact": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\provenance\\breast-cancer-neoadjuvant.json",
+    "cel": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel"
+  },
+  "output": "validation-final.json",
+  "sourceItemCount": 20,
+  "linkedReferenceCount": 19,
+  "textRangesIndependentlyMatched": true,
+  "files": {
+    "src\\provenance\\breast-cancer-neoadjuvant.json": "9aa4243c29cca47bdc6948e43226729d64041645abd8c4c5a8e3a857a6f2dd65",
+    "src\\crl\\breast-cancer.crl": "687e613f717d6a11c80b92158b36498d4d7ac5507741471b754aa4a6959a5464",
+    "src\\cel\\mv\\breast-cancer.cel": "988100c4727c48e4c0ebd976cf54437eccb8f4f1543ae14c8c3be8721ca80e38",
+    "src\\anchor-source\\breast-cancer-neoadjuvant.txt": "cb6fc891d28bdc01cb96b5533d0f74f77b0256681b93660d57b7df4b5af84eed"
+  },
+  "limit": "Final refresh against stable CRL/CEL hashes. Source links do not establish native behavior. Native results are 91/104 expression assertions and12/13 activity/error checks; equivocal and diagnosis-absent failures remain open."
+}

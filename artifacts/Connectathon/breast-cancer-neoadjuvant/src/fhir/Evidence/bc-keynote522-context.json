@@ -1,0 +1,76 @@
+{
+  "resourceType": "Evidence",
+  "id": "bc-keynote522-context",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Evidence/bc-keynote522-context",
+  "version": "0.0.0",
+  "name": "BcKeynote522Context",
+  "title": "KEYNOTE-522 context from the supplied NCI extract",
+  "status": "draft",
+  "date": "2026-09-20",
+  "publisher": "Alphora",
+  "description": "Descriptive PICO context for the KEYNOTE-522 pembrolizumab comparison reported in the supplied NCI professional evidence summary. This separates trial evidence from the ASCO baseline review recommendation.",
+  "author": [
+    {
+      "name": "Alphora Connectathon team"
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "citation",
+      "label": "nci-breast-treatment-pdq",
+      "display": "NCI Breast Cancer Treatment PDQ, displayed April 25, 2025; supplied extract retrieved September 19, 2026, sections _3053 and _2896",
+      "url": "https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#_2896"
+    },
+    {
+      "type": "derived-from",
+      "label": "nci-breast-treatment-pdq-pinned-extract",
+      "display": "Supplied NCI PDQ text extraction; SHA-256 b05f58a44e72c1d7371c5b9bb1fa133079ceff38327feb84885d02cfe397a287",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/sources/raw/nci-breast-treatment-pdq.txt"
+    },
+    {
+      "type": "citation",
+      "label": "asco-pembrolizumab-update-2022",
+      "display": "ASCO rapid recommendation update (2022), Abstract / Recommendation; DOI 10.1200/JCO.22.00503",
+      "url": "https://ascopubs.org/doi/abs/10.1200/JCO.22.00503"
+    },
+    {
+      "type": "documentation",
+      "label": "source-manifest",
+      "display": "Source roles, dates, locators, extraction exclusions and redistribution boundaries",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/sources/manifest.yaml"
+    }
+  ],
+  "note": [
+    {
+      "text": "Manually authored FHIR R4 companion. CRL does not currently generate this artifact family. Descriptive source-linked context, not an executable eligibility rule, treatment order, or assertion of clinical validation."
+    },
+    {
+      "text": "The supplied summary describes a randomized, double-blind phase III comparison. It reports efficacy and harms at particular interim analyses, and explicitly characterizes EFS data as immature. No updated trial follow-up, extracted effect estimate, or author-assigned certainty grade is asserted here."
+    },
+    {
+      "text": "Source displayed date: April 25, 2025. Extract retrieved: September 19, 2026. The selected attributed prose is not the complete maintained NCI PDQ publication; separately credited tables, images and unselected sections were excluded. The dated source set is not an exhaustive review of 2026 guidance."
+    }
+  ],
+  "exposureBackground": {
+    "reference": "EvidenceVariable/bc-keynote522-population"
+  },
+  "exposureVariant": [
+    {
+      "reference": "EvidenceVariable/bc-keynote522-intervention"
+    },
+    {
+      "reference": "EvidenceVariable/bc-keynote522-comparator"
+    }
+  ],
+  "outcome": [
+    {
+      "reference": "EvidenceVariable/bc-pathological-complete-response"
+    },
+    {
+      "reference": "EvidenceVariable/bc-event-free-survival"
+    },
+    {
+      "reference": "EvidenceVariable/bc-treatment-adverse-events"
+    }
+  ]
+}

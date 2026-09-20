@@ -1,0 +1,57 @@
+{
+  "pass": true,
+  "scope": "FHIR R4 JSON schema structure and internal EvidenceVariable references",
+  "resources": 12,
+  "schemaSha256": "2230406893b4cf002a4ee1e5e2bbeca22ac5d2d4931b3e9ef7b9594bbc376a01",
+  "files": [
+    {
+      "file": "src/companion-source/fhir/CodeSystem/breast-cancer-fixture.json",
+      "sha256": "b2e45bab8f17ff8e258acd9314330866f5f5b5b81bba56184c75d63514a6edb3"
+    },
+    {
+      "file": "src/companion-source/fhir/Evidence/bc-asco-neoadjuvant-review.json",
+      "sha256": "0b3817f7a17e79ca4206160d369412e0150c3e60198848f4f9e196fc2c925f01"
+    },
+    {
+      "file": "src/companion-source/fhir/Evidence/bc-keynote522-context.json",
+      "sha256": "5d4f9251fe790b2bcc258e3d701ce3e3fd154f28054609dda5047715eb7be51e"
+    },
+    {
+      "file": "src/companion-source/fhir/EvidenceVariable/bc-event-free-survival.json",
+      "sha256": "735a8b0cc450af3d26d620fb309a70a12f401c5d59e2de969214249d2cb0c9cd"
+    },
+    {
+      "file": "src/companion-source/fhir/EvidenceVariable/bc-keynote522-comparator.json",
+      "sha256": "cee0a2c9f2f349709bd6ae4e642611d1e890f6d6aabbd5fff52e2b7500ce3d57"
+    },
+    {
+      "file": "src/companion-source/fhir/EvidenceVariable/bc-keynote522-intervention.json",
+      "sha256": "ba44af4b6ca17ed2d8a2b55cf15edd73a9faf9cbfe2e782306debb5fa6e3fb3e"
+    },
+    {
+      "file": "src/companion-source/fhir/EvidenceVariable/bc-keynote522-population.json",
+      "sha256": "98f895bc391e84e99263f8315cc6d4cdca3756ea1bf93a753f316c56fbac4d2b"
+    },
+    {
+      "file": "src/companion-source/fhir/EvidenceVariable/bc-neoadjuvant-review-exposure.json",
+      "sha256": "839b1800ae7e0c6579ee5b904b4438472ee93c18f1235dd447311ba71df933e7"
+    },
+    {
+      "file": "src/companion-source/fhir/EvidenceVariable/bc-pathological-complete-response.json",
+      "sha256": "8b65042bce0f5ea908d1e3cd17c546370e8fca8e34d0fa56848b784fc4701f49"
+    },
+    {
+      "file": "src/companion-source/fhir/EvidenceVariable/bc-review-applicability-outcome.json",
+      "sha256": "f4cf8dc1a3466f837f5743f717734a1212684cdc8d442e9c0eeffdea98c8fe47"
+    },
+    {
+      "file": "src/companion-source/fhir/EvidenceVariable/bc-review-population.json",
+      "sha256": "2a32bac7bf6c7d29f80441b553ada20e398d39cfbd41efeb759e2eb7b2bd7ec4"
+    },
+    {
+      "file": "src/companion-source/fhir/EvidenceVariable/bc-treatment-adverse-events.json",
+      "sha256": "5bd9b484d6d038a80d93fd42827f753809b5dc2b15c8621c11f113a181a5e1d0"
+    }
+  ],
+  "errors": []
+}

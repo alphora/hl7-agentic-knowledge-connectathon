@@ -1,0 +1,15 @@
+{
+  "producer": "CQL-to-ELM JVM4.8.0",
+  "inputCql": {
+    "BreastCancerNeoadjuvant.cql": "9dfbfbea410e8d7bc3620e5bd59e7039482dde76733d800e2f7895496e4951b5",
+    "CaseFeatureCommon.cql": "31fea89b8cabeee56bed5470b6ab5e2bffdf0dd7267f163ac6beb5cf5203ee7a",
+    "CRLCommon.cql": "f4cef711204cf9ec8c7b25666d39139eef8d501f588f39bbd7a34b0b5bd807ca",
+    "FHIRHelpers.cql": "6748661c16fe66dd07a68f07f77f7fea44e8b933d265dcc3c575964ba8329591"
+  },
+  "outputElm": {
+    "BreastCancerNeoadjuvant.json": "363a7c422874525765d23b203d915899939206c77d2334287588bc57c3366022",
+    "CaseFeatureCommon.json": "66a6f6e75276b9c775e42d0104be1b791d7901be31f6f86206f014014bebeb39",
+    "CRLCommon.json": "f1b27c0a18fce17d9b3ee0e1ccf8035902a289ba028675a920af987fbcae46e6",
+    "FHIRHelpers.json": "80a799d4066b51b1e80f9461b4a9a58f0b7f5c9b05d05f883311581127c2d606"
+  }
+}

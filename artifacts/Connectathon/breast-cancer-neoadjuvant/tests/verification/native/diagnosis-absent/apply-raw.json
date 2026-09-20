@@ -1,0 +1,36 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [ {
+    "name": "return",
+    "resource": {
+      "resourceType": "Bundle",
+      "id": "breast-cancer-neoadjuvant",
+      "type": "collection",
+      "entry": [ {
+        "resource": {
+          "resourceType": "RequestGroup",
+          "id": "breast-cancer-neoadjuvant",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          } ],
+          "instantiatesCanonical": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant|0.0.0" ],
+          "status": "active",
+          "intent": "proposal",
+          "subject": {
+            "reference": "Patient/patient-diagnosis-absent"
+          }
+        }
+      } ]
+    }
+  } ]
+}

@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "breast-cancer-examples-tnbc-with-distant-me-2d0080608a4a",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "clinical-m"
+      }
+    ]
+  },
+  "valueString": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|cM1",
+  "effectiveDateTime": "2026-06-01",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        }
+      ]
+    }
+  ]
+}

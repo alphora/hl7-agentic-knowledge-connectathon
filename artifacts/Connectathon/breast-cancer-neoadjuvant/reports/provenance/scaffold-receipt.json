@@ -1,0 +1,218 @@
+{
+  "success": true,
+  "policyId": "Breast Cancer Neoadjuvant",
+  "policyVersion": "0.0.0",
+  "clusterCount": 1,
+  "diagnosticCountsByKind": {
+    "deferred-disposition-path": 1,
+    "overreach-baseline": 18,
+    "attribution-needed": 2,
+    "drives-determination-hint": 1
+  },
+  "merged": false,
+  "advisories": [
+    "derivedFrom was made relative to the anchor's own directory because no artifact destination was given. If you persist the artifact anywhere else, run normalize_provenance (CLI crl-normalize-provenance) on save so derivedFrom stays resolvable, then re-validate (#250)."
+  ],
+  "artifact": {
+    "schemaVersion": "1.1",
+    "policyId": "Breast Cancer Neoadjuvant",
+    "policyVersion": "0.0.0",
+    "anchorSource": {
+      "path": "breast-cancer-neoadjuvant.txt",
+      "derivedFrom": "breast-cancer-neoadjuvant.txt",
+      "derivedFromHash": "sha256:cb6fc891d28bdc01cb96b5533d0f74f77b0256681b93660d57b7df4b5af84eed",
+      "derivedFromContract": "anchor-self",
+      "canonicalizer": "crl-anchor-docx-text",
+      "canonicalizerVersion": "1.0.0",
+      "textHash": "sha256:cb6fc891d28bdc01cb96b5533d0f74f77b0256681b93660d57b7df4b5af84eed",
+      "offsetUnit": "utf8-byte",
+      "unicodeNormalization": "NFC",
+      "rangeConvention": "half-open"
+    },
+    "items": [],
+    "ignoredRanges": [],
+    "clusters": [
+      {
+        "id": "cluster:Breast_Cancer_Neoadjuvant:coverage",
+        "label": "coverage",
+        "items": [],
+        "crl": [
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "activity",
+            "name": "Oncology Review Guidance",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "recommends-disposition",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Active Breast Cancer",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "defines-concept",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Clinical M Result",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "defines-concept",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Clinical N Result",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "defines-concept",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Clinical T Result",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "defines-concept",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Diagnosis Records",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "defines-concept",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Estrogen Receptor Negative",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Estrogen Receptor Result",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "defines-concept",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "HER2 Negative",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "HER2 Result",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "defines-concept",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Has Active Confirmed Invasive Breast Cancer",
+            "nodeKind": "inference",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Has Clinical T1c Or Higher",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Has Clinically Positive Nodes",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Has Nonmetastatic Disease",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Indexed Breast Cancer",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "defines-concept",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Progesterone Receptor Negative",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Progesterone Receptor Result",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "defines-concept",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "decision",
+            "name": "Neoadjuvant Guidance",
+            "nodeId": "when[0]",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "decision",
+            "name": "Neoadjuvant Guidance",
+            "nodeId": "when[0]/action[0]",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "recommends-disposition",
+            "status": "provisional"
+          }
+        ],
+        "cel": []
+      }
+    ]
+  }
+}

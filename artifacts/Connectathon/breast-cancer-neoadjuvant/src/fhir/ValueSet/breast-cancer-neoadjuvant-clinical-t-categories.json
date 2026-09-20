@@ -1,0 +1,111 @@
+{
+  "resourceType": "ValueSet",
+  "id": "breast-cancer-neoadjuvant-clinical-t-categories",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-t-categories",
+  "version": "0.0.0",
+  "name": "BreastCancerNeoadjuvantClinicalTCategories",
+  "title": "Breast cancer neoadjuvant TNBC review guidance for the HL7 Agentic Knowledge Connectathon",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-20T00:00:00.000Z",
+  "publisher": "Alphora",
+  "description": "Breast cancer neoadjuvant TNBC review guidance for the HL7 Agentic Knowledge Connectathon",
+  "compose": {
+    "include": [
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "concept": [
+          {
+            "code": "cT1mi",
+            "display": "Clinical T1mi"
+          },
+          {
+            "code": "cT1a",
+            "display": "Clinical T1a"
+          },
+          {
+            "code": "cT1b",
+            "display": "Clinical T1b"
+          },
+          {
+            "code": "cT1c",
+            "display": "Clinical T1c"
+          },
+          {
+            "code": "cT2",
+            "display": "Clinical T2"
+          },
+          {
+            "code": "cT3",
+            "display": "Clinical T3"
+          },
+          {
+            "code": "cT4",
+            "display": "Clinical T4"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2026-09-20T00:00:00.000Z",
+    "contains": [
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "cT1mi",
+        "display": "Clinical T1mi"
+      },
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "cT1a",
+        "display": "Clinical T1a"
+      },
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "cT1b",
+        "display": "Clinical T1b"
+      },
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "cT1c",
+        "display": "Clinical T1c"
+      },
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "cT2",
+        "display": "Clinical T2"
+      },
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "cT3",
+        "display": "Clinical T3"
+      },
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "cT4",
+        "display": "Clinical T4"
+      }
+    ]
+  }
+}

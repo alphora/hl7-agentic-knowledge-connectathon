@@ -1,0 +1,21 @@
+{
+  "resourceType": "Patient",
+  "id": "breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/identifier/cel-test-patient",
+      "value": "breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346"
+    }
+  ],
+  "name": [
+    {
+      "text": "Synthetic tnbc-metastatic"
+    }
+  ],
+  "birthDate": "1970-01-01"
+}

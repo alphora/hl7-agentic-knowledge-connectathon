@@ -1,0 +1,128 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [ {
+    "name": "return",
+    "resource": {
+      "resourceType": "Bundle",
+      "id": "breast-cancer-neoadjuvant",
+      "type": "collection",
+      "entry": [ {
+        "resource": {
+          "resourceType": "RequestGroup",
+          "id": "breast-cancer-neoadjuvant",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          } ],
+          "instantiatesCanonical": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant|0.0.0" ],
+          "status": "active",
+          "intent": "proposal",
+          "subject": {
+            "reference": "Patient/patient-tnbc-t1b-n1"
+          },
+          "action": [ {
+            "title": "Neoadjuvant TNBC Guidance Applicable",
+            "description": "Neoadjuvant TNBC Guidance Applicable",
+            "code": [ {
+              "coding": [ {
+                "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                "code": "guideline-based-care"
+              } ]
+            } ],
+            "condition": [ {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "CRL branch CriterionRef L165C7"
+              }
+            } ],
+            "resource": {
+              "reference": "RequestGroup/breast-cancer-neoadjuvant-oncology-r-159548add3d4-recommendation"
+            }
+          } ]
+        }
+      }, {
+        "resource": {
+          "resourceType": "CommunicationRequest",
+          "id": "breast-cancer-neoadjuvant-oncology-review-guidance",
+          "meta": {
+            "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-communicationrequest" ]
+          },
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          } ],
+          "status": "active",
+          "doNotPerform": false,
+          "subject": {
+            "reference": "Patient/patient-tnbc-t1b-n1"
+          },
+          "payload": [ {
+            "contentString": "The documented nonmetastatic triple-negative breast cancer with clinically positive nodes or at least clinical T1c disease meets the supplied neoadjuvant guidance criterion for oncology review. This does not establish chemotherapy fitness or authorize a medication order. The ASCO 2022 immunotherapy update concerns a distinct high-risk population; this review trigger does not determine pembrolizumab eligibility."
+          } ]
+        }
+      }, {
+        "resource": {
+          "resourceType": "RequestGroup",
+          "id": "breast-cancer-neoadjuvant-oncology-r-159548add3d4-recommendation",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          } ],
+          "instantiatesCanonical": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant-oncology-r-159548add3d4-recommendation|0.0.0" ],
+          "status": "active",
+          "intent": "proposal",
+          "subject": {
+            "reference": "Patient/patient-tnbc-t1b-n1"
+          },
+          "action": [ {
+            "title": "Oncology Review Guidance",
+            "description": "Oncology Review Guidance",
+            "code": [ {
+              "coding": [ {
+                "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                "code": "guideline-based-care"
+              } ]
+            } ],
+            "type": {
+              "coding": [ {
+                "system": "http://terminology.hl7.org/CodeSystem/action-type",
+                "code": "create"
+              } ]
+            },
+            "resource": {
+              "reference": "CommunicationRequest/breast-cancer-neoadjuvant-oncology-review-guidance"
+            }
+          } ]
+        }
+      } ]
+    }
+  } ]
+}

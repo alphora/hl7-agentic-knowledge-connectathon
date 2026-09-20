@@ -1,0 +1,65 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [ {
+    "name": "Is Triple Negative",
+    "valueBoolean": true
+  }, {
+    "name": "Meets Tumor Or Node Criterion",
+    "valueBoolean": true
+  }, {
+    "name": "Has Clinically Positive Nodes",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "final",
+      "code": {
+        "text": "Has Clinically Positive Nodes"
+      },
+      "subject": {
+        "reference": "Patient/patient-tnbc-metastasis-missing"
+      },
+      "effectiveDateTime": "2026-06-01T09:00:00Z",
+      "valueBoolean": false
+    }
+  }, {
+    "name": "Neoadjuvant TNBC Guidance Applicable",
+    "_valueBoolean": {
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode": "unknown"
+      } ]
+    }
+  }, {
+    "name": "Has Nonmetastatic Disease",
+    "_valueBoolean": {
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode": "unknown"
+      } ]
+    }
+  }, {
+    "name": "Has Active Confirmed Invasive Breast Cancer",
+    "valueBoolean": true
+  }, {
+    "name": "Has Clinical T1c Or Higher",
+    "resource": {
+      "resourceType": "Observation",
+      "status": "final",
+      "code": {
+        "text": "Has Clinical T1c Or Higher"
+      },
+      "subject": {
+        "reference": "Patient/patient-tnbc-metastasis-missing"
+      },
+      "effectiveDateTime": "2026-06-01T09:00:00Z",
+      "valueBoolean": true
+    }
+  }, {
+    "name": "In Neoadjuvant Review Population",
+    "_valueBoolean": {
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode": "unknown"
+      } ]
+    }
+  } ]
+}

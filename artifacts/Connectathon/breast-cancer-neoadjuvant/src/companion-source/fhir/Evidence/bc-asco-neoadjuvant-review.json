@@ -1,0 +1,72 @@
+{
+  "resourceType": "Evidence",
+  "id": "bc-asco-neoadjuvant-review",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Evidence/bc-asco-neoadjuvant-review",
+  "version": "0.0.0",
+  "name": "BcAscoNeoadjuvantReview",
+  "title": "ASCO-derived TNBC review context",
+  "status": "draft",
+  "date": "2026-09-20",
+  "publisher": "Alphora",
+  "description": "Source-linked context for the Connectathon's broad TNBC neoadjuvant-review criterion. The ASCO 2021 recommendation boundary and the track's operational additions are distinguished in the population definition.",
+  "author": [
+    {
+      "name": "Alphora Connectathon team"
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "citation",
+      "label": "asco-neoadjuvant-2021",
+      "display": "ASCO neoadjuvant guideline (2021), recommendations 3.1 and 3.2; DOI 10.1200/JCO.20.03399",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8274745/"
+    },
+    {
+      "type": "citation",
+      "label": "asco-pembrolizumab-update-2022",
+      "display": "ASCO rapid recommendation update (2022), Abstract / Recommendation; DOI 10.1200/JCO.22.00503",
+      "url": "https://ascopubs.org/doi/abs/10.1200/JCO.22.00503"
+    },
+    {
+      "type": "derived-from",
+      "label": "breast-cancer-track-contract",
+      "display": "Pinned breast-cancer fixture contract: Source and population contract, Observation selection and Required expressions",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/test-bundles/README.md"
+    },
+    {
+      "type": "documentation",
+      "label": "source-manifest",
+      "display": "Source roles, dates, locators, extraction exclusions and redistribution boundaries",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/sources/manifest.yaml"
+    },
+    {
+      "type": "documentation",
+      "display": "Generated oncology-review guidance",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ActivityDefinition/breast-cancer-neoadjuvant-oncology-review-guidance"
+    }
+  ],
+  "note": [
+    {
+      "text": "Manually authored FHIR R4 companion. CRL does not currently generate this artifact family. Descriptive source-linked context, not an executable eligibility rule, treatment order, or assertion of clinical validation."
+    },
+    {
+      "text": "This is a guideline-to-track applicability context, not a comparative effect estimate. No numerical effect size, certainty grade or treatment benefit is inferred. The cT1a/b N0 boundary is a negative applicability contrast, not a randomized trial comparator."
+    },
+    {
+      "text": "The supplied ASCO 2022 update supports pembrolizumab in a specified high-risk early-stage population. It updates the 2021 immunotherapy evidence context and must not be equated with everyone matching this broad baseline rule. The demonstration does not implement immunotherapy eligibility or treatment orders."
+    }
+  ],
+  "exposureBackground": {
+    "reference": "EvidenceVariable/bc-review-population"
+  },
+  "exposureVariant": [
+    {
+      "reference": "EvidenceVariable/bc-neoadjuvant-review-exposure"
+    }
+  ],
+  "outcome": [
+    {
+      "reference": "EvidenceVariable/bc-review-applicability-outcome"
+    }
+  ]
+}

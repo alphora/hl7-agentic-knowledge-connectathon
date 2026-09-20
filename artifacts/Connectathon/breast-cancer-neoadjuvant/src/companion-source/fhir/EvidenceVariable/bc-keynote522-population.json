@@ -1,0 +1,48 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "bc-keynote522-population",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/EvidenceVariable/bc-keynote522-population",
+  "version": "0.0.0",
+  "name": "BcKeynote522Population",
+  "title": "KEYNOTE-522 stage II or III TNBC population",
+  "status": "draft",
+  "date": "2026-09-20",
+  "publisher": "Alphora",
+  "description": "Study population described by the supplied NCI PDQ excerpt.",
+  "author": [
+    {
+      "name": "Alphora Connectathon team"
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "citation",
+      "label": "nci-breast-treatment-pdq",
+      "display": "NCI Breast Cancer Treatment PDQ, displayed April 25, 2025; supplied extract retrieved September 19, 2026, sections _3053 and _2896",
+      "url": "https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#_2896"
+    },
+    {
+      "type": "derived-from",
+      "label": "nci-breast-treatment-pdq-pinned-extract",
+      "display": "Supplied NCI PDQ text extraction; SHA-256 b05f58a44e72c1d7371c5b9bb1fa133079ceff38327feb84885d02cfe397a287",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/sources/raw/nci-breast-treatment-pdq.txt"
+    }
+  ],
+  "note": [
+    {
+      "text": "Manually authored FHIR R4 companion. CRL does not currently generate this artifact family. Descriptive source-linked context, not an executable eligibility rule, treatment order, or assertion of clinical validation."
+    },
+    {
+      "text": "This trial context is narrower than the Connectathon baseline review trigger. This description is not a reconstructed trial eligibility protocol and does not infer a stage group from tumor size."
+    }
+  ],
+  "type": "descriptive",
+  "characteristic": [
+    {
+      "description": "KEYNOTE-522 stage II or III TNBC population",
+      "definitionCodeableConcept": {
+        "text": "Patients with stage II or stage III triple-negative breast cancer in the randomized phase III KEYNOTE-522 trial, as summarized in the supplied NCI professional evidence extract."
+      }
+    }
+  ]
+}

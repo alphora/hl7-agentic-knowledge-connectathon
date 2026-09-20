@@ -1,0 +1,265 @@
+{
+  "policyId": "Breast Cancer Neoadjuvant",
+  "policyVersion": "0.0.0",
+  "diagnostics": [],
+  "findings": [
+    {
+      "kind": "missed-decision",
+      "severity": "error",
+      "message": "must-link-decision item \"indexed-observation-selection\" has no counted decision implementation (Missed₁).",
+      "itemId": "indexed-observation-selection",
+      "class": "attribution"
+    },
+    {
+      "kind": "mn-keyword-hard",
+      "severity": "manual-review",
+      "message": "non-decision item \"source-file-2\" (definition) carries MN/coverage language — reconcile its role (§9.1).",
+      "itemId": "source-file-2",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-hard",
+      "severity": "manual-review",
+      "message": "non-decision item \"source-file-3\" (definition) carries MN/coverage language — reconcile its role (§9.1).",
+      "itemId": "source-file-3",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-hard",
+      "severity": "manual-review",
+      "message": "non-decision item \"source-file-4\" (definition) carries MN/coverage language — reconcile its role (§9.1).",
+      "itemId": "source-file-4",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-hard",
+      "severity": "manual-review",
+      "message": "non-decision item \"source-file-5\" (definition) carries MN/coverage language — reconcile its role (§9.1).",
+      "itemId": "source-file-5",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-hard",
+      "severity": "manual-review",
+      "message": "non-decision item \"source-file-6\" (definition) carries MN/coverage language — reconcile its role (§9.1).",
+      "itemId": "source-file-6",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-hard",
+      "severity": "manual-review",
+      "message": "non-decision item \"source-file-7\" (definition) carries MN/coverage language — reconcile its role (§9.1).",
+      "itemId": "source-file-7",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-hard",
+      "severity": "manual-review",
+      "message": "non-decision item \"source-file-8\" (definition) carries MN/coverage language — reconcile its role (§9.1).",
+      "itemId": "source-file-8",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-hard",
+      "severity": "manual-review",
+      "message": "non-decision item \"source-file-9\" (definition) carries MN/coverage language — reconcile its role (§9.1).",
+      "itemId": "source-file-9",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-hard",
+      "severity": "manual-review",
+      "message": "non-decision item \"update-distinct-population\" (definition) carries MN/coverage language — reconcile its role (§9.1).",
+      "itemId": "update-distinct-population",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-hard",
+      "severity": "manual-review",
+      "message": "non-decision item \"clinical-stage-domain\" (definition) carries MN/coverage language — reconcile its role (§9.1).",
+      "itemId": "clinical-stage-domain",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"packet-identity\" (role administrative, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "packet-identity",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"source-file-1\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "source-file-1",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "scrutinize",
+      "message": "source item \"source-file-2\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content. (V8 mn-keyword ALSO fired on this item — the coverage language strengthens the concern)",
+      "itemId": "source-file-2",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "scrutinize",
+      "message": "source item \"source-file-3\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content. (V8 mn-keyword ALSO fired on this item — the coverage language strengthens the concern)",
+      "itemId": "source-file-3",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "scrutinize",
+      "message": "source item \"source-file-4\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content. (V8 mn-keyword ALSO fired on this item — the coverage language strengthens the concern)",
+      "itemId": "source-file-4",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "scrutinize",
+      "message": "source item \"source-file-5\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content. (V8 mn-keyword ALSO fired on this item — the coverage language strengthens the concern)",
+      "itemId": "source-file-5",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "scrutinize",
+      "message": "source item \"source-file-6\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content. (V8 mn-keyword ALSO fired on this item — the coverage language strengthens the concern)",
+      "itemId": "source-file-6",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "scrutinize",
+      "message": "source item \"source-file-7\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content. (V8 mn-keyword ALSO fired on this item — the coverage language strengthens the concern)",
+      "itemId": "source-file-7",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "scrutinize",
+      "message": "source item \"source-file-8\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content. (V8 mn-keyword ALSO fired on this item — the coverage language strengthens the concern)",
+      "itemId": "source-file-8",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "scrutinize",
+      "message": "source item \"source-file-9\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content. (V8 mn-keyword ALSO fired on this item — the coverage language strengthens the concern)",
+      "itemId": "source-file-9",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "scrutinize",
+      "message": "source item \"update-distinct-population\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content. (V8 mn-keyword ALSO fired on this item — the coverage language strengthens the concern)",
+      "itemId": "update-distinct-population",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "scrutinize",
+      "message": "source item \"clinical-stage-domain\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content. (V8 mn-keyword ALSO fired on this item — the coverage language strengthens the concern)",
+      "itemId": "clinical-stage-domain",
+      "class": "integrity"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"TNBC, clinical T1c N0 M0\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"TNBC, exactly 10 mm, clinical T1b N0 M0\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"Small TNBC with clinically positive nodes\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"HER2-positive breast cancer\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"ER-positive breast cancer\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"HER2 result missing\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"HER2 interpretation unresolved\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"Small TNBC with missing nodal assessment\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"TNBC with distant metastasis\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"TNBC without distant-metastasis assessment\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"Receptor and staging results without cancer diagnosis\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"TNBC, T1c N0 M0, size in centimeters\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"TNBC, clinical T2 N0 M0\": run-error"
+    }
+  ],
+  "errorCount": 14,
+  "manualReviewCount": 22,
+  "warningCount": 0,
+  "worklistCount": 1,
+  "waiverCount": 12,
+  "waiverScrutinizeCount": 10,
+  "pass": false
+}

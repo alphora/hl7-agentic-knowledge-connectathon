@@ -1,0 +1,114 @@
+{
+  "resourceType": "Library",
+  "id": "BreastCancerNeoadjuvant",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablelibrary",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablelibrary",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablelibrary"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+      "valueCode": "structured"
+    }
+  ],
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvant",
+  "version": "0.0.0",
+  "name": "BreastCancerNeoadjuvant",
+  "title": "Breast Cancer Neoadjuvant",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-20T00:00:00.000Z",
+  "publisher": "Alphora",
+  "description": "Breast cancer neoadjuvant TNBC review guidance for the HL7 Agentic Knowledge Connectathon",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/library-type",
+        "code": "logic-library"
+      }
+    ]
+  },
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-invasive-breast-carcinoma"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-receptor-results"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-negative-receptor-result"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-estrogen-receptor-test"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-progesterone-receptor-test"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-her2-test"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-m-test"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-m-categories"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-m-qualifying-categories"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-n-test"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-n-categories"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-n-qualifying-categories"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-t-test"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-t-categories"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-clinical-t-qualifying-categories"
+    }
+  ],
+  "content": [
+    {
+      "contentType": "text/cql",
+      "url": "../../cql/BreastCancerNeoadjuvant.cql"
+    }
+  ]
+}

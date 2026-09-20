@@ -1,0 +1,60 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "bc-review-population",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/EvidenceVariable/bc-review-population",
+  "version": "0.0.0",
+  "name": "BcReviewPopulation",
+  "title": "Connectathon TNBC oncology-review population",
+  "status": "draft",
+  "date": "2026-09-20",
+  "publisher": "Alphora",
+  "description": "Track operational population for the historical ASCO 2021 neoadjuvant-review boundary, not a complete chemotherapy eligibility population.",
+  "author": [
+    {
+      "name": "Alphora Connectathon team"
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "derived-from",
+      "label": "breast-cancer-track-contract",
+      "display": "Pinned breast-cancer fixture contract: Source and population contract, Observation selection and Required expressions",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/test-bundles/README.md"
+    },
+    {
+      "type": "citation",
+      "label": "asco-neoadjuvant-2021",
+      "display": "ASCO neoadjuvant guideline (2021), recommendations 3.1 and 3.2; DOI 10.1200/JCO.20.03399",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8274745/"
+    },
+    {
+      "type": "citation",
+      "label": "nci-breast-treatment-pdq",
+      "display": "NCI Breast Cancer Treatment PDQ, displayed April 25, 2025; supplied extract retrieved September 19, 2026, sections _3053 and _2896",
+      "url": "https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#_2896"
+    },
+    {
+      "type": "derived-from",
+      "label": "nci-breast-treatment-pdq-pinned-extract",
+      "display": "Supplied NCI PDQ text extraction; SHA-256 b05f58a44e72c1d7371c5b9bb1fa133079ceff38327feb84885d02cfe397a287",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/sources/raw/nci-breast-treatment-pdq.txt"
+    }
+  ],
+  "note": [
+    {
+      "text": "Manually authored FHIR R4 companion. CRL does not currently generate this artifact family. Descriptive source-linked context, not an executable eligibility rule, treatment order, or assertion of clinical validation."
+    },
+    {
+      "text": "Active/confirmed diagnosis, explicit cM0, record linkage and unknown handling are track-authored operational choices. ASCO recommendation 3.2 supplies the small cT1a/b N0 negative contrast. Clinical T/N categories are supplied, never inferred from size or pathological node counts."
+    }
+  ],
+  "type": "descriptive",
+  "characteristic": [
+    {
+      "description": "Connectathon TNBC oncology-review population",
+      "definitionCodeableConcept": {
+        "text": "Adults undergoing pretreatment review of an active, confirmed invasive breast cancer, with explicit clinical M0; ER, PR and HER2 negative; and either clinical T1c/T2/T3/T4 or clinical N1/N2/N3. All tumor-specific observations refer to the indexed cancer. Missing or unresolved inputs remain unknown."
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "bc-keynote522-comparator",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/EvidenceVariable/bc-keynote522-comparator",
+  "version": "0.0.0",
+  "name": "BcKeynote522Comparator",
+  "title": "Placebo plus chemotherapy study comparator",
+  "status": "draft",
+  "date": "2026-09-20",
+  "publisher": "Alphora",
+  "description": "Comparator exposure described in the supplied NCI KEYNOTE-522 summary.",
+  "author": [
+    {
+      "name": "Alphora Connectathon team"
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "citation",
+      "label": "nci-breast-treatment-pdq",
+      "display": "NCI Breast Cancer Treatment PDQ, displayed April 25, 2025; supplied extract retrieved September 19, 2026, sections _3053 and _2896",
+      "url": "https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#_2896"
+    },
+    {
+      "type": "derived-from",
+      "label": "nci-breast-treatment-pdq-pinned-extract",
+      "display": "Supplied NCI PDQ text extraction; SHA-256 b05f58a44e72c1d7371c5b9bb1fa133079ceff38327feb84885d02cfe397a287",
+      "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/breast-cancer/sources/raw/nci-breast-treatment-pdq.txt"
+    }
+  ],
+  "note": [
+    {
+      "text": "Manually authored FHIR R4 companion. CRL does not currently generate this artifact family. Descriptive source-linked context, not an executable eligibility rule, treatment order, or assertion of clinical validation."
+    }
+  ],
+  "type": "descriptive",
+  "characteristic": [
+    {
+      "description": "Placebo plus chemotherapy study comparator",
+      "definitionCodeableConcept": {
+        "text": "The corresponding neoadjuvant chemotherapy backbone with placebo during neoadjuvant and adjuvant treatment, as described for the trial comparison."
+      }
+    }
+  ]
+}

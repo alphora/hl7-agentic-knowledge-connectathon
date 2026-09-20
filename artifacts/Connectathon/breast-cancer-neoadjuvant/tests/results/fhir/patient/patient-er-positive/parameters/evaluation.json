@@ -1,0 +1,28 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [ {
+    "name": "Is Triple Negative",
+    "valueBoolean": false
+  }, {
+    "name": "Meets Tumor Or Node Criterion",
+    "valueBoolean": true
+  }, {
+    "name": "Has Clinically Positive Nodes",
+    "valueBoolean": false
+  }, {
+    "name": "Neoadjuvant TNBC Guidance Applicable",
+    "valueBoolean": false
+  }, {
+    "name": "Has Nonmetastatic Disease",
+    "valueBoolean": true
+  }, {
+    "name": "Has Active Confirmed Invasive Breast Cancer",
+    "valueBoolean": true
+  }, {
+    "name": "Has Clinical T1c Or Higher",
+    "valueBoolean": true
+  }, {
+    "name": "In Neoadjuvant Review Population",
+    "valueBoolean": true
+  } ]
+}

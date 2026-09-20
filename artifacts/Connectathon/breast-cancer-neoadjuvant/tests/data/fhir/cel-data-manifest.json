@@ -1,0 +1,709 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "caseName": "TNBC, clinical T1c N0 M0",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-01",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8/patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8.json",
+          "sha256": "12fbe443a286d0c66d097e41383ad4a42b8c272423e81e5625874a04ba7a45e0"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t1c-n0-91a6c0384aff",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8/condition/breast-cancer-examples-tnbc-clinical-t1c-n0-91a6c0384aff.json",
+          "sha256": "8ccf88505fef977b30c8d4b082d61ea7f4c5ad80ede7793936d1513a41a1f855"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t1c-n0-854914464521",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8/observation/breast-cancer-examples-tnbc-clinical-t1c-n0-854914464521.json",
+          "sha256": "2aa6b740bad95dcb1f9981239ed59be5a0cf6d5a47a495a52a387539306142d5"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t1c-n0-b9b1dc469064",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8/observation/breast-cancer-examples-tnbc-clinical-t1c-n0-b9b1dc469064.json",
+          "sha256": "bb414894c4c1b44de3a44d39790c51956282a1d3a8d6901932370b43ef45c976"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t1c-n0-174182c3e723",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8/observation/breast-cancer-examples-tnbc-clinical-t1c-n0-174182c3e723.json",
+          "sha256": "62c84c2143f3db51e3db604fe56d6698c8c5b72216eb969da9cb55d731ced35d"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t1c-n0-ccd9cca59882",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8/observation/breast-cancer-examples-tnbc-clinical-t1c-n0-ccd9cca59882.json",
+          "sha256": "1521229097568876d15703f5ff8b2261fba31dd44b365f51260047ff4448073d"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t1c-n0-c2d838e1d55f",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8/observation/breast-cancer-examples-tnbc-clinical-t1c-n0-c2d838e1d55f.json",
+          "sha256": "771b5c590eafdbbcfb527c2bfb312abb6f3ba5721811c04a22989cbad3348574"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t1c-n0-0a95ebfca710",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8/observation/breast-cancer-examples-tnbc-clinical-t1c-n0-0a95ebfca710.json",
+          "sha256": "08f3fb4e704a8f1593bd3480ce5d0e8037f752319ba0763f27f80c91083c6eec"
+        }
+      ]
+    },
+    {
+      "caseName": "TNBC, exactly 10 mm, clinical T1b N0 M0",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-02",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811/patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811.json",
+          "sha256": "7642fdbc2a25b548c88ed83aa5c2dccbdea6692bd976dd95a389293db0fc06ce"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-exactly-10-mm-c-77b2fa2c8411",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811/condition/breast-cancer-examples-tnbc-exactly-10-mm-c-77b2fa2c8411.json",
+          "sha256": "3291c5c562fe076d8a0c1027053e8dd65affe193f205fc7dfb55cba73bc2ae9f"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-exactly-10-mm-c-cfafc2952341",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811/observation/breast-cancer-examples-tnbc-exactly-10-mm-c-cfafc2952341.json",
+          "sha256": "7b5b7a04e396cabdbc59c425e9acdad630d80ad96cab79e512b4041e59794ace"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-exactly-10-mm-c-31cbe4c403c1",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811/observation/breast-cancer-examples-tnbc-exactly-10-mm-c-31cbe4c403c1.json",
+          "sha256": "a39976981701eb1285a7b90ebb51dc29ac44ca434dfaef1bfe5e48a1999a3ffa"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-exactly-10-mm-c-8f33bc6b5f90",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811/observation/breast-cancer-examples-tnbc-exactly-10-mm-c-8f33bc6b5f90.json",
+          "sha256": "3cb6f3923642d1c11706de87141ff3f602a2c9b1dd61a33e404d50ae947d36f6"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-exactly-10-mm-c-60a75a2a03f8",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811/observation/breast-cancer-examples-tnbc-exactly-10-mm-c-60a75a2a03f8.json",
+          "sha256": "e950f10bf5151bd797b125152ec0752b04fd3e2dd13440724d2090ca760dd066"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-exactly-10-mm-c-75bacd505f5c",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811/observation/breast-cancer-examples-tnbc-exactly-10-mm-c-75bacd505f5c.json",
+          "sha256": "f79f719997b532d25b31876e749b102d1ff34279b60b768a9a8733a04134ad00"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-exactly-10-mm-c-1ee6cf7b8d9a",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811/observation/breast-cancer-examples-tnbc-exactly-10-mm-c-1ee6cf7b8d9a.json",
+          "sha256": "d67d6887e6904351d12ffad8e5b89090aaa088893179d276575bd2af0ab57215"
+        }
+      ]
+    },
+    {
+      "caseName": "Small TNBC with clinically positive nodes",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-03",
+      "compartmentDir": "patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e/patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e.json",
+          "sha256": "755824075ec457c8b3fecf4fa6c4d9af5c01476757b449dcb05d9f55e2343b09"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-clin-780aaa619a87",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e/condition/breast-cancer-examples-small-tnbc-with-clin-780aaa619a87.json",
+          "sha256": "545ad60bd83d3fd487d444aac9aa7aaf1f7486afcd199b0a96cdbbf9bfbb4788"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-clin-5bbc90e47393",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e/observation/breast-cancer-examples-small-tnbc-with-clin-5bbc90e47393.json",
+          "sha256": "728e4d571f6638a811d9dd181dc23a9638928e23a25b32735b5f4a89581a8a6c"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-clin-da036525da90",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e/observation/breast-cancer-examples-small-tnbc-with-clin-da036525da90.json",
+          "sha256": "357f3473fd5069c862c1428094ae5bab2ddcf3af2d9608a1a44a73e1952feb1a"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-clin-081499809e20",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e/observation/breast-cancer-examples-small-tnbc-with-clin-081499809e20.json",
+          "sha256": "e41824f8aa8ae28728b6a8c45cb6dab711d085ea472cc481ef5a8e844eb04b59"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-clin-bae80a4d3fad",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e/observation/breast-cancer-examples-small-tnbc-with-clin-bae80a4d3fad.json",
+          "sha256": "769dfd387ee166e4453585ad2c62cf0457fa489a9b012f3250005f9b6e3ff90c"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-clin-e84901240a12",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e/observation/breast-cancer-examples-small-tnbc-with-clin-e84901240a12.json",
+          "sha256": "14702f2d00334cd137c58ecb820a8316d1d4eedea75a858bbf158dcc2ff7597b"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-clin-7dfa334a4291",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e/observation/breast-cancer-examples-small-tnbc-with-clin-7dfa334a4291.json",
+          "sha256": "11aaa9054c6711de76071e507edf33806b282fd2ff8b87f680720462697a259f"
+        }
+      ]
+    },
+    {
+      "caseName": "HER2-positive breast cancer",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-04",
+      "compartmentDir": "patient/breast-cancer-examples-her2-positive-breast-ba5868f92567",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-her2-positive-breast-ba5868f92567",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-her2-positive-breast-ba5868f92567/patient/breast-cancer-examples-her2-positive-breast-ba5868f92567.json",
+          "sha256": "2072c85d8dcb2775fde5337425488fb499fde912b1ade889c8d5a799786aa4ef"
+        },
+        {
+          "id": "breast-cancer-examples-her2-positive-breast-c9b187451d2a",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-her2-positive-breast-ba5868f92567/condition/breast-cancer-examples-her2-positive-breast-c9b187451d2a.json",
+          "sha256": "6254758a0895e6ec1464b9066ab34166f66da48fd78e384aa6266a687f89c2b4"
+        },
+        {
+          "id": "breast-cancer-examples-her2-positive-breast-43878ad9d859",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-positive-breast-ba5868f92567/observation/breast-cancer-examples-her2-positive-breast-43878ad9d859.json",
+          "sha256": "e210620dbf9368e9548604d1a4445fc6e05d9c346e67f8abdbc8c06a461336bc"
+        },
+        {
+          "id": "breast-cancer-examples-her2-positive-breast-a6c7327c9478",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-positive-breast-ba5868f92567/observation/breast-cancer-examples-her2-positive-breast-a6c7327c9478.json",
+          "sha256": "e2f058a4ad084d60f43ff23fc6d23d2aa13ce7a0a5f35ce96a1582d3339ec1e2"
+        },
+        {
+          "id": "breast-cancer-examples-her2-positive-breast-20ef860ca2df",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-positive-breast-ba5868f92567/observation/breast-cancer-examples-her2-positive-breast-20ef860ca2df.json",
+          "sha256": "61c3f9260ec685409e45c7273dfbc3b06535689d4e906404ea4dbec8495478d2"
+        },
+        {
+          "id": "breast-cancer-examples-her2-positive-breast-ded7750702bd",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-positive-breast-ba5868f92567/observation/breast-cancer-examples-her2-positive-breast-ded7750702bd.json",
+          "sha256": "992c367aec61634f1968abca1020a88ab07df0c0e7131564369570f3c42cbf18"
+        },
+        {
+          "id": "breast-cancer-examples-her2-positive-breast-e60aaae65a29",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-positive-breast-ba5868f92567/observation/breast-cancer-examples-her2-positive-breast-e60aaae65a29.json",
+          "sha256": "51b1cc2a198ed1a65d0ceae80d4726668d3a3acebd6b46032edf2c1736ef0756"
+        },
+        {
+          "id": "breast-cancer-examples-her2-positive-breast-aca8b5d96b00",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-positive-breast-ba5868f92567/observation/breast-cancer-examples-her2-positive-breast-aca8b5d96b00.json",
+          "sha256": "a0ff9539f816d48fe7c1a989b76b84c93d917084e14b7a8e5d64dc208ad3fdfe"
+        }
+      ]
+    },
+    {
+      "caseName": "ER-positive breast cancer",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-05",
+      "compartmentDir": "patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-er-positive-breast-c-aef7012b8052",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052/patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052.json",
+          "sha256": "e9f0d4f38513697619d016d10c47f1077bd5ec8b8f5aa7bb83348de080059bfb"
+        },
+        {
+          "id": "breast-cancer-examples-er-positive-breast-c-60632ad20ebf",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052/condition/breast-cancer-examples-er-positive-breast-c-60632ad20ebf.json",
+          "sha256": "a9ae3c8de0523fedc14dac29fc2422eed62736ef908a433fb7fb1dfd68d689c1"
+        },
+        {
+          "id": "breast-cancer-examples-er-positive-breast-c-636fccfdca14",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052/observation/breast-cancer-examples-er-positive-breast-c-636fccfdca14.json",
+          "sha256": "dffb4b3c443a4e5e66f00c07bd71d7f57bfa25c768f4d59a9b05911596e41e19"
+        },
+        {
+          "id": "breast-cancer-examples-er-positive-breast-c-711ccb1565e4",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052/observation/breast-cancer-examples-er-positive-breast-c-711ccb1565e4.json",
+          "sha256": "a9906292f71f82e8a29cb72c25efe36f0a6b905ee6e1d642041b39982be8818c"
+        },
+        {
+          "id": "breast-cancer-examples-er-positive-breast-c-6fe71400f679",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052/observation/breast-cancer-examples-er-positive-breast-c-6fe71400f679.json",
+          "sha256": "030573c90d1f08c1aaefb64f904fe2f47522aaf6d2166737fcba77343fecf8f9"
+        },
+        {
+          "id": "breast-cancer-examples-er-positive-breast-c-79608bb27649",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052/observation/breast-cancer-examples-er-positive-breast-c-79608bb27649.json",
+          "sha256": "30ad928436346c5d3d4fb8b74ac2c0e20cf9ef2cfb61969dbda34abfb307b1ab"
+        },
+        {
+          "id": "breast-cancer-examples-er-positive-breast-c-36f1fc383e68",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052/observation/breast-cancer-examples-er-positive-breast-c-36f1fc383e68.json",
+          "sha256": "ecf4581584750ea76c606bc554e243cd73f320ad6ee676aa2a67031e1ee23621"
+        },
+        {
+          "id": "breast-cancer-examples-er-positive-breast-c-164286b95871",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052/observation/breast-cancer-examples-er-positive-breast-c-164286b95871.json",
+          "sha256": "af77a0695171595e561149cf0eeb467fd0de276d61d0e0558e02cd270a7679b6"
+        }
+      ]
+    },
+    {
+      "caseName": "HER2 result missing",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-06",
+      "compartmentDir": "patient/breast-cancer-examples-her2-result-missing-patient-06",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-her2-result-missing-patient-06",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-her2-result-missing-patient-06/patient/breast-cancer-examples-her2-result-missing-patient-06.json",
+          "sha256": "2c939b65dec7fa8ec287b60b427bad63c0eb24a2705fd548b46e3eee833d3fe1"
+        },
+        {
+          "id": "breast-cancer-examples-her2-result-missing-f0a8d80e197f",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-her2-result-missing-patient-06/condition/breast-cancer-examples-her2-result-missing-f0a8d80e197f.json",
+          "sha256": "f98349a1d1888cdfe82ef7d2b6c6327d0d5644841041ccbd7b4188f0ef3ce478"
+        },
+        {
+          "id": "breast-cancer-examples-her2-result-missing-fa371af64c55",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-result-missing-patient-06/observation/breast-cancer-examples-her2-result-missing-fa371af64c55.json",
+          "sha256": "87c9d5983a08f36506a6a5307c2f7ec770369f46cd63a12b67051a0878e4e1dc"
+        },
+        {
+          "id": "breast-cancer-examples-her2-result-missing-59631774c0ff",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-result-missing-patient-06/observation/breast-cancer-examples-her2-result-missing-59631774c0ff.json",
+          "sha256": "fd3903770f16a40bd30c6bf6734b8b423ea99da89fb4ad43ce6f6ed0ba3384b4"
+        },
+        {
+          "id": "breast-cancer-examples-her2-result-missing-2c37e4d1387e",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-result-missing-patient-06/observation/breast-cancer-examples-her2-result-missing-2c37e4d1387e.json",
+          "sha256": "7f9bc49c76478f31b90fcf3ffcc08c3be5e3428840c0983738a72fb3fab34369"
+        },
+        {
+          "id": "breast-cancer-examples-her2-result-missing-06b6923cc077",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-result-missing-patient-06/observation/breast-cancer-examples-her2-result-missing-06b6923cc077.json",
+          "sha256": "f1b45cd78990194e9450a7aea410a3645e0b552272f93a86d9b150dec8577d3d"
+        },
+        {
+          "id": "breast-cancer-examples-her2-result-missing-8ca44683ba99",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-result-missing-patient-06/observation/breast-cancer-examples-her2-result-missing-8ca44683ba99.json",
+          "sha256": "0abc99eda0d458e60763ae274d31dae862523ea4344e7e8b47530dc042fabb80"
+        }
+      ]
+    },
+    {
+      "caseName": "HER2 interpretation unresolved",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-07",
+      "compartmentDir": "patient/breast-cancer-examples-her2-interpretation-8360365ea43d",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-her2-interpretation-8360365ea43d",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-her2-interpretation-8360365ea43d/patient/breast-cancer-examples-her2-interpretation-8360365ea43d.json",
+          "sha256": "5ada7aae49ee8ccd9584df136da324ea73478cfcf3789b4ecc0f872bf5b14151"
+        },
+        {
+          "id": "breast-cancer-examples-her2-interpretation-f8991faaf94a",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-her2-interpretation-8360365ea43d/condition/breast-cancer-examples-her2-interpretation-f8991faaf94a.json",
+          "sha256": "840d921a0ef1d39c75369768f4bcefd10c387bf62992e9f1fdf3ff190d00a76a"
+        },
+        {
+          "id": "breast-cancer-examples-her2-interpretation-897ffebe0542",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-interpretation-8360365ea43d/observation/breast-cancer-examples-her2-interpretation-897ffebe0542.json",
+          "sha256": "5b3230838aefadd7a38af3aba5ce58f3622d429caaa7d97a40d49d37026911cb"
+        },
+        {
+          "id": "breast-cancer-examples-her2-interpretation-d4a671fd1d60",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-interpretation-8360365ea43d/observation/breast-cancer-examples-her2-interpretation-d4a671fd1d60.json",
+          "sha256": "2880d6c6e5bb2048d05e0148e7f7d59b0e197b0205da7ac3790e5b61d0bcb679"
+        },
+        {
+          "id": "breast-cancer-examples-her2-interpretation-c84953d940f6",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-interpretation-8360365ea43d/observation/breast-cancer-examples-her2-interpretation-c84953d940f6.json",
+          "sha256": "f79e5091b826120c64bfe236d28d27783f6156c65fbaa76f2f8935956e4fc6db"
+        },
+        {
+          "id": "breast-cancer-examples-her2-interpretation-a1d77cddeccb",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-interpretation-8360365ea43d/observation/breast-cancer-examples-her2-interpretation-a1d77cddeccb.json",
+          "sha256": "c8956995880d89a2b0ab0f4e20bdf1d0d1375abc0df2c4b2554f70c67ed53771"
+        },
+        {
+          "id": "breast-cancer-examples-her2-interpretation-bd5ff278161f",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-interpretation-8360365ea43d/observation/breast-cancer-examples-her2-interpretation-bd5ff278161f.json",
+          "sha256": "fa19560c5f2b781256659c72d6372d5aa20e85dc58e6c3a3d2a5332547f6ba95"
+        },
+        {
+          "id": "breast-cancer-examples-her2-interpretation-b8e156207ed6",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-her2-interpretation-8360365ea43d/observation/breast-cancer-examples-her2-interpretation-b8e156207ed6.json",
+          "sha256": "85aaf1c5d5e5bc51e0079f074a1160e5715ba6c77833fe1a362b4aa62a48a1ad"
+        }
+      ]
+    },
+    {
+      "caseName": "Small TNBC with missing nodal assessment",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-08",
+      "compartmentDir": "patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-miss-a9748971d873",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873/patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873.json",
+          "sha256": "7b44ca150481089b17b8920c0422d9fd1a69e4ad97e4a4ce952addbc1fac1574"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-miss-114391a9b65e",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873/condition/breast-cancer-examples-small-tnbc-with-miss-114391a9b65e.json",
+          "sha256": "b82eae345279ccc499394a2df27ac1543a11242da21f6f03af97a025c2d6933d"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-miss-e49d09c4809f",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873/observation/breast-cancer-examples-small-tnbc-with-miss-e49d09c4809f.json",
+          "sha256": "d5a84910d47491d04039b9a5113b733d949068b66f8a0483b263387eccd44b54"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-miss-455aaa7a6869",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873/observation/breast-cancer-examples-small-tnbc-with-miss-455aaa7a6869.json",
+          "sha256": "7b972eeb36872937e8bcc828ab6aa27157568690a252819b8893d3875eb04947"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-miss-9a857f9cd65c",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873/observation/breast-cancer-examples-small-tnbc-with-miss-9a857f9cd65c.json",
+          "sha256": "7327efe9af8190f78d48885f187023f4130368690f750928b58811d4b416dbbc"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-miss-67598cdabce4",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873/observation/breast-cancer-examples-small-tnbc-with-miss-67598cdabce4.json",
+          "sha256": "4fd19ec6d3b8d291970c56920b5d40223fe820a0611ab4864bb6ce89785714b8"
+        },
+        {
+          "id": "breast-cancer-examples-small-tnbc-with-miss-1b6000b17267",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873/observation/breast-cancer-examples-small-tnbc-with-miss-1b6000b17267.json",
+          "sha256": "b4d8d2aa31e084d9ca1bd3728937d2b574b417d69679d3c046a51ab9b4f1d7fc"
+        }
+      ]
+    },
+    {
+      "caseName": "TNBC with distant metastasis",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-09",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346/patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346.json",
+          "sha256": "4aa8c1c94c017c2bc7067621e94bc57fd45d682565d153c35ce5fa8fb6af5595"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-with-distant-me-8386aedb8fe9",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346/condition/breast-cancer-examples-tnbc-with-distant-me-8386aedb8fe9.json",
+          "sha256": "ba1ab58a8da0a89de99ab02183ac61f94b05713814bb66bd033710b12f318fc1"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-with-distant-me-4bea1bb364bc",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346/observation/breast-cancer-examples-tnbc-with-distant-me-4bea1bb364bc.json",
+          "sha256": "45a394c4c0d6a8daa62ab7bb73b34fd5ab05baf7da2dd4131b3146770aecbe39"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-with-distant-me-f93775d2321a",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346/observation/breast-cancer-examples-tnbc-with-distant-me-f93775d2321a.json",
+          "sha256": "cffd15d9adfd0f5823c5a74e24bdd1cadc50f8d0ef5493d7059e4bdfe42663ba"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-with-distant-me-2d0080608a4a",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346/observation/breast-cancer-examples-tnbc-with-distant-me-2d0080608a4a.json",
+          "sha256": "5d689c9462fefd9ebc401be3c20031b5f8b4f55e836f1aab4575fc2c4b83e4e7"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-with-distant-me-2f93edd77942",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346/observation/breast-cancer-examples-tnbc-with-distant-me-2f93edd77942.json",
+          "sha256": "a800252b89125130b21f4fa4e4e05d524401e84e15f96de2a88598187e7a6422"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-with-distant-me-996c6976473b",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346/observation/breast-cancer-examples-tnbc-with-distant-me-996c6976473b.json",
+          "sha256": "7fdd153e492d027ff21de3e551760649b464f9a7b109c139e3ec4001e493ffe2"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-with-distant-me-05ef137d8e6a",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346/observation/breast-cancer-examples-tnbc-with-distant-me-05ef137d8e6a.json",
+          "sha256": "84ede40627992708e1f4e720086d00c40d78540844cf893f6fac0262dfdfc707"
+        }
+      ]
+    },
+    {
+      "caseName": "TNBC without distant-metastasis assessment",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-10",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa/patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa.json",
+          "sha256": "4e7f849f6c8dc4b88c9a591c366352c1e70d8830786fd35d6ea49dda269f21cd"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-without-distant-2afbf022129f",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa/condition/breast-cancer-examples-tnbc-without-distant-2afbf022129f.json",
+          "sha256": "aacf062581d07a200a1b7e3a290d81fbbcfefed26d4bd7039ace029310c36c61"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-without-distant-4a18619888bf",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa/observation/breast-cancer-examples-tnbc-without-distant-4a18619888bf.json",
+          "sha256": "fbc759ccc4b2b0e1d1fdc5bb349ce80f7b5f53d155ba910881b09d05bbda8862"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-without-distant-246ebd1f6517",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa/observation/breast-cancer-examples-tnbc-without-distant-246ebd1f6517.json",
+          "sha256": "b4fe0a54a75033321ad1ac9778f824f620469678dac4ab8eceed6fdd3cbf6813"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-without-distant-03c99e66d81d",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa/observation/breast-cancer-examples-tnbc-without-distant-03c99e66d81d.json",
+          "sha256": "c9ff8a9d45c403c05e4e894239d1c35c3d9a5d56d11600cd82c71cda3fbccf41"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-without-distant-896c3ad75782",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa/observation/breast-cancer-examples-tnbc-without-distant-896c3ad75782.json",
+          "sha256": "1b5480f568f2ddd9c44fc18f4be8004bfbeb88dc765a6ae87553f637b6868034"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-without-distant-baf661439ee0",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa/observation/breast-cancer-examples-tnbc-without-distant-baf661439ee0.json",
+          "sha256": "0f443093a87f505fd0aae4e07eb3dd38befdda0e8e3bb4888b7e2a99a33086ba"
+        }
+      ]
+    },
+    {
+      "caseName": "Receptor and staging results without cancer diagnosis",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-11",
+      "compartmentDir": "patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-receptor-and-staging-af2f82921a0e",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e/patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e.json",
+          "sha256": "4cfcb11a57dcf52994dc8899ed32a58e644e719e2e1107391138db82fdaa426a"
+        },
+        {
+          "id": "breast-cancer-examples-receptor-and-staging-10d9fa7df05a",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e/observation/breast-cancer-examples-receptor-and-staging-10d9fa7df05a.json",
+          "sha256": "1768bd995da9b385f8ac6e4b107567c0063462c7e1264f114b505de6caf4448e"
+        },
+        {
+          "id": "breast-cancer-examples-receptor-and-staging-df923920ead0",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e/observation/breast-cancer-examples-receptor-and-staging-df923920ead0.json",
+          "sha256": "f3fb7f089b814556bc5bc994bc39b6f89616a9b5bb6454c215efe386ab91ef0a"
+        },
+        {
+          "id": "breast-cancer-examples-receptor-and-staging-f15ffd3a5b84",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e/observation/breast-cancer-examples-receptor-and-staging-f15ffd3a5b84.json",
+          "sha256": "af71a4bd0cff45d33e3e61aa904eea97b4e3d6bef950e3233b93bb115ebee646"
+        },
+        {
+          "id": "breast-cancer-examples-receptor-and-staging-34b52a4a172f",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e/observation/breast-cancer-examples-receptor-and-staging-34b52a4a172f.json",
+          "sha256": "b8c1dd086ba6be9c370937d602192217d1dd02bface029514ceb0798ab1e59e8"
+        },
+        {
+          "id": "breast-cancer-examples-receptor-and-staging-ad66d54b7882",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e/observation/breast-cancer-examples-receptor-and-staging-ad66d54b7882.json",
+          "sha256": "76698e2eda276552d8f5674ff7889f1239045ba3146fd15f276969d7bc9d2bfe"
+        },
+        {
+          "id": "breast-cancer-examples-receptor-and-staging-16540aabc7e7",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e/observation/breast-cancer-examples-receptor-and-staging-16540aabc7e7.json",
+          "sha256": "a8c411c116120fdce38cd96f1e7ce5526165471a13267888116e3edad959c83a"
+        }
+      ]
+    },
+    {
+      "caseName": "TNBC, T1c N0 M0, size in centimeters",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-12",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77/patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77.json",
+          "sha256": "d94433b61943d19fd25db7c87819c03af97ce7fa0d1f9fd2a63141e1cb853240"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-t1c-n0-m0-size-929ac23a94c6",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77/condition/breast-cancer-examples-tnbc-t1c-n0-m0-size-929ac23a94c6.json",
+          "sha256": "1a83538d359abede12f0b2d71e2549d77d16162cd739d8aec742341f4e3a9082"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-t1c-n0-m0-size-71c888adc1e7",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77/observation/breast-cancer-examples-tnbc-t1c-n0-m0-size-71c888adc1e7.json",
+          "sha256": "0bfcb6303bfa231c41364064656a28efb674b6fb1de5d6da54f6b96f907c7e9e"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-t1c-n0-m0-size-55770f2d32f4",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77/observation/breast-cancer-examples-tnbc-t1c-n0-m0-size-55770f2d32f4.json",
+          "sha256": "a312463dd9ad5c106e58c9fd6b61234e97a017e2f0809deac70373c30f90553e"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-t1c-n0-m0-size-e725faf30d40",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77/observation/breast-cancer-examples-tnbc-t1c-n0-m0-size-e725faf30d40.json",
+          "sha256": "a78ccbbd5fe7e953036035e7b204a0d80f888e28024afd24654fd1e3219a7487"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-t1c-n0-m0-size-006ba7b47205",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77/observation/breast-cancer-examples-tnbc-t1c-n0-m0-size-006ba7b47205.json",
+          "sha256": "7953ed9a419b11ae5dbfad8c6fe4f6854c6a0957f135e7bf19dd438fc0c7ede8"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-t1c-n0-m0-size-1a084c1e7616",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77/observation/breast-cancer-examples-tnbc-t1c-n0-m0-size-1a084c1e7616.json",
+          "sha256": "dfe5af36d7644e09dcf5486f9d6bb9ea26a89225ed2c5f930f40d82739609414"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-t1c-n0-m0-size-bc47974c2e74",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77/observation/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc47974c2e74.json",
+          "sha256": "52e6b132c64f3a71fa5d56dae3d8c8c8416a0c0eebd1ede365c09942424fa98a"
+        }
+      ]
+    },
+    {
+      "caseName": "TNBC, clinical T2 N0 M0",
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-13",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13",
+      "artifacts": [
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13",
+          "resourceType": "Patient",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13/patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13.json",
+          "sha256": "715b64a8021a7a028b7a765b24d8cdf8e4daeb6689fb883561ca0837a554182f"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t2-n0-15570837f18e",
+          "resourceType": "Condition",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13/condition/breast-cancer-examples-tnbc-clinical-t2-n0-15570837f18e.json",
+          "sha256": "e833a8e8f400ab515b30f7c9c34a3f439489091b78b4567a299807bd0e9c42da"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t2-n0-8e549e75de73",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13/observation/breast-cancer-examples-tnbc-clinical-t2-n0-8e549e75de73.json",
+          "sha256": "d4b1a1c2776f60c77d82bc7048a3141c4b3389512121af9c60f35f2641581de4"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t2-n0-30c26e13d63b",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13/observation/breast-cancer-examples-tnbc-clinical-t2-n0-30c26e13d63b.json",
+          "sha256": "e759d8af71692cff4af67ebdf58de5e233aa9727f468dae0fa805152a7c1c34a"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t2-n0-e708c1059916",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13/observation/breast-cancer-examples-tnbc-clinical-t2-n0-e708c1059916.json",
+          "sha256": "5b0ed9c17ec32613e915df8ed98b58a8b1204c89d57910d164ae775799badc07"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t2-n0-06bb6fcede83",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13/observation/breast-cancer-examples-tnbc-clinical-t2-n0-06bb6fcede83.json",
+          "sha256": "0db856404dcca8b43c5eddce034a52081b5b0343ff28d17046f0337feab92090"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t2-n0-46f17c318f77",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13/observation/breast-cancer-examples-tnbc-clinical-t2-n0-46f17c318f77.json",
+          "sha256": "95e036075b83c71e4df8bdd6ee2b53bd35ed85426981a984bdc71cc8f87ad799"
+        },
+        {
+          "id": "breast-cancer-examples-tnbc-clinical-t2-n0-3bdd99093c50",
+          "resourceType": "Observation",
+          "path": "patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13/observation/breast-cancer-examples-tnbc-clinical-t2-n0-3bdd99093c50.json",
+          "sha256": "12089c1897a326ead49eb3afba0d94baabd42c6824985333771eba69c4338dfd"
+        }
+      ]
+    }
+  ]
+}

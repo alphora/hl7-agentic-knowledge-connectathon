@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "fullyNormalized": true,
+  "dryRun": false,
+  "carriers": [
+    {
+      "path": "E:/src/hl7-agentic-knowledge-connectathon/artifacts/Connectathon/breast-cancer-neoadjuvant/src/provenance/breast-cancer-neoadjuvant.json",
+      "kind": "artifact",
+      "changed": true,
+      "wrote": true
+    }
+  ],
+  "worklist": []
+}
