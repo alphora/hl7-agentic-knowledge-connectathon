@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.1",
+  "fhirVersion": "4.0.1",
+  "questionnaireCanonical": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi-three-question-screen|0.2.0",
+  "measurementPeriod": {
+    "start": "2026-01-01T00:00:00Z",
+    "end": "2026-12-31T23:59:59Z",
+    "startInclusive": true,
+    "endInclusive": true
+  },
+  "cases": [
+    {
+      "id": "younger-than-65",
+      "title": "Adult younger than 65",
+      "bundle": "cases/younger-than-65/bundle.json",
+      "assertions": "cases/younger-than-65/assertions.json",
+      "summary": "cases/younger-than-65/SUMMARY.md",
+      "extractedResources": "cases/younger-than-65/extracted-bundle.json"
+    },
+    {
+      "id": "eligible-all-no",
+      "title": "Eligible adult with all answers no",
+      "bundle": "cases/eligible-all-no/bundle.json",
+      "assertions": "cases/eligible-all-no/assertions.json",
+      "summary": "cases/eligible-all-no/SUMMARY.md",
+      "extractedResources": "cases/eligible-all-no/extracted-bundle.json"
+    },
+    {
+      "id": "eligible-unsteady-yes",
+      "title": "Eligible adult who feels unsteady",
+      "bundle": "cases/eligible-unsteady-yes/bundle.json",
+      "assertions": "cases/eligible-unsteady-yes/assertions.json",
+      "summary": "cases/eligible-unsteady-yes/SUMMARY.md",
+      "extractedResources": "cases/eligible-unsteady-yes/extracted-bundle.json"
+    },
+    {
+      "id": "eligible-prior-fall-yes",
+      "title": "Eligible adult with a prior fall",
+      "bundle": "cases/eligible-prior-fall-yes/bundle.json",
+      "assertions": "cases/eligible-prior-fall-yes/assertions.json",
+      "summary": "cases/eligible-prior-fall-yes/SUMMARY.md",
+      "extractedResources": "cases/eligible-prior-fall-yes/extracted-bundle.json"
+    },
+    {
+      "id": "eligible-incomplete-response",
+      "title": "Eligible adult with an incomplete response",
+      "bundle": "cases/eligible-incomplete-response/bundle.json",
+      "assertions": "cases/eligible-incomplete-response/assertions.json",
+      "summary": "cases/eligible-incomplete-response/SUMMARY.md",
+      "extractedResources": "cases/eligible-incomplete-response/extracted-bundle.json"
+    },
+    {
+      "id": "eligible-no-response",
+      "title": "Eligible adult with no response",
+      "bundle": "cases/eligible-no-response/bundle.json",
+      "assertions": "cases/eligible-no-response/assertions.json",
+      "summary": "cases/eligible-no-response/SUMMARY.md",
+      "extractedResources": "cases/eligible-no-response/extracted-bundle.json"
+    }
+  ],
+  "questionnaire": "questionnaire.json"
+}

@@ -1,0 +1,112 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-eligible-all-no",
+  "meta": {
+    "security": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-06-15T12:00:00Z",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-eligible-all-no",
+        "identifier": [
+          {
+            "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/test-patient",
+            "value": "eligible-all-no"
+          }
+        ],
+        "active": true,
+        "birthDate": "1945-01-01"
+      },
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Patient/patient-eligible-all-no"
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounter-eligible-all-no",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/patient-eligible-all-no"
+        },
+        "period": {
+          "start": "2026-06-15T09:00:00Z",
+          "end": "2026-06-15T09:30:00Z"
+        }
+      },
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Encounter/encounter-eligible-all-no"
+    },
+    {
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "response-eligible-all-no",
+        "questionnaire": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi-three-question-screen|0.2.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/patient-eligible-all-no"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-eligible-all-no"
+        },
+        "authored": "2026-06-15T09:20:00Z",
+        "item": [
+          {
+            "linkId": "unsteady",
+            "text": "Do you feel unsteady when standing or walking?",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "worries-about-falling",
+            "text": "Do you worry about falling?",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "fallen-in-past-year",
+            "text": "Have you fallen in the past year?",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|4.0.0"
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "author": {
+          "reference": "Patient/patient-eligible-all-no"
+        }
+      },
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/QuestionnaireResponse/response-eligible-all-no"
+    }
+  ]
+}

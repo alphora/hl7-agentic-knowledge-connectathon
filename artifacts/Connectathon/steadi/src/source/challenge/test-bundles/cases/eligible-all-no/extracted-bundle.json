@@ -1,0 +1,188 @@
+{
+  "resourceType": "Bundle",
+  "id": "extracted-eligible-all-no",
+  "meta": {
+    "security": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-06-15T09:20:00Z",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-eligible-all-no-unsteady",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "version": "2.81",
+              "code": "100257-5",
+              "display": "Feel unsteady when standing or walking"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-eligible-all-no"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-eligible-all-no"
+        },
+        "effectiveDateTime": "2026-06-15T09:20:00Z",
+        "issued": "2026-06-15T09:20:00Z",
+        "performer": [
+          {
+            "reference": "Patient/patient-eligible-all-no"
+          }
+        ],
+        "valueBoolean": false,
+        "derivedFrom": [
+          {
+            "reference": "QuestionnaireResponse/response-eligible-all-no"
+          }
+        ]
+      },
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Observation/observation-eligible-all-no-unsteady"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-eligible-all-no-worries-about-falling",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "version": "2.81",
+              "code": "97878-3",
+              "display": "Worried about falling"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-eligible-all-no"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-eligible-all-no"
+        },
+        "effectiveDateTime": "2026-06-15T09:20:00Z",
+        "issued": "2026-06-15T09:20:00Z",
+        "performer": [
+          {
+            "reference": "Patient/patient-eligible-all-no"
+          }
+        ],
+        "valueBoolean": false,
+        "derivedFrom": [
+          {
+            "reference": "QuestionnaireResponse/response-eligible-all-no"
+          }
+        ]
+      },
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Observation/observation-eligible-all-no-worries-about-falling"
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-eligible-all-no-fallen-in-past-year",
+        "meta": {
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "version": "2.81",
+              "code": "52552-7",
+              "display": "Falls in the past year"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-eligible-all-no"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-eligible-all-no"
+        },
+        "effectiveDateTime": "2026-06-15T09:20:00Z",
+        "issued": "2026-06-15T09:20:00Z",
+        "performer": [
+          {
+            "reference": "Patient/patient-eligible-all-no"
+          }
+        ],
+        "valueBoolean": false,
+        "derivedFrom": [
+          {
+            "reference": "QuestionnaireResponse/response-eligible-all-no"
+          }
+        ]
+      },
+      "fullUrl": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Observation/observation-eligible-all-no-fallen-in-past-year"
+    }
+  ]
+}

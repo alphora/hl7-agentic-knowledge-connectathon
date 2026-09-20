@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.1",
+  "fixtureId": "eligible-unsteady-yes",
+  "fhirVersion": "4.0.1",
+  "bundle": "bundle.json",
+  "evaluationContext": {
+    "patientId": "patient-eligible-unsteady-yes",
+    "measurementPeriod": {
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-12-31T23:59:59Z",
+      "startInclusive": true,
+      "endInclusive": true
+    }
+  },
+  "assertions": [
+    {
+      "expression": "In Screening Population",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "Completed Three Question Screen",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "At Increased Fall Risk",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "Exercise Intervention Applicable",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "Consider Multifactorial Intervention",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "Initial Population",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "Denominator",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    },
+    {
+      "expression": "Numerator",
+      "expected": {
+        "type": "Boolean",
+        "value": true
+      }
+    }
+  ],
+  "sdcExtraction": {
+    "questionnaire": "../../questionnaire.json",
+    "questionnaireCanonical": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi-three-question-screen|0.2.0",
+    "mechanism": "observation",
+    "invocationExpected": true,
+    "expectedResourceSet": "extracted-bundle.json",
+    "expectedObservationCount": 3,
+    "expectedObservations": [
+      {
+        "linkId": "unsteady",
+        "code": {
+          "system": "http://loinc.org",
+          "version": "2.81",
+          "code": "100257-5",
+          "display": "Feel unsteady when standing or walking"
+        },
+        "valueBoolean": true
+      },
+      {
+        "linkId": "worries-about-falling",
+        "code": {
+          "system": "http://loinc.org",
+          "version": "2.81",
+          "code": "97878-3",
+          "display": "Worried about falling"
+        },
+        "valueBoolean": false
+      },
+      {
+        "linkId": "fallen-in-past-year",
+        "code": {
+          "system": "http://loinc.org",
+          "version": "2.81",
+          "code": "52552-7",
+          "display": "Falls in the past year"
+        },
+        "valueBoolean": false
+      }
+    ]
+  }
+}
