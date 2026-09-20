@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-20T14:15:18.753Z",
+  "basis": {
+    "anchor-source": "82d4ad6dec4cc199c718bbbe602aabc45d22abdb",
+    "cel": "887420fa80c94902a9944cec3affbf4878ae658a",
+    "crl": "16043e199a16097d9f28dfd6c587283f30707c4a"
+  },
+  "by": "rob@alphora.com",
+  "entity": "provenance",
+  "method": "release",
+  "schemaVersion": 1
+}
