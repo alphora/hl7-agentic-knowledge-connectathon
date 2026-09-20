@@ -117,7 +117,7 @@ case "TNBC, exactly 10 mm, clinical T1b N0 M0":
 - fact is "02 Estrogen Receptor Result".
 - fact is "02 Progesterone Receptor Result".
 - fact is "02 HER2 Result".
-// This rule is not applicable; native verification checks the empty guidance set.
+- result is "Neoadjuvant Guidance" is "Nothing Recommended".
 
 fact "Patient 03":
 - name is "Synthetic tnbc-t1b-n1".
@@ -233,7 +233,7 @@ case "HER2-positive breast cancer":
 - fact is "04 Estrogen Receptor Result".
 - fact is "04 Progesterone Receptor Result".
 - fact is "04 HER2 Result".
-// This rule is not applicable; native verification checks the empty guidance set.
+- result is "Neoadjuvant Guidance" is "Nothing Recommended".
 
 fact "Patient 05":
 - name is "Synthetic er-positive".
@@ -291,7 +291,7 @@ case "ER-positive breast cancer":
 - fact is "05 Estrogen Receptor Result".
 - fact is "05 Progesterone Receptor Result".
 - fact is "05 HER2 Result".
-// This rule is not applicable; native verification checks the empty guidance set.
+- result is "Neoadjuvant Guidance" is "Nothing Recommended".
 
 fact "Patient 06":
 - name is "Synthetic her2-missing".
@@ -509,7 +509,7 @@ case "TNBC with distant metastasis":
 - fact is "09 Estrogen Receptor Result".
 - fact is "09 Progesterone Receptor Result".
 - fact is "09 HER2 Result".
-// This rule is not applicable; native verification checks the empty guidance set.
+- result is "Neoadjuvant Guidance" is "Nothing Recommended".
 
 fact "Patient 10":
 - name is "Synthetic tnbc-metastasis-missing".
@@ -612,7 +612,7 @@ case "Receptor and staging results without cancer diagnosis":
 - fact is "11 Estrogen Receptor Result".
 - fact is "11 Progesterone Receptor Result".
 - fact is "11 HER2 Result".
-// This rule is not applicable; native verification checks the empty guidance set.
+- result is "Neoadjuvant Guidance" is "Nothing Recommended".
 
 fact "Patient 12":
 - name is "Synthetic tnbc-t1c-n0-cm".

@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "celLibrary": "mv",
   "useCase": "prior-auth",
-  "generatedAt": "2026-09-20T14:29:47.447Z",
+  "generatedAt": "2026-09-20T23:11:56.541Z",
   "provenance": {
-    "crlVersion": "6.4.2",
+    "crlVersion": "6.4.3",
     "producerJarSha256": "9870fc867547f65518c5cd6e698ace77b60a9e98797ed38330c25d06cbf5cb2e",
-    "inputClock": "2026-09-20T14:29:44.523Z",
-    "runtimeSha256": "bcb62a2b60bfbcda103c003883744e0df865db5a02393f09d7bfc38a25a1d020",
-    "definitionClosureSha256": "f52c6f714c29ec627614e4bb79a12809cd1077c33829cf4a9dd4174a29ac152e"
+    "inputClock": "2026-09-20T23:11:53.954Z",
+    "runtimeSha256": "e65cd1c5b1e4ce6312deffbbb49ef45474feb2dc81bba900f43ff1d3bf89368e",
+    "definitionClosureSha256": "f5cfc3cf6d39d92e9a7033f82baa82ea92d2179d5d9e1c442fc17f62a2768a54"
   },
   "cases": [
     {
@@ -32,7 +32,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-01",
       "inputSha256": "7ec782fb54abd22d48116e5ff0f83acf40daa27aa730a01162a8719621deb497",
-      "producedAt": "2026-09-20T14:29:47.451Z"
+      "producedAt": "2026-09-20T23:11:56.544Z"
     },
     {
       "caseName": "TNBC, exactly 10 mm, clinical T1b N0 M0",
@@ -55,7 +55,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-02",
       "inputSha256": "9a13c5465be1cfbfe4682c2383b6263ed3a5dab60a61d1b9cef7b88ab409f1f3",
-      "producedAt": "2026-09-20T14:30:11.842Z"
+      "producedAt": "2026-09-20T23:12:12.462Z"
     },
     {
       "caseName": "Small TNBC with clinically positive nodes",
@@ -78,7 +78,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-03",
       "inputSha256": "22b4b7243a8e0a5d8f05fae2c5c20f710818f3cfedf3b594ea327acc2a65d972",
-      "producedAt": "2026-09-20T14:30:36.601Z"
+      "producedAt": "2026-09-20T23:12:34.043Z"
     },
     {
       "caseName": "HER2-positive breast cancer",
@@ -101,7 +101,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-04",
       "inputSha256": "6b458d8b471c8654e03533f074777737fa8fd01e993a65b83161909f6ebbc3f7",
-      "producedAt": "2026-09-20T14:31:03.477Z"
+      "producedAt": "2026-09-20T23:12:58.110Z"
     },
     {
       "caseName": "ER-positive breast cancer",
@@ -124,7 +124,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-05",
       "inputSha256": "0c8f79f2002b9e85134ccc9664de03e6fc904f78041a78ff22fcc5781c3fbf8d",
-      "producedAt": "2026-09-20T14:31:25.687Z"
+      "producedAt": "2026-09-20T23:13:16.614Z"
     },
     {
       "caseName": "HER2 result missing",
@@ -147,7 +147,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-06",
       "inputSha256": "b1cc3921b758195b4af5aafcb229b1eacc7556115f061df4f5ea22c2e8114fd1",
-      "producedAt": "2026-09-20T14:31:46.416Z"
+      "producedAt": "2026-09-20T23:13:37.689Z"
     },
     {
       "caseName": "HER2 interpretation unresolved",
@@ -170,7 +170,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-07",
       "inputSha256": "b78a306d7795612fa272faeb760373f50cdf50dab928a2206f9e5a39dfde254c",
-      "producedAt": "2026-09-20T14:32:03.504Z"
+      "producedAt": "2026-09-20T23:13:56.725Z"
     },
     {
       "caseName": "Small TNBC with missing nodal assessment",
@@ -193,7 +193,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-08",
       "inputSha256": "827270314a37c26fcae49426674566f6a979785b0fe984fccffb590494792a29",
-      "producedAt": "2026-09-20T14:32:19.599Z"
+      "producedAt": "2026-09-20T23:14:50.066Z"
     },
     {
       "caseName": "TNBC with distant metastasis",
@@ -216,7 +216,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-09",
       "inputSha256": "5af6fc41c019741c4041a1f61e953dccc3b1cb772f07f71e5c51e003f5c1fec9",
-      "producedAt": "2026-09-20T14:32:37.301Z"
+      "producedAt": "2026-09-20T23:15:34.125Z"
     },
     {
       "caseName": "TNBC without distant-metastasis assessment",
@@ -239,7 +239,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-10",
       "inputSha256": "233448778ef1365e3b157fbb3cb9009eb9a67b1f9c44c2f1bd1fc814db62d307",
-      "producedAt": "2026-09-20T14:32:56.737Z"
+      "producedAt": "2026-09-20T23:15:54.478Z"
     },
     {
       "caseName": "Receptor and staging results without cancer diagnosis",
@@ -262,7 +262,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-11",
       "inputSha256": "0f05145a2d6e3c528410a7b26fc53b2365aa16514a023e485ab83667b7309048",
-      "producedAt": "2026-09-20T14:33:13.046Z"
+      "producedAt": "2026-09-20T23:16:10.026Z"
     },
     {
       "caseName": "TNBC, T1c N0 M0, size in centimeters",
@@ -285,7 +285,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-12",
       "inputSha256": "e41e14d02de972ee4c635bd281ba2eb26086651a1a061c0c05b5c45204e6eb60",
-      "producedAt": "2026-09-20T14:33:31.132Z"
+      "producedAt": "2026-09-20T23:16:31.201Z"
     },
     {
       "caseName": "TNBC, clinical T2 N0 M0",
@@ -308,7 +308,7 @@
       "sourceFile": "src/cel/mv/breast-cancer.cel",
       "caseId": "bc-13",
       "inputSha256": "ecd73077a27a4692e2269b7c2d201c69ee147e9044e3fae36b0da05b5fd88ee1",
-      "producedAt": "2026-09-20T14:33:58.551Z"
+      "producedAt": "2026-09-20T23:17:03.055Z"
     }
   ]
 }

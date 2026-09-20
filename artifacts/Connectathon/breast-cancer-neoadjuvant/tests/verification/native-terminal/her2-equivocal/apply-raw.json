@@ -1,0 +1,296 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [ {
+    "name": "return",
+    "resource": {
+      "resourceType": "Bundle",
+      "id": "breast-cancer-neoadjuvant",
+      "type": "collection",
+      "entry": [ {
+        "resource": {
+          "resourceType": "RequestGroup",
+          "id": "breast-cancer-neoadjuvant",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          } ],
+          "instantiatesCanonical": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant|0.0.0" ],
+          "status": "active",
+          "intent": "proposal",
+          "subject": {
+            "reference": "Patient/patient-her2-equivocal"
+          },
+          "action": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-applicabilityBehavior",
+              "valueString": "any"
+            } ],
+            "title": "Neoadjuvant Guidance",
+            "description": "Neoadjuvant Guidance",
+            "code": [ {
+              "coding": [ {
+                "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                "code": "guideline-based-care"
+              } ]
+            } ],
+            "action": [ {
+              "title": "In Neoadjuvant Review Population",
+              "description": "In Neoadjuvant Review Population",
+              "code": [ {
+                "coding": [ {
+                  "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                  "code": "guideline-based-care"
+                } ]
+              } ],
+              "condition": [ {
+                "kind": "applicability",
+                "expression": {
+                  "language": "text/cql-identifier",
+                  "expression": "CRL branch CriterionRef L201C7"
+                }
+              } ]
+            } ]
+          } ]
+        }
+      }, {
+        "resource": {
+          "resourceType": "Questionnaire",
+          "id": "breast-cancer-neoadjuvant",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+            "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvantInterface"
+          }, {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext",
+            "extension": [ {
+              "url": "name",
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext",
+                "code": "patient",
+                "display": "Patient"
+              }
+            }, {
+              "url": "type",
+              "valueCode": "Patient"
+            } ]
+          } ],
+          "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/breast-cancer-neoadjuvant",
+          "version": "0.0.0-patient-her2-equivocal-2026-09-20-07.11.10",
+          "status": "active",
+          "item": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtract",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result"
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+              "extension": [ {
+                "url": "definition",
+                "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result#Observation.subject"
+              }, {
+                "url": "expression",
+                "valueExpression": {
+                  "language": "text/fhirpath",
+                  "expression": "%resource.subject"
+                }
+              } ]
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+              "extension": [ {
+                "url": "definition",
+                "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result#Observation.effective[x]"
+              }, {
+                "url": "expression",
+                "valueExpression": {
+                  "language": "text/fhirpath",
+                  "expression": "%resource.authored"
+                }
+              } ]
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+              "valueExpression": {
+                "name": "ClinicalMResult",
+                "language": "text/cql-identifier",
+                "expression": "Clinical M Result",
+                "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvantInferences"
+              }
+            } ],
+            "linkId": "1",
+            "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result",
+            "text": "What is the clinical M category?",
+            "type": "group",
+            "required": false,
+            "repeats": false,
+            "item": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-expression",
+                  "expression": "%ClinicalMResult.value"
+                }
+              } ],
+              "linkId": "1.1",
+              "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result#Observation.value[x]",
+              "text": "Clinical M Result",
+              "type": "choice",
+              "required": false,
+              "repeats": false,
+              "answerOption": [ {
+                "valueCoding": {
+                  "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+                  "code": "cM0",
+                  "display": "Clinical M0"
+                }
+              }, {
+                "valueCoding": {
+                  "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+                  "code": "cM1",
+                  "display": "Clinical M1"
+                }
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtract",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result"
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+              "extension": [ {
+                "url": "definition",
+                "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result#Observation.subject"
+              }, {
+                "url": "expression",
+                "valueExpression": {
+                  "language": "text/fhirpath",
+                  "expression": "%resource.subject"
+                }
+              } ]
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+              "extension": [ {
+                "url": "definition",
+                "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result#Observation.effective[x]"
+              }, {
+                "url": "expression",
+                "valueExpression": {
+                  "language": "text/fhirpath",
+                  "expression": "%resource.authored"
+                }
+              } ]
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+              "valueExpression": {
+                "name": "HER2Result",
+                "language": "text/cql-identifier",
+                "expression": "HER2 Result",
+                "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvantInferences"
+              }
+            } ],
+            "linkId": "2",
+            "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result",
+            "text": "What is the HER2 result?",
+            "type": "group",
+            "required": false,
+            "repeats": false,
+            "item": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-expression",
+                  "expression": "%HER2Result.value"
+                }
+              } ],
+              "linkId": "2.1",
+              "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result#Observation.value[x]",
+              "text": "HER2 Result",
+              "type": "choice",
+              "required": false,
+              "repeats": false,
+              "answerOption": [ {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA6577-6",
+                  "display": "Negative"
+                }
+              }, {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA6576-8",
+                  "display": "Positive"
+                }
+              }, {
+                "valueCoding": {
+                  "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+                  "code": "equivocal",
+                  "display": "Equivocal ? interpretation unresolved"
+                }
+              } ]
+            } ]
+          } ]
+        }
+      }, {
+        "resource": {
+          "resourceType": "QuestionnaireResponse",
+          "id": "breast-cancer-neoadjuvant-patient-her2-equivocal",
+          "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/breast-cancer-neoadjuvant|0.0.0-patient-her2-equivocal-2026-09-20-07.11.10",
+          "status": "in-progress",
+          "subject": {
+            "reference": "Patient/patient-her2-equivocal"
+          },
+          "authored": "2026-09-20T19:11:10-04:00",
+          "item": [ {
+            "linkId": "1",
+            "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result",
+            "text": "What is the clinical M category?",
+            "item": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+                "valueReference": {
+                  "reference": "http://cqframework.org/fhir/Device/clinical-quality-language"
+                }
+              } ],
+              "linkId": "1.1",
+              "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result#Observation.value[x]",
+              "text": "Clinical M Result",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+                  "code": "cM0"
+                }
+              } ]
+            } ]
+          }, {
+            "linkId": "2",
+            "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result",
+            "text": "What is the HER2 result?",
+            "item": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+                "valueReference": {
+                  "reference": "http://cqframework.org/fhir/Device/clinical-quality-language"
+                }
+              } ],
+              "linkId": "2.1",
+              "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result#Observation.value[x]",
+              "text": "HER2 Result",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+                  "code": "equivocal",
+                  "display": "Equivocal (unresolved fixture result)"
+                }
+              } ]
+            } ]
+          } ]
+        }
+      } ]
+    }
+  } ]
+}

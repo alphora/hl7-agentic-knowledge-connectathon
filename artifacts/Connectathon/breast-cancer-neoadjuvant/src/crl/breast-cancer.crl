@@ -192,12 +192,20 @@ criterion "Neoadjuvant TNBC Guidance Applicable": - when ("In Neoadjuvant Review
 activity "Oncology Review Guidance":
 - request CPGCommunicationRequest.
 - with `The documented nonmetastatic triple-negative breast cancer with clinically positive nodes or at least clinical T1c disease meets the supplied neoadjuvant guidance criterion for oncology review. This does not establish chemotherapy fitness or authorize a medication order. The ASCO 2022 immunotherapy update concerns a distinct high-risk population; this review trigger does not determine pembrolizumab eligibility.`.
+activity "Nothing Recommended":
+- request CPGCommunicationRequest.
+- with `Nothing recommended by this neoadjuvant TNBC review rule. Its applicability criteria are not met. This does not mean that cancer treatment or other oncology review is unnecessary.`.
+
 decision "Neoadjuvant Guidance":
+first:
 - when "In Neoadjuvant Review Population" then:
   - when "HER2 Result Is Definitive" then:
+    first:
     - when ("Is Triple Negative" and "Meets Tumor Or Node Criterion") then recommend activity "Oncology Review Guidance".
+    - otherwise then recommend activity "Nothing Recommended".
   end.
 end.
+- otherwise then recommend activity "Nothing Recommended".
 
 presentation for "Estrogen Receptor Result":
 - question text is "What is the estrogen receptor (ER) result?".

@@ -276,32 +276,35 @@ define "Meets Tumor Or Node Criterion":
 define "Neoadjuvant TNBC Guidance Applicable":
   "In Neoadjuvant Review Population" and "Is Triple Negative" and "Meets Tumor Or Node Criterion"
 
-define "CRL branch CriterionRef L196C7":
+define "CRL branch CriterionRef L201C7":
   "In Neoadjuvant Review Population"
 
-define "Not CRL branch CriterionRef L196C7":
+define "Not CRL branch CriterionRef L201C7":
   not ("In Neoadjuvant Review Population")
 
-define "CRL branch Ref L197C9":
+define "CRL branch Ref L202C9":
   FHIRHelpers.ToBoolean(("HER2 Result Is Definitive").value as FHIR.boolean)
 
-define "Not CRL branch Ref L197C9":
+define "Not CRL branch Ref L202C9":
   not (FHIRHelpers.ToBoolean(("HER2 Result Is Definitive").value as FHIR.boolean))
 
-define "CRL branch And L198C12":
+define "CRL branch And L204C12":
   "Is Triple Negative" and "Meets Tumor Or Node Criterion"
 
-define "Not CRL branch And L198C12":
+define "Not CRL branch And L204C12":
   not ("Is Triple Negative" and "Meets Tumor Or Node Criterion")
 
-define "CRL branch CriterionRef L198C12":
+define "CRL branch CriterionRef L204C12":
   "Is Triple Negative"
 
-define "Not CRL branch CriterionRef L198C12":
+define "Not CRL branch CriterionRef L204C12":
   not ("Is Triple Negative")
 
-define "CRL branch CriterionRef L198C37":
+define "CRL branch CriterionRef L204C37":
   "Meets Tumor Or Node Criterion"
 
-define "Not CRL branch CriterionRef L198C37":
+define "Not CRL branch CriterionRef L204C37":
   not ("Meets Tumor Or Node Criterion")
+
+define "Guard L204C12":
+  "Is Triple Negative" and "Meets Tumor Or Node Criterion"

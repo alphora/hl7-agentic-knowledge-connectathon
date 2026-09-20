@@ -48,8 +48,8 @@
   ],
   "action": [
     {
-      "title": "In Neoadjuvant Review Population",
-      "description": "In Neoadjuvant Review Population",
+      "title": "Neoadjuvant Guidance",
+      "description": "Neoadjuvant Guidance",
       "code": [
         {
           "coding": [
@@ -60,33 +60,16 @@
           ]
         }
       ],
-      "condition": [
+      "extension": [
         {
-          "kind": "applicability",
-          "expression": {
-            "language": "text/cql-identifier",
-            "expression": "CRL branch CriterionRef L196C7"
-          }
-        }
-      ],
-      "input": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
-              "valueString": "What is the clinical M category?"
-            }
-          ],
-          "type": "Observation",
-          "profile": [
-            "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result"
-          ]
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-applicabilityBehavior",
+          "valueString": "any"
         }
       ],
       "action": [
         {
-          "title": "HER2 Result Is Definitive",
-          "description": "HER2 Result Is Definitive",
+          "title": "In Neoadjuvant Review Population",
+          "description": "In Neoadjuvant Review Population",
           "code": [
             {
               "coding": [
@@ -102,7 +85,7 @@
               "kind": "applicability",
               "expression": {
                 "language": "text/cql-identifier",
-                "expression": "CRL branch Ref L197C9"
+                "expression": "CRL branch CriterionRef L201C7"
               }
             }
           ],
@@ -111,19 +94,19 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
-                  "valueString": "What is the HER2 result?"
+                  "valueString": "What is the clinical M category?"
                 }
               ],
               "type": "Observation",
               "profile": [
-                "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result"
+                "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result"
               ]
             }
           ],
           "action": [
             {
-              "title": "Is Triple Negative and Meets Tumor Or Node Criterion",
-              "description": "Is Triple Negative and Meets Tumor Or Node Criterion",
+              "title": "HER2 Result Is Definitive",
+              "description": "HER2 Result Is Definitive",
               "code": [
                 {
                   "coding": [
@@ -139,35 +122,11 @@
                   "kind": "applicability",
                   "expression": {
                     "language": "text/cql-identifier",
-                    "expression": "CRL branch And L198C12"
+                    "expression": "CRL branch Ref L202C9"
                   }
                 }
               ],
               "input": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
-                      "valueString": "What is the estrogen receptor (ER) result?"
-                    }
-                  ],
-                  "type": "Observation",
-                  "profile": [
-                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-estrogen-receptor-result"
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
-                      "valueString": "What is the progesterone receptor (PR) result?"
-                    }
-                  ],
-                  "type": "Observation",
-                  "profile": [
-                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-progesterone-receptor-result"
-                  ]
-                },
                 {
                   "extension": [
                     {
@@ -179,33 +138,150 @@
                   "profile": [
                     "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result"
                   ]
-                },
+                }
+              ],
+              "action": [
                 {
-                  "extension": [
+                  "title": "Is Triple Negative and Meets Tumor Or Node Criterion",
+                  "description": "Is Triple Negative and Meets Tumor Or Node Criterion",
+                  "code": [
                     {
-                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
-                      "valueString": "What is the clinical T category?"
+                      "coding": [
+                        {
+                          "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                          "code": "guideline-based-care"
+                        }
+                      ]
                     }
                   ],
-                  "type": "Observation",
-                  "profile": [
-                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-t-result"
-                  ]
-                },
-                {
-                  "extension": [
+                  "condition": [
                     {
-                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
-                      "valueString": "What is the clinical N category?"
+                      "kind": "applicability",
+                      "expression": {
+                        "language": "text/cql-identifier",
+                        "expression": "CRL branch And L204C12"
+                      }
                     }
                   ],
-                  "type": "Observation",
-                  "profile": [
-                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-n-result"
+                  "input": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                          "valueString": "What is the estrogen receptor (ER) result?"
+                        }
+                      ],
+                      "type": "Observation",
+                      "profile": [
+                        "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-estrogen-receptor-result"
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                          "valueString": "What is the progesterone receptor (PR) result?"
+                        }
+                      ],
+                      "type": "Observation",
+                      "profile": [
+                        "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-progesterone-receptor-result"
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                          "valueString": "What is the HER2 result?"
+                        }
+                      ],
+                      "type": "Observation",
+                      "profile": [
+                        "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result"
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                          "valueString": "What is the clinical T category?"
+                        }
+                      ],
+                      "type": "Observation",
+                      "profile": [
+                        "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-t-result"
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                          "valueString": "What is the clinical N category?"
+                        }
+                      ],
+                      "type": "Observation",
+                      "profile": [
+                        "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-n-result"
+                      ]
+                    }
+                  ],
+                  "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant-oncology-r-159548add3d4-recommendation"
+                },
+                {
+                  "title": "otherwise",
+                  "description": "otherwise",
+                  "code": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                          "code": "guideline-based-care"
+                        }
+                      ]
+                    }
+                  ],
+                  "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant-nothing-recommended-recommendation",
+                  "condition": [
+                    {
+                      "kind": "applicability",
+                      "expression": {
+                        "language": "text/cql-identifier",
+                        "expression": "Not CRL branch And L204C12"
+                      }
+                    }
                   ]
                 }
               ],
-              "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant-oncology-r-159548add3d4-recommendation"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-applicabilityBehavior",
+                  "valueString": "any"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "otherwise",
+          "description": "otherwise",
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                  "code": "guideline-based-care"
+                }
+              ]
+            }
+          ],
+          "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant-nothing-recommended-recommendation",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "Not CRL branch CriterionRef L201C7"
+              }
             }
           ]
         }

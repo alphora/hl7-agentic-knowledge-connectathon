@@ -66,14 +66,33 @@ def main():
                 row.update({"pass": False, "error": str(error)})
             checks.append(row)
         expected_applicability = next(a["expected"]["value"] for a in oracle["assertions"] if a["expression"] == "Neoadjuvant TNBC Guidance Applicable")
-        expected_activities = ["breast-cancer-neoadjuvant-oncology-review-guidance"] if expected_applicability is True else []
+        # The shared oracle still governs clinical applicability. The explicit negative
+        # communication is the operator-approved output representation, not guidance.
+        expected_activities = (["breast-cancer-neoadjuvant-oncology-review-guidance"] if expected_applicability is True
+                               else ["breast-cancer-neoadjuvant-nothing-recommended"] if expected_applicability is False else [])
         activity_row = {"case": case["id"], "expected": expected_activities}
         try:
             applied = json.loads((args.actual_root / case["id"] / "apply-raw.json").read_text(encoding="utf-8"))
             all_resources = list(resources(applied))
             errors = [issue for r in all_resources if r.get("resourceType") == "OperationOutcome" for issue in r.get("issue", []) if issue.get("severity") in {"error", "fatal"}]
             actual_activities = sorted(r.get("id") for r in all_resources if r.get("resourceType") == "CommunicationRequest")
-            activity_row.update({"actual": actual_activities, "errors": errors, "pass": not errors and actual_activities == expected_activities})
+            def walk(value):
+                if isinstance(value, dict):
+                    yield value
+                    for child in value.values():
+                        yield from walk(child)
+                elif isinstance(value, list):
+                    for child in value:
+                        yield from walk(child)
+            groups = [r for r in all_resources if r.get("resourceType") == "RequestGroup"]
+            action_refs = {node.get("resource", {}).get("reference", "").split("/")[-1].lstrip("#")
+                           for group in groups for node in walk(group.get("action", []))}
+            linked = all(activity in action_refs for activity in expected_activities)
+            requests = [r for r in all_resources if r.get("resourceType") == "CommunicationRequest"]
+            payloads = [payload.get("contentString", "") for r in requests for payload in r.get("payload", [])]
+            scoped_negative = expected_applicability is not False or any("This does not mean that cancer treatment" in text for text in payloads)
+            activity_row.update({"actual": actual_activities, "errors": errors, "terminalLinkedFromRequestGroup": linked,
+                                 "payloads": payloads, "pass": bool(groups) and not errors and actual_activities == expected_activities and linked and scoped_negative})
         except (OSError, ValueError) as error:
             activity_row.update({"pass": False, "error": str(error)})
         activity_checks.append(activity_row)

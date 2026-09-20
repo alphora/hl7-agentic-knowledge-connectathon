@@ -813,6 +813,55 @@
           "ownership": "policy-owned",
           "relation": "implements-criterion",
           "status": "linked"
+        },
+        {
+          "lib": "Breast Cancer Neoadjuvant",
+          "kind": "activity",
+          "name": "Nothing Recommended",
+          "nodeKind": "leaf",
+          "ownership": "policy-owned",
+          "relation": "implements-criterion",
+          "status": "linked"
+        },
+        {
+          "lib": "Breast Cancer Neoadjuvant",
+          "kind": "decision",
+          "name": "Neoadjuvant Guidance",
+          "nodeId": "otherwise",
+          "nodeKind": "decision-node",
+          "ownership": "policy-owned",
+          "relation": "implements-criterion",
+          "status": "linked"
+        },
+        {
+          "lib": "Breast Cancer Neoadjuvant",
+          "kind": "decision",
+          "name": "Neoadjuvant Guidance",
+          "nodeId": "when[0]/when[0]/otherwise",
+          "nodeKind": "decision-node",
+          "ownership": "policy-owned",
+          "relation": "implements-criterion",
+          "status": "linked"
+        },
+        {
+          "lib": "Breast Cancer Neoadjuvant",
+          "kind": "decision",
+          "name": "Neoadjuvant Guidance",
+          "nodeId": "otherwise/action[0]",
+          "nodeKind": "decision-node",
+          "ownership": "policy-owned",
+          "relation": "implements-criterion",
+          "status": "linked"
+        },
+        {
+          "lib": "Breast Cancer Neoadjuvant",
+          "kind": "decision",
+          "name": "Neoadjuvant Guidance",
+          "nodeId": "when[0]/when[0]/otherwise/action[0]",
+          "nodeKind": "decision-node",
+          "ownership": "policy-owned",
+          "relation": "implements-criterion",
+          "status": "linked"
         }
       ],
       "cel": []

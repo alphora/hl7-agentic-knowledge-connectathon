@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"outputFile\":\"E:\\\\src\\\\hl7-agentic-knowledge-connectathon\\\\artifacts\\\\Connectathon\\\\breast-cancer-neoadjuvant\\\\reports\\\\package\\\\breast-cancer-neoadjuvant-0.0.0.tgz\",\"packageId\":\"org.alphora.connectathon.breast-cancer-neoadjuvant\",\"version\":\"0.0.0\",\"resourceCount\":49,\"sha256\":\"c834f43a08488f892e7e4915871b18eb08b7b0492f761c3305f18d05f69f93d2\"}"
+    }
+  ],
+  "isError": false
+}
