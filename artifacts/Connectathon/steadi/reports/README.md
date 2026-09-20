@@ -49,3 +49,7 @@ Authored companion inputs live in `src/companion-source/fhir`. They are assemble
 ## FHIR package
 
 The [FHIR npm package](package/steadi-0.0.0.tgz) contains the 30 FHIR definitions and an ImplementationGuide inventory. CRL generated the archive and embedded the local CQL attachments; resource identities are preserved. Synthetic patient examples remain in tests.
+
+## ELM
+
+All nine CRL-generated CQL libraries translated to ELM JSON without errors. Files and input/output hashes are in `tests/verification/elm` and `tests/verification/elm-manifest.json`. The translation helper is `reports/tools/ExportElm.java`; it contains no clinical logic.

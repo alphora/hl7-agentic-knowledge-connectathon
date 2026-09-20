@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-20T14:18:07.280Z",
+  "baseCommit": "a5dde82a9f10ec513fc46ac55a14cc66438d6a25",
+  "basis": {
+    "cel": "61be2ff2870cf5efb4c9bd5959bd2f2b26aa629d",
+    "cql": "b54fced74365f7c049c7ab176ca9a77d563d2496",
+    "crl": "af2fbbdecc8ad7edbdc9869c1ca19658310950ad",
+    "fhir": "db4c2cac5a04e0e5fdfa885dd43e10c418c3ff16"
+  },
+  "entity": "report",
+  "schemaVersion": 1
+}

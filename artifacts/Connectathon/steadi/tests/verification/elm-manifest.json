@@ -1,0 +1,64 @@
+{
+  "producer": "CQL-to-ELM JVM 4.8.0",
+  "source": "CRL 6.4.2 generated CQL",
+  "errors": 0,
+  "warnings": {
+    "FHIRHelpers": 3
+  },
+  "files": [
+    {
+      "cql": "src/cql/CaseFeatureCommon.cql",
+      "cqlSha256": "31fea89b8cabeee56bed5470b6ab5e2bffdf0dd7267f163ac6beb5cf5203ee7a",
+      "elm": "tests/verification/elm/CaseFeatureCommon.json",
+      "elmSha256": "66a6f6e75276b9c775e42d0104be1b791d7901be31f6f86206f014014bebeb39"
+    },
+    {
+      "cql": "src/cql/CRLCommon.cql",
+      "cqlSha256": "f4cef711204cf9ec8c7b25666d39139eef8d501f588f39bbd7a34b0b5bd807ca",
+      "elm": "tests/verification/elm/CRLCommon.json",
+      "elmSha256": "f1b27c0a18fce17d9b3ee0e1ccf8035902a289ba028675a920af987fbcae46e6"
+    },
+    {
+      "cql": "src/cql/FHIRHelpers.cql",
+      "cqlSha256": "6748661c16fe66dd07a68f07f77f7fea44e8b933d265dcc3c575964ba8329591",
+      "elm": "tests/verification/elm/FHIRHelpers.json",
+      "elmSha256": "80a799d4066b51b1e80f9461b4a9a58f0b7f5c9b05d05f883311581127c2d606"
+    },
+    {
+      "cql": "src/cql/SteadiExternalConcepts.cql",
+      "cqlSha256": "b76d636d360138174c1a4dd2f8791cdeddae9f26793aaf69950972b8ca1f2e85",
+      "elm": "tests/verification/elm/SteadiExternalConcepts.json",
+      "elmSha256": "5d3b842447fe6d2252f013a124191db6b899bd5ae6a10600e1a0db78571d0e0a"
+    },
+    {
+      "cql": "src/cql/SteadiExternalElements.cql",
+      "cqlSha256": "066edfc702067d161077840f10d2bb603313a3c9e77815f0354c70097b9a7557",
+      "elm": "tests/verification/elm/SteadiExternalElements.json",
+      "elmSha256": "528dbb1896768423f4686e731d003091b51484f5d1d6880f108739559a1159fe"
+    },
+    {
+      "cql": "src/cql/SteadiInferences.cql",
+      "cqlSha256": "b8e87a302b46ba0d0eb64ba3507bda80fe3853d4b9abd3beb6875e920a7483ef",
+      "elm": "tests/verification/elm/SteadiInferences.json",
+      "elmSha256": "a04412e248eb3254cf61138dbe48a66adb8c6273899e6a4ebe4d500c141a9f67"
+    },
+    {
+      "cql": "src/cql/SteadiInterface.cql",
+      "cqlSha256": "a42ae8b0e4c3490d66e0e92891a54088305c3f673fd10abc6de9d24154df31a1",
+      "elm": "tests/verification/elm/SteadiInterface.json",
+      "elmSha256": "ab87227a2f609aa136b407d0cf0282417ad77a7d0519b3a607366781ad4caf02"
+    },
+    {
+      "cql": "src/cql/SteadiLocalConcepts.cql",
+      "cqlSha256": "70c2fe95c056b48351710123a10a00cb8a734a41ae46f98575d708557ed4f7c2",
+      "elm": "tests/verification/elm/SteadiLocalConcepts.json",
+      "elmSha256": "6819a365b036ee4f89964d11dc852da9b45c2edd5d28d532b9a2ac56a3d90ca2"
+    },
+    {
+      "cql": "src/cql/SteadiLocalElements.cql",
+      "cqlSha256": "37081a1012efaca61c37c670561336ccd2e267ba829197fd0afd3e5a59767f87",
+      "elm": "tests/verification/elm/SteadiLocalElements.json",
+      "elmSha256": "5798a233f089094cb26f2de7bfdc2d6092b45fca386e937151c3428c4e951b14"
+    }
+  ]
+}
