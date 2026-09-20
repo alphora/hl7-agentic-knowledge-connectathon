@@ -1,0 +1,86 @@
+{
+  "revision": "5034ccd6bc5971aa7e366b6b0df0b23caffe4f46",
+  "refinedMarkdownSha256": "6cc1d2a5402ac3275d10d71d5545d0e0513c80bf41c9f85a9ace8e5f31d1b6d4",
+  "docxSha256": "3c8a78302e781152121a0cdeb853b204663ae66347ef8758fe58565f21d86333",
+  "paragraphCount": 848,
+  "exactTextLineSequencePreserved": true,
+  "transformation": "Combine the nine identified supplied files in labeled sections; normalize line endings; one Markdown line becomes one visible Word paragraph. Markdown notation and URLs remain literal. Heading styles affect typography only.",
+  "addedSource": [],
+  "omittedMeaningfulTextFromSelectedFiles": [],
+  "notConcatenated": "Case bundles/assertions, fixture scripts and validation evidence remain exact source files and are used directly by verification; their JSON is not duplicated as narrative paragraphs.",
+  "visualRenderingVerified": false,
+  "correspondence": [
+    {
+      "source": "../source/challenge/README.md",
+      "sourceSha256": "1fe58e7f5845f2727dc605afdd9a0acec7c9dcd66dca06ccb0de39f6bfbb0282",
+      "sourceLines": 92,
+      "refinedFirstLine": 8,
+      "refinedLastLine": 99,
+      "selection": "Entire supplied file, no text selection or deduplication"
+    },
+    {
+      "source": "../source/challenge/use-cases/breast-cancer/README.md",
+      "sourceSha256": "03cc2efee7d6a2beada0ae774bf81e3e3ce26115e5718e880dbf1742e9b345d2",
+      "sourceLines": 129,
+      "refinedFirstLine": 103,
+      "refinedLastLine": 231,
+      "selection": "Entire supplied file, no text selection or deduplication"
+    },
+    {
+      "source": "../source/challenge/use-cases/breast-cancer/sources/README.md",
+      "sourceSha256": "38f396d84861a539f883b1d279d19503d4447201f887a3255397cec2babcb3d4",
+      "sourceLines": 51,
+      "refinedFirstLine": 235,
+      "refinedLastLine": 285,
+      "selection": "Entire supplied file, no text selection or deduplication"
+    },
+    {
+      "source": "../source/challenge/use-cases/breast-cancer/sources/manifest.yaml",
+      "sourceSha256": "f8c505f9d0abed038117312354d1c54c2d1550f914d2e0eecc9047783b8904c7",
+      "sourceLines": 287,
+      "refinedFirstLine": 289,
+      "refinedLastLine": 575,
+      "selection": "Entire supplied file, no text selection or deduplication"
+    },
+    {
+      "source": "../source/challenge/use-cases/breast-cancer/test-bundles/README.md",
+      "sourceSha256": "da98d976a570cef2f4e269f6ba379562a10750dd71503bb280ac2a8a3d1e9c99",
+      "sourceLines": 89,
+      "refinedFirstLine": 579,
+      "refinedLastLine": 667,
+      "selection": "Entire supplied file, no text selection or deduplication"
+    },
+    {
+      "source": "../source/challenge/use-cases/breast-cancer/sources/raw/nci-breast-treatment-pdq.txt",
+      "sourceSha256": "b05f58a44e72c1d7371c5b9bb1fa133079ceff38327feb84885d02cfe397a287",
+      "sourceLines": 33,
+      "refinedFirstLine": 671,
+      "refinedLastLine": 703,
+      "selection": "Entire supplied file, no text selection or deduplication"
+    },
+    {
+      "source": "../source/challenge/use-cases/breast-cancer/sources/raw/nci-breast-tnm.txt",
+      "sourceSha256": "c1027bf765c6f7d67af1c5942e7825aa2e1d98aef78ed7a34d04b5ed62e7f882",
+      "sourceLines": 56,
+      "refinedFirstLine": 707,
+      "refinedLastLine": 762,
+      "selection": "Entire supplied file, no text selection or deduplication"
+    },
+    {
+      "source": "../source/challenge/use-cases/breast-cancer/sources/raw/nci-breast-chemotherapy.txt",
+      "sourceSha256": "283e6361008c83fb9b2d77c50769c394f76c77690c41f186341bf45fb842e6d8",
+      "sourceLines": 54,
+      "refinedFirstLine": 766,
+      "refinedLastLine": 819,
+      "selection": "Entire supplied file, no text selection or deduplication"
+    },
+    {
+      "source": "../source/challenge/use-cases/breast-cancer/sources/raw/nci-breast-immunotherapy.txt",
+      "sourceSha256": "0bd67e80b77dc21f11aaa626b7cff02bfadd9e19afff08a5988a19d46e8b4858",
+      "sourceLines": 25,
+      "refinedFirstLine": 823,
+      "refinedLastLine": 847,
+      "selection": "Entire supplied file, no text selection or deduplication"
+    }
+  ]
+}

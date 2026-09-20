@@ -1,0 +1,848 @@
+# Supplied Breast Cancer Neoadjuvant Challenge Specification
+
+Pinned challenge revision: 5034ccd6bc5971aa7e366b6b0df0b23caffe4f46.
+The following supplied documents are retained in full, with their roles and limitations. Section labels identify originals; no additional referenced clinical documents have been incorporated. The participant README describes the whole track; only the breast-cancer use case is authored in this artifact. Diagnostic fixtures remain unchanged under ../source/challenge/use-cases/breast-cancer/test-bundles.
+
+## Supplied file: README.md
+
+# AI-Assisted Development of Clinical Reasoning Knowledge
+
+This repository contains shared material for a proposed HL7 FHIR Connectathon
+track. The track tests whether AI-assisted authoring can transform unstructured
+clinical sources into valid, clinically coherent, interoperable knowledge
+artifacts.
+
+The repository is implementation-neutral. Participants may use any
+AI-assisted or conventional development approach.
+
+## Use cases
+
+Each use case lives under `use-cases/` with its own overview, source manifest,
+clinical scope, synthetic patient bundles, and expected-result contract.
+
+| Use case | Clinical focus | Participant inputs |
+| --- | --- | --- |
+| [Older-adult fall risk (STEADI)](use-cases/steadi/README.md) | Three-question screening, prevention guidance, and screening completion | [Sources](use-cases/steadi/sources/manifest.yaml), [fixtures](use-cases/steadi/test-bundles/README.md), [slides](use-cases/steadi/slides/connectathon-track-overview.md) |
+| [Breast cancer](use-cases/breast-cancer/README.md) | Neoadjuvant TNBC guidance for oncology review | [Sources](use-cases/breast-cancer/sources/README.md), [fixtures](use-cases/breast-cancer/test-bundles/README.md), [validation](use-cases/breast-cancer/validation/README.md) |
+
+```text
+use-cases/
+├── steadi/
+│   ├── README.md
+│   ├── sources/
+│   ├── test-bundles/
+│   └── slides/
+└── breast-cancer/
+    ├── README.md
+    ├── sources/
+    ├── test-bundles/
+    ├── scripts/
+    └── validation/
+```
+
+Source-manifest `local_path` values are relative to the repository root.
+Fixture-manifest paths are relative to the directory containing that manifest.
+FHIR canonical URLs identify artifacts independently of their filesystem paths.
+
+## Track question
+
+Can AI-assisted development reduce authoring and review effort, support a
+repeatable process across artifact types, and preserve the quality required for
+clinical reasoning content?
+
+Record process evidence and artifact evidence separately:
+
+- **Process:** elapsed authoring time, human review time, revision cycles,
+  blocking issues, and repeatability.
+- **Artifacts:** source traceability, FHIR conformance, CQL translation and
+  execution, clinical coherence, and cross-implementation agreement.
+
+## Participant task
+
+Start with a use case's source corpus and shared test bundles. Produce
+source-linked evidence, structured recommendations, terminology bindings,
+FHIR knowledge artifacts, CQL source, and ELM JSON as specified by that case.
+Assessment and measure requirements are case-specific: STEADI includes SDC
+Questionnaire extraction and a screening-completion measure; breast cancer
+uses diagnostic Observations and an oncology-review applicability rule.
+
+Record tools, versions, instructions, human decisions, and unresolved issues.
+Preserve source locators and distinguish source statements from track-authored
+operational choices. Record exact package dependencies for distribution.
+
+FHIR R4 does not define `Citation`; an R4 submission should use available
+provenance and related-artifact elements. Identify any R5 variant separately.
+
+## Interoperability test
+
+The baseline is FHIR R4 4.0.1, ELM JSON, and a conservative CQL subset suitable
+for multiple CQL 1.5-era implementations. Participants:
+
+1. validate the generated FHIR resources and package;
+2. store and retrieve the knowledge artifacts from independent FHIR servers;
+3. translate the same CQL and record diagnostics;
+4. execute every shared patient bundle for their selected use case;
+5. compare Boolean and null semantics against the assertions; and
+6. record exact implementation, dependency, terminology, and artifact versions.
+
+Baseline evidence requires agreement from at least two independent CQL
+implementations and round-trip testing in at least two FHIR implementations.
+Compilation or upload alone is not a passing result.
+
+## Review boundaries
+
+FHIR validation and CQL compilation are necessary, but they are not clinical
+approval. Source rights and redistribution terms are recorded in each source
+manifest and the repository [notices](NOTICE.md).
+
+All patient data is synthetic. The material is for Connectathon testing and
+education, not clinical use.
+
+## Supplied file: use-cases/breast-cancer/README.md
+
+# Breast cancer: neoadjuvant TNBC review
+
+This case extends the Connectathon's STEADI pattern with a breast cancer
+example: a traceable source corpus, synthetic FHIR R4 patient bundles, and
+engine-neutral expected results. Participants turn the source material into
+reviewable evidence, structured recommendations, and executable knowledge.
+
+The case focuses on triple-negative breast cancer (TNBC) neoadjuvant guidance.
+This package supplies participant inputs. Generated CQL, ELM, and treatment
+pathways are participant deliverables.
+
+## Clinical question
+
+For an adult undergoing pretreatment review of an active, confirmed invasive
+breast cancer, does the documented nonmetastatic disease, receptor status, and
+clinical tumor/node category match the TNBC neoadjuvant guidance under review?
+
+The baseline tests the population described by ASCO's 2021 recommendations
+3.1 and 3.2: TNBC with clinically positive nodes or a clinical tumor category
+of T1c or higher, with small node-negative tumors as negative controls.
+The asserted result is **applicability of guidance for oncology review**.
+It does not determine a patient's fitness for chemotherapy or authorize a
+medication order. A false result means this particular rule does not apply;
+it does not mean that no cancer treatment is indicated.
+
+## Start here
+
+1. Read the [source guide](sources/README.md) and
+   [manifest](sources/manifest.yaml). Distinguish guideline recommendations,
+   professional evidence summaries, and patient education.
+2. Review the [patient fixture contract](test-bundles/README.md), including
+   clinical staging, tumor linkage, and Boolean/null semantics.
+3. Generate structured evidence and recommendation artifacts with source IDs,
+   versions, and section locators.
+4. Formalize the agreed rule in FHIR R4 and CQL, then compare execution with
+   every shared assertion.
+
+The corpus includes NCI source text extracted from online material, with
+retrieval dates and checksums. Extraction and exclusions are documented;
+these files are not untouched HTML snapshots or maintained NCI publications.
+ASCO publications remain linked references under their original rights.
+
+## Guidance and evidence
+
+| Source | Role in this exercise |
+| --- | --- |
+| [ASCO neoadjuvant guideline, 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC8274745/) | Baseline population and TNBC recommendation; use recommendations 1.2, 3.1, and 3.2 as stable locators |
+| [ASCO rapid recommendation update, 2022](https://pubmed.ncbi.nlm.nih.gov/35417251/) | Required update review for immunotherapy; prevents carrying forward the 2021 statement on insufficient evidence as current guidance |
+| [NCI professional breast cancer treatment summary](https://www.cancer.gov/types/breast/hp/breast-treatment-pdq) | Evidence context, including neoadjuvant therapy and KEYNOTE-522; this is an evidence summary, not an ASCO guideline |
+| [NCI TNM staging explanation](https://www.cancer.gov/types/breast/stages/tnm-staging-system) | Tumor-size boundaries and staging context; its node section describes pathological staging and must not be used to derive clinical node categories |
+| [NCI chemotherapy](https://www.cancer.gov/types/breast/treatment/chemotherapy) and [immunotherapy](https://www.cancer.gov/types/breast/treatment/immunotherapy) | Patient-facing explanation of treatment timing and discussion topics |
+
+The 2022 update supports pembrolizumab with neoadjuvant chemotherapy followed
+by adjuvant pembrolizumab in a specified high-risk early-stage TNBC population.
+That population is not identical to everyone matching the baseline chemotherapy
+review rule. Immunotherapy eligibility, contraindications, dosing, sequencing,
+and treatment orders are outside the shared execution contract. Participants
+must record how the update affects any broader pathway they choose to author.
+This is a dated source set, not an exhaustive review of all guidance available
+in 2026.
+
+## Source statements and track choices
+
+The source supports using tumor features and receptors to guide neoadjuvant
+decisions. The following are track-authored operational choices:
+
+- Require an explicit active, confirmed invasive breast cancer and a documented
+  nonmetastatic assessment. Absence of metastatic disease in a record is not
+  evidence of cM0.
+- Use explicit clinical T and N categories. Keep a tumor size measurement for
+  consistency checks; a size alone does not establish stage. A 10 mm tumor is
+  at the T1b upper boundary, not T1c.
+- Evaluate receptor and staging Observations for the same tumor and evaluation
+  context. Receptors from an unrelated tumor must not determine this subtype.
+- Treat unresolved or absent receptor/staging data as unknown. Use three-valued
+  logic so a known positive route can resolve an OR, while missing information
+  cannot silently become a negative result.
+- Use a small, explicit local staging vocabulary for the fixture exchange
+  contract. It is not an AJCC terminology distribution or a claim of mCODE
+  profile conformance.
+
+All baseline patients are adults in a pretreatment context. Age eligibility,
+prior systemic therapy, multiple simultaneous tumors, and longitudinal result
+reconciliation require additional cases before expanding the contract.
+
+## Required expressions
+
+Every implementation must return the typed values specified in the case files
+for these expressions:
+
+- `Has Active Confirmed Invasive Breast Cancer`
+- `Has Nonmetastatic Disease`
+- `In Neoadjuvant Review Population`
+- `Is Triple Negative`
+- `Has Clinically Positive Nodes`
+- `Has Clinical T1c Or Higher`
+- `Meets Tumor Or Node Criterion`
+- `Neoadjuvant TNBC Guidance Applicable`
+
+JSON `null` means an unknown Boolean. It is distinct from `false`, an omitted
+expression, or an engine failure. The detailed data-selection rules and case
+matrix are in the [fixture README](test-bundles/README.md).
+
+## Participant deliverables
+
+| Stage | Expected output |
+| --- | --- |
+| Evidence | Source-linked evidence summary; FHIR `Evidence`/`EvidenceVariable` where appropriate, preserving population, intervention, comparator, outcome, and limitations |
+| Structured recommendation | Decision table and care pathway separating sourced recommendations from operational choices and the 2022 update |
+| Assessment | Explicit receptor/staging data requirements and missing-data handling; a Questionnaire may be an additional reviewed artifact, but diagnostic inputs are not survey answers |
+| Computable guidance | `PlanDefinition`, review-oriented `ActivityDefinition`, `Library`, CQL source, and ELM JSON |
+| Terminology and distribution | Versioned `ValueSet`/`CodeSystem` bindings and a FHIR R4 package with exact dependencies |
+| Verification | FHIR validation, CQL translation/execution results, source traceability, and a clinical review record |
+
+A track-authored process measure of assessment completeness is an optional
+extension. It needs its own population, period, numerator, denominator, and
+fixtures; there is no asserted measure or claim of equivalence to an oncology
+quality measure in this baseline. FHIR R4 has no `Citation` resource; use R4
+provenance and related-artifact elements, or identify an R5 variant separately.
+
+As in STEADI, interoperability evidence requires agreement from at least two
+independent CQL implementations and round-trip testing in two FHIR
+implementations. Record exact tool, terminology, dependency, and artifact
+versions, along with authoring time, review effort, and revisions. A fixture
+integrity check or successful FHIR validation alone does not demonstrate CQL
+execution or clinical approval.
+
+All patients are synthetic. This material is for Connectathon testing and
+education; derived clinical content requires independent clinical review.
+
+## Supplied file: use-cases/breast-cancer/sources/README.md
+
+# Breast cancer source corpus
+
+This corpus supplies unstructured online material for the breast cancer workshop, following the STEADI source-manifest pattern. It combines two linked ASCO guideline publications with four locally usable NCI text extractions. The sources serve different purposes; they are not interchangeable votes for one treatment rule.
+
+The retrieval date is **September 19, 2026**. Each included source records the date actually displayed on the page as well as the retrieval timestamp. A recent retrieval does not mean a recent evidence review or establish that this is an exhaustive collection of current guidance.
+
+## Reading and mining order
+
+1. Read [ASCO 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC8274745/), recommendations **3.1 and 3.2**, for the historical TNBC neoadjuvant decision boundary used in this exercise. Keep the distinction between clinically node-positive disease and cT1a/b N0 disease. Do not turn a missing receptor or staging value into a negative result.
+2. Read the [ASCO 2022 rapid recommendation update](https://ascopubs.org/doi/abs/10.1200/JCO.22.00503) ([PubMed metadata](https://pubmed.ncbi.nlm.nih.gov/35417251/)) before discussing immunotherapy. It updates the 2021 evidence context. A broad flag to review neoadjuvant therapy does not establish pembrolizumab eligibility. Publisher search exposed the update's abstract; direct full-page retrieval failed during this task, so its full text is not supplied here.
+3. Mine [NCI professional treatment excerpts](raw/nci-breast-treatment-pdq.txt) for subtype definition, preoperative treatment context, trial evidence, and adverse-event context. The selected source sections are `_3053` and `_2896`; citations retain links to the original page. This is an evidence synthesis, not a formal practice guideline. The retrieved page displayed **April 25, 2025** and contains evidence-time qualifiers such as immature EFS data; preserve those qualifiers rather than claiming this is the latest trial follow-up.
+4. Use [NCI TNM staging text](raw/nci-breast-tnm.txt) to discuss T-category boundaries and the distinction between T, N, M, grade, and biomarkers. Its N section explicitly describes **pathological** staging and does **not** define clinical cN. Do not infer clinical cN from pathological node counts or derive an entire stage group from tumor diameter.
+5. Use [NCI chemotherapy text](raw/nci-breast-chemotherapy.txt) and [NCI immunotherapy text](raw/nci-breast-immunotherapy.txt) for patient-facing explanations of treatment before and after surgery. These patient education pages are not authority for exact regimen eligibility, dosing, or treatment orders.
+
+The [manifest](manifest.yaml) gives stable source IDs, online URLs, local paths, roles, locators, and provenance. When recording a mined assertion, carry the source ID, recommendation or section locator, source date, retrieval date, and whether the assertion is quoted source content or a workshop interpretation. Preserve disagreement and changed evidence; do not silently combine the 2021 and 2022 recommendations into a timeless rule.
+
+## What is stored
+
+The `raw/*.txt` files are **selected unstructured source prose**, not author-written clinical summaries, complete source-page snapshots, or computable rules. Original wording is preserved, with whitespace normalization, paragraph/list boundaries, resolved hyperlink destinations, and an added provenance header. The patient pages contain article introduction/body prose; the professional page contains only the selected TNBC sections.
+
+All tables, figures, images, captions, image components, navigation, scripts, and unselected sections are excluded. In particular, the professional page's separately credited AJCC tables are not redistributed. The original HTML is fetched only in memory. Its byte count and SHA-256 are recorded independently of the saved text's byte count and SHA-256, so the manifest does not misrepresent an extraction as an untouched response.
+
+Text is adapted from the National Cancer Institute under its [reuse policy](https://www.cancer.gov/policies/copyright-reuse), with attribution to and links to each original publication. The PDQ excerpts are **not** the complete, maintained NCI PDQ cancer information summary. See the original page's [permission section](https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#_AboutThis_12). ASCO publications remain link-only because publicly readable content does not imply redistribution permission.
+
+## Refresh and verify
+
+Run from the repository root:
+
+```sh
+uv run use-cases/breast-cancer/sources/retrieve.py
+```
+
+The script declares pinned Beautiful Soup and PyYAML dependencies, downloads the four NCI pages over HTTPS, checks that every configured selector identifies exactly one element, writes the extracts, and refreshes their manifest entries. Existing link-only entries are preserved. It does not reverify the linked ASCO publications or update their verification dates. Review the resulting diff: source HTML, dates, selectors, treatment context, and permissions can change. The original response hash is an audit record, not a promise that a later HTTP request reproduces identical HTML.
+
+Verify stored files independently:
+
+```sh
+uv run --with pyyaml python - <<'PY'
+from hashlib import sha256
+from pathlib import Path
+import yaml
+manifest = yaml.safe_load(Path('use-cases/breast-cancer/sources/manifest.yaml').read_text())
+for source in manifest['included_sources']:
+    data = Path(source['local_path']).read_bytes()
+    assert len(data) == source['bytes'], source['id']
+    assert sha256(data).hexdigest() == source['sha256'], source['id']
+print('Verified all included source sizes and SHA-256 hashes')
+PY
+```
+
+This corpus supports a nonmetastatic TNBC **oncology-review flag** demonstration. It does not prescribe therapy, establish treatment fitness, or replace oncology review. Missing and conflicting clinical facts remain explicit in the associated patient cases.
+
+## Supplied file: use-cases/breast-cancer/sources/manifest.yaml
+
+version: 1.0.0
+status: draft
+retrieved_at: '2026-09-19'
+checksum_algorithm: sha256
+scope: Educational TNBC neoadjuvant-review use case; not exhaustive current clinical guidance
+included_sources:
+- id: nci-breast-treatment-pdq
+  title: Breast Cancer Treatment (PDQ®)–Health Professional Version
+  canonical_url: https://www.cancer.gov/types/breast/hp/breast-treatment-pdq
+  role:
+  - professional-evidence-summary
+  - receptor-status
+  - neoadjuvant-context
+  locators:
+  - section_id: _1027
+    heading: Stages I, II, and III Triple-Negative Breast Cancer (TNBC)
+    selection: Opening definition paragraph _3053 only
+  - section_id: _2896
+    heading: Preoperative therapy for TNBC
+    selection: Section prose including Chemotherapy and Immunotherapy subsections; tables/images excluded
+  boundary: Professional evidence synthesis, not a formal clinical-practice recommendation. Static selected excerpts
+    are not the complete maintained PDQ summary. Trial eligibility and results do not independently establish this
+    demonstration's decision rule.
+  local_path: use-cases/breast-cancer/sources/raw/nci-breast-treatment-pdq.txt
+  media_type: text/plain; charset=utf-8
+  bytes: 5510
+  sha256: b05f58a44e72c1d7371c5b9bb1fa133079ceff38327feb84885d02cfe397a287
+  source_displayed_dates:
+  - April 25, 2025
+  original_response:
+    retrieved_at: '2026-09-19T15:24:38+00:00'
+    resolved_url: https://www.cancer.gov/types/breast/hp/breast-treatment-pdq
+    http_status: 200
+    media_type: text/html
+    bytes: 812893
+    sha256: 862f78faa9e4cbedc19f9ffcaeba97e029ba51b72bb3b81fc67aa8b6adf96904
+    stored: false
+    reason_not_stored: Original HTML includes images and potentially separately credited material; retain selected
+      permitted prose only.
+  extraction:
+    script: use-cases/breast-cancer/sources/retrieve.py
+    selectors:
+    - '#_3053'
+    - '#_2896'
+    excluded_elements:
+    - audio
+    - figcaption
+    - figure
+    - iframe
+    - img
+    - nav
+    - script
+    - style
+    - svg
+    - table
+    - video
+    - .cgdp-image
+    transformations:
+    - Select source prose only
+    - Normalize whitespace and preserve paragraph/list boundaries
+    - Append resolved link destinations
+    - Prepend extraction and attribution metadata
+  redistribution_basis: NCI text reuse permission, except separately credited material. Selected prose excludes
+    all tables, images and figures; attributed and labeled as an adaptation.
+  license_url: https://www.cancer.gov/policies/copyright-reuse
+- id: nci-breast-tnm
+  title: TNM Staging for Breast Cancer
+  canonical_url: https://www.cancer.gov/types/breast/stages/tnm-staging-system
+  role:
+  - patient-education
+  - staging-context
+  locators:
+  - heading: Tumor (T)
+  - heading: Lymph node (N)
+  - heading: Metastasis (M)
+  boundary: Patient education. T size boundaries provide context; do not infer T category from size alone when invasion
+    features matter. The N section explicitly describes pathological staging and must not be used to derive clinical
+    cN from node counts.
+  local_path: use-cases/breast-cancer/sources/raw/nci-breast-tnm.txt
+  media_type: text/plain; charset=utf-8
+  bytes: 7504
+  sha256: c1027bf765c6f7d67af1c5942e7825aa2e1d98aef78ed7a34d04b5ed62e7f882
+  source_displayed_dates:
+  - August 6, 2025
+  original_response:
+    retrieved_at: '2026-09-19T15:24:40+00:00'
+    resolved_url: https://www.cancer.gov/types/breast/stages/tnm-staging-system
+    http_status: 200
+    media_type: text/html
+    bytes: 45292
+    sha256: 7017a6bce86d5002d2b380247557fe6c3a34a4b32f9ca456a7f25d692ca45b7e
+    stored: false
+    reason_not_stored: Original HTML includes images and potentially separately credited material; retain selected
+      permitted prose only.
+  extraction:
+    script: use-cases/breast-cancer/sources/retrieve.py
+    selectors:
+    - article .cgdp-field-intro-text
+    - article .cgdp-article-body
+    excluded_elements:
+    - audio
+    - figcaption
+    - figure
+    - iframe
+    - img
+    - nav
+    - script
+    - style
+    - svg
+    - table
+    - video
+    - .cgdp-image
+    transformations:
+    - Select source prose only
+    - Normalize whitespace and preserve paragraph/list boundaries
+    - Append resolved link destinations
+    - Prepend extraction and attribution metadata
+  redistribution_basis: NCI text reuse permission, except separately credited material. Selected prose excludes
+    all tables, images and figures; attributed and labeled as an adaptation.
+  license_url: https://www.cancer.gov/policies/copyright-reuse
+- id: nci-breast-chemotherapy
+  title: Chemotherapy for Breast Cancer
+  canonical_url: https://www.cancer.gov/types/breast/treatment/chemotherapy
+  role:
+  - patient-education
+  - treatment-timing
+  locators:
+  - section_id: when-is-chemotherapy-for-breast-cancer-given
+    heading: When is chemotherapy for breast cancer given?
+  boundary: Patient education explains treatment timing and discussions; it is not sufficient authority for regimen
+    selection or precise eligibility thresholds.
+  local_path: use-cases/breast-cancer/sources/raw/nci-breast-chemotherapy.txt
+  media_type: text/plain; charset=utf-8
+  bytes: 7847
+  sha256: 283e6361008c83fb9b2d77c50769c394f76c77690c41f186341bf45fb842e6d8
+  source_displayed_dates:
+  - December 2, 2025
+  original_response:
+    retrieved_at: '2026-09-19T15:24:40+00:00'
+    resolved_url: https://www.cancer.gov/types/breast/treatment/chemotherapy
+    http_status: 200
+    media_type: text/html
+    bytes: 50326
+    sha256: c6b8070453f65a4d332ae8bcf029c92865ad31b0edc1b6990d52e8be07eca067
+    stored: false
+    reason_not_stored: Original HTML includes images and potentially separately credited material; retain selected
+      permitted prose only.
+  extraction:
+    script: use-cases/breast-cancer/sources/retrieve.py
+    selectors:
+    - article .cgdp-field-intro-text
+    - article .cgdp-article-body
+    excluded_elements:
+    - audio
+    - figcaption
+    - figure
+    - iframe
+    - img
+    - nav
+    - script
+    - style
+    - svg
+    - table
+    - video
+    - .cgdp-image
+    transformations:
+    - Select source prose only
+    - Normalize whitespace and preserve paragraph/list boundaries
+    - Append resolved link destinations
+    - Prepend extraction and attribution metadata
+  redistribution_basis: NCI text reuse permission, except separately credited material. Selected prose excludes
+    all tables, images and figures; attributed and labeled as an adaptation.
+  license_url: https://www.cancer.gov/policies/copyright-reuse
+- id: nci-breast-immunotherapy
+  title: Immunotherapy for Breast Cancer
+  canonical_url: https://www.cancer.gov/types/breast/treatment/immunotherapy
+  role:
+  - patient-education
+  - updated-treatment-context
+  locators:
+  - heading: Who gets immunotherapy for breast cancer?
+  - heading: When is immunotherapy for breast cancer given?
+  boundary: Patient education supporting contemporary context; stage/subtype statements are not a substitute for
+    the ASCO update and individualized oncology review.
+  local_path: use-cases/breast-cancer/sources/raw/nci-breast-immunotherapy.txt
+  media_type: text/plain; charset=utf-8
+  bytes: 3114
+  sha256: 0bd67e80b77dc21f11aaa626b7cff02bfadd9e19afff08a5988a19d46e8b4858
+  source_displayed_dates:
+  - December 2, 2025
+  original_response:
+    retrieved_at: '2026-09-19T15:24:40+00:00'
+    resolved_url: https://www.cancer.gov/types/breast/treatment/immunotherapy
+    http_status: 200
+    media_type: text/html
+    bytes: 39119
+    sha256: 0b5f2d67674695fc7ab26904e82c3cd9fdeedd4406210c9ca8f685d924490470
+    stored: false
+    reason_not_stored: Original HTML includes images and potentially separately credited material; retain selected
+      permitted prose only.
+  extraction:
+    script: use-cases/breast-cancer/sources/retrieve.py
+    selectors:
+    - article .cgdp-field-intro-text
+    - article .cgdp-article-body
+    excluded_elements:
+    - audio
+    - figcaption
+    - figure
+    - iframe
+    - img
+    - nav
+    - script
+    - style
+    - svg
+    - table
+    - video
+    - .cgdp-image
+    transformations:
+    - Select source prose only
+    - Normalize whitespace and preserve paragraph/list boundaries
+    - Append resolved link destinations
+    - Prepend extraction and attribution metadata
+  redistribution_basis: NCI text reuse permission, except separately credited material. Selected prose excludes
+    all tables, images and figures; attributed and labeled as an adaptation.
+  license_url: https://www.cancer.gov/policies/copyright-reuse
+link_only_references:
+- id: asco-neoadjuvant-2021
+  title: 'Neoadjuvant Chemotherapy, Endocrine Therapy, and Targeted Therapy for Breast Cancer: ASCO Guideline'
+  canonical_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8274745/
+  doi: 10.1200/JCO.20.03399
+  publication_year: 2021
+  role:
+  - clinical-practice-guideline
+  - historical-rule-anchor
+  locators:
+  - recommendation: '3.1'
+    topic: 'TNBC: clinically node-positive and/or at least T1c disease'
+  - recommendation: '3.2'
+    topic: 'cT1a or cT1b N0 TNBC: not routine neoadjuvant therapy outside a clinical trial'
+  - recommendation: '3.4'
+    topic: Historical immunotherapy evidence statement; read with 2022 rapid update
+  verified_at: '2026-09-19'
+  access_note: Full PMC article read and recommendation numbering verified during the task; subsequent requests
+    sometimes returned a browser challenge.
+  reason: ASCO copyright; full guideline is not redistributed.
+  boundary: The exercise borrows a broad neoadjuvant-review trigger from recommendations 3.1/3.2. The 2021 immunotherapy
+    statement must not be presented as current guidance.
+- id: asco-pembrolizumab-update-2022
+  title: 'Use of Immune Checkpoint Inhibitor Pembrolizumab in the Treatment of High-Risk, Early-Stage Triple-Negative
+    Breast Cancer: ASCO Guideline Rapid Recommendation Update'
+  canonical_url: https://ascopubs.org/doi/abs/10.1200/JCO.22.00503
+  metadata_url: https://pubmed.ncbi.nlm.nih.gov/35417251/
+  doi: 10.1200/JCO.22.00503
+  publication_year: 2022
+  role:
+  - clinical-practice-guideline-update
+  - updated-treatment-context
+  locators:
+  - section: Abstract / Recommendation
+    topic: Pembrolizumab with neoadjuvant chemotherapy followed by adjuvant pembrolizumab for the specified high-risk
+      early-stage TNBC population
+  verified_at: '2026-09-19'
+  access_note: Publisher search result exposed the abstract recommendation; PubMed search verified metadata. Direct
+    publisher full-page access returned an error; no full-text snapshot or exhaustive update search claimed.
+  reason: ASCO copyright; link-only recommendation update.
+  boundary: Review alongside the 2021 guideline; its treatment-specific eligibility must not be equated with the
+    broader educational review flag. No claim that these sources exhaust guidance available in 2026.
+- id: nci-text-reuse-policy
+  title: Reuse of NCI Information
+  canonical_url: https://www.cancer.gov/policies/copyright-reuse
+  role:
+  - redistribution-policy
+  verified_at: '2026-09-19'
+  reason: Permission reference for included attributed text extractions; separately credited material is excluded.
+- id: hl7-cpg-ig
+  title: Clinical Practice Guidelines Implementation Guide
+  canonical_url: https://hl7.org/fhir/uv/cpg/
+  role:
+  - fhir-guidance
+  reason: Standards reference; this corpus does not claim CPG conformance.
+- id: hl7-mcode
+  title: Minimal Common Oncology Data Elements (mCODE) Implementation Guide
+  canonical_url: https://hl7.org/fhir/us/mcode/
+  role:
+  - oncology-data-model-reference
+  reason: Standards reference; demonstration fixtures do not claim mCODE conformance.
+
+## Supplied file: use-cases/breast-cancer/test-bundles/README.md
+
+# Synthetic breast-cancer patient test bundles
+
+These 13 FHIR R4 4.0.1 cases define an implementation-neutral input and expected-result contract for source-linked neoadjuvant TNBC guidance. They follow the STEADI `bundle.json`, `assertions.json`, `SUMMARY.md`, and manifest pattern. The inputs are already diagnostic Observations, so there is no Questionnaire or SDC extraction step.
+
+Every patient is synthetic. Every resource has the `HTEST` security label. No fixture contains a prescription, administration plan, dose, or medication order. A true applicability result means to surface guidance for oncology review; a false result concerns only this narrow review criterion and does not mean that treatment is unnecessary.
+
+## Source and population contract
+
+The clinical criterion follows `asco-neoadjuvant-2021`, recommendation 3.1: TNBC with clinically positive nodes and/or at least T1c disease. The source is linked in the [source manifest](../sources/manifest.yaml). The [use-case overview](../README.md) explains the later ASCO immunotherapy update and current-guidance context. These fixtures do not test pembrolizumab eligibility or complete regimen selection.
+
+The track operationalizes this criterion for an **active, confirmed invasive primary breast cancer with explicit clinical M0 assessment**. Requiring an explicit M0 record and preserving unknown values are track-authored operational choices, not verbatim ASCO rules. Clinical T/N/M assessments are supplied inputs; participants must not infer staging solely from a tumor-size measurement. The NCI staging reference supplies T-category boundary context, including the T1b/T1c boundary at 10 mm. Its N-category section is pathological and is not used to define the clinical N assertions here; those assertions preserve the clinically node-positive versus node-negative distinction in the ASCO recommendation.
+
+A `Condition` coded `invasive-breast-carcinoma` in the [local CodeSystem](code-system.json), with clinical status `active` and verification status `confirmed`, establishes the indexed cancer. The local CodeSystem defines synthetic fixture assertions and clinical stage categories; it is not a mapping to SNOMED CT, AJCC proprietary terminology, or an mCODE profile. There is no claim of mCODE conformance.
+
+## Observation selection
+
+- Evaluation time: `2026-06-15T12:00:00Z`.
+- Observations are final, effective `2026-06-01T09:00:00Z`, and issued `2026-06-02T10:00:00Z`, before evaluation.
+- For cases with an indexed cancer, every Observation has the same Patient subject and an explicit `focus` reference to that cancer Condition.
+- Select usable Observations for that indexed cancer only. Unlinked observations, another tumor's observations, and future or nonfinal results must not supply these inputs.
+- When no indexed cancer Condition exists, all tumor-specific input expressions are unknown. The diagnosis and population/applicability gates are false. The `diagnosis-absent` case intentionally includes unanchored results to detect an implementation that assembles a diagnosis from laboratory data alone.
+- Each supplied case has at most one Observation per input code, one indexed Condition, and no conflicting stage or receptor assessments. Multiple cancers, conflicting or superseded results, treatment response, pathological staging, recurrent disease, and post-neoadjuvant reassessment need additional contracts beyond this fixture set.
+
+The supplied clinical stage codes are `cT1mi`, `cT1a`, `cT1b`, `cT1c`, `cT2`, `cT3`, `cT4`; `cN0`–`cN3`; and `cM0`/`cM1`. The current cases exercise T1b, T1c, T2, N0, N1, M0, M1, and missing N/M. Other declared categories make the comparison contract explicit but are not covered by individual cases here.
+
+## Terminology and units
+
+Observation codes are pinned to LOINC 2.81. The five codes and exact displays were verified as active through ReasonHub on 2026-09-19; see [lookup evidence](../validation/terminology-lookups.json).
+
+| Input | LOINC 2.81 | Value |
+| --- | --- | --- |
+| Estrogen receptor | `85337-4` | Qualitative result |
+| Progesterone receptor | `85339-0` | Qualitative result |
+| HER2 interpretation | `48676-1` | Qualitative result |
+| Tumor size | `21889-1` | Component containing longest dimension |
+| Maximum tumor dimension component | `33728-7` | UCUM `mm` or `cm` quantity |
+
+Negative and positive receptor answers use LOINC answer codes `LA6577-6` and `LA6576-8`. These answer codes were checked against the [LOINC preferred answer list](https://loinc.org/85339-0/), separately from the ReasonHub concept lookups; the ReasonHub answer-code endpoint did not resolve them. The equivocal fixture uses the defined local code `equivocal`. It does not relabel an indeterminate answer code or presume a final negative HER2 interpretation.
+
+Clinical staging and the invasive-diagnosis assertion use the local CodeSystem. There is no automatic conversion from these local codes to standard clinical terminology. A participant may map the input contract to its chosen terminology, but must document exact mappings and versions while preserving the supplied clinical meanings and unknown values.
+
+The 15 mm and 1.5 cm cases have identical stage and applicability expectations. Size is a consistency check and data-portability exercise, not the source of the T-category expression. The exactly-10-mm case explicitly supplies cT1b.
+
+## Required expressions
+
+| Expression | Contract |
+| --- | --- |
+| `Has Active Confirmed Invasive Breast Cancer` | True when the indexed Condition exists with the required code and statuses; false if it does not. |
+| `Has Nonmetastatic Disease` | cM0 → true; cM1 → false; no usable indexed clinical M assessment → unknown. |
+| `In Neoadjuvant Review Population` | Diagnosis expression AND nonmetastatic expression. |
+| `Is Triple Negative` | ER-negative AND PR-negative AND HER2-negative. Positive → false for that receptor; absent or unresolved → unknown. |
+| `Has Clinically Positive Nodes` | cN1/cN2/cN3 → true; cN0 → false; no usable indexed N assessment → unknown. |
+| `Has Clinical T1c Or Higher` | cT1c/cT2/cT3/cT4 → true; cT1mi/cT1a/cT1b → false; no usable indexed T assessment → unknown. |
+| `Meets Tumor Or Node Criterion` | Clinical T expression OR clinically positive nodes expression. |
+| `Neoadjuvant TNBC Guidance Applicable` | Review population AND triple-negative status AND tumor-or-node criterion. |
+
+Use CQL three-valued Boolean semantics. `false AND null` is false; `true AND null` is null; `true OR null` is true; `false OR null` is null. Missing values must not be converted to false. Missing or unresolved HER2 does not establish TNBC.
+
+Every assertion has an expression name and typed expected Boolean value. Unknown is JSON `null` plus `"semantics": "unknown"`. Execution errors and absent result fields are not equivalent to null. A harness should save actual engine output separately and leave the shared assertions unchanged.
+
+## Cases
+
+| Case | Distinguishing input | Applicability |
+| --- | --- | --- |
+| [tnbc-t1c-n0](cases/tnbc-t1c-n0/SUMMARY.md) | TNBC, cT1c cN0 cM0, 15 mm | true |
+| [tnbc-t1b-n0-10mm](cases/tnbc-t1b-n0-10mm/SUMMARY.md) | TNBC, cT1b cN0 cM0, exactly 10 mm | false |
+| [tnbc-t1b-n1](cases/tnbc-t1b-n1/SUMMARY.md) | TNBC, cT1b cN1 cM0, 8 mm | true |
+| [her2-positive](cases/her2-positive/SUMMARY.md) | HER2 positive | false |
+| [er-positive](cases/er-positive/SUMMARY.md) | ER positive | false |
+| [her2-missing](cases/her2-missing/SUMMARY.md) | HER2 absent | unknown |
+| [her2-equivocal](cases/her2-equivocal/SUMMARY.md) | HER2 unresolved | unknown |
+| [tnbc-t1b-nodes-missing](cases/tnbc-t1b-nodes-missing/SUMMARY.md) | Small tumor, no N assessment | unknown |
+| [tnbc-metastatic](cases/tnbc-metastatic/SUMMARY.md) | cM1 | false; outside track population |
+| [tnbc-metastasis-missing](cases/tnbc-metastasis-missing/SUMMARY.md) | No M assessment | unknown |
+| [diagnosis-absent](cases/diagnosis-absent/SUMMARY.md) | Unanchored results, no qualifying Condition | false |
+| [tnbc-t1c-n0-cm](cases/tnbc-t1c-n0-cm/SUMMARY.md) | 1.5 cm counterpart to 15 mm | true |
+| [tnbc-t2-n0](cases/tnbc-t2-n0/SUMMARY.md) | TNBC, cT2 cN0 cM0, 25 mm | true |
+
+## Validation and participant execution
+
+Run the standard-library fixture check from the repository root:
+
+```sh
+python3 use-cases/breast-cancer/scripts/validate_fixtures.py
+```
+
+The checker validates manifest coverage, references, patient/cancer linkage, chronology, declared codes, pinned LOINC observation versions, the 10 mm boundary, unit consistency, and all 104 typed assertions against the documented contract. It is a fixture consistency check, not an independent clinical algorithm, a CQL evaluator, or a substitute for the HL7 validator.
+
+See [validation evidence](../validation/README.md) for the official FHIR validator run, exact versions, diagnostics, and terminology limits. Participant-generated CQL/ELM and `$apply` behavior have not been executed by this fixture preparation. Participants must report their own translation, execution, and FHIR-server round-trip results, as required by the shared track.
+
+## Supplied file: use-cases/breast-cancer/sources/raw/nci-breast-treatment-pdq.txt
+
+Text extraction adapted from the National Cancer Institute
+Original source title: Breast Cancer Treatment (PDQ®)–Health Professional Version
+Original source URL: https://www.cancer.gov/types/breast/hp/breast-treatment-pdq
+Retrieved at: 2026-09-19T15:24:38+00:00
+Source displayed date: April 25, 2025
+Format: selected unstructured source prose; whitespace normalized and link destinations retained.
+Excluded: tables, images/figures/captions, page navigation, scripts, styling, and unselected sections.
+This is a static extraction, not the complete or maintained original publication.
+Reuse policy: https://www.cancer.gov/policies/copyright-reuse
+
+[Source selector: #_3053]
+TNBC is defined as the absence of staining for ER, PR, and HER2. TNBC is insensitive to some of the most effective therapies for patients with breast cancer, including HER2-directed therapy such as trastuzumab and endocrine therapies such as tamoxifen or AIs.
+
+[Source selector: #_2896]
+Preoperative therapy for TNBC
+Patients with TNBC are frequently treated with preoperative systemic therapy.
+Chemotherapy
+Promising results have been observed with the addition of carboplatin to anthracycline/taxane combination chemotherapy regimens in patients with TNBC.
+Evidence (adding carboplatin to an anthracycline/taxane–based chemotherapy regimen in patients with TNBC):
+- In the GeparSixto <https://www.cancer.gov/clinicaltrials/NCT01426880> trial (NCT01426880), carboplatin was added to an anthracycline/taxane–based backbone.[103 <https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#cit/section_6.103>][Level of evidence B3 <https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=810031&version=HealthProfessional&language=English>]
+- Higher pCR rates were observed with the addition of carboplatin to an anthracycline/taxane–based backbone compared with anthracycline/taxane alone (36.9% vs. 53.2%; P = .005) in patients with TNBC.
+- Patients with BRCA1 or BRCA2 variants had a higher rate of pCR, which was not increased by the addition of carboplatin (66.7% in the nonplatinum arm vs. 65.7% in the platinum-containing arm).
+- The 3-year DFS rate was higher for patients with TNBC randomly assigned to the carboplatin arm (86.1% vs. 75.8%; HR, 0.56; 95% CI, 0.34−0.93), but OS did not differ.[104 <https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#cit/section_6.104>]
+- The more intensive regimen was also associated with increased toxicity and treatment discontinuations (39% vs. 48%).
+- The CALGB 40603 <https://www.cancer.gov/clinicaltrials/NCT00861705> trial (NCT00861705) compared an anthracycline/taxane backbone alone with an anthracycline/taxane backbone plus carboplatin in patients with stage II and stage III TNBC.[105 <https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#cit/section_6.105>][Level of evidence B3 <https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=810031&version=HealthProfessional&language=English>]
+- The pCR rate for the breast and axilla was 54% for the anthracycline/taxane backbone-plus-carboplatin group versus 41% for the anthracycline/taxane backbone-alone group (P = .0029).
+Immunotherapy
+Evidence (adding pembrolizumab to a chemotherapy regimen in patients with stage II or stage III TNBC):
+- The randomized, double blind, phase III KEYNOTE-522 <https://www.cancer.gov/clinicaltrials/NCT03036488> trial (NCT03036488) evaluated the addition of immunotherapy to neoadjuvant chemotherapy for patients with stage II and stage III TNBC.[106 <https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#cit/section_6.106>][Level of evidence B1 <https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=810025&version=HealthProfessional&language=English>] Participants were randomly assigned in a 2:1 ratio to receive neoadjuvant chemotherapy (paclitaxel plus carboplatin, followed by doxorubicin plus cyclophosphamide) with either neoadjuvant and adjuvant pembrolizumab or neoadjuvant and adjuvant placebo. Co-primary end points were pCR rate and EFS. The pCR rate, as reported at the time of the first interim analysis for the first 602 participants (pembrolizumab arm, n = 401; placebo arm, n = 201), favored the pembrolizumab arm.
+- A pCR was observed in 64.8% of patients in the pembrolizumab arm and 51.2% of patients in the placebo arm (estimated treatment difference, 13.6%; 95% CI, 5.4%−21.8%; P < .001). Approximately 80% of tumors were positive for programmed death-ligand 1 (PD-L1), but the benefits of pembrolizumab regarding pCR were observed regardless of PD-L1 status.
+- At the time of the fourth interim analysis, when the median follow-up was 39 months, an improved EFS was observed in patients who received pembrolizumab. The 36-month EFS rate was 84.5% for patients who received pembrolizumab and 76.8% for patients who received placebo. (HR, 0.63; 95% CI, 0.48–0.82; P < .001).[107 <https://www.cancer.gov/types/breast/hp/breast-treatment-pdq#cit/section_6.107>][Level of evidence B1 <https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=810025&version=HealthProfessional&language=English>]
+- EFS data are immature.
+- Grade 3 or higher adverse events occurred in 76.8% of participants in the pembrolizumab arm and 72.2% of participants in the placebo arm. Serious treatment-related adverse events occurred in 32.5% of participants in the pembrolizumab arm and 19.5% of participants in the placebo arm. Grade 3 or higher skin rashes, infusion reactions, and adrenal insufficiency were more frequent in the pembrolizumab arm.
+
+## Supplied file: use-cases/breast-cancer/sources/raw/nci-breast-tnm.txt
+
+Text extraction adapted from the National Cancer Institute
+Original source title: TNM Staging for Breast Cancer
+Original source URL: https://www.cancer.gov/types/breast/stages/tnm-staging-system
+Retrieved at: 2026-09-19T15:24:40+00:00
+Source displayed date: August 6, 2025
+Format: selected unstructured source prose; whitespace normalized and link destinations retained.
+Excluded: tables, images/figures/captions, page navigation, scripts, styling, and unselected sections.
+This is a static extraction, not the complete or maintained original publication.
+Reuse policy: https://www.cancer.gov/policies/copyright-reuse
+
+[Source selector: article .cgdp-field-intro-text]
+Breast cancer staging uses the TNM (tumor node metastasis) staging system to describe the size of the primary tumor and the spread of cancer to nearby lymph nodes <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45762> or other parts of the body. The TNM value is combined with a grade <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/774694> and biomarker status (whether the tumor has certain hormone receptors <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/44359> or high levels of HER2 <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/793177>) to determine the stage of breast cancer. Results from multigene tests <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/775581> may be used to help stage some breast cancers. Learn more about Breast Cancer Stages <https://www.cancer.gov/types/breast/stages>.
+
+[Source selector: article .cgdp-article-body]
+Tumor (T)
+The T category in the TNM staging system describes the size and location of the tumor:
+TX: The primary tumor cannot be assessed.
+T0: There is no sign of a primary tumor in the breast.
+Tis: There is carcinoma in situ <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/46488> in the breast.
+- Tis (DCIS): Abnormal cells have been found in the breast ducts <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/46441> and have not spread past the layer of tissue where they began.
+- Tis (Paget disease): A rare form of early, noninvasive cancer where abnormal cells are found in the skin of the nipple and have not spread beyond where they first formed. No tumor or DCIS is found in the breast tissue under the nipple.
+T1: The tumor is 20 millimeters or smaller. There are four subtypes of a T1 tumor depending on the size of the tumor:
+- T1mi: The tumor is 1 millimeter or smaller.
+- T1a: The tumor is larger than 1 millimeter but not larger than 5 millimeters.
+- T1b: The tumor is larger than 5 millimeters but not larger than 10 millimeters.
+- T1c: The tumor is larger than 10 millimeters but not larger than 20 millimeters.
+T2: The tumor is larger than 20 millimeters but not larger than 50 millimeters.
+T3: The tumor is larger than 50 millimeters.
+T4: The tumor is described as one of the following:
+- T4a: The tumor has grown into the chest wall <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/44996>.
+- T4b: The tumor has grown into the skin. An ulcer <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/390317> has formed on the surface of the skin of the breast, small tumor nodules <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/44502> have formed in the same breast as the primary tumor, and/or the skin of the breast is swollen.
+- T4c: The tumor has grown into the chest wall and the skin.
+- T4d: One-third or more of the skin on the breast is red and swollen (called peau d’orange <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45821>). T4d includes inflammatory breast cancer <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45313>.
+Lymph node (N)
+This section describes pathological staging of lymph nodes. Pathological staging is done when the lymph nodes are removed by surgery and studied under a microscope by a pathologist. When the lymph nodes are checked using mammography <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45996> or ultrasound <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/46157>, it is called clinical staging. Clinical staging of lymph nodes is not described here.
+The N category describes the location of the lymph nodes where cancer has spread and the size of the cancer in the lymph nodes:
+NX: The lymph nodes cannot be assessed.
+N0: There is no sign of cancer in the lymph nodes, or there may be tiny clusters of cancer cells not larger than 0.2 millimeters in the lymph nodes.
+N1: Cancer is described as one of the following:
+- N1mi: Cancer has spread to the axillary (armpit area) lymph nodes and is larger than 0.2 millimeters but not larger than 2 millimeters.
+- N1a: Cancer has spread to one to three axillary lymph nodes and the cancer in at least one of the lymph nodes is larger than 2 millimeters.
+- N1b: Cancer has spread to lymph nodes near the breastbone <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/549425> on the same side of the body as the primary tumor. The cancer is larger than 0.2 millimeters and is found by sentinel lymph node biopsy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/46712>. Cancer is not found in the axillary lymph nodes.
+- N1c: Cancer has spread to one to three axillary lymph nodes, and the cancer in at least one of the lymph nodes is larger than 2 millimeters. Cancer is also found by sentinel lymph node biopsy in the lymph nodes near the breastbone on the same side of the body as the primary tumor.
+N2: Cancer is described as one of the following:
+- N2a: Cancer has spread to four to nine axillary lymph nodes, and the cancer in at least one of the lymph nodes is larger than 2 millimeters.
+- N2b: Cancer has spread to lymph nodes near the breastbone, and the cancer is found by imaging tests. Cancer is not found in the axillary lymph nodes by sentinel lymph node biopsy or lymph node dissection <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/44435>.
+N3: Cancer is described as one of the following:
+- N3a: Cancer has spread to 10 or more axillary lymph nodes. The cancer in at least one of the lymph nodes is larger than 2 millimeters, or the cancer has spread to lymph nodes below the collarbone.
+- N3b: Cancer is described as one of the following:
+- Cancer has spread to one to nine axillary lymph nodes, and the cancer in at least one of the lymph nodes is larger than 2 millimeters. Cancer has also spread to lymph nodes near the breastbone, and the cancer is found by imaging tests.
+- Cancer has spread to four to nine axillary lymph nodes, and the cancer in at least one of the lymph nodes is larger than 2 millimeters. Cancer has also spread to lymph nodes near the breastbone on the same side of the body as the primary tumor. The cancer in these lymph nodes is larger than 0.2 millimeters and is found by sentinel lymph node biopsy.
+- N3c: Cancer has spread to lymph nodes above the collarbone on the same side of the body as the primary tumor.
+Metastasis (M)
+The M category describes the spread of cancer to other parts of the body.
+M0: There is no sign that cancer has spread to other parts of the body.
+M1: Cancer has spread to other parts of the body, most often to the bones, lungs, liver, or brain. If cancer has spread to distant lymph nodes, the cancer in the lymph nodes is larger than 0.2 millimeters. The cancer is called metastatic breast cancer.
+
+## Supplied file: use-cases/breast-cancer/sources/raw/nci-breast-chemotherapy.txt
+
+Text extraction adapted from the National Cancer Institute
+Original source title: Chemotherapy for Breast Cancer
+Original source URL: https://www.cancer.gov/types/breast/treatment/chemotherapy
+Retrieved at: 2026-09-19T15:24:40+00:00
+Source displayed date: December 2, 2025
+Format: selected unstructured source prose; whitespace normalized and link destinations retained.
+Excluded: tables, images/figures/captions, page navigation, scripts, styling, and unselected sections.
+This is a static extraction, not the complete or maintained original publication.
+Reuse policy: https://www.cancer.gov/policies/copyright-reuse
+
+[Source selector: article .cgdp-field-intro-text]
+Chemotherapy (chemo) uses drugs to stop the growth of cancer cells, either by killing the cells or stopping them from dividing. Learn about what to expect when receiving chemotherapy at Chemotherapy to Treat Cancer <https://www.cancer.gov/about-cancer/treatment/types/chemotherapy>.
+
+[Source selector: article .cgdp-article-body]
+Who gets chemotherapy for breast cancer?
+Many people with breast cancer get chemotherapy but not everyone. For example, some people with early-stage breast cancer <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/446564> that does not have a high risk of recurrence <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45861> may not get chemotherapy at all.
+Multigene tests <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/775581> such as Oncotype DX <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/737122> and MammaPrint <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/737131> can help determine if you are likely to benefit from chemotherapy. If these tests show you are unlikely to benefit from chemotherapy, you can skip it without increasing the chance of recurrence. Learn more about multigene tests at How Breast Cancer Is Diagnosed <https://www.cancer.gov/types/breast/diagnosis>. Learn about other biomarker tests at Tests for Breast Cancer Biomarkers <https://www.cancer.gov/types/breast/diagnosis/breast-cancer-biomarker-tests>.
+When is chemotherapy for breast cancer given?
+Chemotherapy for breast cancer may be given at different times in your treatment. You might get it after surgery or before surgery. It can also be given if your disease cannot be treated with surgery or if the disease comes back (recurs) after initial treatment.
+Chemotherapy after surgery for breast cancer
+After surgery to remove breast cancer, some people may receive chemotherapy. Chemotherapy is given to kill any remaining cancer cells to lower the risk of recurrence. Chemotherapy after surgery may be called adjuvant chemotherapy.
+Your doctor may recommend chemotherapy after surgery if you have:
+- high-grade <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/386205> breast cancer (grade 3)
+- breast cancer that has spread to the lymph nodes <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45762>
+- triple-negative breast cancer <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/639916>
+- inflammatory breast cancer <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45313>
+Chemotherapy before surgery for breast cancer
+Sometimes chemotherapy is given before surgery. It may be given to shrink large tumors to make breast-conserving surgery <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45626> possible for people who would have otherwise needed a mastectomy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45777>. It may also be given to reduce the number of lymph nodes that need to be removed during surgery or to lower the risk of recurrence. Chemotherapy before surgery may be called neoadjuvant chemotherapy.
+Your doctor may recommend chemotherapy before surgery if you have:
+- high-grade breast cancer (grade 3)
+- breast cancer that has spread to the lymph nodes
+- a large breast cancer
+- HER2-positive <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/737998> breast cancer
+- triple-negative breast cancer
+- inflammatory breast cancer
+Chemotherapy drugs used for breast cancer
+Chemotherapy drugs used to treat breast cancer include:
+- anthracyclines <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/44916>, such as doxorubicin <https://www.cancer.gov/about-cancer/treatment/drugs/doxorubicinhydrochloride>, liposomal doxorubicin <https://www.cancer.gov/about-cancer/treatment/drugs/doxorubicin-hydrochloride-liposome>, and epirubicin <https://www.cancer.gov/about-cancer/treatment/drugs/epirubicinhydrochloride>
+- capecitabine <https://www.cancer.gov/about-cancer/treatment/drugs/capecitabine>
+- cyclophosphamide <https://www.cancer.gov/about-cancer/treatment/drugs/cyclophosphamide>
+- eribulin <https://www.cancer.gov/about-cancer/treatment/drugs/eribulinmesylate>
+- fluorouracil (5-FU) <https://www.cancer.gov/about-cancer/treatment/drugs/fluorouracil>
+- gemcitabine <https://www.cancer.gov/about-cancer/treatment/drugs/gemcitabinehydrochloride>
+- ixabepilone <https://www.cancer.gov/about-cancer/treatment/drugs/ixabepilone>
+- methotrexate <https://www.cancer.gov/about-cancer/treatment/drugs/methotrexate-sodium>
+- platinum agents, such as cisplatin <https://www.cancer.gov/about-cancer/treatment/drugs/cisplatin> or carboplatin <https://www.cancer.gov/about-cancer/treatment/drugs/carboplatin>
+- taxanes <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/46138>, such as paclitaxel <https://www.cancer.gov/about-cancer/treatment/drugs/paclitaxel>, docetaxel <https://www.cancer.gov/about-cancer/treatment/drugs/docetaxel>, and albumin-bound paclitaxel <https://www.cancer.gov/about-cancer/treatment/drugs/nanoparticlepaclitaxel>
+Combinations of chemotherapy drugs may be used. Other chemotherapy drugs not listed here may also be used.
+Chemotherapy may also be combined with other kinds of drugs. For example:
+- HER2-positive breast cancer may be treated with both chemotherapy and targeted therapy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/270742>, such as trastuzumab <https://www.cancer.gov/about-cancer/treatment/drugs/trastuzumab> and pertuzumab <https://www.cancer.gov/about-cancer/treatment/drugs/pertuzumab>. Learn more about these drugs at Targeted Therapy for Breast Cancer <https://www.cancer.gov/types/breast/treatment/targeted-therapy>.
+- Triple-negative breast cancer may be treated with both chemotherapy and the immunotherapy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45729> drug pembrolizumab <https://www.cancer.gov/about-cancer/treatment/drugs/pembrolizumab>. Learn more about Triple-Negative Breast Cancer Treatment <https://www.cancer.gov/types/breast/treatment/triple-negative-breast-cancer>.
+- Hormone receptor–positive <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/788029> breast cancer may be treated with both chemotherapy and hormone therapy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45110>. Learn more about Hormone Therapy for Breast Cancer <https://www.cancer.gov/types/breast/treatment/hormone-therapy>.
+Side effects of chemotherapy
+The most common side effect of chemotherapy is fatigue <https://www.cancer.gov/about-cancer/treatment/side-effects/fatigue>, which is feeling exhausted or extremely tired. Other side effects may include hair loss <https://www.cancer.gov/about-cancer/treatment/side-effects/hair-loss>, mouth sores <https://www.cancer.gov/about-cancer/treatment/side-effects/mouth-throat>, and nausea <https://www.cancer.gov/about-cancer/treatment/side-effects/nausea-vomiting>. Learn more about the side effects of cancer treatment <https://www.cancer.gov/about-cancer/treatment/side-effects> and the steps you can take to manage or prevent them.
+
+## Supplied file: use-cases/breast-cancer/sources/raw/nci-breast-immunotherapy.txt
+
+Text extraction adapted from the National Cancer Institute
+Original source title: Immunotherapy for Breast Cancer
+Original source URL: https://www.cancer.gov/types/breast/treatment/immunotherapy
+Retrieved at: 2026-09-19T15:24:40+00:00
+Source displayed date: December 2, 2025
+Format: selected unstructured source prose; whitespace normalized and link destinations retained.
+Excluded: tables, images/figures/captions, page navigation, scripts, styling, and unselected sections.
+This is a static extraction, not the complete or maintained original publication.
+Reuse policy: https://www.cancer.gov/policies/copyright-reuse
+
+[Source selector: article .cgdp-field-intro-text]
+Immunotherapy helps a person’s immune system <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/46356> fight cancer. Learn about what to expect when receiving immunotherapy at Immunotherapy to Treat Cancer <https://www.cancer.gov/about-cancer/treatment/types/immunotherapy>.
+
+[Source selector: article .cgdp-article-body]
+Who gets immunotherapy for breast cancer?
+You may receive immunotherapy if you have triple-negative breast cancer. Learn about Triple-Negative Breast Cancer <https://www.cancer.gov/types/breast/breast-cancer-types/triple-negative>.
+Sometimes it is not clear if immunotherapy will be helpful. Your doctor may suggest biomarker <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45618> tests to help predict your response to immunotherapy. Learn more about Tests for Breast Cancer Biomarkers <https://www.cancer.gov/types/breast/diagnosis/breast-cancer-biomarker-tests>.
+When is immunotherapy for breast cancer given?
+Immunotherapy for breast cancer may be given at different times in your treatment. You might get it with chemotherapy <https://www.cancer.gov/publications/dictionaries/cancer-terms/def/45214> before surgery to help shrink the tumor so that it can be removed more easily during surgery.
+After the doctor removes all the cancer that can be seen at the time of the surgery, you may receive immunotherapy alone to kill any cancer cells that are left.
+Immunotherapy may also be given with chemotherapy for metastatic breast cancer or recurrent breast cancer that cannot be removed by surgery. Learn more about Metastatic Breast Cancer <https://www.cancer.gov/types/breast/stages/metastatic-breast-cancer> or Breast Cancer Recurrence <https://www.cancer.gov/types/breast/breast-cancer-survivorship/recurrence>.
+Immunotherapy drugs used for breast cancer
+Pembrolizumab <https://www.cancer.gov/about-cancer/treatment/drugs/pembrolizumab> is the only immunotherapy drug approved to treat breast cancer.
+Side effects of immunotherapy
+The most common side effects of immunotherapy are rash, diarrhea <https://www.cancer.gov/about-cancer/treatment/side-effects/diarrhea>, and fatigue <https://www.cancer.gov/about-cancer/treatment/side-effects/fatigue>, which is feeling exhausted or extremely tired. Learn more about the side effects of immunotherapy <https://www.cancer.gov/about-cancer/treatment/types/immunotherapy/side-effects> and steps you can take to manage or prevent them.
+
