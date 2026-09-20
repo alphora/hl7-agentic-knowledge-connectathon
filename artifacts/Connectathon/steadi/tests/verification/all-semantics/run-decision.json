@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 1,
+  "success": true,
+  "caseCount": 6,
+  "passCount": 6,
+  "failCount": 0,
+  "errorCount": 0,
+  "runs": [
+    {
+      "case": "All A true B unknown",
+      "decision": "All Siblings",
+      "status": "pass",
+      "expected": {
+        "leaf": "All Siblings",
+        "branch": "A Action"
+      },
+      "produced": [
+        {
+          "recommendation": "A Action",
+          "viaWhen": "A",
+          "qualifier": null
+        }
+      ],
+      "trace": [
+        {
+          "node": "when A",
+          "nodeId": "when[0]",
+          "kind": "when",
+          "source": {
+            "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+            "range": {
+              "startLine": 22,
+              "startCol": 0,
+              "endLine": 22,
+              "endCol": 46
+            }
+          },
+          "concept": "A",
+          "satisfied": true,
+          "evaluated": true,
+          "facts": [
+            "A Yes"
+          ],
+          "children": [
+            {
+              "node": "A Action",
+              "nodeId": "when[0]/action[0]",
+              "kind": "action",
+              "source": {
+                "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+                "range": {
+                  "startLine": 22,
+                  "startCol": 16,
+                  "endLine": 22,
+                  "endCol": 45
+                }
+              },
+              "evaluated": true
+            }
+          ]
+        },
+        {
+          "node": "when B",
+          "nodeId": "when[1]",
+          "kind": "when",
+          "source": {
+            "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+            "range": {
+              "startLine": 23,
+              "startCol": 0,
+              "endLine": 23,
+              "endCol": 46
+            }
+          },
+          "concept": "B",
+          "evaluated": true,
+          "facts": [],
+          "children": [],
+          "unknown": true
+        }
+      ],
+      "diagnostics": [],
+      "conceptTruth": [
+        {
+          "lib": "All Semantics Probe",
+          "name": "A",
+          "satisfied": true
+        }
+      ],
+      "conceptValues": [
+        {
+          "lib": "All Semantics Probe",
+          "name": "A",
+          "answerValue": {
+            "type": "Boolean",
+            "value": true
+          }
+        }
+      ]
+    },
+    {
+      "case": "All A unknown B true",
+      "decision": "All Siblings",
+      "status": "pass",
+      "expected": {
+        "leaf": "All Siblings",
+        "branch": "B Action"
+      },
+      "produced": [
+        {
+          "recommendation": "B Action",
+          "viaWhen": "B",
+          "qualifier": null
+        }
+      ],
+      "trace": [
+        {
+          "node": "when A",
+          "nodeId": "when[0]",
+          "kind": "when",
+          "source": {
+            "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+            "range": {
+              "startLine": 22,
+              "startCol": 0,
+              "endLine": 22,
+              "endCol": 46
+            }
+          },
+          "concept": "A",
+          "evaluated": true,
+          "facts": [],
+          "children": [],
+          "unknown": true
+        },
+        {
+          "node": "when B",
+          "nodeId": "when[1]",
+          "kind": "when",
+          "source": {
+            "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+            "range": {
+              "startLine": 23,
+              "startCol": 0,
+              "endLine": 23,
+              "endCol": 46
+            }
+          },
+          "concept": "B",
+          "satisfied": true,
+          "evaluated": true,
+          "facts": [
+            "B Yes"
+          ],
+          "children": [
+            {
+              "node": "B Action",
+              "nodeId": "when[1]/action[0]",
+              "kind": "action",
+              "source": {
+                "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+                "range": {
+                  "startLine": 23,
+                  "startCol": 16,
+                  "endLine": 23,
+                  "endCol": 45
+                }
+              },
+              "evaluated": true
+            }
+          ]
+        }
+      ],
+      "diagnostics": [],
+      "conceptTruth": [
+        {
+          "lib": "All Semantics Probe",
+          "name": "B",
+          "satisfied": true
+        }
+      ],
+      "conceptValues": [
+        {
+          "lib": "All Semantics Probe",
+          "name": "B",
+          "answerValue": {
+            "type": "Boolean",
+            "value": true
+          }
+        }
+      ]
+    },
+    {
+      "case": "All both true",
+      "decision": "All Siblings",
+      "status": "pass",
+      "expected": {
+        "leaf": "All Siblings",
+        "branch": "A Action"
+      },
+      "produced": [
+        {
+          "recommendation": "A Action",
+          "viaWhen": "A",
+          "qualifier": null
+        },
+        {
+          "recommendation": "B Action",
+          "viaWhen": "B",
+          "qualifier": null
+        }
+      ],
+      "trace": [
+        {
+          "node": "when A",
+          "nodeId": "when[0]",
+          "kind": "when",
+          "source": {
+            "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+            "range": {
+              "startLine": 22,
+              "startCol": 0,
+              "endLine": 22,
+              "endCol": 46
+            }
+          },
+          "concept": "A",
+          "satisfied": true,
+          "evaluated": true,
+          "facts": [
+            "A Yes"
+          ],
+          "children": [
+            {
+              "node": "A Action",
+              "nodeId": "when[0]/action[0]",
+              "kind": "action",
+              "source": {
+                "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+                "range": {
+                  "startLine": 22,
+                  "startCol": 16,
+                  "endLine": 22,
+                  "endCol": 45
+                }
+              },
+              "evaluated": true
+            }
+          ]
+        },
+        {
+          "node": "when B",
+          "nodeId": "when[1]",
+          "kind": "when",
+          "source": {
+            "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+            "range": {
+              "startLine": 23,
+              "startCol": 0,
+              "endLine": 23,
+              "endCol": 46
+            }
+          },
+          "concept": "B",
+          "satisfied": true,
+          "evaluated": true,
+          "facts": [
+            "B Yes"
+          ],
+          "children": [
+            {
+              "node": "B Action",
+              "nodeId": "when[1]/action[0]",
+              "kind": "action",
+              "source": {
+                "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+                "range": {
+                  "startLine": 23,
+                  "startCol": 16,
+                  "endLine": 23,
+                  "endCol": 45
+                }
+              },
+              "evaluated": true
+            }
+          ]
+        }
+      ],
+      "diagnostics": [],
+      "conceptTruth": [
+        {
+          "lib": "All Semantics Probe",
+          "name": "A",
+          "satisfied": true
+        },
+        {
+          "lib": "All Semantics Probe",
+          "name": "B",
+          "satisfied": true
+        }
+      ],
+      "conceptValues": [
+        {
+          "lib": "All Semantics Probe",
+          "name": "A",
+          "answerValue": {
+            "type": "Boolean",
+            "value": true
+          }
+        },
+        {
+          "lib": "All Semantics Probe",
+          "name": "B",
+          "answerValue": {
+            "type": "Boolean",
+            "value": true
+          }
+        }
+      ]
+    },
+    {
+      "case": "All both unknown",
+      "decision": "All Siblings",
+      "status": "pass",
+      "expected": {
+        "leaf": "All Siblings",
+        "pause": true
+      },
+      "produced": [],
+      "trace": [
+        {
+          "node": "when A",
+          "nodeId": "when[0]",
+          "kind": "when",
+          "source": {
+            "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+            "range": {
+              "startLine": 22,
+              "startCol": 0,
+              "endLine": 22,
+              "endCol": 46
+            }
+          },
+          "concept": "A",
+          "evaluated": true,
+          "facts": [],
+          "children": [],
+          "unknown": true
+        },
+        {
+          "node": "when B",
+          "nodeId": "when[1]",
+          "kind": "when",
+          "source": {
+            "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+            "range": {
+              "startLine": 23,
+              "startCol": 0,
+              "endLine": 23,
+              "endCol": 46
+            }
+          },
+          "concept": "B",
+          "evaluated": true,
+          "facts": [],
+          "children": [],
+          "unknown": true
+        }
+      ],
+      "diagnostics": [],
+      "conceptTruth": [],
+      "conceptValues": []
+    },
+    {
+      "case": "Ordered A true B unknown",
+      "decision": "Ordered Checks",
+      "status": "pass",
+      "expected": {
+        "leaf": "Ordered Checks",
+        "pause": true
+      },
+      "produced": [],
+      "trace": [
+        {
+          "node": "when A",
+          "nodeId": "when[0]",
+          "kind": "when",
+          "source": {
+            "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+            "range": {
+              "startLine": 25,
+              "startCol": 0,
+              "endLine": 27,
+              "endCol": 6
+            }
+          },
+          "concept": "A",
+          "satisfied": true,
+          "evaluated": true,
+          "facts": [
+            "A Yes"
+          ],
+          "children": [
+            {
+              "node": "when B",
+              "nodeId": "when[0]/when[0]",
+              "kind": "when",
+              "source": {
+                "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+                "range": {
+                  "startLine": 26,
+                  "startCol": 2,
+                  "endLine": 26,
+                  "endCol": 55
+                }
+              },
+              "concept": "B",
+              "evaluated": true,
+              "facts": [],
+              "children": [],
+              "unknown": true,
+              "blockedUnknown": true
+            }
+          ]
+        }
+      ],
+      "diagnostics": [],
+      "conceptTruth": [
+        {
+          "lib": "All Semantics Probe",
+          "name": "A",
+          "satisfied": true
+        }
+      ],
+      "conceptValues": [
+        {
+          "lib": "All Semantics Probe",
+          "name": "A",
+          "answerValue": {
+            "type": "Boolean",
+            "value": true
+          }
+        }
+      ]
+    },
+    {
+      "case": "Ordered A unknown B true",
+      "decision": "Ordered Checks",
+      "status": "pass",
+      "expected": {
+        "leaf": "Ordered Checks",
+        "pause": true
+      },
+      "produced": [],
+      "trace": [
+        {
+          "node": "when A",
+          "nodeId": "when[0]",
+          "kind": "when",
+          "source": {
+            "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\tests\\verification\\all-semantics\\src\\crl\\probe.crl",
+            "range": {
+              "startLine": 25,
+              "startCol": 0,
+              "endLine": 27,
+              "endCol": 6
+            }
+          },
+          "concept": "A",
+          "evaluated": true,
+          "facts": [],
+          "children": [],
+          "unknown": true,
+          "blockedUnknown": true
+        }
+      ],
+      "diagnostics": [],
+      "conceptTruth": [
+        {
+          "lib": "All Semantics Probe",
+          "name": "B",
+          "satisfied": true
+        }
+      ],
+      "conceptValues": [
+        {
+          "lib": "All Semantics Probe",
+          "name": "B",
+          "answerValue": {
+            "type": "Boolean",
+            "value": true
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "importDiagnostics": []
+}

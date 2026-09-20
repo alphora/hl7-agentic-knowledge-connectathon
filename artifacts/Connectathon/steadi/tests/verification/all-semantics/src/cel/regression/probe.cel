@@ -1,0 +1,29 @@
+library "All Semantics Cases".
+covers "All Semantics Probe".
+fact "Patient": - name is "Synthetic". - birth date is "1970-01-01". - defined by "Patient".
+fact "A Yes": - value is true. - date is "2026-09-20". - defined by "All Semantics Probe"."A".
+fact "B Yes": - value is true. - date is "2026-09-20". - defined by "All Semantics Probe"."B".
+case "All A true B unknown":
+- subject is "Patient".
+- fact is "A Yes".
+- result is "All Siblings" is "A Action".
+case "All A unknown B true":
+- subject is "Patient".
+- fact is "B Yes".
+- result is "All Siblings" is "B Action".
+case "All both true":
+- subject is "Patient".
+- fact is "A Yes".
+- fact is "B Yes".
+- result is "All Siblings" is "A Action".
+case "All both unknown":
+- subject is "Patient".
+- result is "All Siblings" is pause.
+case "Ordered A true B unknown":
+- subject is "Patient".
+- fact is "A Yes".
+- result is "Ordered Checks" is pause.
+case "Ordered A unknown B true":
+- subject is "Patient".
+- fact is "B Yes".
+- result is "Ordered Checks" is pause.

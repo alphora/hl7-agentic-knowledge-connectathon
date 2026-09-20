@@ -1,0 +1,205 @@
+{
+  "success": true,
+  "policyId": "Steadi",
+  "policyVersion": "0.0.0",
+  "clusterCount": 1,
+  "diagnosticCountsByKind": {
+    "deferred-disposition-path": 1,
+    "overreach-baseline": 17,
+    "attribution-needed": 6,
+    "drives-determination-hint": 8
+  },
+  "merged": false,
+  "advisories": [
+    "derivedFrom was made relative to the anchor's own directory because no artifact destination was given. If you persist the artifact anywhere else, run normalize_provenance (CLI crl-normalize-provenance) on save so derivedFrom stays resolvable, then re-validate (#250)."
+  ],
+  "artifact": {
+    "schemaVersion": "1.1",
+    "policyId": "Steadi",
+    "policyVersion": "0.0.0",
+    "anchorSource": {
+      "path": "steadi.txt",
+      "derivedFrom": "steadi.txt",
+      "derivedFromHash": "sha256:e8fed4e11d4832007937d6ffb78766d8d7bd42c9c4558dde512d12836e21e1d5",
+      "derivedFromContract": "anchor-self",
+      "canonicalizer": "crl-anchor-docx-text",
+      "canonicalizerVersion": "1.0.0",
+      "textHash": "sha256:e8fed4e11d4832007937d6ffb78766d8d7bd42c9c4558dde512d12836e21e1d5",
+      "offsetUnit": "utf8-byte",
+      "unicodeNormalization": "NFC",
+      "rangeConvention": "half-open"
+    },
+    "items": [],
+    "ignoredRanges": [],
+    "clusters": [
+      {
+        "id": "cluster:Steadi:coverage",
+        "label": "coverage",
+        "items": [],
+        "crl": [
+          {
+            "lib": "Steadi",
+            "kind": "activity",
+            "name": "Exercise Guidance",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "recommends-disposition",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "activity",
+            "name": "Multifactorial Intervention Guidance",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "recommends-disposition",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "activity",
+            "name": "Nothing Recommended",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "recommends-disposition",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "concept",
+            "name": "Age 65 Or Older",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "concept",
+            "name": "Fallen In Past Year",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "concept",
+            "name": "Has Fall Answer",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "concept",
+            "name": "Has Unsteady Answer",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "concept",
+            "name": "Has Worries Answer",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "concept",
+            "name": "Unsteady",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "concept",
+            "name": "Worries About Falling",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "decision",
+            "name": "Screening Guidance",
+            "nodeId": "when[0]",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "decision",
+            "name": "Screening Guidance",
+            "nodeId": "when[0]/when[0]",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "decision",
+            "name": "Screening Guidance",
+            "nodeId": "when[0]/when[0]/otherwise",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "decision",
+            "name": "Screening Guidance",
+            "nodeId": "when[0]/when[0]/otherwise/action[0]",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "recommends-disposition",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "decision",
+            "name": "Screening Guidance",
+            "nodeId": "when[0]/when[0]/when[0]",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "decision",
+            "name": "Screening Guidance",
+            "nodeId": "when[0]/when[0]/when[0]/action[0]",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "recommends-disposition",
+            "status": "provisional"
+          },
+          {
+            "lib": "Steadi",
+            "kind": "decision",
+            "name": "Screening Guidance",
+            "nodeId": "when[0]/when[0]/when[0]/action[1]",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "recommends-disposition",
+            "status": "provisional"
+          }
+        ],
+        "cel": []
+      }
+    ]
+  }
+}

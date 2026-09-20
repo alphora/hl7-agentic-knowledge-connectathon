@@ -243,12 +243,6 @@
       "kind": "cockpit-correspondence",
       "severity": "error",
       "class": "integrity",
-      "message": "cockpit correspondence unchecked for case \"Eligible All No\": run-error"
-    },
-    {
-      "kind": "cockpit-correspondence",
-      "severity": "error",
-      "class": "integrity",
       "message": "cockpit correspondence unchecked for case \"Eligible Incomplete Response\": run-error"
     },
     {
@@ -258,7 +252,7 @@
       "message": "cockpit correspondence unchecked for case \"Eligible No Response\": run-error"
     }
   ],
-  "errorCount": 9,
+  "errorCount": 8,
   "manualReviewCount": 20,
   "warningCount": 5,
   "worklistCount": 5,

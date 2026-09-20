@@ -39,7 +39,7 @@ for case in manifest['cases']:
         name=assertion['expression']; expected=assertion['expected']['value']
         checks.append({'case':fixture,'expression':name,'expected':expected,'actual':actual[name],'pass':actual[name] is expected})
     communications=[x for x in walk(apply) if x.get('resourceType')=='CommunicationRequest']
-    expected_ids=['steadi-exercise-guidance','steadi-multifactorial-intervention-guidance'] if fixture in ('eligible-unsteady-yes','eligible-prior-fall-yes') else []
+    expected_ids=['steadi-exercise-guidance','steadi-multifactorial-intervention-guidance'] if fixture in ('eligible-unsteady-yes','eligible-prior-fall-yes') else ['steadi-nothing-recommended'] if fixture=='eligible-all-no' else []
     actual_ids=sorted(x['id'] for x in communications)
     assert actual_ids==expected_ids,(fixture,actual_ids)
     report=json.loads((root/'tests/results/fhir'/case['compartmentDir']/'measurereport/steadi-screening-completion.json').read_text())

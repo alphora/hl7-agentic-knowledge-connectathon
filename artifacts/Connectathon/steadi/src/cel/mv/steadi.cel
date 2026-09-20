@@ -31,11 +31,8 @@ fact "Fall No":
 - date is "2026-06-15T09:20:00Z".
 - defined by "Steadi"."Fallen In Past Year".
 
-// These six examples preserve the supplied subjects and answer patterns.
-// They exercise generated local answer records, NOT the original shared QR.
-// For four no-guidance examples there is deliberately no invented activity
-// oracle. Their expected empty action set is checked against native output.
-// A missing-answer result is not labeled pause: has-value returns false.
+// Supplied screening inputs; completed all-No communicates Nothing Recommended.
+// Missing required answers pause naturally in the Yes/No decision branches.
 case "Younger Than 65":
 - id is "steadi-01".
 - subject is "Younger Patient".
@@ -49,6 +46,8 @@ case "Eligible All No":
 - fact is "Unsteady No".
 - fact is "Worries No".
 - fact is "Fall No".
+
+- result is "Screening Guidance" is "Nothing Recommended".
 
 case "Eligible Unsteady Yes":
 - id is "steadi-03".
@@ -72,6 +71,11 @@ case "Eligible Incomplete Response":
 - fact is "Unsteady Yes".
 - fact is "Worries No".
 
+// No activity while required answers are missing. Native verification asserts this.
+// Completeness is false here; this is not a CRE unknown-condition pause assertion.
+
 case "Eligible No Response":
 - id is "steadi-06".
 - subject is "Eligible Patient".
+// No activity while required answers are missing. Native verification asserts this.
+// Completeness is false here; this is not a CRE unknown-condition pause assertion.

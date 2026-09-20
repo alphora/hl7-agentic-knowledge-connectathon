@@ -48,8 +48,8 @@
   ],
   "action": [
     {
-      "title": "In Screening Population",
-      "description": "In Screening Population",
+      "title": "Age 65 Or Older",
+      "description": "Age 65 Or Older",
       "code": [
         {
           "coding": [
@@ -65,7 +65,7 @@
           "kind": "applicability",
           "expression": {
             "language": "text/cql-identifier",
-            "expression": "CRL branch CriterionRef L101C7"
+            "expression": "CRL branch Ref L107C7"
           }
         }
       ],
@@ -88,7 +88,7 @@
               "kind": "applicability",
               "expression": {
                 "language": "text/cql-identifier",
-                "expression": "CRL branch CriterionRef L102C9"
+                "expression": "CRL branch CriterionRef L108C9"
               }
             }
           ],
@@ -149,7 +149,7 @@
                   "kind": "applicability",
                   "expression": {
                     "language": "text/cql-identifier",
-                    "expression": "CRL branch Or L103C12"
+                    "expression": "CRL branch Or L110C12"
                   }
                 }
               ],
@@ -223,6 +223,36 @@
                   "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi-multifactorial-intervention-guidance-recommendation"
                 }
               ]
+            },
+            {
+              "title": "otherwise",
+              "description": "otherwise",
+              "code": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                      "code": "guideline-based-care"
+                    }
+                  ]
+                }
+              ],
+              "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi-nothing-recommended-recommendation",
+              "condition": [
+                {
+                  "kind": "applicability",
+                  "expression": {
+                    "language": "text/cql-identifier",
+                    "expression": "Not CRL branch Or L110C12"
+                  }
+                }
+              ]
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-applicabilityBehavior",
+              "valueString": "any"
             }
           ]
         }

@@ -30,8 +30,8 @@
             "reference": "Patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b"
           },
           "action": [ {
-            "title": "In Screening Population",
-            "description": "In Screening Population",
+            "title": "Age 65 Or Older",
+            "description": "Age 65 Or Older",
             "code": [ {
               "coding": [ {
                 "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
@@ -42,7 +42,7 @@
               "kind": "applicability",
               "expression": {
                 "language": "text/cql-identifier",
-                "expression": "CRL branch CriterionRef L101C7"
+                "expression": "CRL branch Ref L107C7"
               }
             } ]
           } ]
@@ -69,7 +69,7 @@
             } ]
           } ],
           "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi",
-          "version": "0.0.0-steadi-examples-eligible-incomplete-respons-6e3f6668625b-2026-09-20-09.13.30",
+          "version": "0.0.0-steadi-examples-eligible-incomplete-respons-6e3f6668625b-2026-09-20-09.52.24",
           "status": "active",
           "item": [ {
             "extension": [ {
@@ -251,12 +251,12 @@
         "resource": {
           "resourceType": "QuestionnaireResponse",
           "id": "steadi-steadi-examples-eligible-incomplete-respons-6e3f6668625b",
-          "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi|0.0.0-steadi-examples-eligible-incomplete-respons-6e3f6668625b-2026-09-20-09.13.30",
+          "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi|0.0.0-steadi-examples-eligible-incomplete-respons-6e3f6668625b-2026-09-20-09.52.24",
           "status": "in-progress",
           "subject": {
             "reference": "Patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b"
           },
-          "authored": "2026-09-20T09:13:31-04:00",
+          "authored": "2026-09-20T09:52:25-04:00",
           "item": [ {
             "linkId": "1",
             "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady",

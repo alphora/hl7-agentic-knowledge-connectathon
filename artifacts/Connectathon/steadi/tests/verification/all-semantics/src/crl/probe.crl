@@ -1,0 +1,28 @@
+library "All Semantics Probe".
+concept "A":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- code is `a`.
+- shape reduction is most recent.
+presentation for "A":
+- question text is "Synthetic A?".
+concept "B":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- code is `b`.
+- shape reduction is most recent.
+presentation for "B":
+- question text is "Synthetic B?".
+activity "A Action": - request CPGCommunicationRequest. - with `A-ACTION`.
+activity "B Action": - request CPGCommunicationRequest. - with `B-ACTION`.
+activity "Complete Action": - request CPGCommunicationRequest. - with `COMPLETE`.
+decision "All Siblings":
+all:
+- when "A" then recommend activity "A Action".
+- when "B" then recommend activity "B Action".
+decision "Ordered Checks":
+- when "A" then:
+  - when "B" then recommend activity "Complete Action".
+  end.

@@ -279,38 +279,38 @@ define "Denominator":
 define "Numerator":
   "Denominator" and "Completed Three Question Screen"
 
-define "CRL branch CriterionRef L101C7":
-  "In Screening Population"
+define "CRL branch Ref L107C7":
+  FHIRHelpers.ToBoolean(("Age 65 Or Older").value as FHIR.boolean)
 
-define "Not CRL branch CriterionRef L101C7":
-  not ("In Screening Population")
+define "Not CRL branch Ref L107C7":
+  not (FHIRHelpers.ToBoolean(("Age 65 Or Older").value as FHIR.boolean))
 
-define "CRL branch CriterionRef L102C9":
+define "CRL branch CriterionRef L108C9":
   "Completed Three Question Screen"
 
-define "Not CRL branch CriterionRef L102C9":
+define "Not CRL branch CriterionRef L108C9":
   not ("Completed Three Question Screen")
 
-define "CRL branch Or L103C12":
+define "CRL branch Or L110C12":
   FHIRHelpers.ToBoolean(("Unsteady").value as FHIR.boolean) or FHIRHelpers.ToBoolean(("Worries About Falling").value as FHIR.boolean) or FHIRHelpers.ToBoolean(("Fallen In Past Year").value as FHIR.boolean)
 
-define "Not CRL branch Or L103C12":
+define "Not CRL branch Or L110C12":
   not (FHIRHelpers.ToBoolean(("Unsteady").value as FHIR.boolean) or FHIRHelpers.ToBoolean(("Worries About Falling").value as FHIR.boolean) or FHIRHelpers.ToBoolean(("Fallen In Past Year").value as FHIR.boolean))
 
-define "CRL branch Ref L103C12":
+define "CRL branch Ref L110C12":
   FHIRHelpers.ToBoolean(("Unsteady").value as FHIR.boolean)
 
-define "Not CRL branch Ref L103C12":
+define "Not CRL branch Ref L110C12":
   not (FHIRHelpers.ToBoolean(("Unsteady").value as FHIR.boolean))
 
-define "CRL branch Ref L103C26":
+define "CRL branch Ref L110C26":
   FHIRHelpers.ToBoolean(("Worries About Falling").value as FHIR.boolean)
 
-define "Not CRL branch Ref L103C26":
+define "Not CRL branch Ref L110C26":
   not (FHIRHelpers.ToBoolean(("Worries About Falling").value as FHIR.boolean))
 
-define "CRL branch Ref L103C53":
+define "CRL branch Ref L110C53":
   FHIRHelpers.ToBoolean(("Fallen In Past Year").value as FHIR.boolean)
 
-define "Not CRL branch Ref L103C53":
+define "Not CRL branch Ref L110C53":
   not (FHIRHelpers.ToBoolean(("Fallen In Past Year").value as FHIR.boolean))

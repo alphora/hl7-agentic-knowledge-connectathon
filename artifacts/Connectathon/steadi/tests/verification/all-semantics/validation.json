@@ -1,0 +1,18 @@
+{
+  "crl": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"errors\":[],\"warnings\":[]}"
+      }
+    ]
+  },
+  "cel": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"errors\":[],\"warnings\":[]}"
+      }
+    ]
+  }
+}

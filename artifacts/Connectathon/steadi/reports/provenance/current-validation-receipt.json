@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-20",
+  "crlVersion": "6.4.2",
+  "tool": "validate_provenance",
+  "input": {
+    "anchor": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\src\\anchor-source\\steadi.txt",
+    "artifact": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\src\\provenance\\steadi.json",
+    "cel": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\steadi\\src\\cel\\mv\\steadi.cel"
+  },
+  "output": "validation-final.json",
+  "sourceItemsPreserved": 30,
+  "authoredItems": 1,
+  "distinctLinkedRefs": 17,
+  "sourceTextsAndRangesUnchanged": true,
+  "files": {
+    "src\\provenance\\steadi.json": {
+      "sha256": "10690150fe60ee7df64d8a2f20eee32fae79a756da0d4e7e664855f96dd3b69e"
+    },
+    "src\\crl\\steadi.crl": {
+      "sha256": "c1c516f7628b90b2e3ac19ebe5c9ea6a471fa678154d2c5205e24a8ad4117466"
+    },
+    "src\\cel\\mv\\steadi.cel": {
+      "sha256": "4a7de9ba1d6768a88e7e519facee479dd25b21853759867002b60971957112cb"
+    },
+    "src\\anchor-source\\steadi.txt": {
+      "sha256": "e8fed4e11d4832007937d6ffb78766d8d7bd42c9c4558dde512d12836e21e1d5"
+    }
+  }
+}

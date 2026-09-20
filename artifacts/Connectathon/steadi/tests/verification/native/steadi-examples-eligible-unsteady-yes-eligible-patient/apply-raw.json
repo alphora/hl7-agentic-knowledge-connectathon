@@ -30,8 +30,8 @@
             "reference": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient"
           },
           "action": [ {
-            "title": "In Screening Population",
-            "description": "In Screening Population",
+            "title": "Age 65 Or Older",
+            "description": "Age 65 Or Older",
             "code": [ {
               "coding": [ {
                 "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
@@ -42,10 +42,14 @@
               "kind": "applicability",
               "expression": {
                 "language": "text/cql-identifier",
-                "expression": "CRL branch CriterionRef L101C7"
+                "expression": "CRL branch Ref L107C7"
               }
             } ],
             "action": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-applicabilityBehavior",
+                "valueString": "any"
+              } ],
               "title": "Completed Three Question Screen",
               "description": "Completed Three Question Screen",
               "code": [ {
@@ -58,7 +62,7 @@
                 "kind": "applicability",
                 "expression": {
                   "language": "text/cql-identifier",
-                  "expression": "CRL branch CriterionRef L102C9"
+                  "expression": "CRL branch CriterionRef L108C9"
                 }
               } ],
               "action": [ {
@@ -74,7 +78,7 @@
                   "kind": "applicability",
                   "expression": {
                     "language": "text/cql-identifier",
-                    "expression": "CRL branch Or L103C12"
+                    "expression": "CRL branch Or L110C12"
                   }
                 } ],
                 "action": [ {
@@ -272,7 +276,7 @@
             } ]
           } ],
           "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi",
-          "version": "0.0.0-steadi-examples-eligible-unsteady-yes-eligible-patient-2026-09-20-09.12.09",
+          "version": "0.0.0-steadi-examples-eligible-unsteady-yes-eligible-patient-2026-09-20-09.51.11",
           "status": "active",
           "item": [ {
             "extension": [ {
@@ -454,12 +458,12 @@
         "resource": {
           "resourceType": "QuestionnaireResponse",
           "id": "steadi-steadi-examples-eligible-unsteady-yes-eligible-patient",
-          "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi|0.0.0-steadi-examples-eligible-unsteady-yes-eligible-patient-2026-09-20-09.12.09",
+          "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi|0.0.0-steadi-examples-eligible-unsteady-yes-eligible-patient-2026-09-20-09.51.11",
           "status": "in-progress",
           "subject": {
             "reference": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient"
           },
-          "authored": "2026-09-20T09:12:12-04:00",
+          "authored": "2026-09-20T09:51:14-04:00",
           "item": [ {
             "linkId": "1",
             "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady",

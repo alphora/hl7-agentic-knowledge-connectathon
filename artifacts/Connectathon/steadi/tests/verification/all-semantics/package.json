@@ -1,0 +1,8 @@
+{
+  "name": "synthetic-all-semantics",
+  "version": "0.0.0",
+  "private": true,
+  "crl": {
+    "canonicalBase": "https://example.org/synthetic-all-semantics"
+  }
+}

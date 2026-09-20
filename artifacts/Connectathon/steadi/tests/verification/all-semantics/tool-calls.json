@@ -1,0 +1,23 @@
+[
+  {
+    "tool": "validate_crl",
+    "input": {
+      "path": "E:/src/hl7-agentic-knowledge-connectathon/artifacts/Connectathon/steadi/tests/verification/all-semantics/src/crl/probe.crl"
+    },
+    "outputFile": "validation.json#/crl"
+  },
+  {
+    "tool": "validate_cel",
+    "input": {
+      "path": "E:/src/hl7-agentic-knowledge-connectathon/artifacts/Connectathon/steadi/tests/verification/all-semantics/src/cel/regression/probe.cel"
+    },
+    "outputFile": "validation.json#/cel"
+  },
+  {
+    "tool": "run_decision",
+    "input": {
+      "path": "E:/src/hl7-agentic-knowledge-connectathon/artifacts/Connectathon/steadi/tests/verification/all-semantics/src/cel/regression/probe.cel"
+    },
+    "rawReturnedTextFile": "run-decision.json"
+  }
+]

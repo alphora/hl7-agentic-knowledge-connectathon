@@ -8,7 +8,7 @@ The working project is `E:/src/hl7-agentic-knowledge-connectathon`, on KELP bran
 
 1. Open `src/cel/mv/steadi.cel` in the CRL-enabled VS Code window.
 2. Run **CRL: Show Medical Validation** from the command palette. Start with **Eligible Unsteady Yes**, then **Eligible Prior Fall Yes**. The installed scenario projection was checked for the first case: both Exercise Guidance and Multifactorial Intervention Guidance are produced, with no diagnostic errors. This check verifies the view-model, not a visual browser inspection.
-3. Use the generated FHIR Questionnaire/QuestionnaireResponse files under `tests/results/fhir/patient/` for the native output. `tests/results/questionnaire-manifest-mv.json` maps every case to its files and terminal state. The four no-guidance cases are verified by native evidence; their absent CEL action assertions cause the separate CRE/cockpit correspondence check to remain unchecked.
+3. Use the generated FHIR Questionnaire/QuestionnaireResponse files under `tests/results/fhir/patient/` for the native output. `tests/results/questionnaire-manifest-mv.json` maps every case to its files and terminal state. The all-No case returns Nothing Recommended; incomplete and absent screens remain unanswered without a recommendation. The younger case is outside the screening population.
 4. Inspect each patient's `measurereport/steadi-screening-completion.json`, and the summary at `tests/results/fhir/population/measurereport/steadi-screening-completion.json`.
 
 Recheck all 48 retained native expectations from an artifact terminal:
@@ -21,12 +21,12 @@ This checks recorded actual engine output; it does not rerun the engine. Expecte
 
 ## Working-directory handoff
 
-The CRL/CEL model, generated CQL/FHIR, manual companions, anchors and provenance have been saved and released through KELP. QA was saved at `cc2a114a6c442e94aa50d9d03ba2e7c7cecd539c` and released clean. The fresh native Q/QR manifest was generated on 2026-09-20; all ten resource hashes were checked. Earlier native expression/Measure evidence was retained only after comparing the installed CRL, CEL, CQL, FHIR and all 20 patient-data files with its verified inputs: their bytes match (excluding empty KELP scaffolding files).
+The decision follows age eligibility, a computed completeness check, and an OR of the three screening answers. The completeness calculation adds no respondent question. The six native CQL and $apply runs, generated Questionnaire/QuestionnaireResponse files, MeasureReports and extraction checks were regenerated against this model on 2026-09-20. Lifecycle state is managed through KELP.
 
 ## Recorded execution
 
 - 48/48 supplied named-expression expectations agree with native CQL evaluation over the six CEL-emitted cases.
-- The unsteady-positive and prior-fall-positive cases each produce exactly Exercise Guidance and Multifactorial Intervention Guidance. The other four cases produce neither.
+- The unsteady-positive and prior-fall-positive cases each produce exactly Exercise Guidance and Multifactorial Intervention Guidance. The completed all-No case returns a Nothing Recommended communication. The younger, incomplete and absent-screen cases produce no communication.
 - Native results contain five Questionnaire/QuestionnaireResponse pairs. The younger patient produces no questionnaire.
 - The manual Measure references the generated `SteadiInterface|0.0.0` and its Initial Population, Denominator and Numerator expressions. Native evaluation produces six individual MeasureReports and a summary: population 5, denominator 5, numerator 3, score 0.6.
 - Canonical source generation preserved the supplied refined Markdown in a literal DOCX carrier and reported no warnings. Human visual pagination was not verified.
@@ -48,4 +48,4 @@ Authored companion inputs live in `src/companion-source/fhir`. They are assemble
 
 ## FHIR package
 
-The [FHIR npm package](package/steadi-0.0.0.tgz) contains the 28 FHIR definitions and an ImplementationGuide inventory. CRL generated the archive and embedded the local CQL attachments; resource identities are preserved. Synthetic patient examples remain in tests.
+The [FHIR npm package](package/steadi-0.0.0.tgz) contains the 30 FHIR definitions and an ImplementationGuide inventory. CRL generated the archive and embedded the local CQL attachments; resource identities are preserved. Synthetic patient examples remain in tests.

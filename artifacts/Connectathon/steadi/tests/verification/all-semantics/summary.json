@@ -1,0 +1,70 @@
+{
+  "version": "6.4.2",
+  "evidenceTier": "CRE only; no native or UI execution",
+  "caseCount": 6,
+  "passCount": 6,
+  "errorCount": 0,
+  "cases": [
+    {
+      "case": "All A true B unknown",
+      "produced": [
+        "A Action"
+      ],
+      "status": "pass",
+      "expected": {
+        "leaf": "All Siblings",
+        "branch": "A Action"
+      }
+    },
+    {
+      "case": "All A unknown B true",
+      "produced": [
+        "B Action"
+      ],
+      "status": "pass",
+      "expected": {
+        "leaf": "All Siblings",
+        "branch": "B Action"
+      }
+    },
+    {
+      "case": "All both true",
+      "produced": [
+        "A Action",
+        "B Action"
+      ],
+      "status": "pass",
+      "expected": {
+        "leaf": "All Siblings",
+        "branch": "A Action"
+      }
+    },
+    {
+      "case": "All both unknown",
+      "produced": [],
+      "status": "pass",
+      "expected": {
+        "leaf": "All Siblings",
+        "pause": true
+      }
+    },
+    {
+      "case": "Ordered A true B unknown",
+      "produced": [],
+      "status": "pass",
+      "expected": {
+        "leaf": "Ordered Checks",
+        "pause": true
+      }
+    },
+    {
+      "case": "Ordered A unknown B true",
+      "produced": [],
+      "status": "pass",
+      "expected": {
+        "leaf": "Ordered Checks",
+        "pause": true
+      }
+    }
+  ]
+}
