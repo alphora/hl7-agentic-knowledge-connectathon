@@ -1,0 +1,90 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "0bcf5eac-bbbc-4584-958e-728f3e446ca3",
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/measurereport-populationDescription",
+    "valueString": "Demonstrates a manually authored Measure wrapper referencing actual CRL-generated Boolean expressions. Initial population and denominator use Patient age today at least 65; numerator requires that population and presence of all three local Boolean answers. This narrower demo does not satisfy the full supplied screening-completion measure contract."
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Measure/steadi-screening-completion|0.1.0",
+  "subject": {
+    "reference": "Patient/steadi-examples-eligible-all-no-eligible-patient"
+  },
+  "date": "2026-09-20T07:59:13-04:00",
+  "period": {
+    "start": "2025-12-31T19:00:00-05:00",
+    "end": "2026-12-31T18:59:59-05:00"
+  },
+  "improvementNotation": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+      "code": "increase"
+    } ]
+  },
+  "group": [ {
+    "id": "screening-completion",
+    "population": [ {
+      "id": "initial-population",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "denominator",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "numerator",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 1.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+      "valueString": "numerator"
+    } ],
+    "reference": "Observation/steadi-examples-eligible-all-no-unsteady-no"
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+      "valueString": "initial-population"
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+      "valueString": "denominator"
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+      "valueString": "numerator"
+    } ],
+    "reference": "Patient/steadi-examples-eligible-all-no-eligible-patient"
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+      "valueString": "numerator"
+    } ],
+    "reference": "Observation/steadi-examples-eligible-all-no-fall-no"
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-criteriaReference",
+      "valueString": "numerator"
+    } ],
+    "reference": "Observation/steadi-examples-eligible-all-no-worries-no"
+  } ]
+}

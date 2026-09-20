@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "steadi-examples-eligible-all-no-unsteady-no",
+  "meta": {
+    "profile": [
+      "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/steadi-examples-eligible-all-no-eligible-patient"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+        "code": "unsteady"
+      }
+    ]
+  },
+  "valueBoolean": false,
+  "effectiveDateTime": "2026-06-15T09:20:00Z",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        }
+      ]
+    }
+  ]
+}

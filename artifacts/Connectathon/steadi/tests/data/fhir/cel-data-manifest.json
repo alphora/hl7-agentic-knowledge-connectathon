@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "caseName": "Younger Than 65",
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-01",
+      "compartmentDir": "patient/steadi-examples-younger-than-65-younger-patient",
+      "artifacts": [
+        {
+          "id": "steadi-examples-younger-than-65-younger-patient",
+          "resourceType": "Patient",
+          "path": "patient/steadi-examples-younger-than-65-younger-patient/patient/steadi-examples-younger-than-65-younger-patient.json",
+          "sha256": "1185f995978905814ebcbf4a7ac44de850d5fcd8ef1b7ded80be81fe237f3999"
+        },
+        {
+          "id": "steadi-examples-younger-than-65-unsteady-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-younger-than-65-younger-patient/observation/steadi-examples-younger-than-65-unsteady-no.json",
+          "sha256": "565ecb895892f2a0cfbb62b6b3e708a8c4965a43101897b480eca3e0578d2900"
+        },
+        {
+          "id": "steadi-examples-younger-than-65-worries-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-younger-than-65-younger-patient/observation/steadi-examples-younger-than-65-worries-no.json",
+          "sha256": "40c5acd08ae59214f55ac16f3f4c65d9f2d9e3d7924ad4521b2d41f1e5670420"
+        },
+        {
+          "id": "steadi-examples-younger-than-65-fall-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-younger-than-65-younger-patient/observation/steadi-examples-younger-than-65-fall-no.json",
+          "sha256": "5432b236c80cf6e693b32c36ca78e93e6a9834011e02ed86486c2c3d3b715923"
+        }
+      ]
+    },
+    {
+      "caseName": "Eligible All No",
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-02",
+      "compartmentDir": "patient/steadi-examples-eligible-all-no-eligible-patient",
+      "artifacts": [
+        {
+          "id": "steadi-examples-eligible-all-no-eligible-patient",
+          "resourceType": "Patient",
+          "path": "patient/steadi-examples-eligible-all-no-eligible-patient/patient/steadi-examples-eligible-all-no-eligible-patient.json",
+          "sha256": "ac5bb276cb6ca72866d53fe32d2ed3740949cde14cd4eff900f397613cae6b52"
+        },
+        {
+          "id": "steadi-examples-eligible-all-no-unsteady-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-all-no-eligible-patient/observation/steadi-examples-eligible-all-no-unsteady-no.json",
+          "sha256": "d3c4457459091f54a997230436d50f6a8546e2f9826a787ef8d262dd3f1fe110"
+        },
+        {
+          "id": "steadi-examples-eligible-all-no-worries-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-all-no-eligible-patient/observation/steadi-examples-eligible-all-no-worries-no.json",
+          "sha256": "dc1c0ee144cf88a9782773900ef1227a7a09c4246ca785eaeff316b3944293f3"
+        },
+        {
+          "id": "steadi-examples-eligible-all-no-fall-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-all-no-eligible-patient/observation/steadi-examples-eligible-all-no-fall-no.json",
+          "sha256": "c8cc7690193a7e67956441d944d9b0c576205e6b01b70c6fc58dec4a7ba55ec5"
+        }
+      ]
+    },
+    {
+      "caseName": "Eligible Unsteady Yes",
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-03",
+      "compartmentDir": "patient/steadi-examples-eligible-unsteady-yes-eligible-patient",
+      "artifacts": [
+        {
+          "id": "steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "resourceType": "Patient",
+          "path": "patient/steadi-examples-eligible-unsteady-yes-eligible-patient/patient/steadi-examples-eligible-unsteady-yes-eligible-patient.json",
+          "sha256": "9430e46c7f3c9038d6b94c2d119aff6f1c4ca39249e551c82b1260bb796b0a36"
+        },
+        {
+          "id": "steadi-examples-eligible-unsteady-yes-unsteady-yes",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-unsteady-yes-eligible-patient/observation/steadi-examples-eligible-unsteady-yes-unsteady-yes.json",
+          "sha256": "3a408cdb3d530bfa6c3a527c8393bd096e4fd640340fc8bf44cfd455dc037728"
+        },
+        {
+          "id": "steadi-examples-eligible-unsteady-yes-worries-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-unsteady-yes-eligible-patient/observation/steadi-examples-eligible-unsteady-yes-worries-no.json",
+          "sha256": "7b35b746f330bc0df93da5ea8c5be2b750f7be9955746945bd51497714a8cce5"
+        },
+        {
+          "id": "steadi-examples-eligible-unsteady-yes-fall-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-unsteady-yes-eligible-patient/observation/steadi-examples-eligible-unsteady-yes-fall-no.json",
+          "sha256": "a51e3aeb4e1d895dd0aa2ad4e23c4ef9f722769fd251e9effae4bf6320803d2a"
+        }
+      ]
+    },
+    {
+      "caseName": "Eligible Prior Fall Yes",
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-04",
+      "compartmentDir": "patient/steadi-examples-eligible-prior-fall-yes-eligible-patient",
+      "artifacts": [
+        {
+          "id": "steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "resourceType": "Patient",
+          "path": "patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/patient/steadi-examples-eligible-prior-fall-yes-eligible-patient.json",
+          "sha256": "f53068a4b93e17259574e164283a282a2e4a46eb8f7966a9c5aa1f6e84f911d6"
+        },
+        {
+          "id": "steadi-examples-eligible-prior-fall-yes-unsteady-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/observation/steadi-examples-eligible-prior-fall-yes-unsteady-no.json",
+          "sha256": "2b03caa48a81c688528dc1ac76743483ee612301c3a5953b253a664dc3b9b87f"
+        },
+        {
+          "id": "steadi-examples-eligible-prior-fall-yes-worries-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/observation/steadi-examples-eligible-prior-fall-yes-worries-no.json",
+          "sha256": "52647a21c7dea6ca8e5390625bb65816d70d2bce14a837753a4c4faa4f8ea86f"
+        },
+        {
+          "id": "steadi-examples-eligible-prior-fall-yes-fall-yes",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/observation/steadi-examples-eligible-prior-fall-yes-fall-yes.json",
+          "sha256": "45166684354f61afdcdc27ab8b42ba937d2aef78c47534a2b513acb855d18a4d"
+        }
+      ]
+    },
+    {
+      "caseName": "Eligible Incomplete Response",
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-05",
+      "compartmentDir": "patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b",
+      "artifacts": [
+        {
+          "id": "steadi-examples-eligible-incomplete-respons-6e3f6668625b",
+          "resourceType": "Patient",
+          "path": "patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b/patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b.json",
+          "sha256": "8456c3631cf2788c4c19ae499e5cc204c16db9e25cd21e1aa0796c0ba9bf2fa3"
+        },
+        {
+          "id": "steadi-examples-eligible-incomplete-respons-42e44c06e82d",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b/observation/steadi-examples-eligible-incomplete-respons-42e44c06e82d.json",
+          "sha256": "415234d9e3cbffd7e37067778a953d1cd118825b8a2a6cd4b638fc740650d49e"
+        },
+        {
+          "id": "steadi-examples-eligible-incomplete-response-worries-no",
+          "resourceType": "Observation",
+          "path": "patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b/observation/steadi-examples-eligible-incomplete-response-worries-no.json",
+          "sha256": "a0f1406c6bd47b8bafd48f3b42450e1c9434c292bc78516533d79c0ba8786269"
+        }
+      ]
+    },
+    {
+      "caseName": "Eligible No Response",
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-06",
+      "compartmentDir": "patient/steadi-examples-eligible-no-response-eligible-patient",
+      "artifacts": [
+        {
+          "id": "steadi-examples-eligible-no-response-eligible-patient",
+          "resourceType": "Patient",
+          "path": "patient/steadi-examples-eligible-no-response-eligible-patient/patient/steadi-examples-eligible-no-response-eligible-patient.json",
+          "sha256": "432b37dc34bc97f373941480df6ef3cd68d27782d00f626cd4629443be69449d"
+        }
+      ]
+    }
+  ]
+}

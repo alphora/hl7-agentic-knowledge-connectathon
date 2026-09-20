@@ -1,0 +1,28 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [ {
+    "name": "At Increased Fall Risk",
+    "valueBoolean": false
+  }, {
+    "name": "Numerator",
+    "valueBoolean": false
+  }, {
+    "name": "Exercise Intervention Applicable",
+    "valueBoolean": false
+  }, {
+    "name": "Denominator",
+    "valueBoolean": false
+  }, {
+    "name": "Consider Multifactorial Intervention",
+    "valueBoolean": false
+  }, {
+    "name": "Initial Population",
+    "valueBoolean": false
+  }, {
+    "name": "In Screening Population",
+    "valueBoolean": false
+  }, {
+    "name": "Completed Three Question Screen",
+    "valueBoolean": true
+  } ]
+}

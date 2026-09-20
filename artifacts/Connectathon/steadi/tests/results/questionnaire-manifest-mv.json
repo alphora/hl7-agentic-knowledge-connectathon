@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "celLibrary": "mv",
+  "useCase": "prior-auth",
+  "generatedAt": "2026-09-20T12:17:11.785Z",
+  "provenance": {
+    "crlVersion": "6.4.1",
+    "producerJarSha256": "9870fc867547f65518c5cd6e698ace77b60a9e98797ed38330c25d06cbf5cb2e",
+    "inputClock": "2026-09-20T12:17:07.819Z",
+    "runtimeSha256": "8a63c52b6628d0872385985752ad03de68ef3ead1454b065e58ed3f7bcd64dd3",
+    "definitionClosureSha256": "298b6cda3514d50df1a61eab121942819fbf9f9199dc82916dbb64f277a8a552"
+  },
+  "cases": [
+    {
+      "caseName": "Younger Than 65",
+      "compartmentDir": "patient/steadi-examples-younger-than-65-younger-patient",
+      "state": "no-questionnaire",
+      "reason": "engine offered no questionnaire for this path",
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-01",
+      "inputSha256": "3a83f7f0fbddb8781bd1c5ef2f62d9b955866a94649079c14986e5dbb194dcfd",
+      "producedAt": "2026-09-20T12:17:11.788Z"
+    },
+    {
+      "caseName": "Eligible All No",
+      "compartmentDir": "patient/steadi-examples-eligible-all-no-eligible-patient",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "steadi-steadi-examples-eligible-all-no-eligible-patient",
+          "path": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaire/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
+          "sha256": "41333df8591866b516b683b36cdcaf803223ac57ea90164da757147e8db875b0",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "steadi-steadi-examples-eligible-all-no-eligible-patient",
+          "path": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
+          "sha256": "444dd0dc8cbd68f7417cb6ab6275dc82fd2d2894ebd54ec5ce3d6b0965f89dd2",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-02",
+      "inputSha256": "0f4af0771426bc4695d5c2fe5492feef0425620534a8e7073d7db142ee0e4b09",
+      "producedAt": "2026-09-20T12:17:31.127Z"
+    },
+    {
+      "caseName": "Eligible Unsteady Yes",
+      "compartmentDir": "patient/steadi-examples-eligible-unsteady-yes-eligible-patient",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "steadi-steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "path": "tests/results/fhir/patient/steadi-examples-eligible-unsteady-yes-eligible-patient/questionnaire/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient.json",
+          "sha256": "8a1526b12f34ad5aa323409661f5fa6aadef9795598e4740e8f1a3656a9e54d7",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "steadi-steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "path": "tests/results/fhir/patient/steadi-examples-eligible-unsteady-yes-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient.json",
+          "sha256": "d91c8160210df24630fc36320daedb9b5ed9ba4ca78aad777c961720129d4516",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-03",
+      "inputSha256": "215067a702c653b3676a7b1e544178f56e24e182477cb7eafff2383186e39f72",
+      "producedAt": "2026-09-20T12:17:50.219Z"
+    },
+    {
+      "caseName": "Eligible Prior Fall Yes",
+      "compartmentDir": "patient/steadi-examples-eligible-prior-fall-yes-eligible-patient",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "path": "tests/results/fhir/patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/questionnaire/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient.json",
+          "sha256": "07f886669d924b187c9f920542120aecab7a0e90d2b02945fceba630bdad8008",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "path": "tests/results/fhir/patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient.json",
+          "sha256": "6f7fb6cb0919d9659b2f1693d23a1438a459f20d2f77d5b773695f57bc3846d4",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-04",
+      "inputSha256": "408f076b4b2026494e74894e1c088918d5e7652c2ca47b4154b02e8e8f8db767",
+      "producedAt": "2026-09-20T12:18:11.845Z"
+    },
+    {
+      "caseName": "Eligible Incomplete Response",
+      "compartmentDir": "patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "steadi-steadi-examples-eligible-incomplete-respons-6e3f6668625b",
+          "path": "tests/results/fhir/patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b/questionnaire/steadi-steadi-examples-eligible-incomplete-respons-6e3f6668625b.json",
+          "sha256": "9f75c9fcca8be1675722483dc24a3eeaffd320e11ac39cc1ee9ab5f7be5e5e11",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "steadi-steadi-examples-eligible-incomplete-respons-6e3f6668625b",
+          "path": "tests/results/fhir/patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b/questionnaireresponse/steadi-steadi-examples-eligible-incomplete-respons-6e3f6668625b.json",
+          "sha256": "8406e861e01fdcacaf05db607cd3a594e5c23cee5eeec44cf272508984eaea05",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-05",
+      "inputSha256": "c0be889c7fa68128ffd832ff1741a89dead287aaf189720f6f755b266d195c59",
+      "producedAt": "2026-09-20T12:18:33.999Z"
+    },
+    {
+      "caseName": "Eligible No Response",
+      "compartmentDir": "patient/steadi-examples-eligible-no-response-eligible-patient",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "steadi-steadi-examples-eligible-no-response-eligible-patient",
+          "path": "tests/results/fhir/patient/steadi-examples-eligible-no-response-eligible-patient/questionnaire/steadi-steadi-examples-eligible-no-response-eligible-patient.json",
+          "sha256": "3bc50ca9278a3e58d80e3092e1265819b86b4c8dc689ff8cef497be1c948a294",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "steadi-steadi-examples-eligible-no-response-eligible-patient",
+          "path": "tests/results/fhir/patient/steadi-examples-eligible-no-response-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-no-response-eligible-patient.json",
+          "sha256": "acddc9e432a3d22d5e05548b77692893e4ba1ea2fae5ba9089b9dce14b8f5e16",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/steadi.cel",
+      "caseId": "steadi-06",
+      "inputSha256": "ff6d7ee96db76185228de13025ef233a7a954a6e872a424e1ac3ed2475fb1dfe",
+      "producedAt": "2026-09-20T12:18:59.886Z"
+    }
+  ]
+}

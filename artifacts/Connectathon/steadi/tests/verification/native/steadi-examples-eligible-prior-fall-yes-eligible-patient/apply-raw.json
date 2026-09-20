@@ -1,0 +1,522 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [ {
+    "name": "return",
+    "resource": {
+      "resourceType": "Bundle",
+      "id": "steadi",
+      "type": "collection",
+      "entry": [ {
+        "resource": {
+          "resourceType": "RequestGroup",
+          "id": "steadi",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          } ],
+          "instantiatesCanonical": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi|0.0.0" ],
+          "status": "active",
+          "intent": "proposal",
+          "subject": {
+            "reference": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient"
+          },
+          "action": [ {
+            "title": "In Screening Population",
+            "description": "In Screening Population",
+            "code": [ {
+              "coding": [ {
+                "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                "code": "guideline-based-care"
+              } ]
+            } ],
+            "condition": [ {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "CRL branch CriterionRef L101C7"
+              }
+            } ],
+            "action": [ {
+              "title": "Completed Three Question Screen",
+              "description": "Completed Three Question Screen",
+              "code": [ {
+                "coding": [ {
+                  "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                  "code": "guideline-based-care"
+                } ]
+              } ],
+              "condition": [ {
+                "kind": "applicability",
+                "expression": {
+                  "language": "text/cql-identifier",
+                  "expression": "CRL branch CriterionRef L102C9"
+                }
+              } ],
+              "action": [ {
+                "title": "At Increased Fall Risk",
+                "description": "At Increased Fall Risk",
+                "code": [ {
+                  "coding": [ {
+                    "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                    "code": "guideline-based-care"
+                  } ]
+                } ],
+                "condition": [ {
+                  "kind": "applicability",
+                  "expression": {
+                    "language": "text/cql-identifier",
+                    "expression": "CRL branch CriterionRef L103C11"
+                  }
+                } ],
+                "action": [ {
+                  "title": "Exercise Guidance",
+                  "description": "Exercise Guidance",
+                  "code": [ {
+                    "coding": [ {
+                      "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                      "code": "guideline-based-care"
+                    } ]
+                  } ],
+                  "resource": {
+                    "reference": "RequestGroup/steadi-exercise-guidance-recommendation"
+                  }
+                }, {
+                  "title": "Multifactorial Intervention Guidance",
+                  "description": "Multifactorial Intervention Guidance",
+                  "code": [ {
+                    "coding": [ {
+                      "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                      "code": "guideline-based-care"
+                    } ]
+                  } ],
+                  "resource": {
+                    "reference": "RequestGroup/steadi-multifactorial-intervention-guidance-recommendation"
+                  }
+                } ]
+              } ]
+            } ]
+          } ]
+        }
+      }, {
+        "resource": {
+          "resourceType": "CommunicationRequest",
+          "id": "steadi-exercise-guidance",
+          "meta": {
+            "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-communicationrequest" ]
+          },
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          } ],
+          "status": "active",
+          "doNotPerform": false,
+          "subject": {
+            "reference": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient"
+          },
+          "payload": [ {
+            "contentString": "Exercise interventions are recommended for community-dwelling adults 65 years or older at increased risk of falls (USPSTF grade B). This is guidance, not an intervention order."
+          } ]
+        }
+      }, {
+        "resource": {
+          "resourceType": "RequestGroup",
+          "id": "steadi-exercise-guidance-recommendation",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          } ],
+          "instantiatesCanonical": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi-exercise-guidance-recommendation|0.0.0" ],
+          "status": "active",
+          "intent": "proposal",
+          "subject": {
+            "reference": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient"
+          },
+          "action": [ {
+            "title": "Exercise Guidance",
+            "description": "Exercise Guidance",
+            "code": [ {
+              "coding": [ {
+                "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                "code": "guideline-based-care"
+              } ]
+            } ],
+            "type": {
+              "coding": [ {
+                "system": "http://terminology.hl7.org/CodeSystem/action-type",
+                "code": "create"
+              } ]
+            },
+            "resource": {
+              "reference": "CommunicationRequest/steadi-exercise-guidance"
+            }
+          } ]
+        }
+      }, {
+        "resource": {
+          "resourceType": "CommunicationRequest",
+          "id": "steadi-multifactorial-intervention-guidance",
+          "meta": {
+            "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-communicationrequest" ]
+          },
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          } ],
+          "status": "active",
+          "doNotPerform": false,
+          "subject": {
+            "reference": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient"
+          },
+          "payload": [ {
+            "contentString": "Individualize whether to offer a multifactorial intervention, considering prior falls, comorbidities and patient preferences (USPSTF grade C). This is guidance, not an intervention order."
+          } ]
+        }
+      }, {
+        "resource": {
+          "resourceType": "RequestGroup",
+          "id": "steadi-multifactorial-intervention-guidance-recommendation",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "shareable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "computable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+            "valueCode": "publishable"
+          }, {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+            "valueCode": "structured"
+          } ],
+          "instantiatesCanonical": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi-multifactorial-intervention-guidance-recommendation|0.0.0" ],
+          "status": "active",
+          "intent": "proposal",
+          "subject": {
+            "reference": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient"
+          },
+          "action": [ {
+            "title": "Multifactorial Intervention Guidance",
+            "description": "Multifactorial Intervention Guidance",
+            "code": [ {
+              "coding": [ {
+                "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                "code": "guideline-based-care"
+              } ]
+            } ],
+            "type": {
+              "coding": [ {
+                "system": "http://terminology.hl7.org/CodeSystem/action-type",
+                "code": "create"
+              } ]
+            },
+            "resource": {
+              "reference": "CommunicationRequest/steadi-multifactorial-intervention-guidance"
+            }
+          } ]
+        }
+      }, {
+        "resource": {
+          "resourceType": "Questionnaire",
+          "id": "steadi",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+            "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInterface"
+          }, {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext",
+            "extension": [ {
+              "url": "name",
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext",
+                "code": "patient",
+                "display": "Patient"
+              }
+            }, {
+              "url": "type",
+              "valueCode": "Patient"
+            } ]
+          } ],
+          "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi",
+          "version": "0.0.0-steadi-examples-eligible-prior-fall-yes-eligible-patient-2026-09-20-07.57.08",
+          "status": "active",
+          "item": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtract",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady"
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+              "extension": [ {
+                "url": "definition",
+                "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady#Observation.subject"
+              }, {
+                "url": "expression",
+                "valueExpression": {
+                  "language": "text/fhirpath",
+                  "expression": "%resource.subject"
+                }
+              } ]
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+              "extension": [ {
+                "url": "definition",
+                "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady#Observation.effective[x]"
+              }, {
+                "url": "expression",
+                "valueExpression": {
+                  "language": "text/fhirpath",
+                  "expression": "%resource.authored"
+                }
+              } ]
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+              "valueExpression": {
+                "name": "Unsteady",
+                "language": "text/cql-identifier",
+                "expression": "Unsteady",
+                "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInferences"
+              }
+            } ],
+            "linkId": "1",
+            "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady",
+            "text": "Do you feel unsteady when standing or walking?",
+            "type": "group",
+            "required": false,
+            "repeats": false,
+            "item": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-expression",
+                  "expression": "%Unsteady.value"
+                }
+              } ],
+              "linkId": "1.1",
+              "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady#Observation.value[x]",
+              "text": "Unsteady",
+              "type": "boolean",
+              "required": false,
+              "repeats": false
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtract",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling"
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+              "extension": [ {
+                "url": "definition",
+                "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling#Observation.subject"
+              }, {
+                "url": "expression",
+                "valueExpression": {
+                  "language": "text/fhirpath",
+                  "expression": "%resource.subject"
+                }
+              } ]
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+              "extension": [ {
+                "url": "definition",
+                "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling#Observation.effective[x]"
+              }, {
+                "url": "expression",
+                "valueExpression": {
+                  "language": "text/fhirpath",
+                  "expression": "%resource.authored"
+                }
+              } ]
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+              "valueExpression": {
+                "name": "WorriesAboutFalling",
+                "language": "text/cql-identifier",
+                "expression": "Worries About Falling",
+                "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInferences"
+              }
+            } ],
+            "linkId": "2",
+            "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling",
+            "text": "Do you worry about falling?",
+            "type": "group",
+            "required": false,
+            "repeats": false,
+            "item": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-expression",
+                  "expression": "%WorriesAboutFalling.value"
+                }
+              } ],
+              "linkId": "2.1",
+              "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling#Observation.value[x]",
+              "text": "Worries About Falling",
+              "type": "boolean",
+              "required": false,
+              "repeats": false
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtract",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year"
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+              "extension": [ {
+                "url": "definition",
+                "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year#Observation.subject"
+              }, {
+                "url": "expression",
+                "valueExpression": {
+                  "language": "text/fhirpath",
+                  "expression": "%resource.subject"
+                }
+              } ]
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+              "extension": [ {
+                "url": "definition",
+                "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year#Observation.effective[x]"
+              }, {
+                "url": "expression",
+                "valueExpression": {
+                  "language": "text/fhirpath",
+                  "expression": "%resource.authored"
+                }
+              } ]
+            }, {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+              "valueExpression": {
+                "name": "FallenInPastYear",
+                "language": "text/cql-identifier",
+                "expression": "Fallen In Past Year",
+                "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInferences"
+              }
+            } ],
+            "linkId": "3",
+            "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year",
+            "text": "Have you fallen in the past year?",
+            "type": "group",
+            "required": false,
+            "repeats": false,
+            "item": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-expression",
+                  "expression": "%FallenInPastYear.value"
+                }
+              } ],
+              "linkId": "3.1",
+              "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year#Observation.value[x]",
+              "text": "Fallen In Past Year",
+              "type": "boolean",
+              "required": false,
+              "repeats": false
+            } ]
+          } ]
+        }
+      }, {
+        "resource": {
+          "resourceType": "QuestionnaireResponse",
+          "id": "steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi|0.0.0-steadi-examples-eligible-prior-fall-yes-eligible-patient-2026-09-20-07.57.08",
+          "status": "in-progress",
+          "subject": {
+            "reference": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient"
+          },
+          "authored": "2026-09-20T07:57:10-04:00",
+          "item": [ {
+            "linkId": "1",
+            "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady",
+            "text": "Do you feel unsteady when standing or walking?",
+            "item": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+                "valueReference": {
+                  "reference": "http://cqframework.org/fhir/Device/clinical-quality-language"
+                }
+              } ],
+              "linkId": "1.1",
+              "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady#Observation.value[x]",
+              "text": "Unsteady",
+              "answer": [ {
+                "valueBoolean": false
+              } ]
+            } ]
+          }, {
+            "linkId": "2",
+            "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling",
+            "text": "Do you worry about falling?",
+            "item": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+                "valueReference": {
+                  "reference": "http://cqframework.org/fhir/Device/clinical-quality-language"
+                }
+              } ],
+              "linkId": "2.1",
+              "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling#Observation.value[x]",
+              "text": "Worries About Falling",
+              "answer": [ {
+                "valueBoolean": false
+              } ]
+            } ]
+          }, {
+            "linkId": "3",
+            "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year",
+            "text": "Have you fallen in the past year?",
+            "item": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+                "valueReference": {
+                  "reference": "http://cqframework.org/fhir/Device/clinical-quality-language"
+                }
+              } ],
+              "linkId": "3.1",
+              "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year#Observation.value[x]",
+              "text": "Fallen In Past Year",
+              "answer": [ {
+                "valueBoolean": true
+              } ]
+            } ]
+          } ]
+        }
+      } ]
+    }
+  } ]
+}

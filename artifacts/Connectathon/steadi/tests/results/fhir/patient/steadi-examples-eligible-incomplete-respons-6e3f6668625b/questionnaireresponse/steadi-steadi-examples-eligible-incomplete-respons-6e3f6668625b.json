@@ -1,0 +1,73 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "steadi-steadi-examples-eligible-incomplete-respons-6e3f6668625b",
+  "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi-steadi-examples-eligible-incomplete-respons-6e3f6668625b",
+  "status": "in-progress",
+  "subject": {
+    "reference": "Patient/steadi-examples-eligible-incomplete-respons-6e3f6668625b"
+  },
+  "item": [
+    {
+      "linkId": "1",
+      "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady",
+      "text": "Do you feel unsteady when standing or walking?",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+              "valueReference": {
+                "reference": "http://cqframework.org/fhir/Device/clinical-quality-language"
+              }
+            }
+          ],
+          "linkId": "1.1",
+          "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady#Observation.value[x]",
+          "text": "Unsteady",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "2",
+      "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling",
+      "text": "Do you worry about falling?",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+              "valueReference": {
+                "reference": "http://cqframework.org/fhir/Device/clinical-quality-language"
+              }
+            }
+          ],
+          "linkId": "2.1",
+          "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling#Observation.value[x]",
+          "text": "Worries About Falling",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "3",
+      "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year",
+      "text": "Have you fallen in the past year?",
+      "item": [
+        {
+          "linkId": "3.1",
+          "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year#Observation.value[x]",
+          "text": "Fallen In Past Year"
+        }
+      ]
+    }
+  ]
+}

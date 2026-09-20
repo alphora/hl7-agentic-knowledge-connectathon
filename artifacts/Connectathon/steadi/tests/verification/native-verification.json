@@ -1,0 +1,429 @@
+{
+  "evidence": "native CQL evaluation, PlanDefinition apply and Measure evaluation over CEL-emitted local-answer facts",
+  "assertions": 48,
+  "passed": 48,
+  "checks": [
+    {
+      "case": "younger-than-65",
+      "expression": "In Screening Population",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "younger-than-65",
+      "expression": "Completed Three Question Screen",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "younger-than-65",
+      "expression": "At Increased Fall Risk",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "younger-than-65",
+      "expression": "Exercise Intervention Applicable",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "younger-than-65",
+      "expression": "Consider Multifactorial Intervention",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "younger-than-65",
+      "expression": "Initial Population",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "younger-than-65",
+      "expression": "Denominator",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "younger-than-65",
+      "expression": "Numerator",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "eligible-all-no",
+      "expression": "In Screening Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-all-no",
+      "expression": "Completed Three Question Screen",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-all-no",
+      "expression": "At Increased Fall Risk",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "eligible-all-no",
+      "expression": "Exercise Intervention Applicable",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "eligible-all-no",
+      "expression": "Consider Multifactorial Intervention",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "eligible-all-no",
+      "expression": "Initial Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-all-no",
+      "expression": "Denominator",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-all-no",
+      "expression": "Numerator",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-unsteady-yes",
+      "expression": "In Screening Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-unsteady-yes",
+      "expression": "Completed Three Question Screen",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-unsteady-yes",
+      "expression": "At Increased Fall Risk",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-unsteady-yes",
+      "expression": "Exercise Intervention Applicable",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-unsteady-yes",
+      "expression": "Consider Multifactorial Intervention",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-unsteady-yes",
+      "expression": "Initial Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-unsteady-yes",
+      "expression": "Denominator",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-unsteady-yes",
+      "expression": "Numerator",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-prior-fall-yes",
+      "expression": "In Screening Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-prior-fall-yes",
+      "expression": "Completed Three Question Screen",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-prior-fall-yes",
+      "expression": "At Increased Fall Risk",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-prior-fall-yes",
+      "expression": "Exercise Intervention Applicable",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-prior-fall-yes",
+      "expression": "Consider Multifactorial Intervention",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-prior-fall-yes",
+      "expression": "Initial Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-prior-fall-yes",
+      "expression": "Denominator",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-prior-fall-yes",
+      "expression": "Numerator",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-incomplete-response",
+      "expression": "In Screening Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-incomplete-response",
+      "expression": "Completed Three Question Screen",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "eligible-incomplete-response",
+      "expression": "At Increased Fall Risk",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "eligible-incomplete-response",
+      "expression": "Exercise Intervention Applicable",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "eligible-incomplete-response",
+      "expression": "Consider Multifactorial Intervention",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "eligible-incomplete-response",
+      "expression": "Initial Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-incomplete-response",
+      "expression": "Denominator",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-incomplete-response",
+      "expression": "Numerator",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "eligible-no-response",
+      "expression": "In Screening Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-no-response",
+      "expression": "Completed Three Question Screen",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "eligible-no-response",
+      "expression": "At Increased Fall Risk",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "eligible-no-response",
+      "expression": "Exercise Intervention Applicable",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "eligible-no-response",
+      "expression": "Consider Multifactorial Intervention",
+      "expected": null,
+      "actual": null,
+      "pass": true
+    },
+    {
+      "case": "eligible-no-response",
+      "expression": "Initial Population",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-no-response",
+      "expression": "Denominator",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "eligible-no-response",
+      "expression": "Numerator",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    }
+  ],
+  "cases": [
+    {
+      "case": "younger-than-65",
+      "engineErrors": [],
+      "guidance": [],
+      "measurePopulations": {
+        "initial-population": 0,
+        "denominator": 0,
+        "numerator": 0
+      },
+      "rawDirectory": "tests/verification/native/steadi-examples-younger-than-65-younger-patient"
+    },
+    {
+      "case": "eligible-all-no",
+      "engineErrors": [],
+      "guidance": [],
+      "measurePopulations": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 1
+      },
+      "rawDirectory": "tests/verification/native/steadi-examples-eligible-all-no-eligible-patient"
+    },
+    {
+      "case": "eligible-unsteady-yes",
+      "engineErrors": [],
+      "guidance": [
+        "steadi-exercise-guidance",
+        "steadi-multifactorial-intervention-guidance"
+      ],
+      "measurePopulations": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 1
+      },
+      "rawDirectory": "tests/verification/native/steadi-examples-eligible-unsteady-yes-eligible-patient"
+    },
+    {
+      "case": "eligible-prior-fall-yes",
+      "engineErrors": [],
+      "guidance": [
+        "steadi-exercise-guidance",
+        "steadi-multifactorial-intervention-guidance"
+      ],
+      "measurePopulations": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 1
+      },
+      "rawDirectory": "tests/verification/native/steadi-examples-eligible-prior-fall-yes-eligible-patient"
+    },
+    {
+      "case": "eligible-incomplete-response",
+      "engineErrors": [],
+      "guidance": [],
+      "measurePopulations": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 0
+      },
+      "rawDirectory": "tests/verification/native/steadi-examples-eligible-incomplete-respons-6e3f6668625b"
+    },
+    {
+      "case": "eligible-no-response",
+      "engineErrors": [],
+      "guidance": [],
+      "measurePopulations": {
+        "initial-population": 1,
+        "denominator": 1,
+        "numerator": 0
+      },
+      "rawDirectory": "tests/verification/native/steadi-examples-eligible-no-response-eligible-patient"
+    }
+  ],
+  "measureSummary": {
+    "initial-population": 5,
+    "denominator": 5,
+    "numerator": 3
+  },
+  "measureScore": 0.6,
+  "limits": [
+    "Not original shared QuestionnaireResponse ingestion or SDC extraction.",
+    "Current Patient age substitutes for encounter-age; supplied cases have the same threshold classification.",
+    "Measure does not enforce source QR completed status, encounter association or measurement-period inclusion."
+  ],
+  "crlSha256": "665acf6d09809097bea24cb7a0c4b55646fe7a66eabe9b19ef879d0259191468"
+}

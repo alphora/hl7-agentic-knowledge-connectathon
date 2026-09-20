@@ -1,0 +1,21 @@
+{
+  "resourceType": "Patient",
+  "id": "steadi-examples-eligible-prior-fall-yes-eligible-patient",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/identifier/cel-test-patient",
+      "value": "steadi-examples-eligible-prior-fall-yes-eligible-patient"
+    }
+  ],
+  "name": [
+    {
+      "text": "Synthetic eligible STEADI patient"
+    }
+  ],
+  "birthDate": "1945-01-01"
+}

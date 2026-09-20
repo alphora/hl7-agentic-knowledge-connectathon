@@ -1,0 +1,21 @@
+{
+  "resourceType": "Patient",
+  "id": "steadi-examples-eligible-incomplete-respons-6e3f6668625b",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/identifier/cel-test-patient",
+      "value": "steadi-examples-eligible-incomplete-respons-6e3f6668625b"
+    }
+  ],
+  "name": [
+    {
+      "text": "Synthetic eligible STEADI patient"
+    }
+  ],
+  "birthDate": "1945-01-01"
+}

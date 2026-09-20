@@ -1,0 +1,21 @@
+{
+  "resourceType": "Patient",
+  "id": "steadi-examples-younger-than-65-younger-patient",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/identifier/cel-test-patient",
+      "value": "steadi-examples-younger-than-65-younger-patient"
+    }
+  ],
+  "name": [
+    {
+      "text": "Synthetic younger STEADI patient"
+    }
+  ],
+  "birthDate": "1965-06-16"
+}
