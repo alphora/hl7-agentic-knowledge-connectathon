@@ -41,7 +41,7 @@ public class BreastCancerProbe {
               throw new IllegalArgumentException("Unresolved local CQL: "+a.getUrl());
             a.setData(Files.readAllBytes(cql)); a.setUrl(null);
           }
-          if(l.hasName() && l.getName().equals("BreastCancerNeoadjuvant")) {
+          if(l.hasName() && l.getName().equals("BreastCancerNeoadjuvantInterface")) {
             if(target!=null)throw new IllegalArgumentException("Multiple target libraries");
             target=l;
           }
@@ -49,7 +49,7 @@ public class BreastCancerProbe {
         knowledge.addEntry().setResource(r);
       }
     }
-    if(target==null)throw new IllegalArgumentException("Missing generated BreastCancerNeoadjuvant library");
+    if(target==null)throw new IllegalArgumentException("Missing generated BreastCancerNeoadjuvantInterface library");
     InMemoryFhirRepository repo=new InMemoryFhirRepository(CTX,knowledge);
     var settings=org.opencds.cqf.fhir.cr.CrSettings.getDefault();
     settings.getEvaluationSettings().addRegisteredNamespace("hl7.fhir.uv.cql","http://hl7.org/fhir/uv/cql");

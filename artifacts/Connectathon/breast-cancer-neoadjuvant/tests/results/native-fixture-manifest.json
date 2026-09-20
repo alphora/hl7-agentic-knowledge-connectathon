@@ -12,7 +12,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-tnbc-t1c-n0/parameters/apply.json",
-          "sha256": "113221a291edef762f6f417217636fd5d48af1a925ef30d9ba5a6b87f462ee8d"
+          "sha256": "1482873a9493d0d7be362ba77d19fb6275b0efaa073f0ffb52fd5e7ab51194b1"
         }
       ],
       "activityCheckPass": true
@@ -27,7 +27,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-tnbc-t1b-n0-10mm/parameters/apply.json",
-          "sha256": "d2026e6ac734b4cdbfa915965e9f325bb6514fda2091a77c0251f76f814d9e85"
+          "sha256": "f289b9ce7a0609dd6f4bda7b092bb612722e9827f4c483fd0bdff4ed4e1e83e3"
         }
       ],
       "activityCheckPass": true
@@ -42,7 +42,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-tnbc-t1b-n1/parameters/apply.json",
-          "sha256": "e374482a2dcf69c16feb26095d95414a2e74cc5d53a02664aa73dac7dd7d6ae2"
+          "sha256": "f79f7ee0884740980d41f0645be3ca597a6ea8117ce418c4d908e1ea2e33a1a2"
         }
       ],
       "activityCheckPass": true
@@ -57,7 +57,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-her2-positive/parameters/apply.json",
-          "sha256": "3bcd81f235b36c033dc05a664c33f0da8109b6f56440450a97201bc275d36623"
+          "sha256": "74fca47c36c539dc8409d1cd1156b17f323bb30ff3a05a7efd43805415a67e2c"
         }
       ],
       "activityCheckPass": true
@@ -72,7 +72,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-er-positive/parameters/apply.json",
-          "sha256": "eb2359a382ea11b653f1f1e4baba7cc930a47d912acaa8619e1de05a4eb21cee"
+          "sha256": "a9f7799ed0f124e185396f5c8dd88e3f0a8f57e8943a7a91a3acf85f5293004e"
         }
       ],
       "activityCheckPass": true
@@ -87,7 +87,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-her2-missing/parameters/apply.json",
-          "sha256": "d631ebea575a7b15bb85694cacb14d4a08eec96b881401db7598c2e1e4d8f9ab"
+          "sha256": "cd7f726ad289e1385c540f70134c64e3207fea93837aabb58ff2069b08be655f"
         }
       ],
       "activityCheckPass": true
@@ -98,14 +98,14 @@
       "artifacts": [
         {
           "path": "tests/results/fhir/patient/patient-her2-equivocal/parameters/evaluation.json",
-          "sha256": "277bc25bf304105f3a86bc5471537f800bbeb202d857a4945c77a9e31c12a6e7"
+          "sha256": "62cb293a2c3a895c3d45b115a63add061a56e10b6332b3f16a3bbab9cefb9c72"
         },
         {
           "path": "tests/results/fhir/patient/patient-her2-equivocal/parameters/apply.json",
-          "sha256": "ea3e6bc58dbf6b3e50c24d3dd9d46da58c261fcb4c30ff508d5ed15e0eb4aa8b"
+          "sha256": "b6e8f55c31e9a35d30ff51238ac303ab9f9239ee286e1e70e3dee88d96a62572"
         }
       ],
-      "activityCheckPass": false
+      "activityCheckPass": true
     },
     {
       "case": "tnbc-t1b-nodes-missing",
@@ -117,7 +117,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-tnbc-t1b-nodes-missing/parameters/apply.json",
-          "sha256": "df82b81880df94311f82f09975ab305639aaba6ef7f7fdbfbd52b1d83cb89e7f"
+          "sha256": "4fdd457590f4abcf8b5f8379276ab66d1040acdc2df54c651285bf818f3afcf0"
         }
       ],
       "activityCheckPass": true
@@ -132,7 +132,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-tnbc-metastatic/parameters/apply.json",
-          "sha256": "7916ab9e4884eb89c66108da707587ffd0c925877143658cd4ee70f97ac9bff7"
+          "sha256": "99c23c967071ac51fac6b67a88ee9fbd2a1015965d612f385d4ff4ad0f6f5310"
         }
       ],
       "activityCheckPass": true
@@ -147,7 +147,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-tnbc-metastasis-missing/parameters/apply.json",
-          "sha256": "4bd482869546bfd250574560a6eb241c161cac4c96735547fc00121fb04a86c7"
+          "sha256": "04f7836a8b8ab8377eb481bd06dbe864fe1725b2ce3fc5530411196075eae425"
         }
       ],
       "activityCheckPass": true
@@ -162,7 +162,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-diagnosis-absent/parameters/apply.json",
-          "sha256": "b5a5aab4c3331ce9b62abb1de5fef0e5d5a15dc32bf5174d21d3f3f88b9cd98e"
+          "sha256": "68ca775f6f00472c1e66c9dfa8eda4d2643e8240203261fed5a7b9003bf36375"
         }
       ],
       "activityCheckPass": true
@@ -177,7 +177,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-tnbc-t1c-n0-cm/parameters/apply.json",
-          "sha256": "1bd9e242489e296049dfe1f4ee4a3c257c4a5ef8fff833c371c1195ac4256d7b"
+          "sha256": "88d0a51d7d7113f69055076ceea7f6fbb5176ba4d326d68b9c1c0255a57c10f0"
         }
       ],
       "activityCheckPass": true
@@ -192,7 +192,7 @@
         },
         {
           "path": "tests/results/fhir/patient/patient-tnbc-t2-n0/parameters/apply.json",
-          "sha256": "e7a646f92b507185d52c10bb675c7daff1262be5d76aee798b4821f5879ec8da"
+          "sha256": "cbe1f81e4623b2683483d55cb41b970614c974ccd71fc7b59f46c76705954f2d"
         }
       ],
       "activityCheckPass": true

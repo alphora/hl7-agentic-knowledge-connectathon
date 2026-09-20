@@ -1,39 +1,78 @@
 {
   "crlVersion": "6.4.2",
   "kitSchema": "2.13",
-  "crlSha256": "687e613f717d6a11c80b92158b36498d4d7ac5507741471b754aa4a6959a5464",
-  "celSha256": "988100c4727c48e4c0ebd976cf54437eccb8f4f1543ae14c8c3be8721ca80e38",
-  "nativeEvidence": "native-current/verification.json",
-  "typedAssertions": {
-    "passed": 91,
-    "total": 104
+  "crlSha256": "a415d04589a2f1d981d84692cbd6dbfa02afd4fefc6a8fe925ceede8bc338317",
+  "celSha256": "44bc7af528185e535f4d7be0fea857209e948535ff18b0f02a4dcfda8dc07b05",
+  "nativeEvidence": "native-corrected/verification.json",
+  "workflow": {
+    "activityChecksPassed": 13,
+    "activityChecksTotal": 13,
+    "executionErrors": 0,
+    "equivocal": "Recognized code preserved; definitive-result gate prevents guidance. No null resource invented.",
+    "diagnosisAbsent": "Population gate prevents guidance; downstream scalar exports are diagnostic only."
   },
-  "activityChecks": {
-    "passed": 12,
-    "total": 13
+  "standaloneExpressions": {
+    "passed": 97,
+    "total": 104,
+    "differences": [
+      {
+        "case": "her2-equivocal",
+        "expression": "Is Triple Negative",
+        "expected": null,
+        "actual": false,
+        "pass": false
+      },
+      {
+        "case": "her2-equivocal",
+        "expression": "Neoadjuvant TNBC Guidance Applicable",
+        "expected": null,
+        "actual": false,
+        "pass": false
+      },
+      {
+        "case": "diagnosis-absent",
+        "expression": "Has Nonmetastatic Disease",
+        "expected": null,
+        "actual": true,
+        "pass": false
+      },
+      {
+        "case": "diagnosis-absent",
+        "expression": "Is Triple Negative",
+        "expected": null,
+        "actual": true,
+        "pass": false
+      },
+      {
+        "case": "diagnosis-absent",
+        "expression": "Has Clinically Positive Nodes",
+        "expected": null,
+        "actual": false,
+        "pass": false
+      },
+      {
+        "case": "diagnosis-absent",
+        "expression": "Has Clinical T1c Or Higher",
+        "expected": null,
+        "actual": true,
+        "pass": false
+      },
+      {
+        "case": "diagnosis-absent",
+        "expression": "Meets Tumor Or Node Criterion",
+        "expected": null,
+        "actual": true,
+        "pass": false
+      }
+    ],
+    "interpretation": "Unchanged original assertions retained. Not a full standalone-expression conformance claim; do not infer a new language blocker from these scalar differences."
   },
-  "gaps": [
-    {
-      "id": "her2-equivocal",
-      "observed": "Original fixture returns publication-uninterpretable-value rather than a successful unknown result. All eight expression checks fail because evaluation contains an error; apply contains the same error.",
-      "expected": "Three-valued unknown for triple-negative status and applicability, no guidance, with remaining scalar expressions intact.",
-      "cause": "Selected finite-domain source recognizes positive/negative. Populated equivocal is not recognized; adding it as a recognized nonmember would produce false rather than the required unknown.",
-      "status": "Unresolved supported-authoring/tool capability; reported to CRL. No special null outcome or handwritten CQL added."
-    },
-    {
-      "id": "diagnosis-absent",
-      "observed": "Five tumor-specific named expressions return values rather than unknown; population and final applicability are false and no guidance is produced.",
-      "expected": "Tumor-specific inputs selected only for the indexed active confirmed diagnosis.",
-      "status": "No supported source focus/indexed Condition qualification found in current kit. Reported to CRL; no fixture alterations."
-    },
-    {
-      "id": "cel-coded-observations",
-      "observed": "75 emitted diagnostic Observations, 75 with valueString and 0 with valueCodeableConcept.",
-      "expected": "Original diagnostic fixtures use coded CodeableConcept values.",
-      "cause": "Selected external read-only concepts reject direct CEL facts. Bare Observation facts accept system|code value strings but do not emit CodeableConcept. Installed emitCel applies writeCodedLocalValue only for local-role concepts.",
-      "status": "CEL source validates and emits, but emitted facts do not establish diagnostic fixture equivalence or passing examples. Native verification uses unchanged supplied bundles."
-    }
-  ],
-  "sourceSelectionCoverage": "Original fixtures use final observations, at most one per code, no future records. They do not prove broader status/time/indexed-focus selection behavior.",
-  "celObservationExample": "tests\\data\\fhir\\patient\\breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa\\observation\\breast-cancer-examples-tnbc-without-distant-03c99e66d81d.json"
+  "cel": {
+    "codedObservations": 75,
+    "valueCodeableConcept": 75,
+    "valueString": 0,
+    "evidence": "../data/coded-observation-verification.json",
+    "metadataLimit": "External-coded facts carry local input meta.profile. No profile-conformance claim."
+  },
+  "supersedes": "Earlier broad null-output, diagnosis-workflow and CEL incapability claims withdrawn. Original failed-run evidence remains in native-current for comparison."
 }

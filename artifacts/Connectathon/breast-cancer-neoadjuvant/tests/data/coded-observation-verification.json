@@ -1,0 +1,450 @@
+{
+  "validation": {
+    "success": true,
+    "errors": [],
+    "warnings": [
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Estrogen Receptor Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 31,
+            "column": 0
+          },
+          "end": {
+            "line": 31,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Progesterone Receptor Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 51,
+            "column": 0
+          },
+          "end": {
+            "line": 51,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"HER2 Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 71,
+            "column": 0
+          },
+          "end": {
+            "line": 71,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Clinical M Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 98,
+            "column": 0
+          },
+          "end": {
+            "line": 98,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Clinical N Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 129,
+            "column": 0
+          },
+          "end": {
+            "line": 129,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Clinical T Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 164,
+            "column": 0
+          },
+          "end": {
+            "line": 164,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      }
+    ]
+  },
+  "emission": {
+    "success": true,
+    "caseCount": 13,
+    "resourceCount": 100,
+    "diagnostics": [
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Estrogen Receptor Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 31,
+            "column": 0
+          },
+          "end": {
+            "line": 31,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Progesterone Receptor Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 51,
+            "column": 0
+          },
+          "end": {
+            "line": 51,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"HER2 Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 71,
+            "column": 0
+          },
+          "end": {
+            "line": 71,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Clinical M Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 98,
+            "column": 0
+          },
+          "end": {
+            "line": 98,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Clinical N Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 129,
+            "column": 0
+          },
+          "end": {
+            "line": 129,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Clinical T Result\". Every answer in the referenced ValueSet will qualify.",
+        "location": {
+          "start": {
+            "line": 164,
+            "column": 0
+          },
+          "end": {
+            "line": 164,
+            "column": 0
+          }
+        },
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl"
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Estrogen Receptor Result\". Every answer in the referenced ValueSet will qualify.",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl",
+        "location": {
+          "start": {
+            "line": 31,
+            "column": 0
+          },
+          "end": {
+            "line": 31,
+            "column": 0
+          }
+        }
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Progesterone Receptor Result\". Every answer in the referenced ValueSet will qualify.",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl",
+        "location": {
+          "start": {
+            "line": 51,
+            "column": 0
+          },
+          "end": {
+            "line": 51,
+            "column": 0
+          }
+        }
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"HER2 Result\". Every answer in the referenced ValueSet will qualify.",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl",
+        "location": {
+          "start": {
+            "line": 71,
+            "column": 0
+          },
+          "end": {
+            "line": 71,
+            "column": 0
+          }
+        }
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Clinical M Result\". Every answer in the referenced ValueSet will qualify.",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl",
+        "location": {
+          "start": {
+            "line": 98,
+            "column": 0
+          },
+          "end": {
+            "line": 98,
+            "column": 0
+          }
+        }
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Clinical N Result\". Every answer in the referenced ValueSet will qualify.",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl",
+        "location": {
+          "start": {
+            "line": 129,
+            "column": 0
+          },
+          "end": {
+            "line": 129,
+            "column": 0
+          }
+        }
+      },
+      {
+        "kind": "answer-options-all-qualifying",
+        "severity": "warning",
+        "message": "No nonqualifying answers are declared for \"Clinical T Result\". Every answer in the referenced ValueSet will qualify.",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\crl\\breast-cancer.crl",
+        "location": {
+          "start": {
+            "line": 164,
+            "column": 0
+          },
+          "end": {
+            "line": 164,
+            "column": 0
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is a test expectation; no FHIR data resource is emitted for it.",
+        "caseSlug": "tnbc-clinical-t1c-n0-m0",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 62,
+            "column": 2
+          },
+          "end": {
+            "line": 62,
+            "column": 64
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is a test expectation; no FHIR data resource is emitted for it.",
+        "caseSlug": "small-tnbc-with-clinically-positive-nodes",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 178,
+            "column": 2
+          },
+          "end": {
+            "line": 178,
+            "column": 64
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is pause is a test expectation; no FHIR data resource is emitted for it. Native $apply must be checked separately.",
+        "caseSlug": "her2-result-missing",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 345,
+            "column": 2
+          },
+          "end": {
+            "line": 345,
+            "column": 43
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is pause is a test expectation; no FHIR data resource is emitted for it. Native $apply must be checked separately.",
+        "caseSlug": "her2-interpretation-unresolved",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 403,
+            "column": 2
+          },
+          "end": {
+            "line": 403,
+            "column": 43
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is pause is a test expectation; no FHIR data resource is emitted for it. Native $apply must be checked separately.",
+        "caseSlug": "small-tnbc-with-missing-nodal-assessment",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 454,
+            "column": 2
+          },
+          "end": {
+            "line": 454,
+            "column": 43
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is pause is a test expectation; no FHIR data resource is emitted for it. Native $apply must be checked separately.",
+        "caseSlug": "tnbc-without-distant-metastasis-assessment",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 563,
+            "column": 2
+          },
+          "end": {
+            "line": 563,
+            "column": 43
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is a test expectation; no FHIR data resource is emitted for it.",
+        "caseSlug": "tnbc-t1c-n0-m0-size-in-centimeters",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 673,
+            "column": 2
+          },
+          "end": {
+            "line": 673,
+            "column": 64
+          }
+        }
+      },
+      {
+        "kind": "result-deferred",
+        "severity": "warning",
+        "message": "result is \"Neoadjuvant Guidance\" is a test expectation; no FHIR data resource is emitted for it.",
+        "caseSlug": "tnbc-clinical-t2-n0-m0",
+        "filePath": "E:\\src\\hl7-agentic-knowledge-connectathon\\artifacts\\Connectathon\\breast-cancer-neoadjuvant\\src\\cel\\mv\\breast-cancer.cel",
+        "location": {
+          "start": {
+            "line": 731,
+            "column": 2
+          },
+          "end": {
+            "line": 731,
+            "column": 64
+          }
+        }
+      }
+    ]
+  },
+  "inspection": {
+    "diagnosticObservations": 75,
+    "valueCodeableConcept": 75,
+    "valueString": 0,
+    "exactCodeValueDateMultisetMatchesAuthoredCel": true,
+    "caseIdsPreserved": 13
+  },
+  "limits": [
+    "Native execution is separate.",
+    "Explicit source codes are preserved. Tool-generated resources advertise local input profiles whose code pattern is local; no manual FHIR repair applied."
+  ]
+}

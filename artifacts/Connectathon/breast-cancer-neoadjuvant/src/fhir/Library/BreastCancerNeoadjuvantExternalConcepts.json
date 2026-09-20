@@ -1,6 +1,6 @@
 {
   "resourceType": "Library",
-  "id": "BreastCancerNeoadjuvant",
+  "id": "BreastCancerNeoadjuvantExternalConcepts",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablelibrary",
@@ -26,10 +26,10 @@
       "valueCode": "structured"
     }
   ],
-  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvant",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvantExternalConcepts",
   "version": "0.0.0",
-  "name": "BreastCancerNeoadjuvant",
-  "title": "Breast Cancer Neoadjuvant",
+  "name": "BreastCancerNeoadjuvantExternalConcepts",
+  "title": "BreastCancerNeoadjuvantExternalConcepts",
   "status": "draft",
   "experimental": true,
   "date": "2026-09-20T00:00:00.000Z",
@@ -51,6 +51,10 @@
     {
       "type": "depends-on",
       "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-receptor-results"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/breast-cancer-neoadjuvant-definitive-receptor-results"
     },
     {
       "type": "depends-on",
@@ -108,7 +112,7 @@
   "content": [
     {
       "contentType": "text/cql",
-      "url": "../../cql/BreastCancerNeoadjuvant.cql"
+      "url": "../../cql/BreastCancerNeoadjuvantExternalConcepts.cql"
     }
   ]
 }

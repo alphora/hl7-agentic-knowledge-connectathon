@@ -1,0 +1,51 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "breast-cancer-neoadjuvant-breast-cancer-examples-he-1747590c4a48",
+  "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-her2-result-missing-patient-06",
+  "status": "in-progress",
+  "subject": {
+    "reference": "Patient/breast-cancer-examples-her2-result-missing-patient-06"
+  },
+  "item": [
+    {
+      "linkId": "1",
+      "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result",
+      "text": "What is the clinical M category?",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+              "valueReference": {
+                "reference": "http://cqframework.org/fhir/Device/clinical-quality-language"
+              }
+            }
+          ],
+          "linkId": "1.1",
+          "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result#Observation.value[x]",
+          "text": "Clinical M Result",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+                "code": "cM0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "2",
+      "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result",
+      "text": "What is the HER2 result?",
+      "item": [
+        {
+          "linkId": "2.1",
+          "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result#Observation.value[x]",
+          "text": "HER2 Result"
+        }
+      ]
+    }
+  ]
+}

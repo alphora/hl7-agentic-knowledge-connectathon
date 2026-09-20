@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-20T14:13:47.842861+00:00",
+  "capturedAt": "2026-09-20T14:30:41.567710+00:00",
   "tool": "validate_provenance",
   "crlVersion": "6.4.2",
   "input": {
@@ -9,13 +9,13 @@
   },
   "output": "validation-final.json",
   "sourceItemCount": 20,
-  "linkedReferenceCount": 19,
+  "linkedReferenceCount": 22,
   "textRangesIndependentlyMatched": true,
   "files": {
-    "src\\provenance\\breast-cancer-neoadjuvant.json": "9aa4243c29cca47bdc6948e43226729d64041645abd8c4c5a8e3a857a6f2dd65",
-    "src\\crl\\breast-cancer.crl": "687e613f717d6a11c80b92158b36498d4d7ac5507741471b754aa4a6959a5464",
-    "src\\cel\\mv\\breast-cancer.cel": "988100c4727c48e4c0ebd976cf54437eccb8f4f1543ae14c8c3be8721ca80e38",
+    "src\\provenance\\breast-cancer-neoadjuvant.json": "a2310ca30fb3b8cefe5988f5742a480aaba5846f4ae31e593a962add35d541c8",
+    "src\\crl\\breast-cancer.crl": "a415d04589a2f1d981d84692cbd6dbfa02afd4fefc6a8fe925ceede8bc338317",
+    "src\\cel\\mv\\breast-cancer.cel": "44bc7af528185e535f4d7be0fea857209e948535ff18b0f02a4dcfda8dc07b05",
     "src\\anchor-source\\breast-cancer-neoadjuvant.txt": "cb6fc891d28bdc01cb96b5533d0f74f77b0256681b93660d57b7df4b5af84eed"
   },
-  "limit": "Final refresh against stable CRL/CEL hashes. Source links do not establish native behavior. Native results are 91/104 expression assertions and12/13 activity/error checks; equivocal and diagnosis-absent failures remain open."
+  "limit": "Corrected population -> definitive HER2 -> subtype and tumor/node decision. Recognized equivocal and typed CodeableConcept CEL. Native original-fixture rerun is owned separately at tests/verification/native-corrected; historical native-current results are not this model. Standalone scalar mismatches are diagnostics, not proof of wrong guidance."
 }

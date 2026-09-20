@@ -3,7 +3,7 @@ from pathlib import Path
 import json,hashlib,shutil
 root=Path(__file__).resolve().parents[2]
 fixtures=root/'src/source/challenge/use-cases/breast-cancer/test-bundles'
-raw=root/'tests/verification/native-current'
+raw=root/'tests/verification/native-corrected'
 manifest=json.loads((fixtures/'manifest.json').read_text(encoding='utf-8'))
 checks=json.loads((raw/'verification.json').read_text(encoding='utf-8'))
 results=[]

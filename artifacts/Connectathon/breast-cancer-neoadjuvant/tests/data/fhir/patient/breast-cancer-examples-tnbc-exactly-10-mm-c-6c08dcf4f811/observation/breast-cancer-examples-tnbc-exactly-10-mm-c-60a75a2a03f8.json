@@ -3,7 +3,7 @@
   "id": "breast-cancer-examples-tnbc-exactly-10-mm-c-60a75a2a03f8",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
+      "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-estrogen-receptor-result"
     ]
   },
   "subject": {
@@ -17,7 +17,14 @@
       }
     ]
   },
-  "valueString": "http://loinc.org|LA6577-6",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "LA6577-6"
+      }
+    ]
+  },
   "effectiveDateTime": "2026-06-01",
   "status": "final",
   "category": [

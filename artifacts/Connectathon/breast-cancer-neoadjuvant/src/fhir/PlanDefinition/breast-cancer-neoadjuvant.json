@@ -44,12 +44,12 @@
     ]
   },
   "library": [
-    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvant"
+    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvantInterface"
   ],
   "action": [
     {
-      "title": "Neoadjuvant TNBC Guidance Applicable",
-      "description": "Neoadjuvant TNBC Guidance Applicable",
+      "title": "In Neoadjuvant Review Population",
+      "description": "In Neoadjuvant Review Population",
       "code": [
         {
           "coding": [
@@ -65,11 +65,151 @@
           "kind": "applicability",
           "expression": {
             "language": "text/cql-identifier",
-            "expression": "CRL branch CriterionRef L169C7"
+            "expression": "CRL branch CriterionRef L196C7"
           }
         }
       ],
-      "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant-oncology-r-159548add3d4-recommendation"
+      "input": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+              "valueString": "What is the clinical M category?"
+            }
+          ],
+          "type": "Observation",
+          "profile": [
+            "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "title": "HER2 Result Is Definitive",
+          "description": "HER2 Result Is Definitive",
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                  "code": "guideline-based-care"
+                }
+              ]
+            }
+          ],
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "CRL branch Ref L197C9"
+              }
+            }
+          ],
+          "input": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                  "valueString": "What is the HER2 result?"
+                }
+              ],
+              "type": "Observation",
+              "profile": [
+                "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result"
+              ]
+            }
+          ],
+          "action": [
+            {
+              "title": "Is Triple Negative and Meets Tumor Or Node Criterion",
+              "description": "Is Triple Negative and Meets Tumor Or Node Criterion",
+              "code": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                      "code": "guideline-based-care"
+                    }
+                  ]
+                }
+              ],
+              "condition": [
+                {
+                  "kind": "applicability",
+                  "expression": {
+                    "language": "text/cql-identifier",
+                    "expression": "CRL branch And L198C12"
+                  }
+                }
+              ],
+              "input": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                      "valueString": "What is the estrogen receptor (ER) result?"
+                    }
+                  ],
+                  "type": "Observation",
+                  "profile": [
+                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-estrogen-receptor-result"
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                      "valueString": "What is the progesterone receptor (PR) result?"
+                    }
+                  ],
+                  "type": "Observation",
+                  "profile": [
+                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-progesterone-receptor-result"
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                      "valueString": "What is the HER2 result?"
+                    }
+                  ],
+                  "type": "Observation",
+                  "profile": [
+                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result"
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                      "valueString": "What is the clinical T category?"
+                    }
+                  ],
+                  "type": "Observation",
+                  "profile": [
+                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-t-result"
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                      "valueString": "What is the clinical N category?"
+                    }
+                  ],
+                  "type": "Observation",
+                  "profile": [
+                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-n-result"
+                  ]
+                }
+              ],
+              "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/breast-cancer-neoadjuvant-oncology-r-159548add3d4-recommendation"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

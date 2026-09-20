@@ -36,7 +36,7 @@
   "publisher": "Alphora",
   "description": "Oncology Review Guidance",
   "library": [
-    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvant"
+    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvantInterface"
   ],
   "kind": "CommunicationRequest",
   "profile": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-communicationrequest",

@@ -1,0 +1,39 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "breast-cancer-neoadjuvant-breast-cancer-examples-re-b3580b39bddb",
+  "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-receptor-and-staging-af2f82921a0e",
+  "status": "in-progress",
+  "subject": {
+    "reference": "Patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e"
+  },
+  "item": [
+    {
+      "linkId": "1",
+      "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result",
+      "text": "What is the clinical M category?",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+              "valueReference": {
+                "reference": "http://cqframework.org/fhir/Device/clinical-quality-language"
+              }
+            }
+          ],
+          "linkId": "1.1",
+          "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result#Observation.value[x]",
+          "text": "Clinical M Result",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+                "code": "cM0"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

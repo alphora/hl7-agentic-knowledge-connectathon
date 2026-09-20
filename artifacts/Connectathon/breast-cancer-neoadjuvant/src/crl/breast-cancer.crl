@@ -10,6 +10,12 @@ terminology "Receptor Results":
 - system is `http://loinc.org`.
 - code is `LA6577-6` display is `Negative`.
 - code is `LA6576-8` display is `Positive`.
+- system is `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture`.
+- code is `equivocal` display is `Equivocal ? interpretation unresolved`.
+terminology "Definitive Receptor Results":
+- system is `http://loinc.org`.
+- code is `LA6577-6` display is `Negative`.
+- code is `LA6576-8` display is `Positive`.
 terminology "Negative Receptor Result":
 - system is `http://loinc.org`.
 - code is `LA6577-6` display is `Negative`.
@@ -20,7 +26,9 @@ concept "Estrogen Receptor Result":
 - shape is Record.
 - type is Observation.
 - value type is CodeableConcept.
-- value domain is "Receptor Results".
+- code is `estrogen-receptor-result`.
+- value domain is answer options.
+- value from is "Receptor Results".
 - shape reduction is most recent.
 - source representation:
   - type is Observation.
@@ -38,7 +46,9 @@ concept "Progesterone Receptor Result":
 - shape is Record.
 - type is Observation.
 - value type is CodeableConcept.
-- value domain is "Receptor Results".
+- code is `progesterone-receptor-result`.
+- value domain is answer options.
+- value from is "Receptor Results".
 - shape reduction is most recent.
 - source representation:
   - type is Observation.
@@ -56,7 +66,9 @@ concept "HER2 Result":
 - shape is Record.
 - type is Observation.
 - value type is CodeableConcept.
-- value domain is "Receptor Results".
+- code is `her2-result`.
+- value domain is answer options.
+- value from is "Receptor Results".
 - shape reduction is most recent.
 - source representation:
   - type is Observation.
@@ -81,7 +93,9 @@ concept "Clinical M Result":
 - shape is Record.
 - type is Observation.
 - value type is CodeableConcept.
-- value domain is "Clinical M Categories".
+- code is `clinical-m-result`.
+- value domain is answer options.
+- value from is "Clinical M Categories".
 - shape reduction is most recent.
 - source representation:
   - type is Observation.
@@ -110,7 +124,9 @@ concept "Clinical N Result":
 - shape is Record.
 - type is Observation.
 - value type is CodeableConcept.
-- value domain is "Clinical N Categories".
+- code is `clinical-n-result`.
+- value domain is answer options.
+- value from is "Clinical N Categories".
 - shape reduction is most recent.
 - source representation:
   - type is Observation.
@@ -143,7 +159,9 @@ concept "Clinical T Result":
 - shape is Record.
 - type is Observation.
 - value type is CodeableConcept.
-- value domain is "Clinical T Categories".
+- code is `clinical-t-result`.
+- value domain is answer options.
+- value from is "Clinical T Categories".
 - shape reduction is most recent.
 - source representation:
   - type is Observation.
@@ -154,6 +172,15 @@ concept "Clinical T1c Or Higher Result":
 - value type is boolean.
 - definition is "Clinical T Result" in "Clinical T Qualifying Categories".
 - shape reduction is most recent.
+// Preserve the selected coded result. Only definitive receptor results enter
+// the positive/negative assessment; equivocal is unresolved, not a negative.
+concept "HER2 Result Is Definitive":
+- shape is Record.
+- type is Observation.
+- value type is boolean.
+- definition is "HER2 Result" in "Definitive Receptor Results".
+- shape reduction is most recent.
+
 criterion "Has Nonmetastatic Disease": - when ("Nonmetastatic Disease Result").
 criterion "Has Clinically Positive Nodes": - when ("Clinically Positive Nodes Result").
 criterion "Has Clinical T1c Or Higher": - when ("Clinical T1c Or Higher Result").
@@ -166,4 +193,26 @@ activity "Oncology Review Guidance":
 - request CPGCommunicationRequest.
 - with `The documented nonmetastatic triple-negative breast cancer with clinically positive nodes or at least clinical T1c disease meets the supplied neoadjuvant guidance criterion for oncology review. This does not establish chemotherapy fitness or authorize a medication order. The ASCO 2022 immunotherapy update concerns a distinct high-risk population; this review trigger does not determine pembrolizumab eligibility.`.
 decision "Neoadjuvant Guidance":
-- when "Neoadjuvant TNBC Guidance Applicable" then recommend activity "Oncology Review Guidance".
+- when "In Neoadjuvant Review Population" then:
+  - when "HER2 Result Is Definitive" then:
+    - when ("Is Triple Negative" and "Meets Tumor Or Node Criterion") then recommend activity "Oncology Review Guidance".
+  end.
+end.
+
+presentation for "Estrogen Receptor Result":
+- question text is "What is the estrogen receptor (ER) result?".
+
+presentation for "Progesterone Receptor Result":
+- question text is "What is the progesterone receptor (PR) result?".
+
+presentation for "HER2 Result":
+- question text is "What is the HER2 result?".
+
+presentation for "Clinical M Result":
+- question text is "What is the clinical M category?".
+
+presentation for "Clinical N Result":
+- question text is "What is the clinical N category?".
+
+presentation for "Clinical T Result":
+- question text is "What is the clinical T category?".

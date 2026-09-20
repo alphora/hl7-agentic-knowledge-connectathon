@@ -1,0 +1,23 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-f9b2c974c483",
+  "questionnaire": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa",
+  "status": "in-progress",
+  "subject": {
+    "reference": "Patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa"
+  },
+  "item": [
+    {
+      "linkId": "1",
+      "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result",
+      "text": "What is the clinical M category?",
+      "item": [
+        {
+          "linkId": "1.1",
+          "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-clinical-m-result#Observation.value[x]",
+          "text": "Clinical M Result"
+        }
+      ]
+    }
+  ]
+}

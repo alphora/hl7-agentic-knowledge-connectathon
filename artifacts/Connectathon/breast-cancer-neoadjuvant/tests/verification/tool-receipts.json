@@ -172,5 +172,6 @@
     "errors": [],
     "warnings": []
   },
-  "note": "Selected actual tool result fields; native execution is a separate verification."
+  "note": "Selected actual tool result fields; native execution is a separate verification.",
+  "status": "Historical pre-correction tool receipts; current emission and typed CEL evidence recorded in correction-receipt.json and tests/data/coded-observation-verification.json"
 }

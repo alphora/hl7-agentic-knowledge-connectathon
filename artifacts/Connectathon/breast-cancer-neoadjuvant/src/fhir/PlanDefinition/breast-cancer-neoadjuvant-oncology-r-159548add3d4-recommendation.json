@@ -44,7 +44,7 @@
     ]
   },
   "library": [
-    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvant"
+    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/BreastCancerNeoadjuvantInterface"
   ],
   "action": [
     {

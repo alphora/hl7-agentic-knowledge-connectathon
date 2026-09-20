@@ -5,9 +5,9 @@
   "clusterCount": 1,
   "diagnosticCountsByKind": {
     "deferred-disposition-path": 1,
-    "overreach-baseline": 18,
-    "attribution-needed": 2,
-    "drives-determination-hint": 1
+    "overreach-baseline": 21,
+    "attribution-needed": 4,
+    "drives-determination-hint": 3
   },
   "merged": false,
   "advisories": [
@@ -85,6 +85,24 @@
           {
             "lib": "Breast Cancer Neoadjuvant",
             "kind": "concept",
+            "name": "Clinical T1c Or Higher Result",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Clinically Positive Nodes Result",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
             "name": "Diagnosis Records",
             "nodeKind": "leaf",
             "ownership": "policy-owned",
@@ -121,6 +139,15 @@
           {
             "lib": "Breast Cancer Neoadjuvant",
             "kind": "concept",
+            "name": "HER2 Result Is Definitive",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
             "name": "HER2 Result",
             "nodeKind": "leaf",
             "ownership": "policy-owned",
@@ -139,37 +166,19 @@
           {
             "lib": "Breast Cancer Neoadjuvant",
             "kind": "concept",
-            "name": "Has Clinical T1c Or Higher",
-            "nodeKind": "leaf",
-            "ownership": "policy-owned",
-            "relation": "implements-criterion",
-            "status": "provisional"
-          },
-          {
-            "lib": "Breast Cancer Neoadjuvant",
-            "kind": "concept",
-            "name": "Has Clinically Positive Nodes",
-            "nodeKind": "leaf",
-            "ownership": "policy-owned",
-            "relation": "implements-criterion",
-            "status": "provisional"
-          },
-          {
-            "lib": "Breast Cancer Neoadjuvant",
-            "kind": "concept",
-            "name": "Has Nonmetastatic Disease",
-            "nodeKind": "leaf",
-            "ownership": "policy-owned",
-            "relation": "implements-criterion",
-            "status": "provisional"
-          },
-          {
-            "lib": "Breast Cancer Neoadjuvant",
-            "kind": "concept",
             "name": "Indexed Breast Cancer",
             "nodeKind": "leaf",
             "ownership": "policy-owned",
             "relation": "defines-concept",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "concept",
+            "name": "Nonmetastatic Disease Result",
+            "nodeKind": "leaf",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
             "status": "provisional"
           },
           {
@@ -204,7 +213,27 @@
             "lib": "Breast Cancer Neoadjuvant",
             "kind": "decision",
             "name": "Neoadjuvant Guidance",
-            "nodeId": "when[0]/action[0]",
+            "nodeId": "when[0]/when[0]",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "decision",
+            "name": "Neoadjuvant Guidance",
+            "nodeId": "when[0]/when[0]/when[0]",
+            "nodeKind": "decision-node",
+            "ownership": "policy-owned",
+            "relation": "implements-criterion",
+            "status": "provisional"
+          },
+          {
+            "lib": "Breast Cancer Neoadjuvant",
+            "kind": "decision",
+            "name": "Neoadjuvant Guidance",
+            "nodeId": "when[0]/when[0]/when[0]/action[0]",
             "nodeKind": "decision-node",
             "ownership": "policy-owned",
             "relation": "recommends-disposition",

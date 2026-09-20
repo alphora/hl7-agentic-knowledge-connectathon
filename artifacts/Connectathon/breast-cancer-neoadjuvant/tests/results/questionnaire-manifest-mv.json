@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "celLibrary": "mv",
+  "useCase": "prior-auth",
+  "generatedAt": "2026-09-20T14:29:47.447Z",
+  "provenance": {
+    "crlVersion": "6.4.2",
+    "producerJarSha256": "9870fc867547f65518c5cd6e698ace77b60a9e98797ed38330c25d06cbf5cb2e",
+    "inputClock": "2026-09-20T14:29:44.523Z",
+    "runtimeSha256": "bcb62a2b60bfbcda103c003883744e0df865db5a02393f09d7bfc38a25a1d020",
+    "definitionClosureSha256": "f52c6f714c29ec627614e4bb79a12809cd1077c33829cf4a9dd4174a29ac152e"
+  },
+  "cases": [
+    {
+      "caseName": "TNBC, clinical T1c N0 M0",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-c820b6ab9578",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-tn-c820b6ab9578.json",
+          "sha256": "a973b5088398f2984b1c21bbb0f011a29fc2bb66d1f6cfbc3ba15e1337037470",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-c820b6ab9578",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-clinical-t1c-n0-1d43af0886a8/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-tn-c820b6ab9578.json",
+          "sha256": "e773e5696f3409f4094f0cb102fcdf5c7560ac67931140df90df69cf968e24bf",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-01",
+      "inputSha256": "7ec782fb54abd22d48116e5ff0f83acf40daa27aa730a01162a8719621deb497",
+      "producedAt": "2026-09-20T14:29:47.451Z"
+    },
+    {
+      "caseName": "TNBC, exactly 10 mm, clinical T1b N0 M0",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-bcb7714718f3",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-tn-bcb7714718f3.json",
+          "sha256": "d4a1116f7a17d869130ad753b7f90b93b71df6f914c0b48fba54e586f614b4d8",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-bcb7714718f3",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-exactly-10-mm-c-6c08dcf4f811/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-tn-bcb7714718f3.json",
+          "sha256": "867b649a30ab51c911052b87e1e639824edfc7e99f8817f826c0f92fb41258ee",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-02",
+      "inputSha256": "9a13c5465be1cfbfe4682c2383b6263ed3a5dab60a61d1b9cef7b88ab409f1f3",
+      "producedAt": "2026-09-20T14:30:11.842Z"
+    },
+    {
+      "caseName": "Small TNBC with clinically positive nodes",
+      "compartmentDir": "patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-sm-19cfea5fe003",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-sm-19cfea5fe003.json",
+          "sha256": "166f0d390d516bdefdcdccf28980e4495c6a7fd6b1849c1fc6e8d9deefae39f9",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-sm-19cfea5fe003",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-small-tnbc-with-clin-02a03b7d507e/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-sm-19cfea5fe003.json",
+          "sha256": "0a6eb2936fd21df70cd0a73a0074caaae690e10791a7432d00d316237f976b2e",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-03",
+      "inputSha256": "22b4b7243a8e0a5d8f05fae2c5c20f710818f3cfedf3b594ea327acc2a65d972",
+      "producedAt": "2026-09-20T14:30:36.601Z"
+    },
+    {
+      "caseName": "HER2-positive breast cancer",
+      "compartmentDir": "patient/breast-cancer-examples-her2-positive-breast-ba5868f92567",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-he-4dc1ce607784",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-her2-positive-breast-ba5868f92567/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-he-4dc1ce607784.json",
+          "sha256": "2d76ec3df1654737aa0940f12445c311416c3c378c0a0f4954d0a8efb192f52c",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-he-4dc1ce607784",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-her2-positive-breast-ba5868f92567/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-he-4dc1ce607784.json",
+          "sha256": "2b3ae57e147b96a9533e6f5e4143af57ae53f1467e544095ef82ef6a4ed01e11",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-04",
+      "inputSha256": "6b458d8b471c8654e03533f074777737fa8fd01e993a65b83161909f6ebbc3f7",
+      "producedAt": "2026-09-20T14:31:03.477Z"
+    },
+    {
+      "caseName": "ER-positive breast cancer",
+      "compartmentDir": "patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-er-e662863f0cb1",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-er-e662863f0cb1.json",
+          "sha256": "b2d47f11000199a33e43c3511d10dfaaaba9c0e279d0acd8378338dc968a8d5a",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-er-e662863f0cb1",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-er-positive-breast-c-aef7012b8052/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-er-e662863f0cb1.json",
+          "sha256": "561cd41e91a41e68b5f1f95f2d047a4fd950276d6ed7171a2485daac2d9e5c34",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-05",
+      "inputSha256": "0c8f79f2002b9e85134ccc9664de03e6fc904f78041a78ff22fcc5781c3fbf8d",
+      "producedAt": "2026-09-20T14:31:25.687Z"
+    },
+    {
+      "caseName": "HER2 result missing",
+      "compartmentDir": "patient/breast-cancer-examples-her2-result-missing-patient-06",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-he-1747590c4a48",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-her2-result-missing-patient-06/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-he-1747590c4a48.json",
+          "sha256": "d99f32ad364cc48c5227025db71fd99c3efe0bb77cf0bf5939c70bd9f9c7bfcf",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-he-1747590c4a48",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-her2-result-missing-patient-06/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-he-1747590c4a48.json",
+          "sha256": "95062b8db1c5153656c2f6a1e44675680e15075159e9b11a68ea5d12c3dee644",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-06",
+      "inputSha256": "b1cc3921b758195b4af5aafcb229b1eacc7556115f061df4f5ea22c2e8114fd1",
+      "producedAt": "2026-09-20T14:31:46.416Z"
+    },
+    {
+      "caseName": "HER2 interpretation unresolved",
+      "compartmentDir": "patient/breast-cancer-examples-her2-interpretation-8360365ea43d",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-he-9c46c71dbfa0",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-her2-interpretation-8360365ea43d/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-he-9c46c71dbfa0.json",
+          "sha256": "abf9a22a7985907f123f867ee39b614458f3cad71cf412b7de4eb26e7026cc39",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-he-9c46c71dbfa0",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-her2-interpretation-8360365ea43d/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-he-9c46c71dbfa0.json",
+          "sha256": "12b58fb1c0bee2c8e573e5a8cb6ce14e8ded75fa9739fb3073405f8c8edbddb1",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-07",
+      "inputSha256": "b78a306d7795612fa272faeb760373f50cdf50dab928a2206f9e5a39dfde254c",
+      "producedAt": "2026-09-20T14:32:03.504Z"
+    },
+    {
+      "caseName": "Small TNBC with missing nodal assessment",
+      "compartmentDir": "patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-sm-3598e9cd155e",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-sm-3598e9cd155e.json",
+          "sha256": "f71d82d69b019630a7517154b5e39ed8f9eee91f7b105fc35b57e650c3077223",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-sm-3598e9cd155e",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-small-tnbc-with-miss-a9748971d873/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-sm-3598e9cd155e.json",
+          "sha256": "049cadd674d0569a63083cfe9b7a40f1da63580f6106de98c32cf67842556a2a",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-08",
+      "inputSha256": "827270314a37c26fcae49426674566f6a979785b0fe984fccffb590494792a29",
+      "producedAt": "2026-09-20T14:32:19.599Z"
+    },
+    {
+      "caseName": "TNBC with distant metastasis",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-a12b6caca30f",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-tn-a12b6caca30f.json",
+          "sha256": "607895da4505eaeb790f8271304d1e3c1d9143edf7971ceb1a0c8fa9ff0090c5",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-a12b6caca30f",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-with-distant-me-7c50d0ec7346/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-tn-a12b6caca30f.json",
+          "sha256": "057028a9a3d4cc5c673e4af3a45c5fea6701152ed226229da1efb9109e2b46ac",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-09",
+      "inputSha256": "5af6fc41c019741c4041a1f61e953dccc3b1cb772f07f71e5c51e003f5c1fec9",
+      "producedAt": "2026-09-20T14:32:37.301Z"
+    },
+    {
+      "caseName": "TNBC without distant-metastasis assessment",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-f9b2c974c483",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-tn-f9b2c974c483.json",
+          "sha256": "763efe954129b97cfd623a1eaa140a3c0581c24839b0a16b077dfcb3247febd9",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-f9b2c974c483",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-without-distant-0aa361f6fcaa/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-tn-f9b2c974c483.json",
+          "sha256": "666da2a2b8038ac8f85ec801255a0c61979d1e125a696fed3bc78570407e12f4",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-10",
+      "inputSha256": "233448778ef1365e3b157fbb3cb9009eb9a67b1f9c44c2f1bd1fc814db62d307",
+      "producedAt": "2026-09-20T14:32:56.737Z"
+    },
+    {
+      "caseName": "Receptor and staging results without cancer diagnosis",
+      "compartmentDir": "patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-re-b3580b39bddb",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-re-b3580b39bddb.json",
+          "sha256": "5c3bf4c8daa041cedd7d837119c13ee92039763f9ae32b1e8ca29d6f73647f6e",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-re-b3580b39bddb",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-receptor-and-staging-af2f82921a0e/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-re-b3580b39bddb.json",
+          "sha256": "3ab44e13d376267d2242917ee8eec8483917eb3e36a233ce1c6bc1a5a3b683a1",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-11",
+      "inputSha256": "0f05145a2d6e3c528410a7b26fc53b2365aa16514a023e485ab83667b7309048",
+      "producedAt": "2026-09-20T14:33:13.046Z"
+    },
+    {
+      "caseName": "TNBC, T1c N0 M0, size in centimeters",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-899cd41c977a",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-tn-899cd41c977a.json",
+          "sha256": "dac14d1b7aab86cd6bf3e2a878d9aa3971050661c449e5e5da57691c70054424",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-899cd41c977a",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-t1c-n0-m0-size-bc67300c3d77/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-tn-899cd41c977a.json",
+          "sha256": "159920484889c730d4a56fc2ac5ed011034e8869f1819db14ae9a4c5952e8960",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-12",
+      "inputSha256": "e41e14d02de972ee4c635bd281ba2eb26086651a1a061c0c05b5c45204e6eb60",
+      "producedAt": "2026-09-20T14:33:31.132Z"
+    },
+    {
+      "caseName": "TNBC, clinical T2 N0 M0",
+      "compartmentDir": "patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13",
+      "state": "generated",
+      "artifacts": [
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-d4fdd9e90ac5",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13/questionnaire/breast-cancer-neoadjuvant-breast-cancer-examples-tn-d4fdd9e90ac5.json",
+          "sha256": "1f3415a4f8aeb2de200d4f5d9890273b576067e0093c7a500d417af9321be2a2",
+          "resourceType": "Questionnaire"
+        },
+        {
+          "id": "breast-cancer-neoadjuvant-breast-cancer-examples-tn-d4fdd9e90ac5",
+          "path": "tests/results/fhir/patient/breast-cancer-examples-tnbc-clinical-t2-n0-m0-patient-13/questionnaireresponse/breast-cancer-neoadjuvant-breast-cancer-examples-tn-d4fdd9e90ac5.json",
+          "sha256": "7c802e006de711f24a034c6a1a1b81e94970b9a345725eff1e4564ed54926478",
+          "resourceType": "QuestionnaireResponse"
+        }
+      ],
+      "sourceFile": "src/cel/mv/breast-cancer.cel",
+      "caseId": "bc-13",
+      "inputSha256": "ecd73077a27a4692e2269b7c2d201c69ee147e9044e3fae36b0da05b5fd88ee1",
+      "producedAt": "2026-09-20T14:33:58.551Z"
+    }
+  ]
+}

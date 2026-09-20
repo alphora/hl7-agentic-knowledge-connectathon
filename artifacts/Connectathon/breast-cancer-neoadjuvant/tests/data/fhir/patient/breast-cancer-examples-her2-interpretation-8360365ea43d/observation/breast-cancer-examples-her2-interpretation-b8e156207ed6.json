@@ -3,7 +3,7 @@
   "id": "breast-cancer-examples-her2-interpretation-b8e156207ed6",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-simple-observation"
+      "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/breast-cancer-neoadjuvant-her2-result"
     ]
   },
   "subject": {
@@ -17,7 +17,14 @@
       }
     ]
   },
-  "valueString": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture|equivocal",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "equivocal"
+      }
+    ]
+  },
   "effectiveDateTime": "2026-06-01",
   "status": "final",
   "category": [

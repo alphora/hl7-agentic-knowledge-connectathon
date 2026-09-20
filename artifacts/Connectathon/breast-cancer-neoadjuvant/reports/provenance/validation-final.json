@@ -180,7 +180,7 @@
       "kind": "cockpit-correspondence",
       "severity": "error",
       "class": "integrity",
-      "message": "cockpit correspondence unchecked for case \"TNBC, clinical T1c N0 M0\": run-error"
+      "message": "cockpit correspondence unchecked for case \"TNBC, clinical T1c N0 M0\": no-produced-action"
     },
     {
       "kind": "cockpit-correspondence",
@@ -192,7 +192,7 @@
       "kind": "cockpit-correspondence",
       "severity": "error",
       "class": "integrity",
-      "message": "cockpit correspondence unchecked for case \"Small TNBC with clinically positive nodes\": run-error"
+      "message": "cockpit correspondence unchecked for case \"Small TNBC with clinically positive nodes\": no-produced-action"
     },
     {
       "kind": "cockpit-correspondence",
@@ -210,19 +210,19 @@
       "kind": "cockpit-correspondence",
       "severity": "error",
       "class": "integrity",
-      "message": "cockpit correspondence unchecked for case \"HER2 result missing\": run-error"
+      "message": "cockpit correspondence unchecked for case \"HER2 result missing\": no-produced-action"
     },
     {
       "kind": "cockpit-correspondence",
       "severity": "error",
       "class": "integrity",
-      "message": "cockpit correspondence unchecked for case \"HER2 interpretation unresolved\": run-error"
+      "message": "cockpit correspondence unchecked for case \"HER2 interpretation unresolved\": no-produced-action"
     },
     {
       "kind": "cockpit-correspondence",
       "severity": "error",
       "class": "integrity",
-      "message": "cockpit correspondence unchecked for case \"Small TNBC with missing nodal assessment\": run-error"
+      "message": "cockpit correspondence unchecked for case \"Small TNBC with missing nodal assessment\": no-produced-action"
     },
     {
       "kind": "cockpit-correspondence",
@@ -234,7 +234,7 @@
       "kind": "cockpit-correspondence",
       "severity": "error",
       "class": "integrity",
-      "message": "cockpit correspondence unchecked for case \"TNBC without distant-metastasis assessment\": run-error"
+      "message": "cockpit correspondence unchecked for case \"TNBC without distant-metastasis assessment\": no-produced-action"
     },
     {
       "kind": "cockpit-correspondence",
@@ -246,13 +246,13 @@
       "kind": "cockpit-correspondence",
       "severity": "error",
       "class": "integrity",
-      "message": "cockpit correspondence unchecked for case \"TNBC, T1c N0 M0, size in centimeters\": run-error"
+      "message": "cockpit correspondence unchecked for case \"TNBC, T1c N0 M0, size in centimeters\": no-produced-action"
     },
     {
       "kind": "cockpit-correspondence",
       "severity": "error",
       "class": "integrity",
-      "message": "cockpit correspondence unchecked for case \"TNBC, clinical T2 N0 M0\": run-error"
+      "message": "cockpit correspondence unchecked for case \"TNBC, clinical T2 N0 M0\": no-produced-action"
     }
   ],
   "errorCount": 14,

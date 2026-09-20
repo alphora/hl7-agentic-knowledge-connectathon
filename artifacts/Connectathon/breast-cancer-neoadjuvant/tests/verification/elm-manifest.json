@@ -1,15 +1,64 @@
 {
   "producer": "CQL-to-ELM JVM4.8.0",
-  "inputCql": {
-    "BreastCancerNeoadjuvant.cql": "9dfbfbea410e8d7bc3620e5bd59e7039482dde76733d800e2f7895496e4951b5",
-    "CaseFeatureCommon.cql": "31fea89b8cabeee56bed5470b6ab5e2bffdf0dd7267f163ac6beb5cf5203ee7a",
-    "CRLCommon.cql": "f4cef711204cf9ec8c7b25666d39139eef8d501f588f39bbd7a34b0b5bd807ca",
-    "FHIRHelpers.cql": "6748661c16fe66dd07a68f07f77f7fea44e8b933d265dcc3c575964ba8329591"
+  "errors": 0,
+  "warnings": {
+    "BreastCancerNeoadjuvantExternalElements": 6,
+    "FHIRHelpers": 3
   },
-  "outputElm": {
-    "BreastCancerNeoadjuvant.json": "363a7c422874525765d23b203d915899939206c77d2334287588bc57c3366022",
-    "CaseFeatureCommon.json": "66a6f6e75276b9c775e42d0104be1b791d7901be31f6f86206f014014bebeb39",
-    "CRLCommon.json": "f1b27c0a18fce17d9b3ee0e1ccf8035902a289ba028675a920af987fbcae46e6",
-    "FHIRHelpers.json": "80a799d4066b51b1e80f9461b4a9a58f0b7f5c9b05d05f883311581127c2d606"
-  }
+  "files": [
+    {
+      "cql": "src/cql/BreastCancerNeoadjuvantExternalConcepts.cql",
+      "cqlSha256": "e1f8c94279def82df78e2ceca828415e8d904e060ad070e7fd78905d836fb9b0",
+      "elm": "tests/verification/elm/BreastCancerNeoadjuvantExternalConcepts.json",
+      "elmSha256": "415b415e775ed921fe2b10d04054cfac8027c92fb4f8dd3d10ebaad6cdc7b016"
+    },
+    {
+      "cql": "src/cql/BreastCancerNeoadjuvantExternalElements.cql",
+      "cqlSha256": "02f30f0b1d68cd44b4b489d2560cd020738a4b23e467dfe672765ad7f43f4839",
+      "elm": "tests/verification/elm/BreastCancerNeoadjuvantExternalElements.json",
+      "elmSha256": "c939e0bb15580302dc845ba866712099827b8ecba28f14e392c7ee8a10e7fc5e"
+    },
+    {
+      "cql": "src/cql/BreastCancerNeoadjuvantInferences.cql",
+      "cqlSha256": "18657dcb167e2feb02a69cc5baa07f59bcaed23a93971a421b4a5f1a43212ec5",
+      "elm": "tests/verification/elm/BreastCancerNeoadjuvantInferences.json",
+      "elmSha256": "7ec39f1ff967fcd54df47dd4fc815da29f252c89a98956e651d238d2260a4915"
+    },
+    {
+      "cql": "src/cql/BreastCancerNeoadjuvantInterface.cql",
+      "cqlSha256": "611aefdeac6f292818142e6e21685093fbb8fbadc8172ad16a6a5d0e4fcbfb8c",
+      "elm": "tests/verification/elm/BreastCancerNeoadjuvantInterface.json",
+      "elmSha256": "2fd3a4def8082a55e95a47256ec80456906a7e3077b4433d75afe78ec32a5f11"
+    },
+    {
+      "cql": "src/cql/BreastCancerNeoadjuvantLocalConcepts.cql",
+      "cqlSha256": "765d9981590a71cbf6d21a185c58b3d80359ec633d25e00e3bac2d6d4992bf66",
+      "elm": "tests/verification/elm/BreastCancerNeoadjuvantLocalConcepts.json",
+      "elmSha256": "40c5c2bdf82379d90533aa54a6f05d6c0704346979a84b5325644a5b5aaec60a"
+    },
+    {
+      "cql": "src/cql/BreastCancerNeoadjuvantLocalElements.cql",
+      "cqlSha256": "d7d0a8522807c0c8c5210ef803222dc3d68f029a16a2e1714bce7a5ba055fbfa",
+      "elm": "tests/verification/elm/BreastCancerNeoadjuvantLocalElements.json",
+      "elmSha256": "17393afa7e389ab061b90d526f67bb5582cfffdf77c02b18e07c3f0bea63d522"
+    },
+    {
+      "cql": "src/cql/CaseFeatureCommon.cql",
+      "cqlSha256": "31fea89b8cabeee56bed5470b6ab5e2bffdf0dd7267f163ac6beb5cf5203ee7a",
+      "elm": "tests/verification/elm/CaseFeatureCommon.json",
+      "elmSha256": "66a6f6e75276b9c775e42d0104be1b791d7901be31f6f86206f014014bebeb39"
+    },
+    {
+      "cql": "src/cql/CRLCommon.cql",
+      "cqlSha256": "f4cef711204cf9ec8c7b25666d39139eef8d501f588f39bbd7a34b0b5bd807ca",
+      "elm": "tests/verification/elm/CRLCommon.json",
+      "elmSha256": "f1b27c0a18fce17d9b3ee0e1ccf8035902a289ba028675a920af987fbcae46e6"
+    },
+    {
+      "cql": "src/cql/FHIRHelpers.cql",
+      "cqlSha256": "6748661c16fe66dd07a68f07f77f7fea44e8b933d265dcc3c575964ba8329591",
+      "elm": "tests/verification/elm/FHIRHelpers.json",
+      "elmSha256": "80a799d4066b51b1e80f9461b4a9a58f0b7f5c9b05d05f883311581127c2d606"
+    }
+  ]
 }

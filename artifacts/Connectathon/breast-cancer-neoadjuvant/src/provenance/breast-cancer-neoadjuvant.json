@@ -237,7 +237,7 @@
       ],
       "role": "criterion",
       "roleStatus": "confirmed",
-      "rationale": "OPEN source requirement: select same-subject, indexed-Condition-focus Observations with final status and effective/issued times before evaluation. When no indexed cancer exists, tumor-specific inputs must be unknown. Native diagnosis-absent testing currently returns five unscoped tumor values instead of null. This full selection requirement remains unlinked; successful supplied one-record cases do not prove the general filters.",
+      "rationale": "Input selection requires subject/indexed-Condition linkage, final status and effective/issued cutoffs. The decision now checks the indexed diagnosis/population before receptor and stage guidance. The broad source-filter requirement remains unlinked because general focus/status/time enforcement has not been verified. Prior standalone tumor-field values in diagnosis-absent data are diagnostic scalar mismatches, not proof that the gated decision recommends guidance. Original diagnostic bundles remain the native oracle.",
       "linkRequirement": "must-link-decision"
     },
     {
@@ -267,7 +267,7 @@
       ],
       "role": "criterion",
       "roleStatus": "confirmed",
-      "rationale": "Source requires exact receptor codes and unknown for absent or unresolved HER2, including the local equivocal code. The linked receptor publications identify the intended implementation locations, not complete fulfillment. Current native verification shows equivocal raises an uninterpretable-domain error rather than returning unknown: all eight named outputs fail in that case. This is an explicit unmet source requirement; do not relabel it as false or modify the fixture oracle.",
+      "rationale": "Exact receptor answer codes are retained, with equivocal recognized in the finite receptor domain. The selected HER2 result is separately assessed for definitive status. Only a definitive result advances to the triple-negative and tumor/node guidance condition. An unresolved result produces no recommendation; it is not a language-gap or missing-null-artifact claim. Standalone named-expression null mismatches remain separately reported diagnostics and are not substituted for actual decision behavior.",
       "linkRequirement": "must-link-decision"
     },
     {
@@ -428,7 +428,7 @@
           "lib": "Breast Cancer Neoadjuvant",
           "kind": "decision",
           "name": "Neoadjuvant Guidance",
-          "nodeId": "when[0]",
+          "nodeId": "when[0]/when[0]/when[0]",
           "nodeKind": "decision-node",
           "ownership": "policy-owned",
           "relation": "implements-criterion",
@@ -438,7 +438,7 @@
           "lib": "Breast Cancer Neoadjuvant",
           "kind": "decision",
           "name": "Neoadjuvant Guidance",
-          "nodeId": "when[0]/action[0]",
+          "nodeId": "when[0]/when[0]/when[0]/action[0]",
           "nodeKind": "decision-node",
           "ownership": "policy-owned",
           "relation": "recommends-disposition",
@@ -669,8 +669,17 @@
           "lib": "Breast Cancer Neoadjuvant",
           "kind": "decision",
           "name": "Neoadjuvant Guidance",
-          "nodeId": "when[0]",
+          "nodeId": "when[0]/when[0]",
           "nodeKind": "decision-node",
+          "ownership": "policy-owned",
+          "relation": "implements-criterion",
+          "status": "linked"
+        },
+        {
+          "lib": "Breast Cancer Neoadjuvant",
+          "kind": "concept",
+          "name": "HER2 Result Is Definitive",
+          "nodeKind": "leaf",
           "ownership": "policy-owned",
           "relation": "implements-criterion",
           "status": "linked"
@@ -784,6 +793,26 @@
           "ownership": "policy-owned",
           "relation": "implements-criterion",
           "status": "linked"
+        },
+        {
+          "lib": "Breast Cancer Neoadjuvant",
+          "kind": "decision",
+          "name": "Neoadjuvant Guidance",
+          "nodeId": "when[0]/when[0]",
+          "nodeKind": "decision-node",
+          "ownership": "policy-owned",
+          "relation": "implements-criterion",
+          "status": "linked"
+        },
+        {
+          "lib": "Breast Cancer Neoadjuvant",
+          "kind": "decision",
+          "name": "Neoadjuvant Guidance",
+          "nodeId": "when[0]/when[0]/when[0]",
+          "nodeKind": "decision-node",
+          "ownership": "policy-owned",
+          "relation": "implements-criterion",
+          "status": "linked"
         }
       ],
       "cel": []
@@ -844,7 +873,7 @@
           "lib": "Breast Cancer Neoadjuvant",
           "kind": "decision",
           "name": "Neoadjuvant Guidance",
-          "nodeId": "when[0]",
+          "nodeId": "when[0]/when[0]/when[0]",
           "nodeKind": "decision-node",
           "ownership": "policy-owned",
           "relation": "implements-criterion",
@@ -918,7 +947,7 @@
           "lib": "Breast Cancer Neoadjuvant",
           "kind": "decision",
           "name": "Neoadjuvant Guidance",
-          "nodeId": "when[0]",
+          "nodeId": "when[0]/when[0]/when[0]",
           "nodeKind": "decision-node",
           "ownership": "policy-owned",
           "relation": "implements-criterion",

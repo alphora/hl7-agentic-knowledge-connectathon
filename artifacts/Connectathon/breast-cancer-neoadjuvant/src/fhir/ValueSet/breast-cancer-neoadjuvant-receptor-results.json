@@ -45,6 +45,15 @@
             "display": "Positive"
           }
         ]
+      },
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "concept": [
+          {
+            "code": "equivocal",
+            "display": "Equivocal ? interpretation unresolved"
+          }
+        ]
       }
     ]
   },
@@ -60,6 +69,11 @@
         "system": "http://loinc.org",
         "code": "LA6576-8",
         "display": "Positive"
+      },
+      {
+        "system": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/breast-cancer-fixture",
+        "code": "equivocal",
+        "display": "Equivocal ? interpretation unresolved"
       }
     ]
   }
