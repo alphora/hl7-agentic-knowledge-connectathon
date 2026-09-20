@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-20T12:22:58.024Z",
+  "baseCommit": "3bc8efd93ff957db654b63c41b4702a3721db711",
+  "basis": {
+    "cel": "66fb6b4d54a0c4905707e774419f3ba9c0cd58a0",
+    "cql": "f131df6daafcebdbe0f4e8de941cecb71fe7ceec",
+    "crl": "223257b9ed7378cedadf5cf488bb9459e7f2b262",
+    "fhir": "58506831983391a573a973c4f5535d5255e81807",
+    "qa": "004a191b5a75416aee74db96886c4cd45f517e87"
+  },
+  "entity": "report",
+  "schemaVersion": 1
+}

@@ -1,0 +1,268 @@
+{
+  "policyId": "Steadi",
+  "policyVersion": "0.0.0",
+  "diagnostics": [],
+  "findings": [
+    {
+      "kind": "missed-decision",
+      "severity": "error",
+      "message": "must-link-decision item \"scope-exclusions-not-general-filter\" has no counted decision implementation (Missed₁).",
+      "itemId": "scope-exclusions-not-general-filter",
+      "class": "attribution"
+    },
+    {
+      "kind": "missed-decision",
+      "severity": "error",
+      "message": "must-link-decision item \"measurement-and-encounter-time\" has no counted decision implementation (Missed₁).",
+      "itemId": "measurement-and-encounter-time",
+      "class": "attribution"
+    },
+    {
+      "kind": "missed-decision",
+      "severity": "error",
+      "message": "must-link-decision item \"completed-qr-status\" has no counted decision implementation (Missed₁).",
+      "itemId": "completed-qr-status",
+      "class": "attribution"
+    },
+    {
+      "kind": "missed-decision",
+      "severity": "error",
+      "message": "must-link-decision item \"no-incomplete-extraction\" has no counted decision implementation (Missed₁).",
+      "itemId": "no-incomplete-extraction",
+      "class": "attribution"
+    },
+    {
+      "kind": "missed-decision",
+      "severity": "error",
+      "message": "must-link-decision item \"slide-clinical-scope\" has no counted decision implementation (Missed₁).",
+      "itemId": "slide-clinical-scope",
+      "class": "attribution"
+    },
+    {
+      "kind": "mn-keyword-soft",
+      "severity": "warning",
+      "message": "non-decision item \"six-fixture-cases\" (definition) carries soft coverage language — review (§9.1).",
+      "itemId": "six-fixture-cases",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-soft",
+      "severity": "warning",
+      "message": "non-decision item \"assessment-and-measure-questions\" (definition) carries soft coverage language — review (§9.1).",
+      "itemId": "assessment-and-measure-questions",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-soft",
+      "severity": "warning",
+      "message": "non-decision item \"participant-process-and-slide-introduction\" (administrative) carries soft coverage language — review (§9.1).",
+      "itemId": "participant-process-and-slide-introduction",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-soft",
+      "severity": "warning",
+      "message": "non-decision item \"source-to-artifact-mapping-and-deliverables\" (definition) carries soft coverage language — review (§9.1).",
+      "itemId": "source-to-artifact-mapping-and-deliverables",
+      "class": "integrity"
+    },
+    {
+      "kind": "mn-keyword-soft",
+      "severity": "warning",
+      "message": "non-decision item \"slide-fixture-expectations\" (definition) carries soft coverage language — review (§9.1).",
+      "itemId": "slide-fixture-expectations",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"guidance-scope\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "guidance-scope",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"named-assessment-and-measure-exports\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "named-assessment-and-measure-exports",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"shared-questionnaire-identity-and-codes\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "shared-questionnaire-identity-and-codes",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"three-coded-questions\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "three-coded-questions",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"qr-code-location\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "qr-code-location",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"extraction-resource-contract\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "extraction-resource-contract",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"extraction-transport-format\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "extraction-transport-format",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"six-fixture-cases\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "six-fixture-cases",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"typed-unknown-oracle\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "typed-unknown-oracle",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"prior-fixture-validation\" (role administrative, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "prior-fixture-validation",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"source-identity-and-purpose\" (role administrative, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "source-identity-and-purpose",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"assessment-and-measure-questions\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "assessment-and-measure-questions",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"deliverables-and-sdc-overview\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "deliverables-and-sdc-overview",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"participant-process-and-slide-introduction\" (role administrative, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "participant-process-and-slide-introduction",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"source-to-artifact-mapping-and-deliverables\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "source-to-artifact-mapping-and-deliverables",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"slide-named-behaviors-and-package\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "slide-named-behaviors-and-package",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"review-boundaries\" (role administrative, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "review-boundaries",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"slide-fixture-expectations\" (role definition, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "slide-fixture-expectations",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"interoperability-and-process-reporting\" (role administrative, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "interoperability-and-process-reporting",
+      "class": "integrity"
+    },
+    {
+      "kind": "waiver-disposition-class",
+      "severity": "manual-review",
+      "scrutiny": "routine",
+      "message": "source item \"fixture-introduction\" (role administrative, dispositionClass no-operational-disposition) is acknowledged as routine admin/definition — confirm it carries no decision content.",
+      "itemId": "fixture-introduction",
+      "class": "integrity"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"Younger Than 65\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"Eligible All No\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"Eligible Incomplete Response\": run-error"
+    },
+    {
+      "kind": "cockpit-correspondence",
+      "severity": "error",
+      "class": "integrity",
+      "message": "cockpit correspondence unchecked for case \"Eligible No Response\": run-error"
+    }
+  ],
+  "errorCount": 9,
+  "manualReviewCount": 20,
+  "warningCount": 5,
+  "worklistCount": 5,
+  "waiverCount": 20,
+  "waiverScrutinizeCount": 0,
+  "pass": false
+}

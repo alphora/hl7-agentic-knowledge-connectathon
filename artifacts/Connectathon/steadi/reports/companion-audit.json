@@ -1,0 +1,155 @@
+{
+  "artifact": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-final-staging",
+  "artifactVersion": "0.0.0",
+  "canonicalBase": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir",
+  "manualResourceCount": 10,
+  "manualVersions": [
+    "0.1.0"
+  ],
+  "generatedResourcesUnchanged": true,
+  "files": [
+    {
+      "path": "src\\companion-source\\fhir\\Evidence\\exercise-fall-rate.json",
+      "source": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-authoring\\src\\companion-source\\fhir\\Evidence\\exercise-fall-rate.json",
+      "sourceSha256": "6efb8446abd3ebfbb7100e6e36b97109283091e9105116e06a027354753d4442",
+      "sha256": "1e82d95f1df6fc1cf0b775d2d46289b2fe7f5853ac96bd1f0513f13b1d9bf26c",
+      "changes": [
+        "Add documentation link to actual generated ActivityDefinition/version",
+        "Replace obsolete pending-link note"
+      ]
+    },
+    {
+      "path": "src\\companion-source\\fhir\\Evidence\\multifactorial-fall-rate.json",
+      "source": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-authoring\\src\\companion-source\\fhir\\Evidence\\multifactorial-fall-rate.json",
+      "sourceSha256": "d1d04b1fbf52c8a7c4b1abe962b28ed12ec6d53402bbd12a477836964957bc82",
+      "sha256": "2f77b35d60c22a4de62aa9fa38fb85771650399225a6b048a575fede2d5d3836",
+      "changes": [
+        "Add documentation link to actual generated ActivityDefinition/version",
+        "Replace obsolete pending-link note"
+      ]
+    },
+    {
+      "path": "src\\companion-source\\fhir\\EvidenceVariable\\exercise-fall-rate-population.json",
+      "source": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-authoring\\src\\companion-source\\fhir\\EvidenceVariable\\exercise-fall-rate-population.json",
+      "sourceSha256": "fd22b56565a4d1c4512ade2c7e2a80d01f263bd73f1cad7437291001d9f38f3d",
+      "sha256": "fd22b56565a4d1c4512ade2c7e2a80d01f263bd73f1cad7437291001d9f38f3d",
+      "changes": []
+    },
+    {
+      "path": "src\\companion-source\\fhir\\EvidenceVariable\\exercise-interventions.json",
+      "source": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-authoring\\src\\companion-source\\fhir\\EvidenceVariable\\exercise-interventions.json",
+      "sourceSha256": "7d59c433aacf3e08aa29244324715179a3056fa704b3ab66e5f7b2dba677652c",
+      "sha256": "7d59c433aacf3e08aa29244324715179a3056fa704b3ab66e5f7b2dba677652c",
+      "changes": []
+    },
+    {
+      "path": "src\\companion-source\\fhir\\EvidenceVariable\\incident-fall-rate.json",
+      "source": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-authoring\\src\\companion-source\\fhir\\EvidenceVariable\\incident-fall-rate.json",
+      "sourceSha256": "f46519cfcbf3af930a8260fceca5c256b1b984410065521d045cf3245d34a821",
+      "sha256": "f46519cfcbf3af930a8260fceca5c256b1b984410065521d045cf3245d34a821",
+      "changes": []
+    },
+    {
+      "path": "src\\companion-source\\fhir\\EvidenceVariable\\multifactorial-fall-rate-population.json",
+      "source": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-authoring\\src\\companion-source\\fhir\\EvidenceVariable\\multifactorial-fall-rate-population.json",
+      "sourceSha256": "8e03d34e4eee98f8222cb3199dffde2bc0f377efebd338d03c00314e96a243b0",
+      "sha256": "8e03d34e4eee98f8222cb3199dffde2bc0f377efebd338d03c00314e96a243b0",
+      "changes": []
+    },
+    {
+      "path": "src\\companion-source\\fhir\\EvidenceVariable\\multifactorial-interventions.json",
+      "source": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-authoring\\src\\companion-source\\fhir\\EvidenceVariable\\multifactorial-interventions.json",
+      "sourceSha256": "e619d53e9285e6ab7a8ece9e17b0bb75296227e2cd518233f057da737464d9c4",
+      "sha256": "e619d53e9285e6ab7a8ece9e17b0bb75296227e2cd518233f057da737464d9c4",
+      "changes": []
+    },
+    {
+      "path": "src\\companion-source\\fhir\\EvidenceVariable\\steadi-track-population.json",
+      "source": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-authoring\\src\\companion-source\\fhir\\EvidenceVariable\\steadi-track-population.json",
+      "sourceSha256": "11047c5875a24e789dcdc801137ad84de45007702798c2317e2f922ea7bf8f15",
+      "sha256": "11047c5875a24e789dcdc801137ad84de45007702798c2317e2f922ea7bf8f15",
+      "changes": []
+    },
+    {
+      "path": "src\\companion-source\\fhir\\EvidenceVariable\\trial-comparator.json",
+      "source": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-authoring\\src\\companion-source\\fhir\\EvidenceVariable\\trial-comparator.json",
+      "sourceSha256": "0c1c428c4e983a5fdd8597ea1c05a912a5588b2e92e3ab83465b14d7d59e8c83",
+      "sha256": "0c1c428c4e983a5fdd8597ea1c05a912a5588b2e92e3ab83465b14d7d59e8c83",
+      "changes": []
+    },
+    {
+      "path": "src\\companion-source\\fhir\\Measure\\steadi-screening-completion.json",
+      "source": "E:\\src\\iehp-content-vibe-tools-medical-policy\\tmp\\connectathon-steadi-authoring\\src\\companion-source\\fhir\\Measure\\steadi-screening-completion.json",
+      "sourceSha256": "5c37ed0612711f3864c41fc69a15573bbe26dc1c634f4130f6ee8e0f8cdf99cf",
+      "sha256": "5f5a50c17243f817722befda8be078837f913bb8dae86189b56fc84655f90b56",
+      "changes": [
+        "Connect manual Measure to generated Interface Library/version and exact named definitions",
+        "State actual local-answer demo limitations"
+      ]
+    }
+  ],
+  "resolvedReferences": [
+    {
+      "from": "src\\companion-source\\fhir\\Evidence\\exercise-fall-rate.json.exposureBackground.reference",
+      "reference": "EvidenceVariable/exercise-fall-rate-population",
+      "resolved": true
+    },
+    {
+      "from": "src\\companion-source\\fhir\\Evidence\\exercise-fall-rate.json.exposureVariant[0].reference",
+      "reference": "EvidenceVariable/exercise-interventions",
+      "resolved": true
+    },
+    {
+      "from": "src\\companion-source\\fhir\\Evidence\\exercise-fall-rate.json.exposureVariant[1].reference",
+      "reference": "EvidenceVariable/trial-comparator",
+      "resolved": true
+    },
+    {
+      "from": "src\\companion-source\\fhir\\Evidence\\exercise-fall-rate.json.outcome[0].reference",
+      "reference": "EvidenceVariable/incident-fall-rate",
+      "resolved": true
+    },
+    {
+      "from": "src\\companion-source\\fhir\\Evidence\\exercise-fall-rate.json.relatedArtifact[2].resource",
+      "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ActivityDefinition/steadi-exercise-guidance|0.0.0",
+      "resolved": true
+    },
+    {
+      "from": "src\\companion-source\\fhir\\Evidence\\multifactorial-fall-rate.json.exposureBackground.reference",
+      "reference": "EvidenceVariable/multifactorial-fall-rate-population",
+      "resolved": true
+    },
+    {
+      "from": "src\\companion-source\\fhir\\Evidence\\multifactorial-fall-rate.json.exposureVariant[0].reference",
+      "reference": "EvidenceVariable/multifactorial-interventions",
+      "resolved": true
+    },
+    {
+      "from": "src\\companion-source\\fhir\\Evidence\\multifactorial-fall-rate.json.exposureVariant[1].reference",
+      "reference": "EvidenceVariable/trial-comparator",
+      "resolved": true
+    },
+    {
+      "from": "src\\companion-source\\fhir\\Evidence\\multifactorial-fall-rate.json.outcome[0].reference",
+      "reference": "EvidenceVariable/incident-fall-rate",
+      "resolved": true
+    },
+    {
+      "from": "src\\companion-source\\fhir\\Evidence\\multifactorial-fall-rate.json.relatedArtifact[2].resource",
+      "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ActivityDefinition/steadi-multifactorial-intervention-guidance|0.0.0",
+      "resolved": true
+    },
+    {
+      "from": "src\\companion-source\\fhir\\Measure\\steadi-screening-completion.json.library",
+      "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInterface|0.0.0",
+      "resolved": true
+    }
+  ],
+  "nativeExecution": "Not run by companion worker",
+  "schemaValidation": "Not performed in this assembly audit",
+  "historicalMeasureReports": "Not copied; previous support does not validate changed generated support",
+  "clinicalNarrative": "Evidence/Variable descriptions, statistics, narratives and citations preserved",
+  "versionMeaning": "Manual0.1.0 identities retained; their generated Library/ActivityDefinition references explicitly select0.0.0",
+  "narrativeAndCitationEqualityCheck": "Passed for all9 Evidence/EvidenceVariable resources",
+  "manualVersionPolicy": "Retained existing0.1.0 on manual wrappers/evidence; not inferred from npm package0.0.0. Version-qualified generated dependencies resolve exactly."
+}

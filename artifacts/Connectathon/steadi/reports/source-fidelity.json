@@ -1,0 +1,24 @@
+{
+    "sourceSha256":  "8b28447cb92aaca17f45a783f9d38b91002b3599e16f01df1f812918a4516722",
+    "docxHash":  "sha256:71b3c7feabb40328ea170195b21cacd3223e133ee703a388f06baa9d305d324c",
+    "anchorHash":  "sha256:e8fed4e11d4832007937d6ffb78766d8d7bd42c9c4558dde512d12836e21e1d5",
+    "byteLength":  25823,
+    "exactSourceTextPreserved":  true,
+    "differences":  [
+                        "Line-ending representation and single terminal newline only; this input differed by one terminal LF."
+                    ],
+    "warnings":  [
+
+                 ],
+    "sourceLines":  705,
+    "nonblankLines":  524,
+    "addedSource":  [
+
+                    ],
+    "omittedMeaningfulText":  [
+
+                              ],
+    "canonicalizer":  "crl-anchor-docx-text",
+    "canonicalizerVersion":  "1.0.0",
+    "visualRenderingVerified":  false
+}
