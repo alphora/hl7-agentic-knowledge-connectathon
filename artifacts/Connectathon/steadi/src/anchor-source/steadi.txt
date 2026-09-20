@@ -1,0 +1,705 @@
+# Supplied STEADI challenge specification
+Pinned challenge revision: 5034ccd6bc5971aa7e366b6b0df0b23caffe4f46. The following supplied Markdown is retained verbatim by section; raw source snapshots and original fixtures remain in ../source/challenge. No referenced external documents have been added.
+
+## Supplied file: README.md
+
+# Older-adult fall risk (STEADI)
+
+This case supplies a traceable source corpus, synthetic FHIR R4 patient
+bundles, a shared coded Questionnaire, and engine-neutral expected results.
+Participants turn the source material into evidence, assessment, guidance,
+and screening-completion measure artifacts.
+
+## Clinical question
+
+For a community-dwelling adult age 65 years or older seen in ambulatory care:
+
+1. Is the patient in scope for fall-risk screening?
+2. Was the CDC STEADI three-question screen completed?
+3. Does the completed screen indicate increased fall risk?
+4. Which evidence-linked action is applicable?
+5. Across a measurement period, what proportion of eligible patients completed
+   the screen?
+
+The three screening questions ask whether the patient:
+
+- feels unsteady when standing or walking;
+- worries about falling; or
+- has fallen in the past year.
+
+For this track, a completed screen indicates increased fall risk when any
+answer is yes. Missing or incomplete answers remain unknown and must not be
+treated as a negative screen.
+
+The track includes exercise guidance linked to the USPSTF grade B
+recommendation and individualized consideration of multifactorial
+interventions linked to the grade C recommendation. It does not diagnose a
+fall-related condition, select a specific treatment, or order an intervention.
+
+## Case contents
+
+- [Source manifest](sources/manifest.yaml) and [raw source snapshots](sources/raw/)
+- [MARP overview](slides/connectathon-track-overview.md) and
+  [rendered PDF](slides/connectathon-track-overview.pdf)
+- [Synthetic patient test bundles](test-bundles/README.md), a shared coded
+  [Questionnaire](test-bundles/questionnaire.json), SDC extraction
+  expectations, assertions, and a case summary for every bundle
+
+The raw corpus contains only snapshots whose current redistribution basis is
+recorded in the manifest. Standards references and CMS139FHIR remain link-only.
+CMS139FHIR is a comparison point; it is not copied, and the track-authored
+measure must not claim equivalence to it.
+
+## Participant deliverables
+
+The expected output includes:
+
+| Knowledge role | Expected artifact |
+| --- | --- |
+| Evidence and population definitions | `Evidence`, `EvidenceVariable` |
+| Three-question assessment | `Questionnaire`, reusable logic |
+| Recommendation workflow | `PlanDefinition`, `ActivityDefinition`, `Library` |
+| Screening-completion measure | `Measure`, `Library` |
+| Terminology and package metadata | `ValueSet`, `ImplementationGuide` |
+| Executable logic | CQL source and ELM JSON |
+| Distribution | FHIR R4 NPM package with exact dependency versions |
+
+FHIR R4 does not define `Citation`; an R4 baseline submission should use
+available provenance and related-artifact elements. Any R5 variant must be
+clearly separated from the R4 baseline.
+
+## SDC extraction contract
+
+The input fixtures exercise the SDC Observation-based extraction pattern.
+Each completed QuestionnaireResponse references the same versioned,
+LOINC-coded Questionnaire. Its expected extracted Observations are supplied as
+a normalized resource set so participants can compare `$extract` behavior
+across implementations without depending on server-specific transaction
+details. Incomplete and absent responses remain explicit negative extraction
+cases.
+
+The [fixture contract](test-bundles/README.md#sdc-extraction-contract) defines
+the coded questions, copied Observation fields, extraction invocation rules,
+and Boolean/null semantics.
+
+## Required executable behavior
+
+The shared assertions use these expression names:
+
+- `In Screening Population`
+- `Completed Three Question Screen`
+- `At Increased Fall Risk`
+- `Exercise Intervention Applicable`
+- `Consider Multifactorial Intervention`
+- `Initial Population`
+- `Denominator`
+- `Numerator`
+
+The first five expressions describe patient-level assessment and guidance. The
+last three describe a track-authored screening-completion process measure.
+Incomplete or absent screening data produces an unknown increased-risk result,
+while the measure numerator remains false.
+
+Follow the shared [participant and interoperability requirements](../../README.md),
+including independent CQL execution, FHIR round-trip testing, exact versions,
+source traceability, and process evidence. FHIR validation and CQL compilation
+are necessary, but they are not clinical approval.
+
+All patient data is synthetic. This material is for Connectathon testing and
+education, not clinical use.
+
+
+## Supplied file: slides/connectathon-track-overview.md
+
+---
+marp: true
+theme: connectathon
+size: 16:9
+paginate: true
+footer: HL7 FHIR Connectathon 43 · proposed track · draft 2026-08-26
+title: AI-Assisted Development of Clinical Reasoning Knowledge
+description: Proposed HL7 FHIR Connectathon track for evaluating AI-assisted development of valid, clinically coherent, interoperable FHIR and CQL knowledge artifacts.
+author: Connectathon Track Proposal
+---
+
+<!-- _class: title -->
+
+<div class="eyebrow">Proposed HL7 FHIR Connectathon 43 track</div>
+
+# AI-Assisted Development of Clinical Reasoning Knowledge
+
+<p class="lede">Testing how clinical source material can become valid, clinically coherent, interoperable FHIR and CQL knowledge artifacts.</p>
+
+<p class="subtle">September 19–20, 2026 · Rockville, Maryland</p>
+
+<!--
+[Sources]
+- https://confluence.hl7.org/spaces/FHIR/pages/468259447/2026+-+09+Connectathon+43
+[/Sources]
+-->
+---
+
+<div class="eyebrow">Purpose and intent</div>
+
+## The track evaluates AI-assisted authoring of computable clinical knowledge
+
+<div class="two-col">
+<div class="rule-left">
+
+### Hypothesis
+
+AI-assisted methods can reduce the time and human effort needed to develop computable clinical knowledge, and can support more artifact types with a repeatable process.
+
+</div>
+<div class="rule-left">
+
+### Required result
+
+The resulting knowledge must remain source-traceable, structurally valid, clinically coherent, executable, and portable across independent implementations.
+
+</div>
+</div>
+
+<!--
+[Sources]
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md
+- https://confluence.hl7.org/spaces/FHIR/pages/477659466/2026+-+09+Clinical+Reasoning
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Evaluation questions</div>
+
+## The track records process performance and artifact quality
+
+| Dimension | What the track records |
+| --- | --- |
+| **Efficiency** | elapsed authoring time, human review time, revision cycles, and blocking issues |
+| **Scalability** | artifact types completed, reuse of the process, and response to source changes |
+| **Validity** | FHIR validation, canonical resolution, CQL translation, and package checks |
+| **Clinical coherence** | reviewer findings, corrections, internal consistency, and expected clinical behavior |
+| **Interoperability** | equivalent results across CQL engines and preservation across FHIR repositories |
+
+<p class="small subtle">Where a participant has a comparable conventional baseline, it should be reported. Otherwise, efficiency findings remain descriptive.</p>
+
+<!--
+[Sources]
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#track-question
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#interoperability-test
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Common test design</div>
+
+## Participants use common inputs and acceptance criteria
+
+<div class="pipeline">
+<div>
+<h3>01 · Inputs</h3>
+<p>Approved clinical source corpus and shared use-case statement.</p>
+</div>
+<div>
+<h3>02 · Method</h3>
+<p>Any AI-assisted or conventional authoring approach.</p>
+</div>
+<div>
+<h3>03 · Disclosure</h3>
+<p>Record tools, versions, instructions, decisions, and human review.</p>
+</div>
+<div>
+<h3>04 · Outputs</h3>
+<p>The same required knowledge artifacts and executable behaviors.</p>
+</div>
+<div>
+<h3>05 · Evaluation</h3>
+<p>The same validation, clinical review, fixtures, and interoperability tests.</p>
+</div>
+</div>
+
+<p class="small subtle">No participant implementation defines the reference result. The documented clinical intent and expected behaviors do.</p>
+
+<!--
+[Sources]
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#participant-task
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/use-cases/steadi/test-bundles/README.md
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Use case</div>
+
+## Older-adult fall-risk screening and prevention
+
+<div class="two-col">
+<div>
+
+### Patient-level questions
+
+For a community-dwelling adult age 65 or older:
+
+1. Is the patient in scope for screening?
+2. Was the three-question screen completed?
+3. Does the result indicate increased fall risk?
+4. Which evidence-linked action is applicable?
+
+</div>
+<div>
+
+### Population-level question
+
+Across a measurement period, what proportion of eligible patients completed the screen?
+
+### Knowledge forms exercised
+
+Evidence · guideline · assessment · measure · terminology · CQL logic
+
+</div>
+</div>
+
+<!--
+[Sources]
+- https://www.cdc.gov/steadi/media/pdfs/STEADI-Algorithm-508.pdf
+- https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#seed-use-case
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Clinical scope</div>
+
+## The baseline defines a narrow clinical scope
+
+<div class="two-col">
+<div class="rule-left">
+
+### Included
+
+- community-dwelling adults age 65 or older
+- ambulatory context
+- CDC STEADI three key questions
+- increased risk when any completed answer is yes
+- exercise and individualized multifactorial guidance
+- track-authored screening-completion measure
+
+</div>
+<div class="rule-left">
+
+### Excluded
+
+- diagnosis or emergency triage after a fall
+- automatic ordering of an intervention
+- inpatient, hospice, or long-term-care populations
+- equivalence claims to CMS139FHIR
+- real-world quality reporting or clinical deployment
+
+</div>
+</div>
+
+<!--
+[Sources]
+- https://www.cdc.gov/steadi/media/pdfs/STEADI-Algorithm-508.pdf
+- https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#seed-use-case
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Source material</div>
+
+## The source corpus covers evidence, recommendation, workflow, and formalization
+
+| Source | Role in the use case |
+| --- | --- |
+| **CDC STEADI algorithm and pocket guide** | three-question assessment and screen–assess–intervene workflow |
+| **USPSTF 2024 recommendation** | exercise recommendation and individualized multifactorial consideration |
+| **USPSTF evidence update and open systematic review** | population, outcomes, benefits, harms, and evidence context |
+| **LOINC and HL7 CPG / Using CQL with FHIR** | terminology and computable-artifact guidance |
+| **CMS139FHIR** | comparison point only; not copied or represented as the track measure |
+
+<p class="small subtle">Redistributable snapshots are included in the repository; standards and comparison references remain link-only. Derived statements must retain stable source locators.</p>
+
+<!--
+[Sources]
+- https://www.cdc.gov/steadi/media/pdfs/STEADI-Algorithm-508.pdf
+- https://www.cdc.gov/steadi/media/pdfs/steadi-pocketguide-508.pdf
+- https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions
+- https://www.ncbi.nlm.nih.gov/books/NBK604238/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC11590344/
+- https://loinc.org/
+- https://hl7.org/fhir/uv/cpg/
+- https://hl7.org/fhir/uv/cql/
+- https://ecqi.healthit.gov/ecqm/fhir-ec/2026/cms0139fhir
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/use-cases/steadi/sources/manifest.yaml
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Source-to-output mapping</div>
+
+## Each source role has a defined computable destination
+
+| Source role | Structured knowledge | Primary FHIR output |
+| --- | --- | --- |
+| Evidence review | benefits, harms, population, outcomes | `Evidence`, `EvidenceVariable` |
+| Recommendation | applicability, strength, action | `PlanDefinition`, `ActivityDefinition`, `Library` |
+| STEADI workflow | screening and follow-up decisions | `PlanDefinition`, `ActivityDefinition` |
+| Three-question screen | questions, answers, completeness, positive result | `Questionnaire`, `Library` |
+| Track measure definition | population and completion logic | `Measure`, `Library` |
+| Terminology and packaging guidance | bindings, dependencies, canonical identity | `ValueSet`, `ImplementationGuide` |
+
+<!--
+[Sources]
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#seed-use-case
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#participant-task
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Expected output</div>
+
+## The submission includes reviewable knowledge and FHIR R4 artifacts
+
+<div class="three-col">
+<div class="rule-top">
+
+### Reviewable knowledge
+
+Evidence summary · recommendation decision table · assessment definition · measure definition · terminology definition
+
+</div>
+<div class="rule-top">
+
+### FHIR knowledge artifacts
+
+`Evidence` · `EvidenceVariable` · `Questionnaire` · `Library` · `PlanDefinition` · `ActivityDefinition`
+
+</div>
+<div class="rule-top accent-top">
+
+### Measure and package
+
+`Measure` · `ValueSet` · `ImplementationGuide` · stable canonicals · exact dependency versions
+
+</div>
+</div>
+
+<div class="band teal">
+Every clinical statement and operational choice must be distinguishable and traceable to its source or track-authored rationale.
+</div>
+
+<!--
+[Sources]
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#participant-task
+- https://hl7.org/fhir/R4/
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Expected executable behavior</div>
+
+## CQL expresses assessment, guidance, and measure semantics
+
+<div class="two-col">
+<div class="rule-left">
+
+### Required named behaviors
+
+- `In Screening Population`
+- `Completed Three Question Screen`
+- `At Increased Fall Risk`
+- `Exercise Intervention Applicable`
+- `Consider Multifactorial Intervention`
+- `Initial Population`, `Denominator`, `Numerator`
+
+</div>
+<div class="rule-left">
+
+### Deliverable package
+
+- CQL source using a portable subset
+- translated ELM JSON and translation logs
+- FHIR R4 NPM package
+- synthetic patient Bundles
+- engine-neutral expected results
+- exact translator, engine, and dependency versions
+
+</div>
+</div>
+
+<!--
+[Sources]
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#required-executable-behavior
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/use-cases/steadi/test-bundles/README.md
+- https://hl7.org/fhir/uv/cql/
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Clinical coherence</div>
+
+## Human review verifies that the artifacts tell the same clinical story
+
+<div class="two-col">
+<div class="rule-left">
+
+### Review questions
+
+- Are source statements separated from track-authored choices?
+- Are population, recommendation strength, and actions preserved?
+- Do the assessment, guideline, measure, and CQL agree?
+- Are uncertainty and incomplete data represented explicitly?
+
+</div>
+<div class="rule-left">
+
+### Failure examples
+
+- missing answer treated as a negative answer
+- increased risk represented as a diagnosis
+- exercise and multifactorial recommendations collapsed
+- unsupported code, threshold, or population invented
+- measure represented as CMS139FHIR
+
+</div>
+</div>
+
+<div class="band">
+FHIR validation and CQL compilation are necessary, but they are not clinical approval.
+</div>
+
+<!--
+[Sources]
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#review-boundaries
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#seed-use-case
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#required-executable-behavior
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Shared test cases</div>
+
+## Synthetic fixtures make the expected behavior observable
+
+| Case | Expected result |
+| --- | --- |
+| Adult younger than 65 | outside screening and measure population |
+| Eligible adult; all answers no | complete screen; not at increased risk |
+| Eligible adult; unsteady yes | increased risk; exercise applicable |
+| Eligible adult; prior fall yes | increased risk; multifactorial consideration |
+| Eligible adult; incomplete response | screen incomplete; risk unknown; numerator false |
+| Eligible adult; no response | screen incomplete; risk unknown; numerator false |
+
+<div class="band">
+Missing data must remain unknown. It must not silently become a negative screen.
+</div>
+
+<!--
+[Sources]
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/use-cases/steadi/test-bundles/README.md
+[/Sources]
+-->
+
+---
+
+<div class="eyebrow">Interoperability testing</div>
+
+## Interoperability testing covers validation, translation, execution, and storage
+
+<div class="pipeline">
+<div>
+<h3>01 · Validate</h3>
+<p>Validate FHIR R4 resources and the package.</p>
+</div>
+<div>
+<h3>02 · Round-trip</h3>
+<p>Store and retrieve artifacts from independent FHIR repositories.</p>
+</div>
+<div>
+<h3>03 · Translate</h3>
+<p>Translate the same CQL and record diagnostics.</p>
+</div>
+<div>
+<h3>04 · Execute</h3>
+<p>Run every synthetic fixture in independent CQL engines.</p>
+</div>
+<div>
+<h3>05 · Compare</h3>
+<p>Compare values, null semantics, versions, and discrepancies.</p>
+</div>
+</div>
+
+<p class="small subtle">Baseline acceptance requires agreement across at least two independent CQL implementations and round-trip testing in at least two FHIR implementations.</p>
+
+<!--
+[Sources]
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#interoperability-test
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/use-cases/steadi/test-bundles/README.md
+- https://confluence.hl7.org/spaces/FHIR/pages/477659466/2026+-+09+Clinical+Reasoning
+[/Sources]
+-->
+
+---
+
+<!-- _class: closing -->
+
+<div class="eyebrow">Expected track result</div>
+
+## The outcome is evidence about the process and the artifacts
+
+<div class="two-col">
+<div class="rule-top">
+
+### Process evidence
+
+- authoring and review effort
+- revision history and human decisions
+- repeatability across knowledge-artifact types
+- implementation-specific limitations
+
+</div>
+<div class="rule-top">
+
+### Knowledge evidence
+
+- reviewed source-to-output traceability
+- valid FHIR and translatable CQL
+- clinically coherent fixture behavior
+- cross-implementation result matrix and issue list
+
+</div>
+</div>
+
+<p class="decision">The central question: can AI-assisted development improve efficiency and scale while preserving clinical quality and interoperability?</p>
+
+<!--
+[Sources]
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#track-question
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#participant-task
+- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#interoperability-test
+[/Sources]
+-->
+
+
+## Supplied file: test-bundles/README.md
+
+# Synthetic patient test bundles
+
+This directory contains the shared execution fixtures for the older-adult
+fall-risk use case. Every case is synthetic and uses FHIR R4 4.0.1 resources.
+
+## Common evaluation context
+
+- Measurement period: 2026-01-01 through 2026-12-31, inclusive
+- Ambulatory encounter: 2026-06-15
+- Eligible-patient birth date: 1945-01-01
+- Younger-patient birth date: 1965-06-16
+- Shared coded Questionnaire: [questionnaire.json](questionnaire.json)
+- Questionnaire canonical:
+  `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi-three-question-screen|0.2.0`
+- Synthetic resources carry the standard `HTEST` security label from
+  `http://terminology.hl7.org/CodeSystem/v3-ActReason`.
+
+Each case directory contains:
+
+- `bundle.json`: a FHIR R4 collection Bundle containing a Patient, an
+  ambulatory Encounter, and a QuestionnaireResponse when the scenario has one;
+- `extracted-bundle.json`: the normalized set of resources expected from SDC
+  Observation-based extraction;
+- `assertions.json`: engine-neutral expected values for the eight required
+  CQL expressions and the extraction result; and
+- `SUMMARY.md`: a human-readable explanation of the data and expected result.
+
+The canonical uses a repository-owned namespace. A participant may map it to
+the canonical used by its generated Questionnaire, but must preserve the three
+linkIds, question codes, and asserted behavior.
+
+## Coded Questionnaire contract
+
+| linkId | LOINC 2.81 | Display | Answer type |
+| --- | --- | --- | --- |
+| `unsteady` | `100257-5` | Feel unsteady when standing or walking | Boolean |
+| `worries-about-falling` | `97878-3` | Worried about falling | Boolean |
+| `fallen-in-past-year` | `52552-7` | Falls in the past year | Boolean |
+
+The codes were resolved and verified as active through ReasonHub on
+2026-08-26. The track does not assign a panel code because these three items
+are a deliberate subset rather than a claim to implement the complete LOINC
+Stay Independent panel.
+
+FHIR R4 `QuestionnaireResponse.item` has no `code` element. Each response
+therefore retains Boolean answers and references the versioned shared
+Questionnaire, where the LOINC codes are maintained. SDC extraction repeats
+those codes on the resulting `Observation.code`. This preserves conformant
+FHIR and straightforward Boolean logic in CQL.
+
+A response is complete only when its status is `completed` and all three
+items contain a usable Boolean answer. Increased fall risk is true when the
+response is complete and at least one answer is true. It is false when the
+response is complete and all answers are false. It is null when the response is
+incomplete or absent.
+
+## SDC extraction contract
+
+The shared Questionnaire declares the SDC
+[`sdc-questionnaire-extr-obsn`](https://hl7.org/fhir/uv/sdc/STU4/en/StructureDefinition-sdc-questionnaire-extr-obsn.html)
+profile, enables `sdc-questionnaire-observationExtract`, and supplies the
+`survey` Observation category. The four completed responses are expected to
+produce three final Observations. Each Observation copies the patient,
+encounter, authored time, author, coded question, and Boolean answer, and its
+`derivedFrom` points to the source QuestionnaireResponse.
+
+SDC [`QuestionnaireResponse/$extract`](https://hl7.org/fhir/uv/sdc/STU4/en/OperationDefinition-QuestionnaireResponse-extract.html)
+can return a transaction Bundle. To make cross-implementation comparisons
+stable, each `extracted-bundle.json` is instead a collection Bundle containing
+only the normalized expected resource set. Its deterministic `fullUrl` values
+identify fixture resources and are not part of the semantic assertion; the
+track does not prescribe server-local URLs, request verbs, or
+conditional-create behavior.
+
+The incomplete response and absent-response cases intentionally have an empty
+expected resource set and `invocationExpected=false`. The track does not invoke
+the baseline extraction operation until a completed QuestionnaireResponse is
+available, so a partial affirmative answer cannot leak into downstream logic
+as if the assessment were complete.
+
+## Cases
+
+| Case | Main condition | Expected risk | Extracted Observations |
+| --- | --- | --- | ---: |
+| [younger-than-65](cases/younger-than-65/SUMMARY.md) | complete screen, age below threshold | false; outside population | 3 |
+| [eligible-all-no](cases/eligible-all-no/SUMMARY.md) | complete screen, all answers false | false | 3 |
+| [eligible-unsteady-yes](cases/eligible-unsteady-yes/SUMMARY.md) | unsteady answer true | true | 3 |
+| [eligible-prior-fall-yes](cases/eligible-prior-fall-yes/SUMMARY.md) | prior-fall answer true | true | 3 |
+| [eligible-incomplete-response](cases/eligible-incomplete-response/SUMMARY.md) | one required answer missing | null | 0; no invocation |
+| [eligible-no-response](cases/eligible-no-response/SUMMARY.md) | no QuestionnaireResponse | null | 0; no invocation |
+
+## Assertion format
+
+Every assertion has an expression name and an expected typed value. Boolean
+unknown is represented as JSON `null` with `"semantics": "unknown"`; it is
+not interchangeable with `false`, an omitted result, or an execution error.
+
+A test harness may add raw engine output and status fields in a separate result
+file. It should not modify the shared assertions.
+
+## Fixture validation status
+
+On 2026-08-26, all 13 FHIR files passed the HL7 FHIR validator 6.10.2 with
+FHIR R4 4.0.1 and `hl7.fhir.uv.sdc#4.0.0` with no errors. Remaining warnings
+are limited to omitted generated narratives, the deliberately missing required
+answer in the incomplete fixture, and LOINC validation being disabled in that
+validator run. Exact ReasonHub lookups independently confirmed all three LOINC
+2.81 codes and displays as active. Cross-file checks also confirmed that every
+completed answer is reproduced exactly in the expected Observation and that
+the original eight CQL assertions remain unchanged.

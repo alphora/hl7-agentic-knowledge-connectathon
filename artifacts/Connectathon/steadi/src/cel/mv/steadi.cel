@@ -1,0 +1,77 @@
+library "Steadi Examples".
+covers "Steadi".
+
+fact "Eligible Patient":
+- name is "Synthetic eligible STEADI patient".
+- birth date is "1945-01-01".
+- defined by "Patient".
+fact "Younger Patient":
+- name is "Synthetic younger STEADI patient".
+- birth date is "1965-06-16".
+- defined by "Patient".
+
+fact "Unsteady Yes":
+- value is true.
+- date is "2026-06-15T09:20:00Z".
+- defined by "Steadi"."Unsteady".
+fact "Unsteady No":
+- value is false.
+- date is "2026-06-15T09:20:00Z".
+- defined by "Steadi"."Unsteady".
+fact "Worries No":
+- value is false.
+- date is "2026-06-15T09:20:00Z".
+- defined by "Steadi"."Worries About Falling".
+fact "Fall Yes":
+- value is true.
+- date is "2026-06-15T09:20:00Z".
+- defined by "Steadi"."Fallen In Past Year".
+fact "Fall No":
+- value is false.
+- date is "2026-06-15T09:20:00Z".
+- defined by "Steadi"."Fallen In Past Year".
+
+// These six examples preserve the supplied subjects and answer patterns.
+// They exercise generated local answer records, NOT the original shared QR.
+// For four no-guidance examples there is deliberately no invented activity
+// oracle. Their expected empty action set is checked against native output.
+// A missing-answer result is not labeled pause: has-value returns false.
+case "Younger Than 65":
+- id is "steadi-01".
+- subject is "Younger Patient".
+- fact is "Unsteady No".
+- fact is "Worries No".
+- fact is "Fall No".
+
+case "Eligible All No":
+- id is "steadi-02".
+- subject is "Eligible Patient".
+- fact is "Unsteady No".
+- fact is "Worries No".
+- fact is "Fall No".
+
+case "Eligible Unsteady Yes":
+- id is "steadi-03".
+- subject is "Eligible Patient".
+- fact is "Unsteady Yes".
+- fact is "Worries No".
+- fact is "Fall No".
+- result is "Screening Guidance" is "Exercise Guidance".
+
+case "Eligible Prior Fall Yes":
+- id is "steadi-04".
+- subject is "Eligible Patient".
+- fact is "Unsteady No".
+- fact is "Worries No".
+- fact is "Fall Yes".
+- result is "Screening Guidance" is "Multifactorial Intervention Guidance".
+
+case "Eligible Incomplete Response":
+- id is "steadi-05".
+- subject is "Eligible Patient".
+- fact is "Unsteady Yes".
+- fact is "Worries No".
+
+case "Eligible No Response":
+- id is "steadi-06".
+- subject is "Eligible Patient".

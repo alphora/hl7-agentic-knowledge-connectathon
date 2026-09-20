@@ -1,0 +1,13 @@
+{
+  "textHash": "sha256:e8fed4e11d4832007937d6ffb78766d8d7bd42c9c4558dde512d12836e21e1d5",
+  "canonicalizer": "crl-anchor-docx-text",
+  "canonicalizerVersion": "1.0.0",
+  "offsetUnit": "utf8-byte",
+  "unicodeNormalization": "NFC",
+  "rangeConvention": "half-open",
+  "path": "steadi.txt",
+  "derivedFrom": "../refined-source/steadi.docx",
+  "derivedFromHash": "sha256:71b3c7feabb40328ea170195b21cacd3223e133ee703a388f06baa9d305d324c",
+  "derivedFromContract": "upstream-source",
+  "warnings": []
+}

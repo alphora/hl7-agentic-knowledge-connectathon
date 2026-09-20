@@ -1,0 +1,32 @@
+{
+  "resourceType": "EvidenceVariable",
+  "id": "steadi-track-population",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/EvidenceVariable/steadi-track-population",
+  "version": "0.1.0",
+  "status": "draft",
+  "title": "STEADI track screening population",
+  "date": "2026-09-19",
+  "publisher": "Alphora",
+  "description": "Community-dwelling adults aged 65 years or older seen in ambulatory care. Inpatient, hospice and long-term-care settings are outside this track. This is the track target population, not a claim that every research participant met the three-question screening rule.",
+  "characteristic": [
+    {
+      "description": "STEADI track screening population",
+      "definitionCodeableConcept": {
+        "text": "Community-dwelling adults aged 65 years or older seen in ambulatory care. Inpatient, hospice and long-term-care settings are outside this track. This is the track target population, not a claim that every research participant met the three-question screening rule."
+      }
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "derived-from",
+      "display": "STEADI track scope and executable contract",
+      "document": {
+        "url": "https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/5034ccd6bc5971aa7e366b6b0df0b23caffe4f46/use-cases/steadi/README.md"
+      }
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Community-dwelling adults aged 65 years or older seen in ambulatory care. Inpatient, hospice and long-term-care settings are outside this track. This is the track target population, not a claim that every research participant met the three-question screening rule.</p></div>"
+  }
+}
