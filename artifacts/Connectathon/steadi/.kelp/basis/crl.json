@@ -1,9 +1,0 @@
-{
-  "at": "2026-09-20T13:54:49.436Z",
-  "baseCommit": "c0420a5a10594edb8be285dcf2e1972d35281ab5",
-  "basis": {
-    "refined-source": "00bad91d97de337a14cf152a7791d973aac7df4f"
-  },
-  "entity": "crl",
-  "schemaVersion": 1
-}
