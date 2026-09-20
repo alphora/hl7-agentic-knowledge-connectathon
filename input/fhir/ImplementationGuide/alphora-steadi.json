@@ -1,0 +1,153 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "alphora-steadi",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ImplementationGuide/alphora-steadi",
+  "version": "0.1.0",
+  "name": "AlphoraSteadi",
+  "title": "Alphora STEADI Connectathon",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-19",
+  "publisher": "Alphora",
+  "description": "Synthetic requirement-bounded STEADI assessment, guidance, evidence and completion measure. Direct-authored CQL/FHIR; not clinically approved.",
+  "packageId": "org.alphora.steadi",
+  "license": "MIT",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
+      "packageId": "hl7.fhir.uv.sdc",
+      "version": "4.0.0"
+    },
+    {
+      "uri": "http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg",
+      "packageId": "hl7.fhir.uv.cpg",
+      "version": "2.0.0"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "ActivityDefinition/exercise-guidance"
+        },
+        "name": "Exercise fall-prevention guidance",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ActivityDefinition/multifactorial-guidance"
+        },
+        "name": "Individualized multifactorial consideration",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Measure/steadi-screening-completion"
+        },
+        "name": "STEADI three-question screening completion (Connectathon)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "PlanDefinition/steadi-screening-guidance"
+        },
+        "name": "STEADI screening and prevention guidance",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/steadi-three-question-screen"
+        },
+        "name": "STEADI Three-Question Fall-Risk Screen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/steadi-screen-items"
+        },
+        "name": "STEADI three screening question codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Evidence/exercise-fall-rate"
+        },
+        "name": "Exercise and rate of incident falls",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Evidence/multifactorial-fall-rate"
+        },
+        "name": "Multifactorial intervention and rate of incident falls",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "EvidenceVariable/exercise-fall-rate-population"
+        },
+        "name": "Exercise fall-rate analysis population",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "EvidenceVariable/exercise-interventions"
+        },
+        "name": "Exercise intervention exposure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "EvidenceVariable/incident-fall-rate"
+        },
+        "name": "Rate of incident falls",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "EvidenceVariable/multifactorial-fall-rate-population"
+        },
+        "name": "Multifactorial fall-rate analysis population",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "EvidenceVariable/multifactorial-interventions"
+        },
+        "name": "Multifactorial intervention exposure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "EvidenceVariable/steadi-track-population"
+        },
+        "name": "STEADI track screening population",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "EvidenceVariable/trial-comparator"
+        },
+        "name": "Comparator arms of the contributing trials",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Library/Steadi"
+        },
+        "name": "STEADI assessment and guidance logic",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Library/SteadiMeasure"
+        },
+        "name": "STEADI screening-completion measure logic",
+        "exampleBoolean": false
+      }
+    ]
+  }
+}

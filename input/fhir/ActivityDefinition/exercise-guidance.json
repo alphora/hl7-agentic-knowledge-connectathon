@@ -1,0 +1,41 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "exercise-guidance",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ActivityDefinition/exercise-guidance",
+  "version": "0.1.0",
+  "name": "ExerciseGuidance",
+  "title": "Exercise fall-prevention guidance",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-19",
+  "publisher": "Alphora",
+  "library": [
+    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/Steadi|0.1.0"
+  ],
+  "description": "Exercise interventions are recommended for community-dwelling adults aged 65 years or older at increased fall risk (USPSTF grade B). This guidance does not select or order a particular intervention.",
+  "kind": "CommunicationRequest",
+  "intent": "proposal",
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs",
+        "code": "send-message"
+      }
+    ]
+  },
+  "relatedArtifact": [
+    {
+      "type": "justification",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Evidence/exercise-fall-rate|0.1.0"
+    }
+  ],
+  "dynamicValue": [
+    {
+      "path": "payload.contentString",
+      "expression": {
+        "language": "text/cql",
+        "expression": "Exercise fall-prevention guidance Message"
+      }
+    }
+  ]
+}

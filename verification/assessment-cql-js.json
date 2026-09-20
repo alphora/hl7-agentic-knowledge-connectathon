@@ -1,0 +1,421 @@
+{
+  "controls": [
+    {
+      "id": "context-false",
+      "expected": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "actual": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "excluded-period",
+      "expected": [
+        false,
+        false,
+        null,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "actual": [
+        false,
+        false,
+        null,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "status": "passed",
+  "runId": "cac6c21e-31ab-4cd4-84b8-180ce1b30317",
+  "engine": "cql-execution@3.3.2",
+  "cases": [
+    {
+      "fixtureId": "eligible-all-no",
+      "checks": [
+        {
+          "expression": "In Screening Population",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Completed Three Question Screen",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "At Increased Fall Risk",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Exercise Intervention Applicable",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Consider Multifactorial Intervention",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Initial Population",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Denominator",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Numerator",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "fixtureId": "eligible-incomplete-response",
+      "checks": [
+        {
+          "expression": "In Screening Population",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Completed Three Question Screen",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "At Increased Fall Risk",
+          "expected": null,
+          "actual": null,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Exercise Intervention Applicable",
+          "expected": null,
+          "actual": null,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Consider Multifactorial Intervention",
+          "expected": null,
+          "actual": null,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Initial Population",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Denominator",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Numerator",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "fixtureId": "eligible-no-response",
+      "checks": [
+        {
+          "expression": "In Screening Population",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Completed Three Question Screen",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "At Increased Fall Risk",
+          "expected": null,
+          "actual": null,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Exercise Intervention Applicable",
+          "expected": null,
+          "actual": null,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Consider Multifactorial Intervention",
+          "expected": null,
+          "actual": null,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Initial Population",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Denominator",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Numerator",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "fixtureId": "eligible-prior-fall-yes",
+      "checks": [
+        {
+          "expression": "In Screening Population",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Completed Three Question Screen",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "At Increased Fall Risk",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Exercise Intervention Applicable",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Consider Multifactorial Intervention",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Initial Population",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Denominator",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Numerator",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "fixtureId": "eligible-unsteady-yes",
+      "checks": [
+        {
+          "expression": "In Screening Population",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Completed Three Question Screen",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "At Increased Fall Risk",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Exercise Intervention Applicable",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Consider Multifactorial Intervention",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Initial Population",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Denominator",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Numerator",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "fixtureId": "younger-than-65",
+      "checks": [
+        {
+          "expression": "In Screening Population",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Completed Three Question Screen",
+          "expected": true,
+          "actual": true,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "At Increased Fall Risk",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Exercise Intervention Applicable",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Consider Multifactorial Intervention",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Initial Population",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Denominator",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        },
+        {
+          "expression": "Numerator",
+          "expected": false,
+          "actual": false,
+          "present": true,
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "return",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "steadi-screening-guidance",
+        "type": "collection",
+        "entry": [
+          {
+            "resource": {
+              "resourceType": "RequestGroup",
+              "id": "steadi-screening-guidance",
+              "instantiatesCanonical": [
+                "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi-screening-guidance|0.1.0"
+              ],
+              "status": "active",
+              "intent": "proposal",
+              "subject": {
+                "reference": "Patient/patient-eligible-unsteady-yes"
+              },
+              "encounter": {
+                "reference": "Encounter/encounter-eligible-unsteady-yes"
+              },
+              "action": [
+                {
+                  "id": "exercise-guidance",
+                  "title": "Exercise fall-prevention guidance",
+                  "documentation": [
+                    {
+                      "type": "justification",
+                      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Evidence/exercise-fall-rate|0.1.0"
+                    }
+                  ],
+                  "condition": [
+                    {
+                      "kind": "applicability",
+                      "expression": {
+                        "language": "text/cql",
+                        "expression": "Exercise Intervention Applicable"
+                      }
+                    }
+                  ],
+                  "resource": {
+                    "reference": "CommunicationRequest/exercise-guidance-exercise-guidance"
+                  }
+                },
+                {
+                  "id": "multifactorial-guidance",
+                  "title": "Individualized multifactorial consideration",
+                  "documentation": [
+                    {
+                      "type": "justification",
+                      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Evidence/multifactorial-fall-rate|0.1.0"
+                    }
+                  ],
+                  "condition": [
+                    {
+                      "kind": "applicability",
+                      "expression": {
+                        "language": "text/cql",
+                        "expression": "Consider Multifactorial Intervention"
+                      }
+                    }
+                  ],
+                  "resource": {
+                    "reference": "CommunicationRequest/multifactorial-guidance-multifactorial-guidance"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "resource": {
+              "resourceType": "CommunicationRequest",
+              "id": "exercise-guidance-exercise-guidance",
+              "status": "active",
+              "subject": {
+                "reference": "Patient/patient-eligible-unsteady-yes"
+              },
+              "encounter": {
+                "reference": "Encounter/encounter-eligible-unsteady-yes"
+              },
+              "payload": [
+                {
+                  "contentString": "Exercise interventions are recommended for community-dwelling adults aged 65 years or older at increased fall risk (USPSTF grade B). This guidance does not select or order a particular intervention."
+                }
+              ]
+            }
+          },
+          {
+            "resource": {
+              "resourceType": "CommunicationRequest",
+              "id": "multifactorial-guidance-multifactorial-guidance",
+              "status": "active",
+              "subject": {
+                "reference": "Patient/patient-eligible-unsteady-yes"
+              },
+              "encounter": {
+                "reference": "Encounter/encounter-eligible-unsteady-yes"
+              },
+              "payload": [
+                {
+                  "contentString": "Individualize whether to offer multifactorial fall-prevention interventions for community-dwelling adults aged 65 years or older at increased fall risk, considering prior falls, comorbidities and patient preferences (USPSTF grade C). This is not a routine intervention order."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "runId": "78f5dc68-9b6d-45ed-871d-6f004d1fbaa3",
+  "status": "passed",
+  "package": "dist/org.alphora.steadi-0.1.0.tgz",
+  "sha256": "37c9fd74d65aef0283a2668c1292de7a9dde19bdf2d3d8cc7116501080fdb4e5",
+  "resources": 18,
+  "resolvedLocalCanonicalReferences": 13,
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
+    "hl7.fhir.uv.sdc": "4.0.0",
+    "hl7.fhir.uv.cpg": "2.0.0"
+  },
+  "files": {
+    "package/.index.json": "5ac4c56585124248dd1aba7002d90a11b8b3fe1ecfecebf5a88ee7727373a571",
+    "package/ActivityDefinition-exercise-guidance.json": "adb32c0ccf1aa364db277e7bc612a3909b4046382e237934e3b4008c4900f79c",
+    "package/ActivityDefinition-multifactorial-guidance.json": "52bce9b8e59eb71c65708a56ddbad874c28a315e80b6d8c92cebdb6a85dcc414",
+    "package/Evidence-exercise-fall-rate.json": "6efb8446abd3ebfbb7100e6e36b97109283091e9105116e06a027354753d4442",
+    "package/Evidence-multifactorial-fall-rate.json": "d1d04b1fbf52c8a7c4b1abe962b28ed12ec6d53402bbd12a477836964957bc82",
+    "package/EvidenceVariable-exercise-fall-rate-population.json": "fd22b56565a4d1c4512ade2c7e2a80d01f263bd73f1cad7437291001d9f38f3d",
+    "package/EvidenceVariable-exercise-interventions.json": "7d59c433aacf3e08aa29244324715179a3056fa704b3ab66e5f7b2dba677652c",
+    "package/EvidenceVariable-incident-fall-rate.json": "f46519cfcbf3af930a8260fceca5c256b1b984410065521d045cf3245d34a821",
+    "package/EvidenceVariable-multifactorial-fall-rate-population.json": "8e03d34e4eee98f8222cb3199dffde2bc0f377efebd338d03c00314e96a243b0",
+    "package/EvidenceVariable-multifactorial-interventions.json": "e619d53e9285e6ab7a8ece9e17b0bb75296227e2cd518233f057da737464d9c4",
+    "package/EvidenceVariable-steadi-track-population.json": "11047c5875a24e789dcdc801137ad84de45007702798c2317e2f922ea7bf8f15",
+    "package/EvidenceVariable-trial-comparator.json": "0c1c428c4e983a5fdd8597ea1c05a912a5588b2e92e3ab83465b14d7d59e8c83",
+    "package/ImplementationGuide-alphora-steadi.json": "959b4634dd71f95880a5fef5508a71867644c63d31b7a6fe5287d66cba30b70e",
+    "package/LICENSE": "f604b2f7f27796f33bfaf1142d176b8a7eadd89736d566d856bab57ccd6ac95c",
+    "package/Library-Steadi.json": "ee49cd4fc1a9884eb703518bebea79f15dbd810f9765713a717e0ffafb018f62",
+    "package/Library-SteadiMeasure.json": "9ea060797c86ec4ec143d2f47a9aa4df07b71a4f6fdfb3392e1755cf8a9bd2e0",
+    "package/Measure-steadi-screening-completion.json": "5c37ed0612711f3864c41fc69a15573bbe26dc1c634f4130f6ee8e0f8cdf99cf",
+    "package/PlanDefinition-steadi-screening-guidance.json": "202bb6292994ff2fbf15b0d2ea5b7f7d37aafd6c5323484ddf68076964ccc141",
+    "package/Questionnaire-steadi-three-question-screen.json": "7c569b2853f1bed847549962a2e765c8c7f5d2685894c832fa010d94471535d5",
+    "package/Steadi.cql": "8fab37f16f43c9e0a3f29219bf92424642b90290cbcab33f7fe64d925b5a642b",
+    "package/Steadi.json": "bef41fb6f7316a9a5e0941ba391072ca26f816149af75022a0333006cd0aff76",
+    "package/SteadiMeasure.cql": "ef49b98702b981c428f854ae4a1c62d8703e42c2c2aa5dc26d7aee542655f0e1",
+    "package/SteadiMeasure.json": "285010523acf952dce95b8ae7a0ca743d63eda2629741adff866ef6c3c2bf609",
+    "package/ValueSet-steadi-screen-items.json": "3e34e586c29c26e81ed88dea77534cd6300c2f81b7b84aecb95a14838ff96a0e",
+    "package/package.json": "951fc971c97cad72a82a740bc4f03e9f0ec9cfca30eb412beb0dd8ad9603961d",
+    "package/upstream-MIT.txt": "e1fe473757ef641da34a06c3300694a07eee913ed2300514e39dbe19476d21d9"
+  },
+  "limits": [
+    "Structural inventory/reference/package checks only; full profile/terminology validation remains separate",
+    "Not published to a package registry"
+  ]
+}

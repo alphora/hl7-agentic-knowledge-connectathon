@@ -11,7 +11,25 @@ try:
  schema=json.loads((ROOT/'.cache/fhir-schema/fhir.schema.json').read_bytes())
  native=json.loads((ROOT/'verification/measure-native/summary.json').read_text())
  assert native['status']=='passed' and len(native['cases'])==6,'Native report set is not a current complete pass'
+ assessment=json.loads((ROOT/'verification/assessment-native/summary.json').read_text())
+ assert assessment['status']=='passed' and len(assessment['cases'])==6 and len(assessment['controls'])==14,'Assessment run incomplete'
+ for rel,digest in assessment['inputs'].items():
+  assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==digest,'Assessment input changed since execution: '+rel
+ for row in assessment['cases']+assessment['controls']:
+  assert row['passed'],'Unpassed assessment case'
+  if 'guidanceCount' in row:
+   applied=json.loads((ROOT/'verification/assessment-native'/row['name']/'apply.json').read_bytes())
+   bundle=next(p['resource'] for p in applied['parameter'] if p['name']=='return')
+   group=next(e['resource'] for e in bundle['entry'] if e['resource']['resourceType']=='RequestGroup')
+   expected_actions=['exercise-guidance','multifactorial-guidance'] if row['guidanceCount']==2 else []
+   assert sorted(a['id'] for a in group.get('action',[]))==expected_actions,'Missing or duplicate guidance action'
+  for name,digest in row.get('outputs',{}).items():
+   assert hashlib.sha256((ROOT/'verification/assessment-native'/row['name']/name).read_bytes()).hexdigest()==digest,'Changed native evidence'
  paths=list((ROOT/'input/fhir').rglob('*.json'))+list((ROOT/'generated/companions').rglob('*.json'))+list((ROOT/'verification/measure-native').glob('*.json'))
+ for folder in (ROOT/'verification/assessment-native').iterdir():
+  if folder.is_dir():
+   paths.extend(folder/n for n in ('evaluation.json','extraction.json','apply.json') if (folder/n).exists())
+ paths.append(ROOT/'dist/knowledge-transaction.json')
  rows=[]
  for path in paths:
   resource=json.loads(path.read_bytes())

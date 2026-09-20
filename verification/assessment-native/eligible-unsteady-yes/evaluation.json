@@ -1,0 +1,97 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "At Increased Fall Risk",
+      "valueBoolean": true
+    },
+    {
+      "name": "Numerator",
+      "valueBoolean": true
+    },
+    {
+      "name": "Exercise Intervention Applicable",
+      "valueBoolean": true
+    },
+    {
+      "name": "Denominator",
+      "valueBoolean": true
+    },
+    {
+      "name": "Consider Multifactorial Intervention",
+      "valueBoolean": true
+    },
+    {
+      "name": "Initial Population",
+      "valueBoolean": true
+    },
+    {
+      "name": "Assessment Response",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "response-eligible-unsteady-yes",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|4.0.0"
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "HTEST",
+              "display": "test health data"
+            }
+          ]
+        },
+        "questionnaire": "https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi-three-question-screen|0.2.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/patient-eligible-unsteady-yes"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-eligible-unsteady-yes"
+        },
+        "authored": "2026-06-15T09:20:00Z",
+        "author": {
+          "reference": "Patient/patient-eligible-unsteady-yes"
+        },
+        "item": [
+          {
+            "linkId": "unsteady",
+            "text": "Do you feel unsteady when standing or walking?",
+            "answer": [
+              {
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "linkId": "worries-about-falling",
+            "text": "Do you worry about falling?",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "fallen-in-past-year",
+            "text": "Have you fallen in the past year?",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "In Screening Population",
+      "valueBoolean": true
+    },
+    {
+      "name": "Completed Three Question Screen",
+      "valueBoolean": true
+    }
+  ]
+}

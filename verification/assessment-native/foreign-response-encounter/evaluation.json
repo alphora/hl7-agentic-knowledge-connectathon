@@ -1,0 +1,69 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "At Increased Fall Risk",
+      "_valueBoolean": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Numerator",
+      "valueBoolean": false
+    },
+    {
+      "name": "Exercise Intervention Applicable",
+      "_valueBoolean": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Denominator",
+      "valueBoolean": true
+    },
+    {
+      "name": "Consider Multifactorial Intervention",
+      "_valueBoolean": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Initial Population",
+      "valueBoolean": true
+    },
+    {
+      "name": "Assessment Response",
+      "_valueBoolean": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "name": "In Screening Population",
+      "valueBoolean": true
+    },
+    {
+      "name": "Completed Three Question Screen",
+      "valueBoolean": false
+    }
+  ]
+}

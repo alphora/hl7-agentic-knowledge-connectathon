@@ -1,30 +1,26 @@
 # STEADI assessment and measure contract
 
-All rules below come from the supplied track at revision 5034ccd6bc5971aa7e366b6b0df0b23caffe4f46. No IEHP/HCSC customer guidance applies.
+Source: supplied track revision `5034ccd6bc5971aa7e366b6b0df0b23caffe4f46`. No IEHP/HCSC customer guidance applies. The operator approved the direct CQL/FHIR implementation when CRL capabilities were insufficient for this delivery.
 
-| Determination | Faithful interpretation | Implementation status |
-| --- | --- | --- |
-| In Screening Population | Age at least 65, ambulatory encounter, community-dwelling context, excluding inpatient/hospice/LTC | Assessment integration pending; period/encounter eligibility implemented in measure |
-| Completed Three Question Screen | One completed QuestionnaireResponse with all three usable Boolean answers | Implemented in measure helper; CRL shared-response integration pending |
-| At Increased Fall Risk | Completed and any Yes -> true; completed all No -> false; incomplete/absent -> null | Local-answer CRL core demonstrated; not shared-fixture acceptance |
-| Exercise Intervention Applicable | In population and increased risk | CRL communication action demonstrated; final input integration pending |
-| Consider Multifactorial Intervention | Same applicability, distinct individualized grade C guidance | Separate CRL communication action demonstrated |
-| Initial Population | Patient has an eligible ambulatory encounter within the period | Authored Measure library |
-| Denominator | Initial Population | Authored Measure library |
-| Numerator | Denominator and a completed screen in the period linked to an eligible encounter | Authored Measure library |
+| Expression | Implemented meaning |
+| --- | --- |
+| In Screening Population | The selected patient-associated encounter is ambulatory and within the period; age at that encounter is at least 65 and track context is confirmed |
+| Completed Three Question Screen | One selected completed QuestionnaireResponse has all three usable Boolean answers |
+| At Increased Fall Risk | Complete any-Yes is true; complete all-No is false; incomplete or absent is unknown, independently of age eligibility |
+| Exercise Intervention Applicable | In population AND increased risk |
+| Consider Multifactorial Intervention | Same applicability, distinct individualized grade C guidance |
+| Initial Population | At least one eligible ambulatory encounter during the measurement period |
+| Denominator | Initial Population |
+| Numerator | Denominator and one completed screen in the period linked to an eligible encounter |
 
-The Questionnaire is reused unchanged, including its versioned canonical, required Boolean items, LOINC 2.81 codes and three linkIds. Its upstream copyright and metadata remain intact. The three items are a deliberate subset, not a claim to implement a complete LOINC panel.
+The shared Questionnaire retains its exact versioned canonical, three required Boolean items and LOINC 2.81 bindings. Completion means status `completed` plus all three answers; an affirmative partial response does not bypass completion. Extraction is allowed for a completed younger patient's response even though guidance is inapplicable.
 
-The measure is a patient-based proportion and a process measure. It does not measure intervention adherence, fall reduction, quality of treatment, or CMS139FHIR equivalence. An all-No response is a completed screen and counts in the numerator. A partial Yes response does not.
+## Operational choices
 
-Track operational choices in the measure:
-- Calculate age at the linked encounter start.
-- Both encounter start and response authored time must lie in the supplied inclusive measurement period.
-- Require matching patient and encounter references.
-- Count a patient once if any qualifying encounter has a complete response; do not merge answers across responses.
-- Community residence and non-hospice/non-LTC context are an explicit track parameter, not inferred from an AMB code. The supplied fixtures establish that context; broader deployment must establish it separately.
-- Duplicate instances of a required item or multiple answers cause an evaluation error rather than selecting an arbitrary answer. This is malformed-input handling, not a negative screen.
+Assessment uses the explicitly selected encounter. The adapter requires `Encounter Id` and its guidance target to agree. It selects the matching QuestionnaireResponse by explicit response ID when supplied, otherwise by a singleton match on questionnaire, patient, encounter and period. Multiple matches are an error; answers are never pooled. Duplicate required items or answers produce cardinality errors. Missing/wrong-type answers remain unusable, not false.
 
-The Measure is authored independently because the operator confirmed CRL has no Measure authoring construct. Its population expressions are in SteadiMeasure.cql. Assessment and guidance remain on the CRL -> generated CQL/FHIR -> native $apply path. Measure evaluation uses the native measure command corresponding to Measure/$evaluate-measure.
+The Measure is period-wide and patient-based. A patient counts once if any qualifying encounter has one completed screen. An all-No screen counts in the numerator. This is a screening-completion process measure, not fall reduction, treatment quality, adherence, or CMS139FHIR equivalence.
 
-The native CRL probe is isolated under the ignored .cache/preflight/crl-core directory. Its local answer codes and generated linkIds are not the supplied LOINC/Questionnaire contract. Successful generation there proves the native mechanism, not completion of the challenge.
+Age is calculated at encounter start. Encounter start and response authored time lie within the inclusive measurement period. The supplied fixtures establish community residence and non-hospice/non-LTC context through the explicit `Track Context Confirmed` parameter. An AMB code alone does not establish those facts for general use.
+
+The assessment includes `SteadiMeasure` for shared answer/eligibility helpers and delegates the three measure expressions to that Library. Guidance logic is defined once in CQL and referenced by the authored PlanDefinition. Both guidance actions communicate information; neither orders an intervention or selects a specific treatment. Each points to its corresponding Evidence resource.

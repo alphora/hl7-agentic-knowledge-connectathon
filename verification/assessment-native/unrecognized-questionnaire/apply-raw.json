@@ -1,0 +1,53 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "return",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "steadi-screening-guidance",
+        "type": "collection",
+        "entry": [
+          {
+            "resource": {
+              "resourceType": "RequestGroup",
+              "id": "steadi-screening-guidance",
+              "contained": [
+                {
+                  "resourceType": "OperationOutcome",
+                  "id": "apply-outcome-steadi-screening-guidance",
+                  "issue": [
+                    {
+                      "severity": "error",
+                      "code": "exception",
+                      "diagnostics": "Error encountered extracting response-eligible-all-no: Unable to retrieve Questionnaire code map for Observation based extraction"
+                    }
+                  ]
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-messages",
+                  "valueReference": {
+                    "reference": "#apply-outcome-steadi-screening-guidance"
+                  }
+                }
+              ],
+              "instantiatesCanonical": [
+                "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi-screening-guidance|0.1.0"
+              ],
+              "status": "active",
+              "intent": "proposal",
+              "subject": {
+                "reference": "Patient/patient-eligible-all-no"
+              },
+              "encounter": {
+                "reference": "Encounter/encounter-eligible-all-no"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

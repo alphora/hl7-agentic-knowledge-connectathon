@@ -1,0 +1,76 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "steadi-screening-guidance",
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi-screening-guidance",
+  "version": "0.1.0",
+  "name": "SteadiScreeningGuidance",
+  "title": "STEADI screening and prevention guidance",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-19",
+  "publisher": "Alphora",
+  "description": "Direct-authored STEADI challenge guidance. Applicability is evaluated from the supplied, coherent QuestionnaireResponse; this does not order an intervention.",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "workflow-definition"
+      }
+    ]
+  },
+  "library": [
+    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/Steadi|0.1.0"
+  ],
+  "relatedArtifact": [
+    {
+      "type": "justification",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Evidence/exercise-fall-rate|0.1.0"
+    },
+    {
+      "type": "justification",
+      "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Evidence/multifactorial-fall-rate|0.1.0"
+    }
+  ],
+  "action": [
+    {
+      "id": "exercise-guidance",
+      "title": "Exercise fall-prevention guidance",
+      "documentation": [
+        {
+          "type": "justification",
+          "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Evidence/exercise-fall-rate|0.1.0"
+        }
+      ],
+      "condition": [
+        {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "Exercise Intervention Applicable"
+          }
+        }
+      ],
+      "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ActivityDefinition/exercise-guidance|0.1.0"
+    },
+    {
+      "id": "multifactorial-guidance",
+      "title": "Individualized multifactorial consideration",
+      "documentation": [
+        {
+          "type": "justification",
+          "resource": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Evidence/multifactorial-fall-rate|0.1.0"
+        }
+      ],
+      "condition": [
+        {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql",
+            "expression": "Consider Multifactorial Intervention"
+          }
+        }
+      ],
+      "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ActivityDefinition/multifactorial-guidance|0.1.0"
+    }
+  ]
+}

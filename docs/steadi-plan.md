@@ -1,6 +1,6 @@
 # STEADI implementation plan
 
-Status: native plan review completed with 2 important findings accepted; refinements and preflight qualification in progress. No implementation acceptance claimed.
+Status: direct-authoring plan accepted; implementation and verification in progress.
 Updated: 2026-09-19.
 Upstream revision: 5034ccd6bc5971aa7e366b6b0df0b23caffe4f46.
 Public repository: https://github.com/alphora/hl7-agentic-knowledge-connectathon
@@ -42,19 +42,19 @@ These resources describe evidence and its subjects. They do not replace the eigh
 ### Decisions to settle before artifact generation
 
 - Operator-approved canonical base (2026-09-19): https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir. Preserve upstream fixture identities; any allowed Questionnaire mapping must be explicit.
-- Exact supported CRL/CQL/companion boundary: question sent to CRL, answer pending.
+- Direct CQL/FHIR implementation is authorized; it remains explicitly distinguished from CRL generation.
 - Fixture context omits explicit community residence/hospice data. Record the track-scoped context assumptions explicitly; an AMB encounter alone does not prove those facts for general clinical use.
 - Document operational choices for age anchor, encounter/period linkage and selection among multiple responses, preserving all supplied expectations. Do not mix answers across separate response instances.
 
-### Execution contract and bounded preflight
+### Accepted execution contract
 
-The proposed CQL input is the original synthetic patient Bundle, including QuestionnaireResponses, together with the explicit measurement period and evaluation date. Both independent engines receive equivalent input and parameter values. CQL completeness/risk reads one coherent response instance; it does not combine answers across responses. Extraction is a separate required tested operation against the same QuestionnaireResponse and supplied Questionnaire. Actual extraction output is compared with the expected resources; it is not required as a substitute CQL input merely because extraction is part of the challenge.
+The operator authorized direct implementation of missing capabilities. Author the assessment and guidance directly in standard CQL/FHIR, alongside the already authorized Measure/Evidence companions. This supersedes the earlier CRL-generated-only path for this challenge. No CRL tools-repository changes or additional clinical sources are included.
 
-Use CRL-generated CQL/ELM and FHIR definitions with our verified native $apply runtime as the implementation path. Qualify the needed translator/model/helper and extraction interfaces against the supplied contract. Do not replace this path with hand-authored clinical CQL merely to satisfy fixtures. Independent CQL and FHIR implementations may be supplied by collaborating participants; operating a second local stack is not an implementation prerequisite. Exchange the same artifacts, original fixtures, parameters and typed expected results, then retain observed versions and results. Resolve concrete fixture-integration gaps without silently changing inputs or generated outputs.
+Both execution implementations receive the original synthetic patient Bundle and equivalent explicit period/selection/context parameters. CQL reads one coherent selected response. Native SDC extraction is independently invoked on that same response and the unchanged Questionnaire; documented adapter metadata corrections retain raw engine evidence. The outputs are explicitly direct-authored/adapter results, not CRL emission.
 
 ## Phase 2 - Required implementation only
 
-Author the evidence summary, recommendation decision table, assessment/measure/terminology definitions and corresponding R4 resources. Use the shared three-question Questionnaire, required linkIds/LOINC bindings and extraction semantics. Pin dependencies and expose the exact eight expression names. Use current supported CRL forms where applicable; resolve the expression/export boundary before encoding.
+Author the evidence summary, recommendation decision table, assessment/measure/terminology definitions and corresponding R4 resources. Use the shared three-question Questionnaire, required linkIds/LOINC bindings and extraction semantics. Pin dependencies and expose the exact eight expression names. Use standard CQL and FHIR with explicit provenance to the supplied requirements.
 
 | Required output | Planned acceptance evidence |
 | --- | --- |
@@ -77,17 +77,12 @@ Validate our generated resources and execute our artifact pipeline first. Coordi
 
 Review the source-to-evidence-to-guidance/measure chain and the actual delivered artifacts. Record reviewer findings and lead dispositions; human clinical acceptance remains separate. Record elapsed authoring and human review time, revision cycles, blockers and repeatability. Without a comparable conventional baseline, report descriptive effort only.
 
-After scoped code/artifact review, commit and push the authorized public project with a strict file allowlist excluding private workspace material, credentials and cached third-party snapshots. Publish reproducible instructions, verification evidence and remaining limitations. The public repository already exists; no implementation has yet been committed.
+After scoped code/artifact review, commit and push the authorized public project with a strict file allowlist excluding private workspace material, credentials and cached third-party snapshots. Publish reproducible instructions, verification evidence and remaining limitations. The public repository contains the initial reviewed Measure/Evidence delivery; assessment and package changes receive their own code review.
 
-## Review and capability status
+## Review and verification status
 
-Native impl plan review: 0 critical, 2 important, 1 nit; all accepted. Comparator representation and preflight/input contract added; hash status reconciled. Candidate preflight remains to be executed. Review was against a byte-identical bounded packet, not raw clinical sources or execution. No clinical fidelity approval inferred.
-External panel arm: unavailable in this session after two earlier timeouts; do not imply a completed external review.
-CRL capability question: 01M2XKZB50EX9GYFKCFMG4EYXQ, pending.
-Evidence-specific follow-up: 01M2XMJSEENDFE9GTBF54617DT, accepted but CRL not armed at send time; answer pending.
+The direct-implementation plan review converged after two important findings were accepted: keep risk independent of population eligibility, and distinguish exact selected-encounter assessment from period-wide Measure membership. Controls cover both. Native execution, code review and package validation are separate gates.
 
-## Operator clarifications (2026-09-19)
+The external review arm was unavailable after two timeouts. Native review is recorded separately from lead execution. Human clinical acceptance and cross-participant storage/retrieval are not inferred from tests or review.
 
-Prioritize CRL-generated CQL/ELM and FHIR artifacts and their native $apply behavior. Cross-implementation checks can be coordinated among participants. The direct CQL prototype passed 48 supplied assertions on cql-execution, but is not the selected deliverable or proof of CRL behavior. A Boolean Observation coded-source compatibility probe failed in CRL6.4.0; the exact diagnostic and shared-Questionnaire integration question were sent to CRL in exchange 01M2XPMRBDZ2CWHQNGHRMHCXW8. Local selected-answer experiments must be labeled separately from shared-fixture acceptance.
-
-Measure boundary confirmed by operator: author standard FHIR Measure separately, with its population CQL Library, and use Measure/$evaluate-measure or the runtime measure command. Assessment and guidance remain CRL-generated and use $apply. The measure companion contains period/encounter/completion counting, not a replacement guidance implementation.
+Current results and remaining work are recorded in `task-state.json` and the verification reports. The package uses exact R4 4.0.1, SDC 4.0.0 and CPG 2.0.0 dependency declarations. These do not establish transitive profile/terminology validation by themselves.
