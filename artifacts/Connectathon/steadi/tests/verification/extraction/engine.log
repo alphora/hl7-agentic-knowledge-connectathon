@@ -1,0 +1,13 @@
+younger-than-65: native $extract returned 3 entries
+eligible-all-no: native $extract returned 3 entries
+eligible-unsteady-yes: native $extract returned 3 entries
+eligible-prior-fall-yes: native $extract returned 3 entries
+
+[main] INFO ca.uhn.fhir.util.VersionUtil - HAPI FHIR version 8.8.1 - Rev 5fc1c76d43
+[main] INFO ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+[main] INFO ca.uhn.fhir.util.XmlUtil - FHIR XML procesing will use StAX implementation 'Woodstox' version '7.1.0'
+[main] INFO ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+[main] INFO ca.uhn.fhir.context.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-resources.xml
+[main] INFO ca.uhn.fhir.context.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-types.xml
+[main] INFO ca.uhn.fhir.context.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-others.xml
+[main] INFO ca.uhn.fhir.context.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/extension/extension-definitions.xml

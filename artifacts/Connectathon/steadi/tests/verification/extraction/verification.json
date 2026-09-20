@@ -1,0 +1,1182 @@
+{
+  "scope": "Generated Q plus client-completed QR extraction; incoming challenge QR ingestion is not required by this check.",
+  "runtime": "cqf-fhir-cr-cli-4.7-crl-4aee6041",
+  "records": [
+    {
+      "case": "younger-than-65",
+      "invocationExpected": true,
+      "invoked": true,
+      "templateReason": "Age-gated apply emitted no Questionnaire. Client reuses the unchanged generated eligible-all-no Questionnaire for the age-independent extraction test, with the younger case all-false answers.",
+      "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaire/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
+      "questionnaireSourceSha256": "41333df8591866b516b683b36cdcaf803223ac57ea90164da757147e8db875b0",
+      "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
+      "clientChanges": [
+        "status completed",
+        "authored and encounter from supplied context",
+        "author is synthetic patient"
+      ],
+      "checks": [
+        {
+          "field": "observationCount",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "field": "engineErrors",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "question": "unsteady",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "unsteady",
+          "field": "valueBoolean",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-younger-than-65-younger-patient",
+          "actual": "Patient/steadi-examples-younger-than-65-younger-patient",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "encounter",
+          "expected": "Encounter/encounter-younger-than-65",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "100257-5"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "unsteady"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-younger-than-65-younger-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-younger-client-response",
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "valueBoolean",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-younger-than-65-younger-patient",
+          "actual": "Patient/steadi-examples-younger-than-65-younger-patient",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "encounter",
+          "expected": "Encounter/encounter-younger-than-65",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "97878-3"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "worries-about-falling"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-younger-than-65-younger-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-younger-client-response",
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "valueBoolean",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-younger-than-65-younger-patient",
+          "actual": "Patient/steadi-examples-younger-than-65-younger-patient",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "encounter",
+          "expected": "Encounter/encounter-younger-than-65",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "52552-7"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "fallen-in-past-year"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-younger-than-65-younger-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-younger-client-response",
+          "actual": [],
+          "pass": false
+        }
+      ],
+      "pass": false,
+      "scope": "supplemental generated-form reuse; not an apply-produced QR"
+    },
+    {
+      "case": "eligible-all-no",
+      "invocationExpected": true,
+      "invoked": true,
+      "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaire/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
+      "questionnaireSourceSha256": "41333df8591866b516b683b36cdcaf803223ac57ea90164da757147e8db875b0",
+      "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
+      "clientChanges": [
+        "status completed",
+        "authored and encounter from supplied context",
+        "author is synthetic patient"
+      ],
+      "checks": [
+        {
+          "field": "observationCount",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "field": "engineErrors",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "question": "unsteady",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "unsteady",
+          "field": "valueBoolean",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-eligible-all-no-eligible-patient",
+          "actual": "Patient/steadi-examples-eligible-all-no-eligible-patient",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "encounter",
+          "expected": "Encounter/encounter-eligible-all-no",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "100257-5"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "unsteady"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-eligible-all-no-eligible-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-steadi-examples-eligible-all-no-eligible-patient",
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "valueBoolean",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-eligible-all-no-eligible-patient",
+          "actual": "Patient/steadi-examples-eligible-all-no-eligible-patient",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "encounter",
+          "expected": "Encounter/encounter-eligible-all-no",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "97878-3"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "worries-about-falling"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-eligible-all-no-eligible-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-steadi-examples-eligible-all-no-eligible-patient",
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "valueBoolean",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-eligible-all-no-eligible-patient",
+          "actual": "Patient/steadi-examples-eligible-all-no-eligible-patient",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "encounter",
+          "expected": "Encounter/encounter-eligible-all-no",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "52552-7"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "fallen-in-past-year"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-eligible-all-no-eligible-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-steadi-examples-eligible-all-no-eligible-patient",
+          "actual": [],
+          "pass": false
+        }
+      ],
+      "pass": false,
+      "scope": "generated-output check"
+    },
+    {
+      "case": "eligible-unsteady-yes",
+      "invocationExpected": true,
+      "invoked": true,
+      "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-unsteady-yes-eligible-patient/questionnaire/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient.json",
+      "questionnaireSourceSha256": "8a1526b12f34ad5aa323409661f5fa6aadef9795598e4740e8f1a3656a9e54d7",
+      "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-unsteady-yes-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient.json",
+      "clientChanges": [
+        "status completed",
+        "authored and encounter from supplied context",
+        "author is synthetic patient"
+      ],
+      "checks": [
+        {
+          "field": "observationCount",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "field": "engineErrors",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "question": "unsteady",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "unsteady",
+          "field": "valueBoolean",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "actual": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "encounter",
+          "expected": "Encounter/encounter-eligible-unsteady-yes",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "100257-5"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "unsteady"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "valueBoolean",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "actual": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "encounter",
+          "expected": "Encounter/encounter-eligible-unsteady-yes",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "97878-3"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "worries-about-falling"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "valueBoolean",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "actual": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "encounter",
+          "expected": "Encounter/encounter-eligible-unsteady-yes",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "52552-7"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "fallen-in-past-year"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-eligible-unsteady-yes-eligible-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient",
+          "actual": [],
+          "pass": false
+        }
+      ],
+      "pass": false,
+      "scope": "generated-output check"
+    },
+    {
+      "case": "eligible-prior-fall-yes",
+      "invocationExpected": true,
+      "invoked": true,
+      "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/questionnaire/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient.json",
+      "questionnaireSourceSha256": "07f886669d924b187c9f920542120aecab7a0e90d2b02945fceba630bdad8008",
+      "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient.json",
+      "clientChanges": [
+        "status completed",
+        "authored and encounter from supplied context",
+        "author is synthetic patient"
+      ],
+      "checks": [
+        {
+          "field": "observationCount",
+          "pass": true,
+          "actual": 3
+        },
+        {
+          "field": "engineErrors",
+          "pass": true,
+          "actual": []
+        },
+        {
+          "question": "unsteady",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "unsteady",
+          "field": "valueBoolean",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "actual": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "encounter",
+          "expected": "Encounter/encounter-eligible-prior-fall-yes",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "100257-5"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "unsteady"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "unsteady",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "unsteady",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "valueBoolean",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "actual": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "encounter",
+          "expected": "Encounter/encounter-eligible-prior-fall-yes",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "97878-3"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "worries-about-falling"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "worries-about-falling",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "oneAssociatedObservation",
+          "pass": true,
+          "actual": 1
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "valueBoolean",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "status",
+          "expected": "final",
+          "actual": "final",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "subject",
+          "expected": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "actual": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "effectiveDateTime",
+          "expected": "2026-06-15T09:20:00Z",
+          "actual": "2026-06-15T09:20:00Z",
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "encounter",
+          "expected": "Encounter/encounter-eligible-prior-fall-yes",
+          "actual": null,
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "code",
+          "expected": {
+            "system": "http://loinc.org",
+            "code": "52552-7"
+          },
+          "actual": [
+            {
+              "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+              "code": "fallen-in-past-year"
+            }
+          ],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "category",
+          "expected": {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "survey"
+          },
+          "actual": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "survey"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "authorToPerformer",
+          "expected": {
+            "reference": "Patient/steadi-examples-eligible-prior-fall-yes-eligible-patient"
+          },
+          "actual": [],
+          "pass": false
+        },
+        {
+          "question": "fallen-in-past-year",
+          "field": "derivedFrom",
+          "expected": "QuestionnaireResponse/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient",
+          "actual": [],
+          "pass": false
+        }
+      ],
+      "pass": false,
+      "scope": "generated-output check"
+    },
+    {
+      "case": "eligible-incomplete-response",
+      "invocationExpected": false,
+      "invoked": false,
+      "reason": "Client does not submit incomplete or absent responses to baseline extraction.",
+      "scope": "generated-output check"
+    },
+    {
+      "case": "eligible-no-response",
+      "invocationExpected": false,
+      "invoked": false,
+      "reason": "Client does not submit incomplete or absent responses to baseline extraction.",
+      "scope": "generated-output check"
+    }
+  ],
+  "allContractFieldsPass": false,
+  "engineOutputRepaired": false,
+  "primaryCompletedResponses": 3,
+  "primaryFinalObservationCounts": [
+    3,
+    3,
+    3
+  ],
+  "youngerCase": "Supplemental extraction check only; age-gated apply correctly did not generate a Questionnaire."
+}

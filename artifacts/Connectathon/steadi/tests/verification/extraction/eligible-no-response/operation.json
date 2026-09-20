@@ -1,0 +1,6 @@
+{
+  "case": "eligible-no-response",
+  "invocationExpected": false,
+  "invoked": false,
+  "reason": "Client does not submit incomplete or absent responses to baseline extraction."
+}

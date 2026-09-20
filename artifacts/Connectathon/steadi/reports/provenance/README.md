@@ -16,10 +16,10 @@ Five missed-decision items represent four distinct boundaries:
 
 1. General community-dwelling/ambulatory and excluded-population filtering is not implemented; supplied synthetic fixture context supplies those conditions. The slide repetition is an additional source item, not another distinct gap.
 2. The implementation uses age today rather than encounter-relative age. Supplied fixture agreement does not prove arbitrary retrospective eligibility. The measurement-period statement also belongs to the separate Measure context, whose execution evidence the lead owns.
-3. Three present local Boolean answers do not establish the original shared QuestionnaireResponse's completed status or response association.
-4. Guarding incomplete answers from guidance does not implement the separate SDC rule forbidding extraction invocation for incomplete/absent shared responses.
+3. The original source-model record conflated input ingestion with client completion. This interpretation is corrected: CEL inputs are valid setup; the client completes the generated response before extraction. The extraction test records completion explicitly.
+4. Extraction invocation is a client workflow responsibility. The new test invokes it for complete responses and does not invoke it for incomplete/absent responses; this is not a requirement for another decision branch.
 
-Additional technical contract limits are explicitly recorded in the definition-item rationales: exact shared linkIds, external question-code bindings, original shared-QR interoperability and full SDC extraction fields. They are not declared implemented by clinical decision links. Manual Measure/Evidence companions, packaging and participant interoperability checks require their own evidence.
+Additional technical contract limits are explicitly recorded in the definition-item rationales: exact shared linkIds, external question-code bindings, the specific extracted-field differences listed in ../extraction.md. They are not declared implemented by clinical decision links. Manual Measure/Evidence companions, packaging and participant interoperability checks require their own evidence.
 
 ## CRE/cockpit evidence is separate
 
@@ -43,3 +43,7 @@ The five soft keyword warnings arise from eligibility/criteria words in case tab
 The carrier was normalized and FINAL-validated against the actual artifact paths after installation. Normalization returned `fullyNormalized: true` with no changes or worklist. FINAL findings remain the explicit findings above; saving through KELP does not turn them into a passing validation.
 
 This is demo provenance with explicit gaps, not a full-fidelity or production acceptance claim. Source acknowledgement alone is not complete implementation.
+
+## Interpretation correction after the recorded FINAL run
+
+The saved validator output is historical execution evidence, not a current independent adjudication of the source interpretation above. The original-QR input-ingestion caveat is withdrawn. The source and provenance carrier were not rewritten by this focused output test; the former source-gap classifications for completion/extraction must be read with this correction.

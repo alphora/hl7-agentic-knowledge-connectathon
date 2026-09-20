@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-20T12:35:08.762Z",
+  "baseCommit": "53b04af20493e19f1d3df773908e4c3e0adf9eed",
+  "basis": {
+    "cel": "66fb6b4d54a0c4905707e774419f3ba9c0cd58a0",
+    "companion-source": "b55ed8fdebc9240f0cf854f6c3dd511f655ce0bf",
+    "cql": "f131df6daafcebdbe0f4e8de941cecb71fe7ceec",
+    "fhir": "58506831983391a573a973c4f5535d5255e81807"
+  },
+  "entity": "qa",
+  "schemaVersion": 1
+}

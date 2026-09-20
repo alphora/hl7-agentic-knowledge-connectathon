@@ -1,0 +1,14 @@
+{
+  "case": "younger-than-65",
+  "invocationExpected": true,
+  "invoked": true,
+  "templateReason": "Age-gated apply emitted no Questionnaire. Client reuses the unchanged generated eligible-all-no Questionnaire for the age-independent extraction test, with the younger case all-false answers.",
+  "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaire/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
+  "questionnaireSourceSha256": "41333df8591866b516b683b36cdcaf803223ac57ea90164da757147e8db875b0",
+  "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-all-no-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-all-no-eligible-patient.json",
+  "clientChanges": [
+    "status completed",
+    "authored and encounter from supplied context",
+    "author is synthetic patient"
+  ]
+}

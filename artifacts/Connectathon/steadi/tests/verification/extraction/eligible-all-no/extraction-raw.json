@@ -1,0 +1,93 @@
+{
+  "resourceType": "Bundle",
+  "id": "extract-steadi-steadi-examples-eligible-all-no-eligible-patient",
+  "type": "transaction",
+  "entry": [ {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "extract-steadi-steadi-examples-eligible-all-no-elig-bd41fc07918b",
+      "meta": {
+        "profile": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady|0.0.0" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+          "code": "unsteady"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/steadi-examples-eligible-all-no-eligible-patient"
+      },
+      "effectiveDateTime": "2026-06-15T09:20:00Z",
+      "valueBoolean": false
+    },
+    "request": {
+      "method": "POST"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "extract-steadi-steadi-examples-eligible-all-no-elig-2d585e6c3c28",
+      "meta": {
+        "profile": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling|0.0.0" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+          "code": "worries-about-falling"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/steadi-examples-eligible-all-no-eligible-patient"
+      },
+      "effectiveDateTime": "2026-06-15T09:20:00Z",
+      "valueBoolean": false
+    },
+    "request": {
+      "method": "POST"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "extract-steadi-steadi-examples-eligible-all-no-elig-ab18b0a7994d",
+      "meta": {
+        "profile": [ "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year|0.0.0" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+          "code": "fallen-in-past-year"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/steadi-examples-eligible-all-no-eligible-patient"
+      },
+      "effectiveDateTime": "2026-06-15T09:20:00Z",
+      "valueBoolean": false
+    },
+    "request": {
+      "method": "POST"
+    }
+  } ]
+}

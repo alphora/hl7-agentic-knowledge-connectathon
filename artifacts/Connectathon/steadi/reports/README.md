@@ -31,7 +31,7 @@ The CRL/CEL model, generated CQL/FHIR, manual companions, anchors and provenance
 - The manual Measure references the generated `SteadiInterface|0.0.0` and its Initial Population, Denominator and Numerator expressions. Native evaluation produces six individual MeasureReports and a summary: population 5, denominator 5, numerator 3, score 0.6.
 - Canonical source generation preserved the supplied refined Markdown in a literal DOCX carrier and reported no warnings. Human visual pagination was not verified.
 
-These results demonstrate the local-answer demo. They are not a claim of complete challenge input interoperability or clinical validation.
+These results demonstrate the generated logic and native operations using CEL-supplied input. The challenge extraction check concerns completed responses, not how answers were initially populated. Full conformance still has the specific differences listed below; no clinical-validation claim is made.
 
 ## Established companion authoring
 
@@ -43,8 +43,8 @@ Authored companion inputs live in `src/companion-source/fhir`. They are assemble
 
 ## Explicit differences and unfinished checks
 
-- The CEL examples contain local answer Observations. These runs do not establish ingestion of the challenge's original shared QuestionnaireResponse or SDC extraction.
-- The authored screening inputs currently use local codes. Declaring a LOINC terminology does not establish those external question-code bindings.
+- CEL supplies the initial answers as Observations. That is not itself a deviation from the extraction contract. Native `$extract` on the three in-scope completed client responses returns three final Observations each. See the [extraction results](extraction.md).
+- Actual extracted Observations use the authored local codes rather than the specified LOINC codes; encounter, author/performer and QR `derivedFrom` are also missing. Status, survey category, Boolean values, subject and authored-to-effective time pass. These are observed output differences, not an asserted inability of CRL; supported authoring/configuration options have been queried with CRL.
 - The age source evaluates age today, rather than at the encounter. The supplied six birthdates have the same threshold classification for this demonstration.
 - The demonstration Measure checks age and answer presence. It does not enforce completed QuestionnaireResponse status, same-response/encounter association or measurement-period inclusion.
 - Generated identifiers and linkIds are preserved. We could manually remap them to the challenge identifiers, but deliberately did not: the demonstration uses our tooling's capabilities. The reason exact linkId equality is necessary remains a question for the challenge organizers.

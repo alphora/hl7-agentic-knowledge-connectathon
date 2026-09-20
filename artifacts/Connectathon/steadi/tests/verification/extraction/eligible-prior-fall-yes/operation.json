@@ -1,0 +1,13 @@
+{
+  "case": "eligible-prior-fall-yes",
+  "invocationExpected": true,
+  "invoked": true,
+  "questionnaireSource": "tests/results/fhir/patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/questionnaire/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient.json",
+  "questionnaireSourceSha256": "07f886669d924b187c9f920542120aecab7a0e90d2b02945fceba630bdad8008",
+  "responseTemplate": "tests/results/fhir/patient/steadi-examples-eligible-prior-fall-yes-eligible-patient/questionnaireresponse/steadi-steadi-examples-eligible-prior-fall-yes-eligible-patient.json",
+  "clientChanges": [
+    "status completed",
+    "authored and encounter from supplied context",
+    "author is synthetic patient"
+  ]
+}

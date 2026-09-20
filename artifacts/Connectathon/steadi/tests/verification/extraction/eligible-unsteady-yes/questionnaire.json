@@ -1,0 +1,254 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "steadi-steadi-examples-eligible-unsteady-yes-eligible-patient",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+      "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInterface"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext",
+      "extension": [
+        {
+          "url": "name",
+          "valueCoding": {
+            "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext",
+            "code": "patient",
+            "display": "Patient"
+          }
+        },
+        {
+          "url": "type",
+          "valueCode": "Patient"
+        }
+      ]
+    }
+  ],
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi-steadi-examples-eligible-unsteady-yes-eligible-patient",
+  "version": "0.0.0-steadi-examples-eligible-unsteady-yes-eligible-patient",
+  "status": "active",
+  "item": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtract",
+          "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady"
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+          "extension": [
+            {
+              "url": "definition",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady#Observation.subject"
+            },
+            {
+              "url": "expression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%resource.subject"
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+          "extension": [
+            {
+              "url": "definition",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady#Observation.effective[x]"
+            },
+            {
+              "url": "expression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%resource.authored"
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+          "valueExpression": {
+            "name": "Unsteady",
+            "language": "text/cql-identifier",
+            "expression": "Unsteady",
+            "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInferences"
+          }
+        }
+      ],
+      "linkId": "1",
+      "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady",
+      "text": "Do you feel unsteady when standing or walking?",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/cql-expression",
+                "expression": "%Unsteady.value"
+              }
+            }
+          ],
+          "linkId": "1.1",
+          "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady#Observation.value[x]",
+          "text": "Unsteady",
+          "type": "boolean",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtract",
+          "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling"
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+          "extension": [
+            {
+              "url": "definition",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling#Observation.subject"
+            },
+            {
+              "url": "expression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%resource.subject"
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+          "extension": [
+            {
+              "url": "definition",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling#Observation.effective[x]"
+            },
+            {
+              "url": "expression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%resource.authored"
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+          "valueExpression": {
+            "name": "WorriesAboutFalling",
+            "language": "text/cql-identifier",
+            "expression": "Worries About Falling",
+            "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInferences"
+          }
+        }
+      ],
+      "linkId": "2",
+      "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling",
+      "text": "Do you worry about falling?",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/cql-expression",
+                "expression": "%WorriesAboutFalling.value"
+              }
+            }
+          ],
+          "linkId": "2.1",
+          "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling#Observation.value[x]",
+          "text": "Worries About Falling",
+          "type": "boolean",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtract",
+          "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year"
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+          "extension": [
+            {
+              "url": "definition",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year#Observation.subject"
+            },
+            {
+              "url": "expression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%resource.subject"
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+          "extension": [
+            {
+              "url": "definition",
+              "valueCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year#Observation.effective[x]"
+            },
+            {
+              "url": "expression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%resource.authored"
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+          "valueExpression": {
+            "name": "FallenInPastYear",
+            "language": "text/cql-identifier",
+            "expression": "Fallen In Past Year",
+            "reference": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInferences"
+          }
+        }
+      ],
+      "linkId": "3",
+      "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year",
+      "text": "Have you fallen in the past year?",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/cql-expression",
+                "expression": "%FallenInPastYear.value"
+              }
+            }
+          ],
+          "linkId": "3.1",
+          "definition": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year#Observation.value[x]",
+          "text": "Fallen In Past Year",
+          "type": "boolean",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

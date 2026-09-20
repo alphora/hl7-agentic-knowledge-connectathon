@@ -421,7 +421,7 @@
   },
   "measureScore": 0.6,
   "limits": [
-    "Not original shared QuestionnaireResponse ingestion or SDC extraction.",
+    "Extraction is tested separately in tests/verification/extraction; direct CEL input is not a contract deviation.",
     "Current Patient age substitutes for encounter-age; supplied cases have the same threshold classification.",
     "Measure does not enforce source QR completed status, encounter association or measurement-period inclusion."
   ],
