@@ -1,9 +1,10 @@
 {
-  "at": "2026-09-20T10:19:19.101Z",
-  "baseCommit": "a9c655e789137a73298a4f7703804e635ed28bf9",
+  "at": "2026-09-20T10:19:35.125Z",
   "basis": {
     "refined-source": "a57cdf1874c69f177d196c009661dc0b15b841ab"
   },
+  "by": "rob@alphora.com",
   "entity": "crl",
+  "method": "release",
   "schemaVersion": 1
 }
