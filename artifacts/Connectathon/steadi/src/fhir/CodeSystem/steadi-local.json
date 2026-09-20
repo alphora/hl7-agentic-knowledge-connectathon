@@ -1,0 +1,49 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "steadi-local",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/CodeSystem/steadi-local",
+  "version": "0.0.0",
+  "name": "SteadiLocal",
+  "title": "Steadi",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-20T00:00:00.000Z",
+  "publisher": "unknown",
+  "description": "Steadi",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "unsteady",
+      "display": "Unsteady"
+    },
+    {
+      "code": "worries-about-falling",
+      "display": "Worries About Falling"
+    },
+    {
+      "code": "fallen-in-past-year",
+      "display": "Fallen In Past Year"
+    }
+  ]
+}

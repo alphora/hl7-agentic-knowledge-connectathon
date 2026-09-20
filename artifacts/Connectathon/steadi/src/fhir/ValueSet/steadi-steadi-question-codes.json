@@ -1,0 +1,75 @@
+{
+  "resourceType": "ValueSet",
+  "id": "steadi-steadi-question-codes",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ValueSet/steadi-steadi-question-codes",
+  "version": "0.0.0",
+  "name": "SteadiSteadiQuestionCodes",
+  "title": "Steadi",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-20T00:00:00.000Z",
+  "publisher": "unknown",
+  "description": "Steadi",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "100257-5",
+            "display": "Feel unsteady when standing or walking"
+          },
+          {
+            "code": "97878-3",
+            "display": "Worried about falling"
+          },
+          {
+            "code": "52552-7",
+            "display": "Falls in the past year"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2026-09-20T00:00:00.000Z",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "100257-5",
+        "display": "Feel unsteady when standing or walking"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "97878-3",
+        "display": "Worried about falling"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "52552-7",
+        "display": "Falls in the past year"
+      }
+    ]
+  }
+}

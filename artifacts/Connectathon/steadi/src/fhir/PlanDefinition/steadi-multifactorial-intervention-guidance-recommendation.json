@@ -1,0 +1,75 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "steadi-multifactorial-intervention-guidance-recommendation",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+      "valueCode": "structured"
+    }
+  ],
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi-multifactorial-intervention-guidance-recommendation",
+  "version": "0.0.0",
+  "name": "SteadiMultifactorialInterventionGuidanceRecommendation",
+  "title": "Multifactorial Intervention Guidance",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-20T00:00:00.000Z",
+  "publisher": "unknown",
+  "description": "Multifactorial Intervention Guidance",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "eca-rule"
+      }
+    ]
+  },
+  "library": [
+    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInterface"
+  ],
+  "action": [
+    {
+      "title": "Multifactorial Intervention Guidance",
+      "description": "Multifactorial Intervention Guidance",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+              "code": "guideline-based-care"
+            }
+          ]
+        }
+      ],
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/action-type",
+            "code": "create"
+          }
+        ]
+      },
+      "groupingBehavior": "logical-group",
+      "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/ActivityDefinition/steadi-multifactorial-intervention-guidance"
+    }
+  ]
+}

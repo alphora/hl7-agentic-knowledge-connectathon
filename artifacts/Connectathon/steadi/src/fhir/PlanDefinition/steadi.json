@@ -1,0 +1,232 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "steadi",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition",
+      "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableplandefinition"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+      "valueCode": "structured"
+    }
+  ],
+  "url": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi",
+  "version": "0.0.0",
+  "name": "SteadiScreeningGuidance",
+  "title": "Screening Guidance",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-09-20T00:00:00.000Z",
+  "publisher": "unknown",
+  "description": "Screening Guidance",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "workflow-definition"
+      }
+    ]
+  },
+  "library": [
+    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/Library/SteadiInterface"
+  ],
+  "action": [
+    {
+      "title": "In Screening Population",
+      "description": "In Screening Population",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+              "code": "guideline-based-care"
+            }
+          ]
+        }
+      ],
+      "condition": [
+        {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CRL branch CriterionRef L101C7"
+          }
+        }
+      ],
+      "action": [
+        {
+          "title": "Completed Three Question Screen",
+          "description": "Completed Three Question Screen",
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                  "code": "guideline-based-care"
+                }
+              ]
+            }
+          ],
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "CRL branch CriterionRef L102C9"
+              }
+            }
+          ],
+          "input": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                  "valueString": "Do you feel unsteady when standing or walking?"
+                }
+              ],
+              "type": "Observation",
+              "profile": [
+                "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                  "valueString": "Do you worry about falling?"
+                }
+              ],
+              "type": "Observation",
+              "profile": [
+                "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                  "valueString": "Have you fallen in the past year?"
+                }
+              ],
+              "type": "Observation",
+              "profile": [
+                "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year"
+              ]
+            }
+          ],
+          "action": [
+            {
+              "title": "At Increased Fall Risk",
+              "description": "At Increased Fall Risk",
+              "code": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                      "code": "guideline-based-care"
+                    }
+                  ]
+                }
+              ],
+              "condition": [
+                {
+                  "kind": "applicability",
+                  "expression": {
+                    "language": "text/cql-identifier",
+                    "expression": "CRL branch CriterionRef L103C11"
+                  }
+                }
+              ],
+              "input": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                      "valueString": "Do you feel unsteady when standing or walking?"
+                    }
+                  ],
+                  "type": "Observation",
+                  "profile": [
+                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-unsteady"
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                      "valueString": "Do you worry about falling?"
+                    }
+                  ],
+                  "type": "Observation",
+                  "profile": [
+                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-worries-about-falling"
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-input-text",
+                      "valueString": "Have you fallen in the past year?"
+                    }
+                  ],
+                  "type": "Observation",
+                  "profile": [
+                    "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/StructureDefinition/steadi-fallen-in-past-year"
+                  ]
+                }
+              ],
+              "action": [
+                {
+                  "title": "Exercise Guidance",
+                  "description": "Exercise Guidance",
+                  "code": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                          "code": "guideline-based-care"
+                        }
+                      ]
+                    }
+                  ],
+                  "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi-exercise-guidance-recommendation"
+                },
+                {
+                  "title": "Multifactorial Intervention Guidance",
+                  "description": "Multifactorial Intervention Guidance",
+                  "code": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                          "code": "guideline-based-care"
+                        }
+                      ]
+                    }
+                  ],
+                  "definitionCanonical": "https://alphora.github.io/hl7-agentic-knowledge-connectathon/fhir/PlanDefinition/steadi-multifactorial-intervention-guidance-recommendation"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

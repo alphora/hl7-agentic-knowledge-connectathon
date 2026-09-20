@@ -1,0 +1,1114 @@
+{
+    "schemaVersion":  "1.1",
+    "policyId":  "Steadi",
+    "policyVersion":  "0.0.0",
+    "anchorSource":  {
+                         "path":  "steadi.txt",
+                         "derivedFrom":  "../anchor-source/steadi.txt",
+                         "derivedFromHash":  "sha256:e8fed4e11d4832007937d6ffb78766d8d7bd42c9c4558dde512d12836e21e1d5",
+                         "derivedFromContract":  "anchor-self",
+                         "canonicalizer":  "crl-anchor-docx-text",
+                         "canonicalizerVersion":  "1.0.0",
+                         "textHash":  "sha256:e8fed4e11d4832007937d6ffb78766d8d7bd42c9c4558dde512d12836e21e1d5",
+                         "offsetUnit":  "utf8-byte",
+                         "unicodeNormalization":  "NFC",
+                         "rangeConvention":  "half-open"
+                     },
+    "items":  [
+                  {
+                      "id":  "population-age",
+                      "origin":  "source",
+                      "text":  "For a community-dwelling adult age 65 years or older seen in ambulatory care:\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  654,
+                                             "end":  732
+                                         }
+                                     ],
+                      "role":  "criterion",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Age threshold is implemented by the Patient age-today projection and population guard. The community-dwelling/ambulatory context on this line is a supplied fixture assumption, separately recorded as an unimplemented eligibility boundary below; the link does not prove general context filtering.",
+                      "linkRequirement":  "must-link-decision"
+                  },
+                  {
+                      "id":  "screening-questions",
+                      "origin":  "source",
+                      "text":  "The three screening questions ask whether the patient:\n\n- feels unsteady when standing or walking;\n- worries about falling; or\n- has fallen in the past year.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  1041,
+                                             "end":  1199
+                                         }
+                                     ],
+                      "role":  "criterion",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "The three distinct Boolean question concepts retain the supplied question meanings; external-code and exact-linkId correspondence remain separate open requirements.",
+                      "linkRequirement":  "must-link-decision"
+                  },
+                  {
+                      "id":  "risk-completeness-and-unknown",
+                      "origin":  "source",
+                      "text":  "For this track, a completed screen indicates increased fall risk when any\nanswer is yes. Missing or incomplete answers remain unknown and must not be\ntreated as a negative screen.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  1200,
+                                             "end":  1380
+                                         }
+                                     ],
+                      "role":  "criterion",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "The completed-answer guard and transparent risk criterion require three usable local Boolean values, preserve false versus missing, and gate guidance. Original shared QuestionnaireResponse status/association is not implemented by this link.",
+                      "linkRequirement":  "must-link-decision"
+                  },
+                  {
+                      "id":  "exercise-guidance",
+                      "origin":  "source",
+                      "text":  "The track includes exercise guidance linked to the USPSTF grade B\nrecommendation and individualized consideration of multifactorial\ninterventions linked to the grade C recommendation. It does not diagnose a\nfall-related condition, select a specific treatment, or order an intervention.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  1381,
+                                             "end":  1667
+                                         }
+                                     ],
+                      "role":  "determination",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "This paragraph states the exercise grade B and multifactorial grade C guidance. Separate activities preserve both, with non-ordering communication requests.",
+                      "linkRequirement":  "must-link-decision"
+                  },
+                  {
+                      "id":  "guidance-scope",
+                      "origin":  "source",
+                      "text":  "interventions linked to the grade C recommendation. It does not diagnose a\nfall-related condition, select a specific treatment, or order an intervention.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  1513,
+                                             "end":  1667
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "This is a limit on what guidance may claim, not a new eligibility condition. Activities communicate guidance and do not diagnose or order an intervention.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "named-assessment-and-measure-exports",
+                      "origin":  "source",
+                      "text":  "## Required executable behavior\n\nThe shared assertions use these expression names:\n\n- `In Screening Population`\n- `Completed Three Question Screen`\n- `At Increased Fall Risk`\n- `Exercise Intervention Applicable`\n- `Consider Multifactorial Intervention`\n- `Initial Population`\n- `Denominator`\n- `Numerator`\n\nThe first five expressions describe patient-level assessment and guidance. The\nlast three describe a track-authored screening-completion process measure.\nIncomplete or absent screening data produces an unknown increased-risk result,\nwhile the measure numerator remains false.\n\nFollow the shared [participant and interoperability requirements](../../README.md),\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  3801,
+                                             "end":  4469
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Names and measure semantics are contract requirements represented by CRL Criterion exports and a manual Measure companion; Criterion declarations are not indexed as linkable leaves by this scaffold. Emitted and native expression evidence is maintained by the lead. This source acknowledgement does not attest that companion or named-expression execution has passed.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "scope-exclusions-not-general-filter",
+                      "origin":  "source",
+                      "text":  "- community-dwelling adults age 65 or older\n- ambulatory context\n- CDC STEADI three key questions\n- increased risk when any completed answer is yes\n- exercise and individualized multifactorial guidance\n- track-authored screening-completion measure\n\n\u003c/div\u003e\n\u003cdiv class=\"rule-left\"\u003e\n\n### Excluded\n\n- diagnosis or emergency triage after a fall\n- automatic ordering of an intervention\n- inpatient, hospice, or long-term-care populations\n- equivalence claims to CMS139FHIR\n- real-world quality reporting or clinical deployment\n\n\u003c/div\u003e\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  9863,
+                                             "end":  10392
+                                         }
+                                     ],
+                      "role":  "criterion",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "OPEN: age and the three-question/guidance behavior are modeled, but community residence, ambulatory encounter and hospice/long-term-care exclusions are supplied fixture context rather than general executable eligibility filters. This item intentionally remains without a decision link; it is not waived as presumed scope.",
+                      "linkRequirement":  "must-link-decision"
+                  },
+                  {
+                      "id":  "measurement-and-encounter-time",
+                      "origin":  "source",
+                      "text":  "- Measurement period: 2026-01-01 through 2026-12-31, inclusive\n- Ambulatory encounter: 2026-06-15\n- Eligible-patient birth date: 1945-01-01\n- Younger-patient birth date: 1965-06-16\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  20106,
+                                             "end":  20287
+                                         }
+                                     ],
+                      "role":  "criterion",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "OPEN: fixture dates and birth dates are retained, but the actual projection calculates age today, not at the supplied encounter. The source-defined period is a Measure context, not an encoded screening decision filter. Do not infer full retrospective eligibility support from age-threshold fixture agreement.",
+                      "linkRequirement":  "must-link-decision"
+                  },
+                  {
+                      "id":  "shared-questionnaire-identity-and-codes",
+                      "origin":  "source",
+                      "text":  "- Shared coded Questionnaire: [questionnaire.json](questionnaire.json)\n- Questionnaire canonical:\n  `https://reason-healthcare.github.io/hl7-agentic-knowledge-connectathon/fhir/Questionnaire/steadi-three-question-screen|0.2.0`\n- Synthetic resources carry the standard `HTEST` security label from\n  `http://terminology.hl7.org/CodeSystem/v3-ActReason`.\n\nEach case directory contains:\n\n- `bundle.json`: a FHIR R4 collection Bundle containing a Patient, an\n  ambulatory Encounter, and a QuestionnaireResponse when the scenario has one;\n- `extracted-bundle.json`: the normalized set of resources expected from SDC\n  Observation-based extraction;\n- `assertions.json`: engine-neutral expected values for the eight required\n  CQL expressions and the extraction result; and\n- `SUMMARY.md`: a human-readable explanation of the data and expected result.\n\nThe canonical uses a repository-owned namespace. A participant may map it to\nthe canonical used by its generated Questionnaire, but must preserve the three\nlinkIds, question codes, and asserted behavior.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  20287,
+                                             "end":  21336
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "OPEN contract: canonical mapping is permitted, but exact linkIds and question codes are required. Local generated Questionnaire identifiers are retained under operator direction; declaration of external terminology alone does not prove question-code emission. Exact shared-QR interoperability is not claimed.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "three-coded-questions",
+                      "origin":  "source",
+                      "text":  "## Coded Questionnaire contract\n\n| linkId | LOINC 2.81 | Display | Answer type |\n| --- | --- | --- | --- |\n| `unsteady` | `100257-5` | Feel unsteady when standing or walking | Boolean |\n| `worries-about-falling` | `97878-3` | Worried about falling | Boolean |\n| `fallen-in-past-year` | `52552-7` | Falls in the past year | Boolean |\n\nThe codes were resolved and verified as active through ReasonHub on\n2026-08-26. The track does not assign a panel code because these three items\nare a deliberate subset rather than a claim to implement the complete LOINC\nStay Independent panel.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  21337,
+                                             "end":  21916
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "The three source LOINC 2.81 question codes are declared in CRL terminology. Their binding on generated question/extracted Observation output remains a separate unmet contract; local answer codes are not represented as those LOINC codes.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "qr-code-location",
+                      "origin":  "source",
+                      "text":  "FHIR R4 `QuestionnaireResponse.item` has no `code` element. Each response\ntherefore retains Boolean answers and references the versioned shared\nQuestionnaire, where the LOINC codes are maintained. SDC extraction repeats\nthose codes on the resulting `Observation.code`. This preserves conformant\nFHIR and straightforward Boolean logic in CQL.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  21917,
+                                             "end":  22259
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Source explains Questionnaire versus QuestionnaireResponse code placement and expected extraction. Actual generated shared-QR/extraction interoperability has not been established; no clinical decision link can substitute for it.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "completed-qr-status",
+                      "origin":  "source",
+                      "text":  "A response is complete only when its status is `completed` and all three\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  22260,
+                                             "end":  22333
+                                         }
+                                     ],
+                      "role":  "criterion",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "OPEN: original QuestionnaireResponse.status=completed is required by source. The model uses three local selected answer records and cannot establish original shared-response status/association. This source requirement deliberately has no linked implementation.",
+                      "linkRequirement":  "must-link-decision"
+                  },
+                  {
+                      "id":  "three-usable-booleans-and-risk",
+                      "origin":  "source",
+                      "text":  "items contain a usable Boolean answer. Increased fall risk is true when the\nresponse is complete and at least one answer is true. It is false when the\nresponse is complete and all answers are false. It is null when the response is\nincomplete or absent.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  22333,
+                                             "end":  22586
+                                         }
+                                     ],
+                      "role":  "criterion",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "The local-answer portion is implemented by presence predicates and nullable risk logic. Combined with the separately open completed-QR-status item, this does not claim that all original shared-response semantics are satisfied.",
+                      "linkRequirement":  "must-link-decision"
+                  },
+                  {
+                      "id":  "extraction-resource-contract",
+                      "origin":  "source",
+                      "text":  "## SDC extraction contract\n\nThe shared Questionnaire declares the SDC\n[`sdc-questionnaire-extr-obsn`](https://hl7.org/fhir/uv/sdc/STU4/en/StructureDefinition-sdc-questionnaire-extr-obsn.html)\nprofile, enables `sdc-questionnaire-observationExtract`, and supplies the\n`survey` Observation category. The four completed responses are expected to\nproduce three final Observations. Each Observation copies the patient,\nencounter, authored time, author, coded question, and Boolean answer, and its\n`derivedFrom` points to the source QuestionnaireResponse.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  22587,
+                                             "end":  23136
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "OPEN: SDC profile/enablement and exact final Observation fields, including encounter, authored time, author, question coding and derivedFrom, require their own producer checks. A CRL-generated local answer record is not claimed to satisfy this contract.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "extraction-transport-format",
+                      "origin":  "source",
+                      "text":  "SDC [`QuestionnaireResponse/$extract`](https://hl7.org/fhir/uv/sdc/STU4/en/OperationDefinition-QuestionnaireResponse-extract.html)\ncan return a transaction Bundle. To make cross-implementation comparisons\nstable, each `extracted-bundle.json` is instead a collection Bundle containing\nonly the normalized expected resource set. Its deterministic `fullUrl` values\nidentify fixture resources and are not part of the semantic assertion; the\ntrack does not prescribe server-local URLs, request verbs, or\nconditional-create behavior.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  23137,
+                                             "end":  23665
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Fixture collection Bundle format is the normalized expected set; server URLs and transaction verbs are not semantic requirements. No requirement for two servers owned by this participant is inferred.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "no-incomplete-extraction",
+                      "origin":  "source",
+                      "text":  "The incomplete response and absent-response cases intentionally have an empty\nexpected resource set and `invocationExpected=false`. The track does not invoke\nthe baseline extraction operation until a completed QuestionnaireResponse is\navailable, so a partial affirmative answer cannot leak into downstream logic\nas if the assessment were complete.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  23666,
+                                             "end":  24014
+                                         }
+                                     ],
+                      "role":  "criterion",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "OPEN: the decision guards prevent incomplete local answer sets producing guidance, but do not implement the separate SDC invocationExpected=false rule for partial/absent shared QuestionnaireResponses. No linked extraction implementation is claimed.",
+                      "linkRequirement":  "must-link-decision"
+                  },
+                  {
+                      "id":  "six-fixture-cases",
+                      "origin":  "source",
+                      "text":  "## Cases\n\n| Case | Main condition | Expected risk | Extracted Observations |\n| --- | --- | --- | ---: |\n| [younger-than-65](cases/younger-than-65/SUMMARY.md) | complete screen, age below threshold | false; outside population | 3 |\n| [eligible-all-no](cases/eligible-all-no/SUMMARY.md) | complete screen, all answers false | false | 3 |\n| [eligible-unsteady-yes](cases/eligible-unsteady-yes/SUMMARY.md) | unsteady answer true | true | 3 |\n| [eligible-prior-fall-yes](cases/eligible-prior-fall-yes/SUMMARY.md) | prior-fall answer true | true | 3 |\n| [eligible-incomplete-response](cases/eligible-incomplete-response/SUMMARY.md) | one required answer missing | null | 0; no invocation |\n| [eligible-no-response](cases/eligible-no-response/SUMMARY.md) | no QuestionnaireResponse | null | 0; no invocation |\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  24015,
+                                             "end":  24818
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Frozen CEL steadi-01 through steadi-06 preserve these six scenario answer patterns. They use generated local answer records rather than the original shared QR. Four no-action cases are intentionally not given fabricated action/pause outcomes.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "typed-unknown-oracle",
+                      "origin":  "source",
+                      "text":  "## Assertion format\n\nEvery assertion has an expression name and an expected typed value. Boolean\nunknown is represented as JSON `null` with `\"semantics\": \"unknown\"`; it is\nnot interchangeable with `false`, an omitted result, or an execution error.\n\nA test harness may add raw engine output and status fields in a separate result\nfile. It should not modify the shared assertions.\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  24819,
+                                             "end":  25198
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Preserve original typed assertions. Null is distinct from false, absence and engine error. This defines verification, not a substitute decision or a claim that the native run passed.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "prior-fixture-validation",
+                      "origin":  "source",
+                      "text":  "## Fixture validation status\n\nOn 2026-08-26, all 13 FHIR files passed the HL7 FHIR validator 6.10.2 with\nFHIR R4 4.0.1 and `hl7.fhir.uv.sdc#4.0.0` with no errors. Remaining warnings\nare limited to omitted generated narratives, the deliberately missing required\nanswer in the incomplete fixture, and LOINC validation being disabled in that\nvalidator run. Exact ReasonHub lookups independently confirmed all three LOINC\n2.81 codes and displays as active. Cross-file checks also confirmed that every\ncompleted answer is reproduced exactly in the expected Observation and that\nthe original eight CQL assertions remain unchanged.",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  25199,
+                                             "end":  25823
+                                         }
+                                     ],
+                      "role":  "administrative",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Historical validation status of supplied fixtures; not validation or clinical approval of this generated artifact.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "source-identity-and-purpose",
+                      "origin":  "source",
+                      "text":  "# Supplied STEADI challenge specification\nPinned challenge revision: 5034ccd6bc5971aa7e366b6b0df0b23caffe4f46. The following supplied Markdown is retained verbatim by section; raw source snapshots and original fixtures remain in ../source/challenge. No referenced external documents have been added.\n\n## Supplied file: README.md\n\n# Older-adult fall risk (STEADI)\n\nThis case supplies a traceable source corpus, synthetic FHIR R4 patient\nbundles, a shared coded Questionnaire, and engine-neutral expected results.\nParticipants turn the source material into evidence, assessment, guidance,\nand screening-completion measure artifacts.\n\n## Clinical question\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  0,
+                                             "end":  654
+                                         }
+                                     ],
+                      "role":  "administrative",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Source identity, supplied-file heading and challenge introduction; these identify the corpus and authoring purpose, not additional clinical eligibility criteria.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "assessment-and-measure-questions",
+                      "origin":  "source",
+                      "text":  "\n1. Is the patient in scope for fall-risk screening?\n2. Was the CDC STEADI three-question screen completed?\n3. Does the completed screen indicate increased fall risk?\n4. Which evidence-linked action is applicable?\n5. Across a measurement period, what proportion of eligible patients completed\n   the screen?\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  732,
+                                             "end":  1041
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "The five use-case questions organize assessment, guidance and the completion measure. Their detailed executable requirements are attributed separately; this item does not assert that measure execution or every output is complete.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "deliverables-and-sdc-overview",
+                      "origin":  "source",
+                      "text":  "\n## Case contents\n\n- [Source manifest](sources/manifest.yaml) and [raw source snapshots](sources/raw/)\n- [MARP overview](slides/connectathon-track-overview.md) and\n  [rendered PDF](slides/connectathon-track-overview.pdf)\n- [Synthetic patient test bundles](test-bundles/README.md), a shared coded\n  [Questionnaire](test-bundles/questionnaire.json), SDC extraction\n  expectations, assertions, and a case summary for every bundle\n\nThe raw corpus contains only snapshots whose current redistribution basis is\nrecorded in the manifest. Standards references and CMS139FHIR remain link-only.\nCMS139FHIR is a comparison point; it is not copied, and the track-authored\nmeasure must not claim equivalence to it.\n\n## Participant deliverables\n\nThe expected output includes:\n\n| Knowledge role | Expected artifact |\n| --- | --- |\n| Evidence and population definitions | `Evidence`, `EvidenceVariable` |\n| Three-question assessment | `Questionnaire`, reusable logic |\n| Recommendation workflow | `PlanDefinition`, `ActivityDefinition`, `Library` |\n| Screening-completion measure | `Measure`, `Library` |\n| Terminology and package metadata | `ValueSet`, `ImplementationGuide` |\n| Executable logic | CQL source and ELM JSON |\n| Distribution | FHIR R4 NPM package with exact dependency versions |\n\nFHIR R4 does not define `Citation`; an R4 baseline submission should use\navailable provenance and related-artifact elements. Any R5 variant must be\nclearly separated from the R4 baseline.\n\n## SDC extraction contract\n\nThe input fixtures exercise the SDC Observation-based extraction pattern.\nEach completed QuestionnaireResponse references the same versioned,\nLOINC-coded Questionnaire. Its expected extracted Observations are supplied as\na normalized resource set so participants can compare `$extract` behavior\nacross implementations without depending on server-specific transaction\ndetails. Incomplete and absent responses remain explicit negative extraction\ncases.\n\nThe [fixture contract](test-bundles/README.md#sdc-extraction-contract) defines\nthe coded questions, copied Observation fields, extraction invocation rules,\nand Boolean/null semantics.\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  1667,
+                                             "end":  3801
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Supplied source manifest/raw source pointers, rights/comparison limits, artifact-family deliverables, and the SDC overview. References remain references. SDC code/status/field requirements are separately recorded as open below; Measure and Evidence-family companions require their own lead evidence.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "participant-process-and-slide-introduction",
+                      "origin":  "source",
+                      "text":  "including independent CQL execution, FHIR round-trip testing, exact versions,\nsource traceability, and process evidence. FHIR validation and CQL compilation\nare necessary, but they are not clinical approval.\n\nAll patient data is synthetic. This material is for Connectathon testing and\neducation, not clinical use.\n\n\n## Supplied file: slides/connectathon-track-overview.md\n\n---\nmarp: true\ntheme: connectathon\nsize: 16:9\npaginate: true\nfooter: HL7 FHIR Connectathon 43 · proposed track · draft 2026-08-26\ntitle: AI-Assisted Development of Clinical Reasoning Knowledge\ndescription: Proposed HL7 FHIR Connectathon track for evaluating AI-assisted development of valid, clinically coherent, interoperable FHIR and CQL knowledge artifacts.\nauthor: Connectathon Track Proposal\n---\n\n\u003c!-- _class: title --\u003e\n\n\u003cdiv class=\"eyebrow\"\u003eProposed HL7 FHIR Connectathon 43 track\u003c/div\u003e\n\n# AI-Assisted Development of Clinical Reasoning Knowledge\n\n\u003cp class=\"lede\"\u003eTesting how clinical source material can become valid, clinically coherent, interoperable FHIR and CQL knowledge artifacts.\u003c/p\u003e\n\n\u003cp class=\"subtle\"\u003eSeptember 19–20, 2026 · Rockville, Maryland\u003c/p\u003e\n\n\u003c!--\n[Sources]\n- https://confluence.hl7.org/spaces/FHIR/pages/468259447/2026+-+09+Connectathon+43\n[/Sources]\n--\u003e\n---\n\n\u003cdiv class=\"eyebrow\"\u003ePurpose and intent\u003c/div\u003e\n\n## The track evaluates AI-assisted authoring of computable clinical knowledge\n\n\u003cdiv class=\"two-col\"\u003e\n\u003cdiv class=\"rule-left\"\u003e\n\n### Hypothesis\n\nAI-assisted methods can reduce the time and human effort needed to develop computable clinical knowledge, and can support more artifact types with a repeatable process.\n\n\u003c/div\u003e\n\u003cdiv class=\"rule-left\"\u003e\n\n### Required result\n\nThe resulting knowledge must remain source-traceable, structurally valid, clinically coherent, executable, and portable across independent implementations.\n\n\u003c/div\u003e\n\u003c/div\u003e\n\n\u003c!--\n[Sources]\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md\n- https://confluence.hl7.org/spaces/FHIR/pages/477659466/2026+-+09+Clinical+Reasoning\n[/Sources]\n--\u003e\n\n---\n\n\u003cdiv class=\"eyebrow\"\u003eEvaluation questions\u003c/div\u003e\n\n## The track records process performance and artifact quality\n\n| Dimension | What the track records |\n| --- | --- |\n| **Efficiency** | elapsed authoring time, human review time, revision cycles, and blocking issues |\n| **Scalability** | artifact types completed, reuse of the process, and response to source changes |\n| **Validity** | FHIR validation, canonical resolution, CQL translation, and package checks |\n| **Clinical coherence** | reviewer findings, corrections, internal consistency, and expected clinical behavior |\n| **Interoperability** | equivalent results across CQL engines and preservation across FHIR repositories |\n\n\u003cp class=\"small subtle\"\u003eWhere a participant has a comparable conventional baseline, it should be reported. Otherwise, efficiency findings remain descriptive.\u003c/p\u003e\n\n\u003c!--\n[Sources]\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#track-question\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#interoperability-test\n[/Sources]\n--\u003e\n\n---\n\n\u003cdiv class=\"eyebrow\"\u003eCommon test design\u003c/div\u003e\n\n## Participants use common inputs and acceptance criteria\n\n\u003cdiv class=\"pipeline\"\u003e\n\u003cdiv\u003e\n\u003ch3\u003e01 · Inputs\u003c/h3\u003e\n\u003cp\u003eApproved clinical source corpus and shared use-case statement.\u003c/p\u003e\n\u003c/div\u003e\n\u003cdiv\u003e\n\u003ch3\u003e02 · Method\u003c/h3\u003e\n\u003cp\u003eAny AI-assisted or conventional authoring approach.\u003c/p\u003e\n\u003c/div\u003e\n\u003cdiv\u003e\n\u003ch3\u003e03 · Disclosure\u003c/h3\u003e\n\u003cp\u003eRecord tools, versions, instructions, decisions, and human review.\u003c/p\u003e\n\u003c/div\u003e\n\u003cdiv\u003e\n\u003ch3\u003e04 · Outputs\u003c/h3\u003e\n\u003cp\u003eThe same required knowledge artifacts and executable behaviors.\u003c/p\u003e\n\u003c/div\u003e\n\u003cdiv\u003e\n\u003ch3\u003e05 · Evaluation\u003c/h3\u003e\n\u003cp\u003eThe same validation, clinical review, fixtures, and interoperability tests.\u003c/p\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cp class=\"small subtle\"\u003eNo participant implementation defines the reference result. The documented clinical intent and expected behaviors do.\u003c/p\u003e\n\n\u003c!--\n[Sources]\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#participant-task\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/use-cases/steadi/test-bundles/README.md\n[/Sources]\n--\u003e\n\n---\n\n\u003cdiv class=\"eyebrow\"\u003eUse case\u003c/div\u003e\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  4469,
+                                             "end":  8771
+                                         }
+                                     ],
+                      "role":  "administrative",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Participant verification/process requirements, synthetic-use warning, MARP presentation metadata, evaluation dimensions and authoring-method overview. These are real reporting obligations, not screening eligibility branches. Independent execution/round-trip/human review must be reported according to actual performance and operator-scoped skips.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "slide-clinical-scope",
+                      "origin":  "source",
+                      "text":  "## Older-adult fall-risk screening and prevention\n\n\u003cdiv class=\"two-col\"\u003e\n\u003cdiv\u003e\n\n### Patient-level questions\n\nFor a community-dwelling adult age 65 or older:\n\n1. Is the patient in scope for screening?\n2. Was the three-question screen completed?\n3. Does the result indicate increased fall risk?\n4. Which evidence-linked action is applicable?\n\n\u003c/div\u003e\n\u003cdiv\u003e\n\n### Population-level question\n\nAcross a measurement period, what proportion of eligible patients completed the screen?\n\n### Knowledge forms exercised\n\nEvidence · guideline · assessment · measure · terminology · CQL logic\n\n\u003c/div\u003e\n\u003c/div\u003e\n\n\u003c!--\n[Sources]\n- https://www.cdc.gov/steadi/media/pdfs/STEADI-Algorithm-508.pdf\n- https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#seed-use-case\n[/Sources]\n--\u003e\n\n---\n\n\u003cdiv class=\"eyebrow\"\u003eClinical scope\u003c/div\u003e\n\n## The baseline defines a narrow clinical scope\n\n\u003cdiv class=\"two-col\"\u003e\n\u003cdiv class=\"rule-left\"\u003e\n\n### Included\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  8771,
+                                             "end":  9863
+                                         }
+                                     ],
+                      "role":  "criterion",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "OPEN duplicate clinical scope: community-dwelling older-adult population and screening/guidance/measure questions. Age and local-answer behavior are linked in the primary clinical-source items. General residence/encounter filtering is not implemented; this duplicate overview is not waived as presumed scope.",
+                      "linkRequirement":  "must-link-decision"
+                  },
+                  {
+                      "id":  "source-to-artifact-mapping-and-deliverables",
+                      "origin":  "source",
+                      "text":  "\u003c/div\u003e\n\n\u003c!--\n[Sources]\n- https://www.cdc.gov/steadi/media/pdfs/STEADI-Algorithm-508.pdf\n- https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#seed-use-case\n[/Sources]\n--\u003e\n\n---\n\n\u003cdiv class=\"eyebrow\"\u003eSource material\u003c/div\u003e\n\n## The source corpus covers evidence, recommendation, workflow, and formalization\n\n| Source | Role in the use case |\n| --- | --- |\n| **CDC STEADI algorithm and pocket guide** | three-question assessment and screen–assess–intervene workflow |\n| **USPSTF 2024 recommendation** | exercise recommendation and individualized multifactorial consideration |\n| **USPSTF evidence update and open systematic review** | population, outcomes, benefits, harms, and evidence context |\n| **LOINC and HL7 CPG / Using CQL with FHIR** | terminology and computable-artifact guidance |\n| **CMS139FHIR** | comparison point only; not copied or represented as the track measure |\n\n\u003cp class=\"small subtle\"\u003eRedistributable snapshots are included in the repository; standards and comparison references remain link-only. Derived statements must retain stable source locators.\u003c/p\u003e\n\n\u003c!--\n[Sources]\n- https://www.cdc.gov/steadi/media/pdfs/STEADI-Algorithm-508.pdf\n- https://www.cdc.gov/steadi/media/pdfs/steadi-pocketguide-508.pdf\n- https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions\n- https://www.ncbi.nlm.nih.gov/books/NBK604238/\n- https://pmc.ncbi.nlm.nih.gov/articles/PMC11590344/\n- https://loinc.org/\n- https://hl7.org/fhir/uv/cpg/\n- https://hl7.org/fhir/uv/cql/\n- https://ecqi.healthit.gov/ecqm/fhir-ec/2026/cms0139fhir\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/use-cases/steadi/sources/manifest.yaml\n[/Sources]\n--\u003e\n\n---\n\n\u003cdiv class=\"eyebrow\"\u003eSource-to-output mapping\u003c/div\u003e\n\n## Each source role has a defined computable destination\n\n| Source role | Structured knowledge | Primary FHIR output |\n| --- | --- | --- |\n| Evidence review | benefits, harms, population, outcomes | `Evidence`, `EvidenceVariable` |\n| Recommendation | applicability, strength, action | `PlanDefinition`, `ActivityDefinition`, `Library` |\n| STEADI workflow | screening and follow-up decisions | `PlanDefinition`, `ActivityDefinition` |\n| Three-question screen | questions, answers, completeness, positive result | `Questionnaire`, `Library` |\n| Track measure definition | population and completion logic | `Measure`, `Library` |\n| Terminology and packaging guidance | bindings, dependencies, canonical identity | `ValueSet`, `ImplementationGuide` |\n\n\u003c!--\n[Sources]\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#seed-use-case\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#participant-task\n[/Sources]\n--\u003e\n\n---\n\n\u003cdiv class=\"eyebrow\"\u003eExpected output\u003c/div\u003e\n\n## The submission includes reviewable knowledge and FHIR R4 artifacts\n\n\u003cdiv class=\"three-col\"\u003e\n\u003cdiv class=\"rule-top\"\u003e\n\n### Reviewable knowledge\n\nEvidence summary · recommendation decision table · assessment definition · measure definition · terminology definition\n\n\u003c/div\u003e\n\u003cdiv class=\"rule-top\"\u003e\n\n### FHIR knowledge artifacts\n\n`Evidence` · `EvidenceVariable` · `Questionnaire` · `Library` · `PlanDefinition` · `ActivityDefinition`\n\n\u003c/div\u003e\n\u003cdiv class=\"rule-top accent-top\"\u003e\n\n### Measure and package\n\n`Measure` · `ValueSet` · `ImplementationGuide` · stable canonicals · exact dependency versions\n\n\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cdiv class=\"band teal\"\u003e\nEvery clinical statement and operational choice must be distinguishable and traceable to its source or track-authored rationale.\n\u003c/div\u003e\n\n\u003c!--\n[Sources]\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#participant-task\n- https://hl7.org/fhir/R4/\n[/Sources]\n--\u003e\n\n---\n\n\u003cdiv class=\"eyebrow\"\u003eExpected executable behavior\u003c/div\u003e\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  10392,
+                                             "end":  14424
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Slide source-role and output-family mapping, evidence context, source links and packaging requirements. This does not import the linked clinical documents or assert that companion/native/package work has passed. The lead must report actual artifact and interoperability evidence.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "slide-named-behaviors-and-package",
+                      "origin":  "source",
+                      "text":  "## CQL expresses assessment, guidance, and measure semantics\n\n\u003cdiv class=\"two-col\"\u003e\n\u003cdiv class=\"rule-left\"\u003e\n\n### Required named behaviors\n\n- `In Screening Population`\n- `Completed Three Question Screen`\n- `At Increased Fall Risk`\n- `Exercise Intervention Applicable`\n- `Consider Multifactorial Intervention`\n- `Initial Population`, `Denominator`, `Numerator`\n\n\u003c/div\u003e\n\u003cdiv class=\"rule-left\"\u003e\n\n### Deliverable package\n\n- CQL source using a portable subset\n- translated ELM JSON and translation logs\n- FHIR R4 NPM package\n- synthetic patient Bundles\n- engine-neutral expected results\n- exact translator, engine, and dependency versions\n\n\u003c/div\u003e\n\u003c/div\u003e\n\n\u003c!--\n[Sources]\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#required-executable-behavior\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/use-cases/steadi/test-bundles/README.md\n- https://hl7.org/fhir/uv/cql/\n[/Sources]\n--\u003e\n\n---\n\n\u003cdiv class=\"eyebrow\"\u003eClinical coherence\u003c/div\u003e\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  14424,
+                                             "end":  15434
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Duplicate named assessment/measure exports and executable package contract. Source acknowledgement identifies these required outputs; it is not a claim of native proof or of direct CRL Measure/Evidence support.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "review-boundaries",
+                      "origin":  "source",
+                      "text":  "## Human review verifies that the artifacts tell the same clinical story\n\n\u003cdiv class=\"two-col\"\u003e\n\u003cdiv class=\"rule-left\"\u003e\n\n### Review questions\n\n- Are source statements separated from track-authored choices?\n- Are population, recommendation strength, and actions preserved?\n- Do the assessment, guideline, measure, and CQL agree?\n- Are uncertainty and incomplete data represented explicitly?\n\n\u003c/div\u003e\n\u003cdiv class=\"rule-left\"\u003e\n\n### Failure examples\n\n- missing answer treated as a negative answer\n- increased risk represented as a diagnosis\n- exercise and multifactorial recommendations collapsed\n- unsupported code, threshold, or population invented\n- measure represented as CMS139FHIR\n\n\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cdiv class=\"band\"\u003e\nFHIR validation and CQL compilation are necessary, but they are not clinical approval.\n\u003c/div\u003e\n\n\u003c!--\n[Sources]\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#review-boundaries\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#seed-use-case\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#required-executable-behavior\n[/Sources]\n--\u003e\n\n---\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  15434,
+                                             "end":  16624
+                                         }
+                                     ],
+                      "role":  "administrative",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Review questions, failure examples and clinical-approval limitation guide verification. They do not introduce another patient-level decision. Missing/unknown and separate guidance are attributed in the clinical items; validation is not clinical approval.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "slide-fixture-expectations",
+                      "origin":  "source",
+                      "text":  "\u003cdiv class=\"eyebrow\"\u003eShared test cases\u003c/div\u003e\n\n## Synthetic fixtures make the expected behavior observable\n\n| Case | Expected result |\n| --- | --- |\n| Adult younger than 65 | outside screening and measure population |\n| Eligible adult; all answers no | complete screen; not at increased risk |\n| Eligible adult; unsteady yes | increased risk; exercise applicable |\n| Eligible adult; prior fall yes | increased risk; multifactorial consideration |\n| Eligible adult; incomplete response | screen incomplete; risk unknown; numerator false |\n| Eligible adult; no response | screen incomplete; risk unknown; numerator false |\n\n\u003cdiv class=\"band\"\u003e\nMissing data must remain unknown. It must not silently become a negative screen.\n\u003c/div\u003e\n\n\u003c!--\n[Sources]\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/use-cases/steadi/test-bundles/README.md\n[/Sources]\n--\u003e\n\n---\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  16624,
+                                             "end":  17513
+                                         }
+                                     ],
+                      "role":  "definition",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Duplicate six-case source oracle and warning against treating unknown as false. The source cases are retained independently of authoring predictions; original shared-QR and native evidence limits still apply.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "interoperability-and-process-reporting",
+                      "origin":  "source",
+                      "text":  "\u003cdiv class=\"eyebrow\"\u003eInteroperability testing\u003c/div\u003e\n\n## Interoperability testing covers validation, translation, execution, and storage\n\n\u003cdiv class=\"pipeline\"\u003e\n\u003cdiv\u003e\n\u003ch3\u003e01 · Validate\u003c/h3\u003e\n\u003cp\u003eValidate FHIR R4 resources and the package.\u003c/p\u003e\n\u003c/div\u003e\n\u003cdiv\u003e\n\u003ch3\u003e02 · Round-trip\u003c/h3\u003e\n\u003cp\u003eStore and retrieve artifacts from independent FHIR repositories.\u003c/p\u003e\n\u003c/div\u003e\n\u003cdiv\u003e\n\u003ch3\u003e03 · Translate\u003c/h3\u003e\n\u003cp\u003eTranslate the same CQL and record diagnostics.\u003c/p\u003e\n\u003c/div\u003e\n\u003cdiv\u003e\n\u003ch3\u003e04 · Execute\u003c/h3\u003e\n\u003cp\u003eRun every synthetic fixture in independent CQL engines.\u003c/p\u003e\n\u003c/div\u003e\n\u003cdiv\u003e\n\u003ch3\u003e05 · Compare\u003c/h3\u003e\n\u003cp\u003eCompare values, null semantics, versions, and discrepancies.\u003c/p\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cp class=\"small subtle\"\u003eBaseline acceptance requires agreement across at least two independent CQL implementations and round-trip testing in at least two FHIR implementations.\u003c/p\u003e\n\n\u003c!--\n[Sources]\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#interoperability-test\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/use-cases/steadi/test-bundles/README.md\n- https://confluence.hl7.org/spaces/FHIR/pages/477659466/2026+-+09+Clinical+Reasoning\n[/Sources]\n--\u003e\n\n---\n\n\u003c!-- _class: closing --\u003e\n\n\u003cdiv class=\"eyebrow\"\u003eExpected track result\u003c/div\u003e\n\n## The outcome is evidence about the process and the artifacts\n\n\u003cdiv class=\"two-col\"\u003e\n\u003cdiv class=\"rule-top\"\u003e\n\n### Process evidence\n\n- authoring and review effort\n- revision history and human decisions\n- repeatability across knowledge-artifact types\n- implementation-specific limitations\n\n\u003c/div\u003e\n\u003cdiv class=\"rule-top\"\u003e\n\n### Knowledge evidence\n\n- reviewed source-to-output traceability\n- valid FHIR and translatable CQL\n- clinically coherent fixture behavior\n- cross-implementation result matrix and issue list\n\n\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cp class=\"decision\"\u003eThe central question: can AI-assisted development improve efficiency and scale while preserving clinical quality and interoperability?\u003c/p\u003e\n\n\u003c!--\n[Sources]\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#track-question\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#participant-task\n- https://github.com/reason-healthcare/hl7-agentic-knowledge-connectathon/blob/main/README.md#interoperability-test\n[/Sources]\n--\u003e\n\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  17513,
+                                             "end":  19847
+                                         }
+                                     ],
+                      "role":  "administrative",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Track-level validation, translation, independent execution/storage, comparison and process-evidence expectations. Operator excluded participant round-trip coordination for this demo; no such run is claimed and no new patient eligibility condition follows.",
+                      "dispositionClass":  "no-operational-disposition"
+                  },
+                  {
+                      "id":  "fixture-introduction",
+                      "origin":  "source",
+                      "text":  "## Supplied file: test-bundles/README.md\n\n# Synthetic patient test bundles\n\nThis directory contains the shared execution fixtures for the older-adult\nfall-risk use case. Every case is synthetic and uses FHIR R4 4.0.1 resources.\n\n## Common evaluation context\n\n",
+                      "sourceRefs":  [
+                                         {
+                                             "start":  19847,
+                                             "end":  20106
+                                         }
+                                     ],
+                      "role":  "administrative",
+                      "roleStatus":  "confirmed",
+                      "rationale":  "Supplied fixture file heading and synthetic FHIR R4 context. Detailed operational/clinical fixture requirements are attributed in the following items.",
+                      "dispositionClass":  "no-operational-disposition"
+                  }
+              ],
+    "ignoredRanges":  [
+
+                      ],
+    "clusters":  [
+                     {
+                         "id":  "cluster:Steadi:population-age",
+                         "label":  "population-age",
+                         "items":  [
+                                       "population-age"
+                                   ],
+                         "crl":  [
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "concept",
+                                         "name":  "Age 65 Or Older",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     }
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:screening-questions",
+                         "label":  "screening-questions",
+                         "items":  [
+                                       "screening-questions"
+                                   ],
+                         "crl":  [
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "concept",
+                                         "name":  "Fallen In Past Year",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "concept",
+                                         "name":  "Unsteady",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "concept",
+                                         "name":  "Worries About Falling",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     }
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:risk-completeness-and-unknown",
+                         "label":  "risk-completeness-and-unknown",
+                         "items":  [
+                                       "risk-completeness-and-unknown"
+                                   ],
+                         "crl":  [
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "concept",
+                                         "name":  "Has Fall Answer",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "concept",
+                                         "name":  "Has Unsteady Answer",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "concept",
+                                         "name":  "Has Worries Answer",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]/when[0]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]/when[0]/when[0]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     }
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:exercise-guidance",
+                         "label":  "exercise-guidance",
+                         "items":  [
+                                       "exercise-guidance"
+                                   ],
+                         "crl":  [
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "activity",
+                                         "name":  "Exercise Guidance",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "recommends-disposition",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "activity",
+                                         "name":  "Multifactorial Intervention Guidance",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "recommends-disposition",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]/when[0]/when[0]/action[0]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "recommends-disposition",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]/when[0]/when[0]/action[1]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "recommends-disposition",
+                                         "status":  "linked"
+                                     }
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:guidance-scope",
+                         "label":  "guidance-scope",
+                         "items":  [
+                                       "guidance-scope"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:named-assessment-and-measure-exports",
+                         "label":  "named-assessment-and-measure-exports",
+                         "items":  [
+                                       "named-assessment-and-measure-exports"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:scope-exclusions-not-general-filter",
+                         "label":  "scope-exclusions-not-general-filter",
+                         "items":  [
+                                       "scope-exclusions-not-general-filter"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:measurement-and-encounter-time",
+                         "label":  "measurement-and-encounter-time",
+                         "items":  [
+                                       "measurement-and-encounter-time"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:shared-questionnaire-identity-and-codes",
+                         "label":  "shared-questionnaire-identity-and-codes",
+                         "items":  [
+                                       "shared-questionnaire-identity-and-codes"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:three-coded-questions",
+                         "label":  "three-coded-questions",
+                         "items":  [
+                                       "three-coded-questions"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:qr-code-location",
+                         "label":  "qr-code-location",
+                         "items":  [
+                                       "qr-code-location"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:completed-qr-status",
+                         "label":  "completed-qr-status",
+                         "items":  [
+                                       "completed-qr-status"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:three-usable-booleans-and-risk",
+                         "label":  "three-usable-booleans-and-risk",
+                         "items":  [
+                                       "three-usable-booleans-and-risk"
+                                   ],
+                         "crl":  [
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "concept",
+                                         "name":  "Has Fall Answer",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "concept",
+                                         "name":  "Has Unsteady Answer",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "concept",
+                                         "name":  "Has Worries Answer",
+                                         "nodeKind":  "leaf",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]/when[0]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]/when[0]/when[0]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     }
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:extraction-resource-contract",
+                         "label":  "extraction-resource-contract",
+                         "items":  [
+                                       "extraction-resource-contract"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:extraction-transport-format",
+                         "label":  "extraction-transport-format",
+                         "items":  [
+                                       "extraction-transport-format"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:no-incomplete-extraction",
+                         "label":  "no-incomplete-extraction",
+                         "items":  [
+                                       "no-incomplete-extraction"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:six-fixture-cases",
+                         "label":  "six-fixture-cases",
+                         "items":  [
+                                       "six-fixture-cases"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:typed-unknown-oracle",
+                         "label":  "typed-unknown-oracle",
+                         "items":  [
+                                       "typed-unknown-oracle"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:prior-fixture-validation",
+                         "label":  "prior-fixture-validation",
+                         "items":  [
+                                       "prior-fixture-validation"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:source-identity-and-purpose",
+                         "label":  "source-identity-and-purpose",
+                         "items":  [
+                                       "source-identity-and-purpose"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:assessment-and-measure-questions",
+                         "label":  "assessment-and-measure-questions",
+                         "items":  [
+                                       "assessment-and-measure-questions"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:deliverables-and-sdc-overview",
+                         "label":  "deliverables-and-sdc-overview",
+                         "items":  [
+                                       "deliverables-and-sdc-overview"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:participant-process-and-slide-introduction",
+                         "label":  "participant-process-and-slide-introduction",
+                         "items":  [
+                                       "participant-process-and-slide-introduction"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:slide-clinical-scope",
+                         "label":  "slide-clinical-scope",
+                         "items":  [
+                                       "slide-clinical-scope"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:source-to-artifact-mapping-and-deliverables",
+                         "label":  "source-to-artifact-mapping-and-deliverables",
+                         "items":  [
+                                       "source-to-artifact-mapping-and-deliverables"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:slide-named-behaviors-and-package",
+                         "label":  "slide-named-behaviors-and-package",
+                         "items":  [
+                                       "slide-named-behaviors-and-package"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:review-boundaries",
+                         "label":  "review-boundaries",
+                         "items":  [
+                                       "review-boundaries"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:slide-fixture-expectations",
+                         "label":  "slide-fixture-expectations",
+                         "items":  [
+                                       "slide-fixture-expectations"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:interoperability-and-process-reporting",
+                         "label":  "interoperability-and-process-reporting",
+                         "items":  [
+                                       "interoperability-and-process-reporting"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:fixture-introduction",
+                         "label":  "fixture-introduction",
+                         "items":  [
+                                       "fixture-introduction"
+                                   ],
+                         "crl":  [
+
+                                 ],
+                         "cel":  [
+
+                                 ]
+                     },
+                     {
+                         "id":  "cluster:Steadi:positive-guidance-path",
+                         "label":  "Completed positive screen: both guidance activities",
+                         "items":  [
+                                       "population-age",
+                                       "risk-completeness-and-unknown",
+                                       "exercise-guidance"
+                                   ],
+                         "crl":  [
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]/when[0]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]/when[0]/when[0]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "implements-criterion",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]/when[0]/when[0]/action[0]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "recommends-disposition",
+                                         "status":  "linked"
+                                     },
+                                     {
+                                         "lib":  "Steadi",
+                                         "kind":  "decision",
+                                         "name":  "Screening Guidance",
+                                         "nodeId":  "when[0]/when[0]/when[0]/action[1]",
+                                         "nodeKind":  "decision-node",
+                                         "ownership":  "policy-owned",
+                                         "relation":  "recommends-disposition",
+                                         "status":  "linked"
+                                     }
+                                 ],
+                         "cel":  [
+                                     {
+                                         "status":  "linked",
+                                         "caseId":  "steadi-03",
+                                         "file":  "src/cel/mv/steadi.cel",
+                                         "relation":  "tests-branch",
+                                         "kind":  "case"
+                                     },
+                                     {
+                                         "status":  "linked",
+                                         "caseId":  "steadi-04",
+                                         "file":  "src/cel/mv/steadi.cel",
+                                         "relation":  "tests-branch",
+                                         "kind":  "case"
+                                     }
+                                 ]
+                     }
+                 ]
+}
